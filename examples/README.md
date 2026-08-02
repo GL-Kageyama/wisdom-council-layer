@@ -7,6 +7,7 @@
 | フォルダ | ジャンル | 分類の推移（v1 → v2） |
 |----------|---------|----------------------|
 | `creative-poem/` | 詩 | discovery_target → current_success |
+| `creative-poem-sea/` | 詩（海・『借りた言葉』） | discovery_target → innovation（v1〜v10） |
 | `creative-film/` | 映画企画 | discovery_target → innovation |
 | `creative-watercolor/` | 画像生成プロンプト（水彩） | discovery_target → innovation |
 | `creative-photography/` | 画像生成プロンプト（写真） | discovery_target → innovation |
