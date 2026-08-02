@@ -102,24 +102,61 @@ def render_disagreement(value_vector):
         print("  有意な不一致なし（評価者は概ね一致している）")
 
 
-def render_contrasts(value_vector):
-    """Cross-dimension contrasts: a notably high axis alongside a notably low
-    axis is the strongest signal in the vector (e.g. high originality + low
-    business = a classic Discovery Target)."""
+EVAL_TO_DIM = {
+    "originality": "originality",
+    "anti-generic-filter": "quality",
+    "aesthetic-critic": "aesthetic",
+    "emotional-impact": "emotional_impact",
+    "future-potential": "future_potential",
+    "business-value": "business_value",
+    "scientific-novelty": "scientific_novelty",
+    "philosophical-evaluator": "philosophical_depth",
+    "quality-evaluator": "quality",
+    "meaning-evaluator": "meaning",
+}
+
+
+def excluded_ids(obj):
+    """Set of dimension keys excluded from aggregation (exceptional feature).
+    Normalizes evaluator_id (kebab-case) to value-vector dimension keys."""
+    out = set()
+    for e in (obj.get("excluded_evaluators") or []):
+        eid = e.get("evaluator_id") if isinstance(e, dict) else e
+        out.add(EVAL_TO_DIM.get(eid, eid))
+    return out
+
+
+def contrast_pairs(value_vector, excluded=(), limit=4):
+    """Cross-dimension contrasts (high axis >= 70 vs low axis <= 25), skipping
+    excluded evaluators, most striking first. A high+low coexistence is the
+    strongest signal in the vector (e.g. high originality + low business)."""
     scores = {}
     for key, jp in DIMENSIONS:
+        if key in excluded:
+            continue
         entry = (value_vector or {}).get(key)
         mean = entry.get("mean") if isinstance(entry, dict) else entry
         if mean is not None:
             scores[key] = mean
-    high = [(k, v) for k, v in scores.items() if v >= 70]
-    low = [(k, v) for k, v in scores.items() if v <= 25]
-    if high and low:
+    pairs = []
+    for hk, hv in scores.items():
+        if hv < 70:
+            continue
+        for lk, lv in scores.items():
+            if lk == hk or lv > 25:
+                continue
+            pairs.append((hk, hv, lk, lv))
+    pairs.sort(key=lambda p: -(p[1] - p[3]))
+    return pairs[:limit]
+
+
+def render_contrasts(value_vector, excluded=()):
+    pairs = contrast_pairs(value_vector, excluded)
+    if pairs:
+        jp = {d[0]: d[1] for d in DIMENSIONS}
         print("\n【次元間の対立（Contrast）】高スコア軸と低スコア軸の共存 = 価値の緊張関係")
-        for hk, hv in high:
-            for lk, lv in low:
-                print(f"  ⚡ {DIMENSIONS[[d[0] for d in DIMENSIONS].index(hk)][1]}({hk}) {hv}"
-                      f"  vs  {DIMENSIONS[[d[0] for d in DIMENSIONS].index(lk)][1]}({lk}) {lv}")
+        for hk, hv, lk, lv in pairs:
+            print(f"  ⚡ {jp[hk]}({hk}) {hv}  vs  {jp[lk]}({lk}) {lv}")
         print("  → この対立は平均化せず、そのまま保存する（debate-principles.md）")
 
 
@@ -139,9 +176,17 @@ def render_council(obj):
     print(f"\n  【対象】 {obj.get('content_summary', '—')}")
     print(f"  ドメイン: {obj.get('domain', '—')}  |  招集評価者: {len(obj.get('evaluators_consulted', []) or [])}体")
 
+    excl = obj.get("excluded_evaluators") or []
+    if excl:
+        print("  ⏭️ 除外（例外的機能）: 集計から除外した評価者")
+        for e in excl:
+            eid = e.get("evaluator_id") if isinstance(e, dict) else e
+            reason = e.get("reason", "") if isinstance(e, dict) else ""
+            print(f"    · {eid}: {reason or '次元が不適合'}")
+
     render_value_vector(obj.get("value_vector"))
     render_disagreement(obj.get("value_vector"))
-    render_contrasts(obj.get("value_vector"))
+    render_contrasts(obj.get("value_vector"), excluded_ids(obj))
 
     if obj.get("executive_summary"):
         print(f"\n【総評】\n  {obj['executive_summary']}")
@@ -195,13 +240,223 @@ def render_evaluator(obj):
         print(f"\n【ナラティブ】\n  {obj['narrative']}")
 
 
+def md_bar(score, width=20):
+    """Compact bar for Markdown table cells."""
+    if score is None:
+        return "—"
+    filled = max(0, min(100, int(score))) * width // 100
+    return "█" * filled + "░" * (width - filled)
+
+
+def md_val(v):
+    return "—" if v is None else f"{v}"
+
+
+def render_council_md(obj):
+    """Readable Markdown report (suitable for .md files / GitHub preview)."""
+    L = []
+    L.append("# 🧠 Wisdom Council Value Report")
+    L.append("")
+    L.append(f"> **分類**: {CLASS_BADGE.get(obj.get('classification'), obj.get('classification', '?'))}")
+    L.append("")
+
+    # Summary table
+    L.append("## 📋 概要")
+    L.append("")
+    L.append("| 項目 | 値 |")
+    L.append("|------|-----|")
+    L.append(f"| 対象 | {obj.get('content_summary', '—')} |")
+    L.append(f"| ドメイン | {obj.get('domain', '—')} |")
+    L.append(f"| 招集評価者 | {len(obj.get('evaluators_consulted', []) or [])}体 |")
+    L.append(f"| 現在価値 | {md_val(obj.get('current_value_score'))} |")
+    L.append(f"| 潜在価値 | {md_val(obj.get('hidden_potential_score'))} |")
+    L.append("")
+
+    # Excluded evaluators
+    excl = obj.get("excluded_evaluators") or []
+    if excl:
+        L.append("## ⏭️ 除外した評価者（例外的機能）")
+        L.append("")
+        L.append("| 評価者 | 理由 |")
+        L.append("|--------|------|")
+        for e in excl:
+            eid = e.get("evaluator_id") if isinstance(e, dict) else e
+            reason = e.get("reason", "") if isinstance(e, dict) else ""
+            L.append(f"| `{eid}` | {reason or '次元が不適合'} |")
+        L.append("")
+
+    # Value vector
+    L.append("## 📊 Value Vector")
+    L.append("")
+    L.append("| 次元 | スコア | 分散 | バー |")
+    L.append("|------|:------:|:----:|------|")
+    vec = obj.get("value_vector") or {}
+    any_scored = False
+    for key, jp in DIMENSIONS:
+        entry = vec.get(key)
+        if isinstance(entry, dict):
+            mean = entry.get("mean")
+            variance = entry.get("variance")
+            scores = entry.get("scores") or []
+        else:
+            mean = entry
+            variance = None
+            scores = []
+        if mean is None and variance is None:
+            continue
+        any_scored = True
+        v = f"{variance}" if variance is not None else "—"
+        n = f" (n={len(scores)})" if scores else ""
+        L.append(f"| {jp} (`{key}`) | {md_val(mean)} | {v}{n} | `{md_bar(mean)}` |")
+    if not any_scored:
+        L.append("| — | — | — | スコアされた次元なし |")
+    L.append("")
+
+    # Disagreement
+    L.append("## 🔀 不一致（Disagreement）")
+    L.append("")
+    found = False
+    for key, jp in DIMENSIONS:
+        entry = vec.get(key)
+        if not isinstance(entry, dict):
+            continue
+        scores = entry.get("scores") or []
+        variance = entry.get("variance")
+        if variance is None or len(set(scores)) < 2:
+            continue
+        found = True
+        level = "⚠⚠ 深刻" if variance > 400 else ("⚠ 中程度" if variance >= 100 else "軽度")
+        L.append(f"- **[{level}]** {jp}（`{key}`）: スコア = {scores}")
+    if not found:
+        L.append("- 有意な不一致なし（評価者は概ね一致）")
+    L.append("")
+
+    # Contrasts (skip excluded evaluators, show most striking)
+    pairs = contrast_pairs(vec, excluded_ids(obj))
+    if pairs:
+        L.append("## ⚡ 次元間の対立（Contrast）")
+        L.append("")
+        L.append("| 高スコア軸 | 低スコア軸 |")
+        L.append("|-----------|-----------|")
+        idx = {d[0]: d[1] for d in DIMENSIONS}
+        for hk, hv, lk, lv in pairs:
+            L.append(f"| {idx[hk]}（`{hk}`）{hv} | {idx[lk]}（`{lk}`）{lv} |")
+        L.append("")
+        L.append("> この対立は平均化せず保存する（debate-principles.md）")
+        L.append("")
+
+    if obj.get("executive_summary"):
+        L.append("## 📝 総評")
+        L.append("")
+        L.append(f"> {obj['executive_summary']}")
+        L.append("")
+
+    if obj.get("consensus_summary"):
+        L.append("## 🤝 一致点")
+        L.append("")
+        L.append(obj["consensus_summary"])
+        L.append("")
+
+    recs = obj.get("recommendations") or []
+    if recs:
+        L.append("## 🎯 推奨アクション")
+        L.append("")
+        for i, r in enumerate(recs, 1):
+            L.append(f"{i}. {r}")
+        L.append("")
+
+    caves = obj.get("caveats") or []
+    if caves:
+        L.append("## ⚠️ 注意点")
+        L.append("")
+        for c in caves:
+            L.append(f"- {c}")
+        L.append("")
+
+    ind = obj.get("individual_reports") or []
+    if ind:
+        L.append("## 📄 個別評価の素材")
+        L.append("")
+        L.append("下流の再作成スキルは、各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` を入力に使う。生データは JSON（`individual_reports`）に保存。")
+        L.append("")
+
+    return "\n".join(L)
+
+
+def render_evaluator_md(obj):
+    L = []
+    L.append(f"# 🔎 {obj.get('evaluator_name', obj.get('evaluator_id', 'Evaluator'))}")
+    L.append("")
+    L.append(f"> **分類**: {CLASS_BADGE.get(obj.get('classification'), obj.get('classification', '?'))}  |  信頼度: {md_val(obj.get('confidence'))}")
+    L.append("")
+    L.append(f"**総合スコア**: {md_val(obj.get('primary_score'))}  `{md_bar(obj.get('primary_score'))}`")
+    if obj.get("primary_score_rationale"):
+        L.append("")
+        L.append(f"*{obj['primary_score_rationale']}*")
+    L.append("")
+    ds = obj.get("dimension_scores") or {}
+    if ds:
+        L.append("## 次元別")
+        L.append("")
+        L.append("| 次元 | スコア | 重み |")
+        L.append("|------|:------:|:----:|")
+        for name, d in ds.items():
+            L.append(f"| {name} | {md_val(d.get('score'))} | {d.get('weight', '—')} |")
+            if d.get("evidence"):
+                L.append(f"| ↳ {d['evidence']} | | |")
+        L.append("")
+    if obj.get("unique_perspective"):
+        L.append(f"## 👁️ この評価者にしか見えないもの")
+        L.append("")
+        L.append(obj["unique_perspective"])
+        L.append("")
+    if obj.get("expected_disagreement_points"):
+        L.append("## 🔮 予測される不一致")
+        L.append("")
+        for p in obj["expected_disagreement_points"]:
+            L.append(f"- **{p.get('evaluator_type')}**: {p.get('predicted_stance')}")
+        L.append("")
+    if obj.get("narrative"):
+        L.append("## 📖 ナラティブ")
+        L.append("")
+        L.append(obj["narrative"])
+        L.append("")
+    return "\n".join(L)
+
+
 def main():
-    if len(sys.argv) > 2:
-        print("Usage: python utils/render_report.py [report.json]", file=sys.stderr)
+    args = [a for a in sys.argv[1:]]
+    out_format = "console"
+    out_file = None
+    positional = []
+    i = 0
+    while i < len(args):
+        a = args[i]
+        if a in ("--format", "-f") and i + 1 < len(args):
+            out_format = args[i + 1]
+            i += 2
+        elif a in ("--output", "-o") and i + 1 < len(args):
+            out_file = args[i + 1]
+            i += 2
+        elif a in ("--help", "-h"):
+            print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [report.json]",
+                  file=sys.stderr)
+            return 0
+        else:
+            positional.append(a)
+            i += 1
+
+    if out_format not in ("console", "md"):
+        print("--format must be 'console' or 'md'", file=sys.stderr)
+        return 1
+    if len(positional) > 1:
+        print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [report.json]",
+              file=sys.stderr)
         return 2
+
     try:
-        if len(sys.argv) == 2:
-            with open(sys.argv[1], encoding="utf-8") as f:
+        if positional:
+            with open(positional[0], encoding="utf-8") as f:
                 obj = json.load(f)
         else:
             obj = json.load(sys.stdin)
@@ -213,14 +468,39 @@ def main():
         return 2
 
     if isinstance(obj, dict) and "report_id" in obj:
-        render_council(obj)
+        text = render_council_md(obj) if out_format == "md" else _console_council(obj)
     elif isinstance(obj, dict) and "evaluator_id" in obj:
-        render_evaluator(obj)
+        text = render_evaluator_md(obj) if out_format == "md" else _console_evaluator(obj)
     else:
         print("Input is neither a council report (report_id) nor an evaluator output (evaluator_id).",
               file=sys.stderr)
         return 1
+
+    if out_file:
+        with open(out_file, "w", encoding="utf-8") as f:
+            f.write(text + "\n")
+        print(f"✓ wrote {out_file}")
+    else:
+        print(text)
     return 0
+
+
+def _console_council(obj):
+    import io
+    buf = io.StringIO()
+    import contextlib
+    with contextlib.redirect_stdout(buf):
+        render_council(obj)
+    return buf.getvalue()
+
+
+def _console_evaluator(obj):
+    import io
+    buf = io.StringIO()
+    import contextlib
+    with contextlib.redirect_stdout(buf):
+        render_evaluator(obj)
+    return buf.getvalue()
 
 
 if __name__ == "__main__":

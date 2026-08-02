@@ -50,15 +50,17 @@ Wisdom Council Layerは単純な点数ではなく、**現在価値 × 潜在価
 
 ### しきい値の目安
 
+厳格スコアリング（`scoring-strictness.md`）では中央値が約30になるため、分類しきい値もそれに合わせて再調整する。
+
 | 分類 | Current Value | Hidden Potential |
 |------|---------------|------------------|
-| Current Success | 高 (≥ 60) | 低 (< 50) |
-| Discovery Target | 低 (< 50) | 高 (≥ 60) |
-| Trend Object | 高 (≥ 60) | 中 (50-60) |
-| Innovation | 高 (≥ 60) | 高 (≥ 60) |
-| Low Signal | 低 (< 50) | 低 (< 50) |
+| Current Success | 高 (≥ 45) | 低 (< 35) |
+| Discovery Target | 低 (< 35) | 高 (≥ 45) |
+| Trend Object | 高 (≥ 45) | 中 (35-44) |
+| Innovation | 高 (≥ 45) | 高 (≥ 45) |
+| Low Signal | 低 (< 35) | 低 (< 35) |
 
-※ しきい値は開始時の目安であり、Meta Value Layerの実装時に調整される。
+※ しきい値は開始時の目安であり、Meta Value Layerの実装時に実データで調整される。
 
 ## 重要な注意
 

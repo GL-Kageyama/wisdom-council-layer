@@ -152,15 +152,15 @@ texture, and rhythm.
 ## Scoring Guidelines
 
 Strict calibration: this scale is deliberately harsh. Prettiness is common
-and cheap; beauty is rare. Competent-but-forgettable work lands below 55.
-Scores of 70+ require a real aesthetic experience. When in doubt, score
+and cheap; beauty is rare. Competent-but-forgettable work lands below 45.
+Scores of 60+ require a real aesthetic experience. When in doubt, score
 lower — the council discovers rather than approves.
 
-- 0-15: Aesthetically inert. No form, no texture, no presence.
-- 16-35: Prettiness without beauty. Polished surface, empty depth.
-- 36-55: Competent aesthetics with moments of genuine beauty. Common.
-- 56-75: Coherent, expressive, and alive. A real aesthetic experience.
-- 76-90: Rarely earned. Creates its own criteria. Unforgettable form.
+- 0-10: Aesthetically inert. No form, no texture, no presence.
+- 11-30: Prettiness without beauty. Polished surface, empty depth.
+- 31-50: Competent aesthetics with moments of genuine beauty. Common.
+- 51-70: Coherent, expressive, and alive. A real aesthetic experience.
+- 71-90: Rarely earned. Creates its own criteria. Unforgettable form.
 - 91-100: Reserved for a work that redefines its medium's aesthetics.
 
 ## Calibration Reference

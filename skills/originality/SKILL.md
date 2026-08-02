@@ -153,14 +153,14 @@ is not the goal. If this content is derivative, say so plainly.
 ## Scoring Guidelines
 
 Strict calibration: this scale is deliberately harsh. Competent but common
-work lands below 60. Scores of 70+ are earned by genuine excellence; 85+ is
+work lands below 50. Scores of 60+ are earned by genuine excellence; 75+ is
 rare. When in doubt, score lower — the council discovers rather than approves.
 
-- 0-15: Derivative. A recombination of existing patterns with no new idea.
-- 16-35: Marginally novel. One element is new but the whole is familiar.
-- 36-55: Genuinely novel in one dimension, familiar in others. Competent but common.
-- 56-75: Strongly original. Multiple dimensions show meaningful deviation.
-- 76-90: Rarely earned. Category-defining or category-breaking work.
+- 0-10: Derivative. A recombination of existing patterns with no new idea.
+- 11-30: Marginally novel. One element is new but the whole is familiar.
+- 31-50: Genuinely novel in one dimension, familiar in others. Competent but common.
+- 51-70: Strongly original. Multiple dimensions show meaningful deviation.
+- 71-90: Rarely earned. Category-defining or category-breaking work.
 - 91-100: Reserved for historically significant originality.
 
 ## Calibration Reference

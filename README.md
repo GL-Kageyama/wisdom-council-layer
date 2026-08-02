@@ -215,10 +215,20 @@ python utils/validate_output.py < evaluator_output.json
 
 JSONのままでは見づらい場合、レンダラーで視覚表示に変換できます。
 
+**コンソール表示:**
 ```bash
 python utils/render_report.py < report.json     # stdinから
 python utils/render_report.py report.json        # ファイルから
 ```
+
+**Markdown出力（読みやすい文書にまとめる）:**
+
+```bash
+python utils/render_report.py --format md report.json               # 標準出力
+python utils/render_report.py --format md -o report.md report.json  # ファイルに保存
+```
+
+MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/sample-poem-report.md](wisdom-council-layer/examples/sample-poem-report.md)
 
 **出力例**（[examples/sample-poem-report.json](wisdom-council-layer/examples/sample-poem-report.json) をレンダリングしたもの）:
 

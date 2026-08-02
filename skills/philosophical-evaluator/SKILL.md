@@ -163,12 +163,12 @@ shallowness is common and scores low. Genuine intellectual depth that
 reconfigures understanding is rare. When in doubt, score lower — the
 council discovers rather than approves.
 
-- 0-15: No philosophical value. No question, no depth, no impact.
-- 16-35: Ornamented shallowness. The appearance of depth without
+- 0-10: No philosophical value. No question, no depth, no impact.
+- 11-30: Ornamented shallowness. The appearance of depth without
   substance.
-- 36-55: Genuine questions posed, unevenly developed. Common.
-- 56-75: Real intellectual depth that engages fundamental questions.
-- 76-90: Rarely earned. A work that can reconfigure how a reader
+- 31-50: Genuine questions posed, unevenly developed. Common.
+- 51-70: Real intellectual depth that engages fundamental questions.
+- 71-90: Rarely earned. A work that can reconfigure how a reader
   understands existence.
 - 91-100: Reserved for a work that reorients an entire worldview.
 

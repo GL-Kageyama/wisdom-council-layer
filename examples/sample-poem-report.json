@@ -17,19 +17,22 @@
     "quality-evaluator",
     "meaning-evaluator"
   ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" }
+  ],
   "value_vector": {
-    "originality": { "mean": 78, "variance": 0, "min": 78, "max": 78, "scores": [78] },
-    "quality": { "mean": 65, "variance": 49, "min": 58, "max": 72, "scores": [72, 58] },
-    "aesthetic": { "mean": 62, "variance": 0, "min": 62, "max": 62, "scores": [62] },
-    "emotional_impact": { "mean": 68, "variance": 0, "min": 68, "max": 68, "scores": [68] },
-    "future_potential": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
-    "business_value": { "mean": 18, "variance": 0, "min": 18, "max": 18, "scores": [18] },
+    "originality": { "mean": 55, "variance": 0, "min": 55, "max": 55, "scores": [55] },
+    "quality": { "mean": 42, "variance": 9, "min": 40, "max": 44, "scores": [44, 40] },
+    "aesthetic": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
+    "emotional_impact": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] },
+    "future_potential": { "mean": 36, "variance": 0, "min": 36, "max": 36, "scores": [36] },
+    "business_value": { "mean": 12, "variance": 0, "min": 12, "max": 12, "scores": [12] },
     "scientific_novelty": { "mean": 5, "variance": 0, "min": 5, "max": 5, "scores": [5] },
-    "philosophical_depth": { "mean": 60, "variance": 0, "min": 60, "max": 60, "scores": [60] },
-    "meaning": { "mean": 66, "variance": 0, "min": 66, "max": 66, "scores": [66] }
+    "philosophical_depth": { "mean": 44, "variance": 0, "min": 44, "max": 44, "scores": [44] },
+    "meaning": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] }
   },
-  "current_value_score": 49,
-  "hidden_potential_score": 59,
+  "current_value_score": 39,
+  "hidden_potential_score": 43,
   "classification": "discovery_target",
   "disagreement_map": [
     {
@@ -37,57 +40,49 @@
       "variance": 0,
       "disputing_evaluators": ["business-value", "originality"],
       "arguments": [
-        "business-value: 詩に直接的な市場価値はない。18点。",
-        "originality: 市場性の低さは芸術価値と別軸であり、独創性78点はむしろ長期的資産。"
-      ]
-    },
-    {
-      "dimension": "scientific_novelty",
-      "variance": 0,
-      "disputing_evaluators": ["scientific-novelty"],
-      "arguments": [
-        "scientific-novelty: 詩に科学的新規性はない。5点。",
-        "（fullモードで招集されたため不適合。autoモードなら creative では招集されない。）"
+        "business-value: 詩に直接的な市場価値はない。12点。",
+        "originality: 市場性の低さは芸術価値と別軸であり、独創性55点はむしろ長期的資産。"
       ]
     }
   ],
-  "consensus_summary": "独創性・感情・意味の3軸で評価者が高く一致。『現在は流通していないが、価値の兆候がある』という見立てで概ね一致。",
-  "executive_summary": "『重力を結わえる人』は独創性(78)・感情(68)・意味(66)が高く、discovery_target（現在評価は限定的だが長期観察対象）と判定。ビジネス価値(18)は本質的に低く、科学新規性(5)は不適合。言語的冒険がやや足りず美学的深みは平均+α(62)。",
-  "synthesis_narrative": "この作品は『今は評価されないが、価値の兆候がある』典型例である。独創性評価者は『重力を結わえる』という比喩の概念的新規性を高く評価したが、ビジネス評価者は市場価値の低さを指摘した。この対立こそが、詩という形式の本質——商業価値と芸術価値の分離——を表している。fullモードで招集された科学評価者が低スコア(5)を付けたのは形式の不適合であり、autoモードなら creative では招集されない点に注意。",
+  "consensus_summary": "独創性(55)・意味(50)・感情(46)が「普通」よりは上だが傑出はしていない。『現在は流通していないが、価値の兆候が少しある』という見立てで概ね一致。",
+  "executive_summary": "『重力を結わえる人』は独創性(55)・意味(50)が平均より上だが、美(40)・品質(42)は凡庸域。厳格スコアリングにより、discovery_target（現在評価は限定的、潜在価値は45近傍）と判定。ビジネス価値(12)は本質的に低い。科学評価は例外的に除外。",
+  "synthesis_narrative": "厳格スコアリング（中央値約30）のもと、この詩は『普通に良い』（30-45）をやや上回る程度。独創性評価者は『重力を結わえる』という比喩に新規性を認め55点を付けたが、美学的評価者は『比喩の展開が直線的で感覚的な深みが足りない』と40点。ビジネス評価者は12点で、詩の市場性の低さを指摘。fullモードで招集された科学評価者は例外的に除外された。全体として『今はまだ埋もれているが、磨けば価値の兆候がある』作品。",
   "individual_reports": [
     {
       "evaluator_id": "originality",
       "evaluator_name": "Originality Evaluator",
       "content_summary": "詩『重力を結わえる人』の独創性評価",
       "domain": "creative",
-      "primary_score": 78,
-      "primary_score_rationale": "『重力』を物理現象ではなく結わえ・ほどけるものとして捉える概念的新規性",
+      "primary_score": 55,
+      "primary_score_rationale": "『重力』を結わえ・ほどけるものとして捉える比喩は新しいが、展開が一方向に留まる",
       "dimension_scores": {
-        "conceptual_novelty": { "score": 82, "weight": 0.35, "evidence": "重力を結わえる・吊るす・ほどく", "judgment": "比喩レベルで新しい" },
-        "combinatorial_surprise": { "score": 75, "weight": 0.25, "evidence": "重荷×重力×紐の結合", "judgment": "予想外の結合" },
-        "distance_from_template": { "score": 80, "weight": 0.25, "evidence": "既存の『重荷』詩との距離", "judgment": "十分に遠い" },
-        "non_obviousness": { "score": 72, "weight": 0.15, "evidence": "独自の比喩運用", "judgment": "専門家でも意外" }
+        "conceptual_novelty": { "score": 58, "weight": 0.35, "evidence": "重力を結わえる・吊るす・ほどく", "judgment": "比喩レベルでは新しい" },
+        "combinatorial_surprise": { "score": 55, "weight": 0.25, "evidence": "重荷×重力×紐の結合", "judgment": "予想はできる" },
+        "distance_from_template": { "score": 52, "weight": 0.25, "evidence": "既存の『重荷』詩との距離", "judgment": "中程度" },
+        "non_obviousness": { "score": 50, "weight": 0.15, "evidence": "独自の比喩運用", "judgment": "専門家を驚かせるほどではない" }
       },
-      "value_vector_contribution": { "originality": 78, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": { "originality": 55, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
       "classification": "discovery_target",
-      "confidence": 85,
-      "strengths": ["重力を操作可能なものとして捉える新規な比喩"],
-      "weaknesses": ["比喩の展開がやや直線的"],
+      "confidence": 70,
+      "strengths": ["重力を操作可能なものとして捉える比喩"],
+      "weaknesses": ["比喩の展開が直線的で、一つの観察で終わっている"],
       "red_flags_triggered": [],
-      "green_flags_detected": ["カテゴリー破壊的比喩", "生産的な奇妙さ"],
-      "unique_perspective": "普遍テーマ（重荷）を物理的比喩で再構成した点が既存詩と明確に差別化されている",
+      "green_flags_detected": ["比喩の新規性"],
+      "unique_perspective": "普遍テーマ（重荷）を物理的比喩で再構成した点が既存詩と少し異なる",
       "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "市場性の低さを指摘するだろう" }],
-      "improvement_suggestions": ["比喩の意外な転換を増やす"],
-      "narrative": "『重力を結わえる』という比喩は、既存の重荷テーマを物理的次元で刷新している。..."
+      "improvement_suggestions": ["比喩の意外な転換を加える（例: 光と錆びの矛盾）", "2連目で視点を反転させる"],
+      "narrative": "『重力を結わえる』という比喩は既存の重荷テーマを物理的次元で捉え直した点で新しい。しかし展開が直線的で、比喩が一つの観察で終わってしまう。..."
     }
   ],
   "recommendations": [
     "discovery_target として記録し、6ヶ月後に再評価する",
-    "詩集の一篇として複数作品と合わせて評価する（単体の商業化は見込まない）",
+    "比喩の転換を加えた改訂版を作成し、再評価する（作成→評価→再作成ループ）",
     "autoモード（creative）なら originality・anti-generic・aesthetic・emotional + meaning・philosophical の6体で十分"
   ],
   "caveats": [
-    "scientific_novelty は詩に不適合（fullモードのため招集された）",
-    "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない"
+    "scientific_novelty は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない",
+    "厳格スコアリング適用のため、以前の非厳格なサンプルと数値の水準が異なる"
   ]
 }

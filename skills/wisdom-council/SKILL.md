@@ -88,13 +88,16 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 
 **評価結果は常に統合する。** 個々の評価者出力は内部の素材であり、成果物は常に統合されたValue Reportである。
 
+**例外的機能 — excluded_evaluators（評価の除外）:** デフォルトでは全評価者を統合する。しかし**例外として**、ドメインやコンテンツ形式に明らかに不適合な評価者（例: 詩への科学評価）は、`excluded_evaluators` に `evaluator_id` と `reason` 付きで記録し、**Value Vector・現在/潜在価値の集計から除外**する。除外した評価者のスコアも `individual_reports` には残す（記録は保つ）。除外は「値が低いから」ではなく「次元が不適合だから」に限る。
+
 1. すべての評価者のJSON出力を収集する。
 2. 各出力を `schemas/value-output.schema.json` に対して検証する。
-3. 合成 Value Vector を構築する（各次元の平均・分散・範囲）。
-4. 不一致クラスタを特定する（分散がしきい値を超える次元）。
-5. 4象限モデルに基づいて分類を導出する。
-6. 統合 Value Report を生成する。
-7. 評価者が不正なJSONを返した場合は、`caveats` に記録して除外し、残りの評価者で続行する。
+3. 例外的に不適合な評価者を判定し、`excluded_evaluators` に記録する。
+4. **除外されなかった評価者のみ**で合成 Value Vector を構築する（各次元の平均・分散・範囲）。
+5. 不一致クラスタを特定する（分散がしきい値を超える次元）。
+6. 4象限モデルに基づいて分類を導出する。
+7. 統合 Value Report を生成する。
+8. 評価者が不正なJSONを返した場合は、`caveats` に記録して除外し、残りの評価者で続行する。
 
 ### Phase 4: Disagreement Preservation（不一致の保存）
 
@@ -128,6 +131,9 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
   "content_type": "text|code|structured",
   "domain": "assessed domain",
   "evaluators_consulted": ["list of evaluator ids"],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "このコンテンツ形式に不適合" }
+  ],
   "value_vector": {
     "originality": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
     "quality": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
@@ -172,16 +178,16 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 - `current_value_score`: quality, originality, aesthetic, emotional_impact, business_value, scientific_novelty の平均（評価された次元のみ）。
 - `hidden_potential_score`: future_potential, meaning, philosophical_depth の平均（評価された次元のみ）。originality は現在価値の一部として扱う（未来寄与の重複カウントを避ける）。
 
-評価者は厳格スコアリング（`references/scoring-strictness.md`）に従うため、絶対スコアは低めに出る。しきい値は相対的な目安であり、Meta Value Layerで実データに基づき再調整する。
+評価者は厳格スコアリング（`references/scoring-strictness.md`）に従うため、絶対スコアは低めに出る（中央値約30、「普通に良い」は30-45）。しきい値は相対的な目安であり、Meta Value Layerで実データに基づき再調整する。
 
 | 現在価値 | 潜在価値 | 分類 |
 |---------|---------|------|
-| ≥ 60 | ≥ 60 | `innovation` |
-| ≥ 60 | 50-59 | `trend_object` |
-| ≥ 60 | < 50 | `current_success` |
-| < 50 | ≥ 60 | `discovery_target` |
-| < 50 | < 50 | `low_signal` |
-| 50-59 | いずれか | 各評価者の `classification` と不一致度で判断（ボーダーケース） |
+| ≥ 45 | ≥ 45 | `innovation` |
+| ≥ 45 | 35-44 | `trend_object` |
+| ≥ 45 | < 35 | `current_success` |
+| < 35 | ≥ 45 | `discovery_target` |
+| < 35 | < 35 | `low_signal` |
+| 35-44 | いずれか | 各評価者の `classification` と不一致度で判断（ボーダーケース） |
 
 絶対スコアの低さだけで `low_signal` と断定しない。各評価者の `classification` と `unique_perspective` を照合して最終判断する。
 
@@ -233,6 +239,13 @@ never a bare collection of individual evaluator outputs. For each
 dimension in the value vector, compute the mean, variance, min, and
 max across evaluators who scored it. Dimensions with no scores remain
 null.
+
+Exceptional exclusion: if a consulted evaluator's dimension is clearly
+not applicable to this content (e.g. scientific novelty for a poem),
+record it in `excluded_evaluators` with a reason and exclude its score
+from the value vector and from current/hidden value aggregation. Its
+raw output stays in `individual_reports`. Exclude only for dimension
+mismatch, never for a low score.
 
 ### Step 4: Build the Disagreement Map
 

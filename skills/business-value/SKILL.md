@@ -157,11 +157,11 @@ become viable businesses. A plausible market with unresolved demand is
 common and scores low. Defensible value is rare. When in doubt, score
 lower — the council discovers rather than approves.
 
-- 0-15: No viable market. No one would pay.
-- 16-35: Weak market logic. Demand unclear or fabricated.
-- 36-55: Plausible market with significant uncertainty. Common.
-- 56-75: Clear market value with identifiable demand and advantage.
-- 76-90: Rarely earned. Strong defensible position in a growing market.
+- 0-10: No viable market. No one would pay.
+- 11-30: Weak market logic. Demand unclear or fabricated.
+- 31-50: Plausible market with significant uncertainty. Common.
+- 51-70: Clear market value with identifiable demand and advantage.
+- 71-90: Rarely earned. Strong defensible position in a growing market.
 - 91-100: Reserved for a venture with network effects and a defensible moat.
 
 ## Calibration Reference

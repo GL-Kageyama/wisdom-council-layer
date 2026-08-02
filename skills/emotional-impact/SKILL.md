@@ -152,14 +152,14 @@ genuine feeling from sentimentality.
 
 Strict calibration: this scale is deliberately harsh. Formulaic sentiment
 and surface emotion are common and score low. Authentic, lasting emotional
-impact is rare. Competent-but-forgettable work lands below 55. When in
+impact is rare. Competent-but-forgettable work lands below 45. When in
 doubt, score lower — the council discovers rather than approves.
 
-- 0-15: Emotionally inert. Leaves no impression.
-- 16-35: Surface emotion only. Formulaic sentiment without depth.
-- 36-55: Genuine feeling in places, uneven throughout. Common.
-- 56-75: Authentically moving. Creates real empathy and lingers.
-- 76-90: Rarely earned. Transforms how one feels. Memorable for years.
+- 0-10: Emotionally inert. Leaves no impression.
+- 11-30: Surface emotion only. Formulaic sentiment without depth.
+- 31-50: Genuine feeling in places, uneven throughout. Common.
+- 51-70: Authentically moving. Creates real empathy and lingers.
+- 71-90: Rarely earned. Transforms how one feels. Memorable for years.
 - 91-100: Reserved for a work that permanently changes emotional understanding.
 
 ## Calibration Reference

@@ -164,11 +164,11 @@ value is rare and must be argued with historical and environmental
 evidence, not optimism. When in doubt, score lower — a Discovery Target is
 a real bet, not a wish.
 
-- 0-15: No future value signal. Trends oppose it; no compounding.
-- 16-35: Limited future potential. Mostly reactive to present conditions.
-- 36-55: Genuine future potential, uncertain direction. Common.
-- 56-75: Strong future potential. Clear alignment with ongoing shifts.
-- 76-90: Rarely earned. A bet the future will reward. Historically
+- 0-10: No future value signal. Trends oppose it; no compounding.
+- 11-30: Limited future potential. Mostly reactive to present conditions.
+- 31-50: Genuine future potential, uncertain direction. Common.
+- 51-70: Strong future potential. Clear alignment with ongoing shifts.
+- 71-90: Rarely earned. A bet the future will reward. Historically
   analogous to recognized-but-late innovation.
 - 91-100: Reserved for a work whose full significance may only be visible
   in decades.

@@ -150,11 +150,11 @@ is the baseline and scores low; it is the minimum, not the standard.
 Professional quality that truly fulfills every promise is rare. When in
 doubt, score lower — the council discovers rather than approves.
 
-- 0-15: Severely incomplete. Promises are broken, execution is rough.
-- 16-35: Below professional standard. Multiple notable flaws.
-- 36-55: Competent but uneven. Delivers on some promises, not others. Common.
-- 56-75: Professional quality. Fulfills its promises with skill.
-- 76-90: Exceptional craft. Masterful execution of every promise.
+- 0-10: Severely incomplete. Promises are broken, execution is rough.
+- 11-30: Below professional standard. Multiple notable flaws.
+- 31-50: Competent but uneven. Delivers on some promises, not others. Common.
+- 51-70: Professional quality. Fulfills its promises with skill.
+- 71-90: Exceptional craft. Masterful execution of every promise.
 - 91-100: Reserved for flawless, reference-grade craft.
 
 ## Calibration Reference

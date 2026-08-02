@@ -164,11 +164,11 @@ exhausts on one reading is common and scores low. Deep, life-shaping
 meaning is rare. When in doubt, score lower — the council discovers rather
 than approves.
 
-- 0-15: No meaning. Does not touch human existence.
-- 16-35: Apparent meaning, exhausted on one reading.
-- 36-55: Genuine meaning in places, uneven throughout. Common.
-- 56-75: Deeply meaningful. Becomes part of how one understands life.
-- 76-90: Rarely earned. A work that gives life new weight and direction.
+- 0-10: No meaning. Does not touch human existence.
+- 11-30: Apparent meaning, exhausted on one reading.
+- 31-50: Genuine meaning in places, uneven throughout. Common.
+- 51-70: Deeply meaningful. Becomes part of how one understands life.
+- 71-90: Rarely earned. A work that gives life new weight and direction.
 - 91-100: Reserved for a work that reorients how a reader lives.
 
 ## Calibration Reference

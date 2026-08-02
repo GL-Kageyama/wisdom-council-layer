@@ -181,6 +181,16 @@ def validate_report(obj):
     if "disagreement_map" in obj and not isinstance(obj["disagreement_map"], list):
         errors.append("disagreement_map must be an array")
 
+    if "excluded_evaluators" in obj:
+        ex = obj["excluded_evaluators"]
+        if not isinstance(ex, list):
+            errors.append("excluded_evaluators must be an array")
+        else:
+            for i, e in enumerate(ex):
+                if isinstance(e, dict) and "evaluator_id" in e:
+                    continue
+                errors.append(f"excluded_evaluators[{i}] must be an object with 'evaluator_id'")
+
     if "value_vector" in obj:
         vec = obj["value_vector"]
         if not isinstance(vec, dict):

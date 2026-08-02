@@ -67,7 +67,7 @@ python utils/validate_output.py < output.json
 | ツール | 役割 |
 |--------|------|
 | `utils/validate_output.py` | 評価者出力のスキーマ検証 |
-| `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・次元間の対立） |
+| `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・次元間の対立）。`--format md` でMarkdown文書出力、`-o` でファイル保存 |
 | `utils/compare_reports.py` | 改訂前後の差分比較（評価→再作成ループ用） |
 
 ## 評価出力は「入力」として設計されている

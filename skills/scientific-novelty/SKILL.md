@@ -163,11 +163,11 @@ incremental application of known methods and scores low. Genuine novelty
 is rare and must be proven against the existing framework, not asserted.
 When in doubt, score lower — the council discovers rather than approves.
 
-- 0-15: No scientific novelty. Known application or combination.
-- 16-35: Marginal novelty. One new element, mostly known framework.
-- 36-55: Genuine novelty in a limited domain. Common.
-- 56-75: Substantial novelty with important implications if correct.
-- 76-90: Rarely earned. A framework-shifting contribution.
+- 0-10: No scientific novelty. Known application or combination.
+- 11-30: Marginal novelty. One new element, mostly known framework.
+- 31-50: Genuine novelty in a limited domain. Common.
+- 51-70: Substantial novelty with important implications if correct.
+- 71-90: Rarely earned. A framework-shifting contribution.
 - 91-100: Reserved for a contribution that reshapes the field.
 
 ## Calibration Reference

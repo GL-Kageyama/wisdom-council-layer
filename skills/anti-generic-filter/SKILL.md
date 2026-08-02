@@ -154,17 +154,17 @@ about what makes content generic.
 ## Scoring Guidelines
 
 Strict calibration: this scale is deliberately harsh. Most polished, correct
-but anonymous output is generic and lands below 55. Scores of 70+ require a
+but anonymous output is generic and lands below 45. Scores of 60+ require a
 voice that could not be mistaken for anyone else's. When in doubt, flag
 genericity — the council discovers rather than approves.
 
-- 0-15: Severely generic. Reads like a polished product of the statistical
+- 0-10: Severely generic. Reads like a polished product of the statistical
   average. No specific person could have written this.
-- 16-35: Mostly generic with flashes of specificity.
-- 36-55: A genuine voice exists but is uneven or partially conventional. Common.
-- 56-75: Clearly the work of a particular sensibility. Committed, specific,
+- 11-30: Mostly generic with flashes of specificity.
+- 31-50: A genuine voice exists but is uneven or partially conventional. Common.
+- 51-70: Clearly the work of a particular sensibility. Committed, specific,
   concrete.
-- 76-90: Rarely earned. Textured, risk-taking, and unmistakably particular.
+- 71-90: Rarely earned. Textured, risk-taking, and unmistakably particular.
 - 91-100: Reserved for a voice that is historically singular.
 
 ## Calibration Reference
