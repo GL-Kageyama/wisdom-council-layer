@@ -441,12 +441,14 @@ def main():
     out_format = "console"
     out_file = None
     show_ind = False
+    format_set = False
     positional = []
     i = 0
     while i < len(args):
         a = args[i]
         if a in ("--format", "-f") and i + 1 < len(args):
             out_format = args[i + 1]
+            format_set = True
             i += 2
         elif a in ("--output", "-o") and i + 1 < len(args):
             out_file = args[i + 1]
@@ -461,6 +463,10 @@ def main():
         else:
             positional.append(a)
             i += 1
+
+    # Auto-detect Markdown output: -o report.md produces MD without --format.
+    if not format_set and out_file and out_file.endswith(".md"):
+        out_format = "md"
 
     if out_format not in ("console", "md"):
         print("--format must be 'console' or 'md'", file=sys.stderr)

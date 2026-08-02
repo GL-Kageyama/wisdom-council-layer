@@ -1,0 +1,293 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "映画企画『瞬きの考古学者』v2改訂案：1フレームにだけ写る母の痕跡を、AI削除モデルの重要度重みを逆手に取って辿る映像考古学者の近未来ミステリー",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "映画企画に科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "未商業化の映画企画に市場性評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {"mean": 60, "variance": 0, "min": 60, "max": 60, "scores": [60]},
+    "quality": {"mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48, 48]},
+    "aesthetic": {"mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56]},
+    "emotional_impact": {"mean": 64, "variance": 0, "min": 64, "max": 64, "scores": [64]},
+    "future_potential": {"mean": 66, "variance": 0, "min": 66, "max": 66, "scores": [66]}
+  },
+  "current_value_score": 57,
+  "hidden_potential_score": 66,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "anti-generic-filter"],
+      "arguments": [
+        "感情影響評価者: 母の自己犠牲と終盤の公開という選択は、観客に同じ問いを課す真摯な構造である。感情操作ではなく、選択の重さで心を動かす（64点）。",
+        "反凡庸フィルター: 母が子を守るための自己犠牲という装置は、観客の涙を誘うよう設計された感情操作の入り口である。抑制して扱わねば凡庸に堕ちる（品質48点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["quality-evaluator", "aesthetic-critic"],
+      "arguments": [
+        "品質評価者: 物語は『調べる』から『選ぶ』へ変わり、構造的に完成した。選択は終わりを持つ（48点）。",
+        "美的批評家: 構造の完成は良いが、母の失踪の真実を説明で語ると、映像の沈黙が持つ美が削がれる。説明の最小化が必要（56点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "v2では、全評価者が『前提の独創性と映像的な核が、物語の骨格・感情の軸・美の形式と一体化した』ことで一致した。個人的な賭け金（母）が加わり、能動的な対立構造（削除モデルとの競走）と終盤の選択が設計された。残る一致した懸念は、説明の最小化と、母の自己犠牲を感情操作へ傾けさせない抑制である。",
+  "executive_summary": "改訂案はイノベーション（Innovation）と判定された。現在価値は34→57、潜在価値は58→66へ上昇し、個人的な賭け金・能動的な対立構造・終盤の選択という再作成指令が、前提の独創性（60）を構造へ波及させた。感情影響（64）・未来可能性（66）が特に伸び、美（56）もモチーフと物語の一体化で構造化された。残る課題は、説明を最小化して映像の神秘を保ち、母の自己犠牲という装置を感傷操作へ傾けさせないことである。",
+  "synthesis_narrative": "議長として私は、この改訂が再作成指令を忠実に反映したことを確認したい。v1で最も厳しかった感情影響評価者の指摘——『観客が誰に感情移入してよいか分からない』——は、追跡対象を主人公の母とする個人的な賭け金によって解消された。品質評価者が指摘した構造の未完成は、削除モデルとの競走という能動的な対立軸と、終盤の公開という実際の選択によって解決された。独創性評価者と美的批評家が評価する中核前提は失われていない。むしろ、母が削除モデルの重要度重みにパンくず列を埋め込んでいたという発明が、前提の独創性を構造へ波及させた。合議は一致してイノベーションと判定する。ただし、反凡庸フィルターの警告は重い——母の自己犠牲という装置は、次の過剰な感情強化で感傷操作へ堕ちる。抑制こそが、この企画の未来を決める。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 60,
+      "primary_score_rationale": "中核前提（1フレームの女）に、追跡対象＝母であるという個人的な再文脈化と、削除モデルの重要度重みを逆手に取った『痕跡のパンくず列』という構造的な独創が加わり、逸脱が前提から構造へ波及した。",
+      "dimension_scores": {
+        "premise_novelty": {"score": 66, "weight": 0.4, "evidence": "1フレームだけに写る母の痕跡", "judgment": "中核前提の独創性は維持された。"},
+        "meaningful_deviation": {"score": 60, "weight": 0.4, "evidence": "母が削除モデルの学習データを自身で編纂し、重要度重みにパンくず列を埋め込んでいた", "judgment": "逸脱が前提から構造へ波及し、追跡の方法そのものが独創的になった。"},
+        "recombination_risk": {"score": 48, "weight": 0.2, "evidence": "旧監視実験という説明", "judgment": "親子の失踪説明がやや既知のディストピアSFに寄る危険が残る。"}
+      },
+      "value_vector_contribution": {"originality": 60, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 74,
+      "strengths": [
+        "1フレームの女＝母という再文脈化が、既に見た映像をすべて裏返す回顧的な独創性を持つ",
+        "削除モデルの重要度重みを利用したパンくず列は、物語の方法自体がオリジナル",
+        "『誰が人の姿を所有するか』という主題と前提が統合された"
+      ],
+      "weaknesses": [
+        "親子の失踪説明が、既知の監視実験SFに寄る類推力の残滓",
+        "説明過多になると、1フレームという映像的な神秘が失われる危険"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["回顧的に意味を変える構造", "映像メディア固有の方法論"],
+      "unique_perspective": "この改訂で最も価値があるのは、追跡方法の独創性（重要度重みのパンくず列）である。これは映像アーカイブという舞台でしか成立しない方法で、観客は玲と同じ手順を体験することで、物語と映像世界の内部構造を同時に理解する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "感情の強度は評価しつつ、説明過多が神秘を削る点を警戒する"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "母失踪の説明が既知の型に寄る点を指摘する"}
+      ],
+      "improvement_suggestions": [
+        "監視実験の説明を削り、映像の神秘を優先する",
+        "パンくず列の発見過程を、観客が同じ推理を追える形で提示する"
+      ],
+      "narrative": "v2では、独創性が前提から構造へ波及した。1フレームの女が母であるという再文脈化は、映像を回顧的に裏返す力を持つ。残る課題は、説明が神秘を侵食しないよう、映像の余白を残すことだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "調査プロシージャルの平均解は解体され、主人公固有の方法論（母が残したパンくず列の復元）と能動的な対立構造に置き換えられた。ただし親子の再会という装置は感情操作の入り口に近く、注視が必要。",
+      "dimension_scores": {
+        "generic_structure_risk": {"score": 52, "weight": 0.4, "evidence": "能動的な目的（削除モデルが最後の痕跡を消す前にパンくず列を辿る）", "judgment": "受動的な調査ものの平均解から脱した。"},
+        "specificity": {"score": 55, "weight": 0.4, "evidence": "重要度重み、パンくず列、玲自身が被検体だった旧実験", "judgment": "固有の語彙が物語を決定づけるまで具体化した。"},
+        "voice": {"score": 38, "weight": 0.2, "evidence": "母の自己犠牲という動機づけ", "judgment": "感情装置として機能する一方、既知の『母は子を守る』の型に収まる危険が残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 48, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 70,
+      "strengths": [
+        "物語の方法（重要度重みのパンくず列）が主人公に固有で、一般化できない",
+        "追跡が能動的になり、生成系AIが安易に出力する受動的調査ものから脱した",
+        "主題（誰が人の姿を所有するか）が物語と一貫している"
+      ],
+      "weaknesses": [
+        "『母が子を守るための自己犠牲』という動機の型に収まる危険",
+        "最後のフレーム公開という選択が、感情操作的な正しさに傾きかねない"
+      ],
+      "red_flags_triggered": ["感情操作の入り口（母の自己犠牲という装置）"],
+      "green_flags_detected": ["固有の方法論", "一般化できない物語構造"],
+      "unique_perspective": "私はv2で改善の大半を認めるが、新しい罠を警戒する。母の自己犠牲という装置は、それ自体が観客の涙を誘うよう設計された感情操作になり得る。この罠を回避するには、母の動機を説明し尽くさず、観客に判断を委ねる余白が要る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "母の自己犠牲を真摯な感情として高く評価し、私の警戒を過剰と見る"},
+        {"evaluator_type": "originality", "predicted_stance": "監視実験の類推力に私ほど神経質ではない"}
+      ],
+      "improvement_suggestions": [
+        "母の動機を説明し尽くさず、映像の余白で観客に判断を委ねる",
+        "感情の強度を抑制し、感傷より客観的な喪失の描き方に重心を置く"
+      ],
+      "narrative": "v2では凡庸の骨格が解体され、固有の方法論が立った。残る罠は、新しく入った母の自己犠牲が感情操作へ傾くことだ。この装置を抑制して扱えれば、この企画は凡庸を確実に回避する。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 56,
+      "primary_score_rationale": "1フレームの女というモチーフが、削除モデルの重要度重みと結びつき、物語の骨格そのものを貫く映像言語になった。欠落する映像、消される母の姿という、破壊の美学が構造化された。",
+      "dimension_scores": {
+        "visual_core": {"score": 62, "weight": 0.5, "evidence": "1フレームの女が母となり、パンくず列の復元が追跡の方法になる", "judgment": "モチーフが物語の骨格と接続し、形式として機能し始めた。"},
+        "sensuous_realization": {"score": 50, "weight": 0.3, "evidence": "消されるフレーム、欠落していく母の姿", "judgment": "欠落の美学が設計に現れたが、具体的な映像文法の詳細はまだ。"},
+        "formal_coherence": {"score": 55, "weight": 0.2, "evidence": "削除モデルの重要度重み＝映像の保存条件という、世界のルールと映像形式の一致", "judgment": "世界のルールと映像形式が一致し、美が構造と統合された。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": 56, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 73,
+      "strengths": [
+        "1フレームというモチーフが物語の骨格（追跡の方法）と一体化した",
+        "削除＝欠落という、映像が失われていく破壊の美学が構造化された",
+        "世界のルール（重要度重み）と映像形式（何が残り何が消えるか）が一致している"
+      ],
+      "weaknesses": [
+        "感覚的な具体化（実際の映像文法）はまだ企図の段階",
+        "母の失踪の真実が説明で語られると、映像の沈黙が持つ美が削がれる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["モチーフと構造の一体化", "破壊の美学の構造化"],
+      "unique_perspective": "この改訂の最大の美学的成果は、削除モデルの重要度重みが『映像の保存条件』として世界のルールと映像形式を一致させたことだ。玲が母のフレームを復元する過程は、そのまま画面の欠落が満たされていく過程になる。この形式は、物語と美が同じ動きで進むことを可能にする。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "映像文法の具体化不足を指摘し、美学の予感をやや過小評価する"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "欠落の美が、母を失った感情の重みを十分に運べると見るかは評価が割れ得る"}
+      ],
+      "improvement_suggestions": [
+        "フレームの復元を、画面の欠落が満たされる具体的な映像文法として設計する",
+        "母の失踪の真実は説明でなく、映像の余白で語る"
+      ],
+      "narrative": "v2では、1フレームのモチーフが物語の骨格と一体化し、破壊の美学が構造化された。美が物語の内側から作品を支え始めている。残る課題は、映像文法の具体化と、説明による美の侵食を防ぐことだ。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 64,
+      "primary_score_rationale": "母の顔を知らない主人公が、1フレームだけに写る母を見つけ、母が自分を守るために消えたことを知る——この構造は、喪失・再会の希望・罪悪感という感情装置を物語の骨格に組み込み、観客の感情移入を可能にした。",
+      "dimension_scores": {
+        "empathy_generation": {"score": 66, "weight": 0.5, "evidence": "3歳のときに母が失踪し、顔を知らない玲", "judgment": "『顔を知らない親』という普遍的な欠落が共感を生む。"},
+        "emotional_stake": {"score": 68, "weight": 0.3, "evidence": "最後の1フレームを公開すれば母の痕跡は保存されるが、自分の過去も永久保存される", "judgment": "観客が追える具体的な選択が感情的な賭け金を生む。"},
+        "memory_persistence": {"score": 58, "weight": 0.2, "evidence": "1フレームにだけ写る母、消えゆく痕跡", "judgment": "残像と欠落のイメージが記憶に残る。ただし感傷に傾く危険も。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": 64, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 76,
+      "strengths": [
+        "個人的な賭け金（母＝追跡対象）が感情移入の軸を作った",
+        "終盤の選択（公開か破棄か）が、観客自身の問いになる",
+        "『顔を知らない母』という欠落が、最も普遍的な喪失の形と直結する"
+      ],
+      "weaknesses": [
+        "母の自己犠牲の説明が強すぎると、感傷操作に傾く",
+        "感情の強度を演出に頼りすぎると、映像の抑制が失われる"
+      ],
+      "red_flags_triggered": ["感情操作の予兆（自己犠牲という装置が強く働き過ぎた場合）"],
+      "green_flags_detected": ["喪失と選択が構造に組み込まれた"],
+      "unique_perspective": "この改訂で私が最も重視するのは、感情が『設定』から『構造』へ昇格したことだ。最後のフレームの公開という選択は、母を救うことと、自分自身をアーカイブに曝すことが不可分である点で、観客に同じ問いを課す。感情操作でなく、選択の重さで心を動かせる位置に立った。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "母の自己犠牲を感情操作の入り口と見て警戒する"},
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "感情の強度が映像の沈黙の美を削ることを警戒する"}
+      ],
+      "improvement_suggestions": [
+        "母の動機を説明し尽くさず、観客の想像に委ねる",
+        "感情の強度を演出ではなく選択の重さで支える"
+      ],
+      "narrative": "v2で感情は設定から構造へ昇格した。顔を知らない母、そして公開という選択は、観客に同じ問いを課す。感傷に堕さなければ、この企画は心を深く動かす位置に立つ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "三幕構成の後半（転換・決着）が設計され、主人公が能動的な目的と選択を持つ構造になった。世界観のルール（重要度重み）も定義され、整合性を検証できる段階に達した。",
+      "dimension_scores": {
+        "structural_completion": {"score": 55, "weight": 0.4, "evidence": "転換（母のパンくず列の発見）と決着（最後の1フレームの公開という選択）", "judgment": "三幕構成が一応の完成を見た。"},
+        "premise_execution": {"score": 52, "weight": 0.3, "evidence": "削除モデルの重要度重みが追跡の方法と結びつく", "judgment": "前提が構造として機能するまで組み立てられた。"},
+        "craft_precision": {"score": 42, "weight": 0.3, "evidence": "旧監視実験、玲自身が被検体だった設定", "judgment": "設定の精密さは向上したが、説明の取り扱いには注意が要る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 48, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 74,
+      "strengths": [
+        "能動的な目的と選択を持つ構造になった",
+        "世界観のルール（重要度重み）が定義され、整合性を検証できる",
+        "転換点と決着が設計された"
+      ],
+      "weaknesses": [
+        "説明（監視実験・被検体設定）が過剰だと、物語の余白と神秘を損なう",
+        "あくまで企画の段階で、脚本としての完成度は未検証"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構造の完成", "ルールの定義"],
+      "unique_perspective": "私の観点から見た最大の変化は、物語が『調べる』から『選ぶ』へ変わったことだ。調査プロシージャルは終わりがなく、品質として評価しづらいが、選択は終わりを持つ。この構造的な完成が、この企画を評価可能な対象へ引き上げた。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "映像文法の具体化をさらに要求する"},
+        {"evaluator_type": "originality", "predicted_stance": "説明の削減を求め、神秘の優先を主張する"}
+      ],
+      "improvement_suggestions": [
+        "説明を最小化し、物語の余白を残す",
+        "脚本段階で、選択の結果が物語をどう閉じるかを検証する"
+      ],
+      "narrative": "v2は構造的に完成した。物語は調べるから選ぶへ変わり、評価可能な対象になった。残る作業は、説明を最小化して余白を残し、脚本段階で選択の結末を検証することだ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "映画企画『瞬きの考古学者』v2改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 66,
+      "primary_score_rationale": "記憶の所有という主題が、母の自己犠牲と監視実験という個人的・社会的な両軸を得て、環境変化で価値が一層上昇する方向に定まった。1フレームの女という資産はシリーズ展開に耐える。",
+      "dimension_scores": {
+        "environment_fit": {"score": 68, "weight": 0.4, "evidence": "母の自己犠牲＝監視社会から子を守る行為", "judgment": "監視・記録・AIによる記憶再構成が進む時代に、この主題の切実さは増す。"},
+        "expansion_room": {"score": 64, "weight": 0.3, "evidence": "パンくず列、旧監視実験、玲自身の記録", "judgment": "シリーズ・スピンオフ・世界観の拡張が自然に可能。"},
+        "timeliness_risk": {"score": 62, "weight": 0.3, "evidence": "個人的な記憶と社会的な監視の接続", "judgment": "親子の物語と監視社会の物語が接続され、類推力が弱まった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 66, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "個人的な喪失と社会的な監視が接続され、主題の射程が広がった",
+        "1フレームの女という映像的資産が、シリーズ展開に耐える",
+        "AIによる記憶再構成が進む未来に、この主題は一層切実になる"
+      ],
+      "weaknesses": [
+        "主題が広がりすぎると焦点が分散する危険",
+        "監視実験の説明が既知のSFの類推力に寄ると、将来の差別化が弱まる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["主題の時代適合性", "拡張可能な映像的資産"],
+      "unique_perspective": "私はこの改訂で、企画が『種』から『作品になり得るもの』へ移行したと見る。個人的な記憶と社会的な監視が接続されたことで、この企画は個人の物語であると同時に、未来の社会論として読める射程を持った。この二重性こそ、長期的な価値の源泉である。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "主題の広がりが焦点を分散させるリスクを指摘する"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "監視実験の類推力に警戒を続ける"}
+      ],
+      "improvement_suggestions": [
+        "個人と社会の二重性を、どちらかに寄せず保つ",
+        "監視実験の説明は最小限にし、差別化要素を独自のルールで担保する"
+      ],
+      "narrative": "v2は『種』から『作品になり得るもの』へ移行した。個人的な喪失と社会的な監視の接続が、企画に長期的な射程を与えた。この二重性を保てるかどうかが、未来の価値を左右する。"
+    }
+  ],
+  "recommendations": [
+    "母の失踪の真実は説明でなく、映像の余白と観客の想像に委ねる",
+    "母の自己犠牲の動機を説明し尽くさず、抑制した演出で感情操作を回避する",
+    "パンくず列の発見過程を、観客が同じ推理を追える形で脚本化する",
+    "監視実験の説明は最小限にし、差別化を独自のルールで担保する",
+    "映像文法（フレームの復元＝画面の欠落の回復）を具体化する"
+  ],
+  "caveats": [
+    "評価対象は企画・あらすじであり、脚本・演出の実物ではない。品質・美のスコアは企画段階の上限",
+    "過修正のリスク: 独創的な前提が、説明過多と感情装置の強化で凡庸な親子ドラマに丸まる恐れ",
+    "イノベーション判定は『現在価値・潜在価値ともに45以上』の基準を満たしたもの。完成作の実物検証は未実施"
+  ]
+}

@@ -1,191 +1,289 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "スタートアップ『消えゆく日記』改訂案——『消える前提』を差別化軸に",
+  "content_summary": "FOODSIGN（フードサイン）v2 — B2B在庫シグナル基盤へのピボット改訂",
   "domain": "business",
   "mode": "full",
-  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "future-potential", "quality-evaluator", "meaning-evaluator"],
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "quality-evaluator", "future-potential", "meaning-evaluator"],
   "excluded_evaluators": [
-    { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
+    {"evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）"},
+    {"evaluator_id": "aesthetic-critic", "reason": "企画文書に美的完成度の評価軸は不適合"},
+    {"evaluator_id": "emotional-impact", "reason": "ビジネス企画評価では主軸とならない（消費者感情はbusiness-valueが担う）"},
+    {"evaluator_id": "philosophical-evaluator", "reason": "企画段階では市場価値の検証が優先され、世界観の変容評価は時期尚早"}
   ],
   "value_vector": {
-    "originality": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
-    "quality": { "mean": 51, "variance": 4, "min": 50, "max": 52, "scores": [52, 50] },
-    "business_value": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] },
-    "future_potential": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
-    "meaning": { "mean": 28, "variance": 0, "min": 28, "max": 28, "scores": [28] }
+    "originality": {"mean": 45, "variance": 0, "min": 45, "max": 45, "scores": [45]},
+    "quality": {"mean": 52, "variance": 4, "min": 50, "max": 54, "scores": [54, 50]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 34, "variance": 0, "min": 34, "max": 34, "scores": [34]},
+    "business_value": {"mean": 55, "variance": 0, "min": 55, "max": 55, "scores": [55]},
+    "scientific_novelty": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 30, "variance": 0, "min": 30, "max": 30, "scores": [30]}
   },
-  "current_value_score": 53,
-  "hidden_potential_score": 34,
+  "current_value_score": 51,
+  "hidden_potential_score": 32,
   "classification": "current_success",
   "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 4,
+      "disputing_evaluators": ["quality-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "quality-evaluator: 3本柱の収益と垂直特化で、構成・実現可能性が明確に改善した（54）",
+        "anti-generic-filter: 「データ×物流×コンサル」の三点セットは、今度はB2B文脈の新たな定型に近づきつつある（50）"
+      ]
+    },
     {
       "dimension": "business_value",
       "variance": 0,
       "disputing_evaluators": ["business-value", "meaning-evaluator"],
       "arguments": [
-        "business-value: 『消える前提』は差別化され、市場性が高い。58点。",
-        "meaning-evaluator: 市場性は高いが、感情の扱いに意味性は依然薄い。28点。"
+        "business-value: リカーリング型データライセンスで収益の安定性が高まり、正面競合を回避する差別化が明確（55）",
+        "meaning-evaluator: 事業としては改善したが、食品ロスという人間的テーマを『シグナル商品』に転化する視点は依然として軽い（30）"
       ]
     }
   ],
-  "consensus_summary": "『永続保存』を『消える前提』に反転した差別化により、ビジネス価値が42→58に改善。独創性も38→50に。",
-  "executive_summary": "『消える前提』の反転により、ビジネス価値が42→58、独創性が38→50に改善。現在価値53で current_success に到達。ただし意味(28)は低く、深みは今後の課題。",
-  "synthesis_narrative": "作成スキルが個別評価（weaknesses）を入力に合成した再作成指令（差別化軸の反転）が有効だった。ビジネス評価者は『消える前提は既存と真逆で口コミが生まれる』と58点。独創性も『消えゆき方の可視化』という独自体験として50点。一方、意味評価者は28点のままで、感情の扱いの深みが次の課題。",
+  "consensus_summary": "6名の評価者は、『割引の場から廃棄の予測と転換のインフラへ』のピボットが差別化を明確にし、ビジネス価値（55）と品質（52）を引き上げた点で概ね一致。データライセンスというリカーリング収益と垂直特化による参入障壁が評価され、current_successへ分類された。一方、future-potentialとmeaningは構造改善を認めつつも、長期の持続性と人間的テーマの軽量化には引き続き懐疑的である。",
+  "executive_summary": "FOODSIGN v2は、レジAPI＋IoTセンサーで店舗の売れ残りを自動取得し、廃棄予測データのライセンスと共同物流で収益化するB2B在庫シグナル基盤。消費者CACへの依存を脱し、競合の正面から外れた差別化とリカーリング収益で現時点の価値（≈51）を確保した。",
+  "synthesis_narrative": "合議はv2をcurrent_successと判定した。改善指令（差別化の明確化・収益ロジックの再構築）が、汎用アプリを『売り切れロスの予測と転換を商品化する』独自の基盤へ再定義した。残る論点は、データライセンスの買い手が十分に存在するかという需要の検証と、新たな定型（データ×物流×コンサル）に陥るリスクである。",
   "individual_reports": [
     {
       "evaluator_id": "originality",
-      "evaluator_name": "Originality Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の独自性評価",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
       "domain": "business",
-      "primary_score": 50,
-      "primary_score_rationale": "『消える前提』という逆転の発想が既存と差別化された",
+      "primary_score": 45,
+      "primary_score_rationale": "『廃棄の場』から『売り切れのシグナル』へ商品の対象を変えた点が、割引市場の文脈からの意味ある逸脱として評価できる。垂直特化の非自明さも加算。",
       "dimension_scores": {
-        "conceptual_novelty": { "score": 52, "weight": 0.35, "evidence": "永続保存の反転", "judgment": "新しい角度" },
-        "combinatorial_surprise": { "score": 50, "weight": 0.25, "evidence": "消える×感情記録", "judgment": "意外な結合" },
-        "distance_from_template": { "score": 48, "weight": 0.25, "evidence": "既存日記との差", "judgment": "明確になった" },
-        "non_obviousness": { "score": 48, "weight": 0.15, "evidence": "消える前提の着想", "judgment": "やや意外" }
+        "conceptual_novelty": {"score": 46, "weight": 0.35, "evidence": "「売れ残り在庫を自動取得し、廃棄予測データとして商品化する」はフードロス領域では見慣れない視点", "judgment": "根底のアイデアが、割引からデータへと思考の枠組みごと移動した。"},
+        "combinatorial_surprise": {"score": 45, "weight": 0.25, "evidence": "「POS/重量センサー×廃棄予測×共同物流」の結合が新しい意味（廃棄の転換）を生む", "judgment": "既存要素の組み合わせだが、その結合は予測しにくい方向にある。"},
+        "distance_from_template": {"score": 44, "weight": 0.25, "evidence": "Too Good To Go系の消費者割引テンプレートから明確に離れた", "judgment": "最も近い先行作品からの距離が、v1に比べて大きく広がった。"},
+        "non_obviousness": {"score": 44, "weight": 0.15, "evidence": "ベーカリー・精肉という垂直特化は、一般の実践者が選ばない死角", "judgment": "見て「なるほど」とはなるが、自然には思いつきにくい。"}
       },
-      "value_vector_contribution": { "originality": 50, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
-      "classification": "current_success",
-      "confidence": 72,
-      "strengths": ["逆転の発想による差別化"],
-      "weaknesses": ["『消える』の意味づけが浅い"],
+      "value_vector_contribution": {"originality": 45, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 71,
+      "strengths": [
+        "商品の対象を『場（割引）』から『シグナル（データ）』へ移した発想の転換",
+        "垂直特化という、業界の常識の死角を突く非自明性"
+      ],
+      "weaknesses": [
+        "「データ×物流×コンサル」の三点セットはB2B分野で多用される組み合わせで、まだ完全に独自ではない",
+        "データ基盤のアイデア自体は既存のサプライチェーン系SaaSの延長に見える"
+      ],
       "red_flags_triggered": [],
-      "green_flags_detected": ["カテゴリー破壊的な角度"],
-      "unique_perspective": "『消える』を機能でなくコンセプトにした点が新しい",
-      "expected_disagreement_points": [{ "evaluator_type": "meaning-evaluator", "predicted_stance": "意味性は薄いと見るだろう" }],
-      "improvement_suggestions": ["『消えゆき方』の体験をより具体的に"],
-      "narrative": "永続保存の常識を反転させた点が差別化として機能した。..."
+      "green_flags_detected": ["意味ある逸脱（割引→データ）", "非自明な垂直特化"],
+      "unique_perspective": "改善の本質は『同じ市場で商品の対象を変えた』ことだ。独創性は需要を新しく作ることではなく、既存の需要の『見方を変える』ことでも成立する。ここが正しく効いている。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "差別化の明確化を高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "B2B定型（データ×物流×コンサル）への回帰を指摘し、やや低く見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "垂直特化の業界固有知識（ベーカリーの焼き上がりサイクル等）を文書に埋め込み、代替不能性を高める",
+        "データライセンスという手法に依らず、業界独自の運用ノウハウそのものを企画の中核に据える"
+      ],
+      "narrative": "この改訂は、私がv1で求めた『同じ需要の場で、新しさを生む方法』を正しく実行している。割引市場の見方を変え、店舗が毎晩捨てる在庫を『明日の予測』に変換した。ただし、その手法がまた別の定型に落ち着かないか、次なる非自明が試される。"
     },
     {
       "evaluator_id": "anti-generic-filter",
-      "evaluator_name": "Anti-Generic Filter",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の凡庸性評価",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
       "domain": "business",
-      "primary_score": 52,
-      "primary_score_rationale": "『消える前提』に固有の体験の声が現れた",
+      "primary_score": 50,
+      "primary_score_rationale": "SDGsの善意を割引に回収する凡庸構図は消え、店舗のオペレーションという具体的な細部（レジAPI・重量センサー）が現れた。ただしB2Bの定型への接近は残る。",
       "dimension_scores": {
-        "generic_language_density": { "score": 50, "weight": 0.30, "evidence": "定番語は減った", "judgment": "改善" },
-        "risk_avoidance": { "score": 55, "weight": 0.25, "evidence": "既存と真逆を選ぶ", "judgment": "リスクを取った" },
-        "information_density": { "score": 50, "weight": 0.25, "evidence": "コンセプトが明確", "judgment": "向上" },
-        "particularity": { "score": 52, "weight": 0.20, "evidence": "消えゆき方のUI", "judgment": "独自性が出た" }
+        "generic_language_density": {"score": 52, "weight": 0.30, "evidence": "「POS/重量センサー」「垂直領域」など、置き換え不能な具体要素が増えた", "judgment": "言い回しが具体的になり、どの企画にも当てはまる万能感が薄れた。"},
+        "risk_avoidance": {"score": 54, "weight": 0.25, "evidence": "「消費者割引競争の正面から外れる」という明確な立場表明がある", "judgment": "判断を下し、反論を呼び込む覚悟ができた。"},
+        "information_density": {"score": 48, "weight": 0.25, "evidence": "収益が3本柱で明示され、データライセンス・物流・コンサルと分節化された", "judgment": "v1より情報量は増えたが、各柱の数字根拠は未だ薄い。"},
+        "particularity": {"score": 44, "weight": 0.20, "evidence": "「レジAPI連携」「IoT重量センサー」は他の企画に置き換えにくい細部", "judgment": "特定の店舗オペレーションに根ざした固有性が出てきた。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": 52, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "current_success",
-      "confidence": 68,
-      "strengths": ["差別化の声が出た"],
-      "weaknesses": ["消えゆき方のUIの具体性不足"],
+      "confidence": 74,
+      "strengths": [
+        "善意の上に立つ売り文句が消え、測定可能なオペレーションの言葉に置き換わった",
+        "「店舗の登録運用負担ゼロ」という、導入現場の具体性に踏み込んだ",
+        "明確な立場（割引競争の回避）を取っている"
+      ],
+      "weaknesses": [
+        "「データ×物流×コンサル」の三点セットは、今度はB2B文脈の新しい定型に見える",
+        "各収益柱の数値根拠（ライセンス単価・想定契約数）が欠落し、情報密度に限界がある"
+      ],
       "red_flags_triggered": [],
-      "green_flags_detected": ["生産的なリスク"],
-      "unique_perspective": "『消える』を選んだことで、このアプリでしかない体験の手がかりが生まれた",
-      "expected_disagreement_points": [{ "evaluator_type": "quality-evaluator", "predicted_stance": "実装前提は依然不明と見るだろう" }],
-      "improvement_suggestions": ["消えゆき方のUXを具体的に設計する"],
-      "narrative": "差別化の言葉がコンセプトに現れ、凡庸さが薄れた。..."
+      "green_flags_detected": ["具体的細部（POS・重量センサー）", "リスクを取った立場表明"],
+      "unique_perspective": "私は『具体性』で品質を嗅ぐ。v2にはレジAPI、重量センサー、ベーカリーの焼き上がり——現場の摩擦から生まれた言葉がある。これが凡庸から抜ける唯一の道だが、同時にB2B定型の罠も新たに見えている。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "改善を構造の一貫性として認め、私より高い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "収益の3本柱を高く評価し、リカーリング構造を重視するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "各収益柱に想定単価・契約数・ユニットエコノミクスの数字を入れ、情報密度を上げる",
+        "「データ×物流×コンサル」の各要素を業界固有の細部で塗り替え、定型化を防ぐ"
+      ],
+      "narrative": "この改訂は、私が嗅ぎ取る『平均的な正しさ』の匂いをかなり薄めた。店舗の冷蔵庫の話が、ようやく具体的な言葉になった。だがB2B企画は、『データと物流とコンサル』という三つ子を並べれば通る、という新たな迷信に陥りやすい。次はその迷信を破る番だ。"
     },
     {
       "evaluator_id": "business-value",
-      "evaluator_name": "Business Value Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の市場性評価",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
       "domain": "business",
-      "primary_score": 58,
-      "primary_score_rationale": "『消える前提』は既存と真逆で、差別化と話題性が生まれる",
+      "primary_score": 55,
+      "primary_score_rationale": "手数料依存からリカーリング型データライセンスへ収益の質が変わり、競合の正面を避ける差別化が明確になった。需要の実証が次の課題。",
       "dimension_scores": {
-        "market_demand": { "score": 55, "weight": 0.30, "evidence": "消す自由への需要", "judgment": "明確化" },
-        "growth_potential": { "score": 60, "weight": 0.25, "evidence": "プライバシー意識の高まり", "judgment": "追い風" },
-        "feasibility_of_delivery": { "score": 52, "weight": 0.20, "evidence": "消える仕組みは実装可能", "judgment": "改善" },
-        "competitive_advantage": { "score": 62, "weight": 0.25, "evidence": "コンセプトの差別化", "judgment": "参入障壁に近い" }
+        "market_demand": {"score": 58, "weight": 0.30, "evidence": "食品メーカーの廃棄ロスは経営課題として支払い意欲が想定できる", "judgment": "買い手は特定できた。ただし金額・件数は未実証で、需要の確度はあくまで想定。"},
+        "growth_potential": {"score": 58, "weight": 0.25, "evidence": "廃棄削減の規制強化と、廃棄処理費の高騰がB2B需要を押し上げる", "judgment": "市場は構造的に伸びる。追い風がデータ購買予算に転換するかが鍵。"},
+        "feasibility_of_delivery": {"score": 52, "weight": 0.20, "evidence": "レジAPI連携と重量センサーは既存技術で実装可能", "judgment": "技術的には届く。店舗への導入初期コストの負担モデルが未確定。"},
+        "competitive_advantage": {"score": 50, "weight": 0.25, "evidence": "垂直特化と導入店舗数の蓄積で参入障壁を築く構想", "judgment": "障壁は『これから作る』段階で、現時点ではまだ防御力がない。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 58, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 55, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "current_success",
-      "confidence": 75,
-      "strengths": ["コンセプト差別化"],
-      "weaknesses": ["収益モデルが未確定"],
+      "confidence": 78,
+      "strengths": [
+        "取引手数料一本から、データライセンス・物流・コンサルの3本柱へ収益を分散した",
+        "消費者割引競争の正面を避け、資本力で潰されにくい場所を選んだ",
+        "店舗の登録負担ゼロ（自動取得）が、導入摩擦を下げる明確な論理になっている"
+      ],
+      "weaknesses": [
+        "データライセンスの買い手（食品メーカー）の支払い意思が未検証",
+        "センサー・POS導入の初期コストを誰が負担するかのモデルが未確定",
+        "参入障壁は構想段階で、まだ実績による防御力を持たない"
+      ],
       "red_flags_triggered": [],
-      "green_flags_detected": ["参入障壁", "話題性"],
-      "unique_perspective": "『消える』は機能でなく価値提案であり、真似されにくい",
-      "expected_disagreement_points": [{ "evaluator_type": "meaning-evaluator", "predicted_stance": "市場性と意味性は別と見るだろう" }],
-      "improvement_suggestions": ["収益モデル（サブスク等）を固める"],
-      "narrative": "『消える前提』は既存と真逆で、価値提案として機能する。..."
-    },
-    {
-      "evaluator_id": "future-potential",
-      "evaluator_name": "Future Potential Analyzer",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の将来性評価",
-      "domain": "business",
-      "primary_score": 40,
-      "primary_score_rationale": "コンセプトは明確になったが、市場の受け方は不確実",
-      "dimension_scores": {
-        "environmental_shift_potential": { "score": 45, "weight": 0.30, "evidence": "データ断捨離の流れ", "judgment": "追い風" },
-        "historical_similarity": { "score": 38, "weight": 0.25, "evidence": "消えるSNSの前例", "judgment": "賛否両論" },
-        "compounding_value": { "score": 38, "weight": 0.25, "evidence": "消えるので蓄積しない", "judgment": "限定" },
-        "timing_analysis": { "score": 40, "weight": 0.20, "evidence": "時期は悪くない", "judgment": "普通" }
-      },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 40, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
-      "classification": "trend_object",
-      "confidence": 60,
-      "strengths": ["データ断捨離の追い風"],
-      "weaknesses": ["消える価値の持続性は不明"],
-      "red_flags_triggered": [],
-      "green_flags_detected": [],
-      "unique_perspective": "『消える』が一過性のトレンドになるか、根強い価値になるかは未知数",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "現在の市場価値を重視するだろう" }],
-      "improvement_suggestions": ["消える先の『残るもの』を設計する"],
-      "narrative": "コンセプトは明確だが、長期の価値は実証待ち。..."
+      "green_flags_detected": ["リカーリング収益構造", "需要の買い手が特定された", "競合の正面を回避"],
+      "unique_perspective": "私は『儲けの質』を見る。v1の手数料は市場の風向きに左右されるが、v2のデータライセンスは契約で積み上がる。そして重要なのは、店舗の在庫データが増えるほど予測精度が上がり、メーカーが離れられなくなる構造だ——これがネットワーク効果の原型になれる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "食品ロスを商品（シグナル）に転化する冷徹さを、テーマの軽量化として批判するだろう。"},
+        {"evaluator_type": "future-potential", "predicted_stance": "現在の需要実証の不足を指摘し、私より控えめな点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "MVP前に食品メーカー2〜3社との契約意向（LOI）を取得し、需要を実証する",
+        "導入初期コストを店舗負担にしない回収モデル（機器のリース化等）を設計する",
+        "100店規模の導入実績を最優先のKPIとし、参入障壁の実体を築く"
+      ],
+      "narrative": "この改訂は『アイデアの良さ』から『ビジネスの成り立ち』へ、ようやく踏み出した。儲けの源泉が手数料の風まかせから、契約で積み上がるデータの価値へ変わった。だが投資家は次の瞬間に『そのデータに最初に金を払うのは誰だ？』と聞く。買い手のサインが一枚でもあれば、この評価はもう一段跳ねる。"
     },
     {
       "evaluator_id": "quality-evaluator",
-      "evaluator_name": "Quality Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の完成度評価",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
       "domain": "business",
-      "primary_score": 50,
-      "primary_score_rationale": "コンセプトは明確化したが、実装詳細はまだ不十分",
+      "primary_score": 54,
+      "primary_score_rationale": "v1で未回収だった課題（店舗の在庫運用負担）への解決手段が明記され、収益・差別化・先行優位の三層が整合的に構成された。",
       "dimension_scores": {
-        "technical_quality": { "score": 50, "weight": 0.35, "evidence": "消える仕組みの設計", "judgment": "方向は良い" },
-        "precision": { "score": 48, "weight": 0.20, "evidence": "消えゆき方の定義", "judgment": "やや曖昧" },
-        "structure": { "score": 52, "weight": 0.25, "evidence": "構成は明確", "judgment": "改善" },
-        "feasibility": { "score": 48, "weight": 0.20, "evidence": "端末内処理の実装前提", "judgment": "まだ不明" }
+        "technical_quality": {"score": 55, "weight": 0.35, "evidence": "事業概要・差別化・収益3本柱・先行優位・変更点の5層が論理的に接続されている", "judgment": "各層が互いを支える構造に仕上がった。"},
+        "precision": {"score": 54, "weight": 0.20, "evidence": "「月額固定」「年額契約」と収益の性質を区別して明示", "judgment": "収益の質（リカーリング）まで書けた精度の向上。"},
+        "structure": {"score": 54, "weight": 0.25, "evidence": "「店舗側の登録運用負担はゼロ（自動取得）」が、v1の課題欄の約束を回収している", "judgment": "自己指摘した問題への答を企画内に閉じられた。"},
+        "feasibility": {"score": 52, "weight": 0.20, "evidence": "レジAPI・重量センサーは実装可能な技術で、物流は既存業者との提携で成立", "judgment": "実現可能性は高まったが、導入コストの分担が未確定のまま残る。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": null, "quality": 54, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "current_success",
-      "confidence": 70,
-      "strengths": ["コンセプトの明確化"],
-      "weaknesses": ["技術スタック未確定"],
+      "confidence": 73,
+      "strengths": [
+        "v1で挙げた店舗オペレーションの課題に対し、自動取得という具体的な解決を明記した",
+        "差別化→収益→先行優位が因果として繋がる構成",
+        "収益の性質（リカーリング・年額）まで区別した精密さ"
+      ],
+      "weaknesses": [
+        "各収益柱の数値（ライセンス単価・想定契約数・限界利益）が未記載",
+        "導入初期コスト（センサー・POS）の負担モデルが未確定で、実現可能性に影を残す"
+      ],
       "red_flags_triggered": [],
-      "green_flags_detected": ["約束の遵守"],
-      "unique_perspective": "『消えゆき方』の技術実装（ローカル削除・定期削除）が次段階の要",
-      "expected_disagreement_points": [{ "evaluator_type": "anti-generic-filter", "predicted_stance": "コンセプトの声は出たと認めるだろう" }],
-      "improvement_suggestions": ["技術スタックと削除仕様を明記する"],
-      "narrative": "コンセプトは明確になったが、実装の土台は次段階。..."
+      "green_flags_detected": ["約束の回収（店舗運用負担の解決）", "構造の一貫性", "収益の性質の明示"],
+      "unique_perspective": "完成度検査官として私が最も評価するのは『約束の回収』だ。v1で課題と書いたことを、v2が答えて閉じた。改善のループが、単なる表現の変更ではなく構造の強化として機能している。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "B2Bの定型への接近を指摘し、構成の良さを『型通り』と見るだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "収益構造の改善を評価しつつ、数値根拠の欠如をより強く要求するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "収益3本柱それぞれに、単価・契約数・限界利益の数字を入れる",
+        "導入初期コストの負担と回収のモデル（リース、成功報酬型）を明文化する"
+      ],
+      "narrative": "v2の構成は、v1の課題をきちんと回収した形になっている。店舗の運用負担という約束を、自動取得という手段で閉じ、差別化から収益までが一本の因果で繋がった。残る粗は数字と負担モデルだ。それを埋めれば、この企画の品質はさらに高くなる。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
+      "domain": "business",
+      "primary_score": 34,
+      "primary_score_rationale": "在庫データの蓄積が予測精度を高め、複利の価値構造が生まれた。ただし需要実証がなく、環境変化がデータ購買予算に転換する確度は未だ低い。",
+      "dimension_scores": {
+        "environmental_shift_potential": {"score": 40, "weight": 0.30, "evidence": "食品ロス規制の強化と廃棄処理費の高騰が、廃棄予測データへの需要を押し上げる方向", "judgment": "進行中の変化がこの企画の価値を押し上げる方向に働く。"},
+        "historical_similarity": {"score": 32, "weight": 0.25, "evidence": "サプライチェーンSaaSが『データ資産』として評価された系譜と部分的に類似", "judgment": "完全な前例はないが、否定された革新というより検証待ちの構造。"},
+        "compounding_value": {"score": 34, "weight": 0.25, "evidence": "在庫データが増えるほど予測精度が上がり、メーカーが離れにくくなる", "judgment": "データが蓄積する複利の構造が企画に組み込まれた。"},
+        "timing_analysis": {"score": 28, "weight": 0.20, "evidence": "データ購買の制度・予算の整備が、現在の実行よりも遅い可能性", "judgment": "環境の成熟は確認できるが、収益化のタイミングには不確実性が残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 34, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 67,
+      "strengths": [
+        "データが増えるほど精度が上がる複利構造が企画に組み込まれた",
+        "フードロス規制という進行中の変化を、市場追い風として正しく見ている"
+      ],
+      "weaknesses": [
+        "データライセンスの買い手の支払いが実証されておらず、未来価値の前提が不安定",
+        "『場を割引からデータへ』移したが、そのデータの制度化（購入予算）が実現する確度が不明"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["複利の価値構造"],
+      "unique_perspective": "v1で私が指摘した『在庫データを捨てている』問題は、この改訂で修正された。毎晩積まれる売れ残り情報を資産として貯める方向へ向いた。未来の時間軸で見る限り、これは正しい方向だが、資産になるには需要の実証が不可欠だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "現在の収益構造の改善を重視し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "originality", "predicted_stance": "データ化の方向性を独自性として評価し、未来の可能性を高く見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "パイロット事業で廃棄予測データの購入実績を作り、複利の前提を実証する",
+        "食品メーカーの購買予算サイクルに合わせた導入時期（年度計画）を企画に織り込む"
+      ],
+      "narrative": "私はv1で、この企画が毎晩捨てる在庫データを資産にできずに割引で消費している、と指摘した。v2はそれを直した——データを貯め、予測の精度を上げる構造へ。しかし資産は、誰かが金を払って初めて価値になる。最初の買い手の痕跡がまだない限り、私はこの可能性を控えめにしか賭けない。"
     },
     {
       "evaluator_id": "meaning-evaluator",
-      "evaluator_name": "Meaning Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』改訂案の意味性評価",
+      "evaluator_name": "意味評価者（意味の守護者）",
+      "content_summary": "FOODSIGN v2 — B2B在庫シグナル基盤へのピボット改訂",
       "domain": "business",
-      "primary_score": 28,
-      "primary_score_rationale": "『消える』の意味づけが、人間の生への繋がりにまだ届かない",
+      "primary_score": 30,
+      "primary_score_rationale": "事業としての質は改善したが、食品ロスを『廃棄予測データ』という商品へ転化する視点は、テーマの人間的な重みをさらに遠ざけている。",
       "dimension_scores": {
-        "existential_resonance": { "score": 26, "weight": 0.35, "evidence": "消える感情の意味", "judgment": "未深化" },
-        "narrative_power": { "score": 30, "weight": 0.25, "evidence": "消えゆき方の体験", "judgment": "手がかりはある" },
-        "significance": { "score": 28, "weight": 0.20, "evidence": "必要性", "judgment": "中途" },
-        "interpretive_depth": { "score": 30, "weight": 0.20, "evidence": "消える前提の深掘り", "judgment": "浅い" }
+        "existential_resonance": {"score": 24, "weight": 0.35, "evidence": "「廃棄予測データ」「シグナル商品」と、食と人をつなぐ言葉が企画から消えた", "judgment": "売れ残った食の意味への問いは、v1よりむしろ遠ざかった。"},
+        "narrative_power": {"score": 28, "weight": 0.25, "evidence": "物語の中心が『データの価値』になり、食べ手の物語が脱落", "judgment": "B2B化で物語の層が失われた。"},
+        "significance": {"score": 36, "weight": 0.20, "evidence": "廃棄転換という機能は社会的に重要", "judgment": "テーマの重要さは維持されるが、企画に必然性の物語はない。"},
+        "interpretive_depth": {"score": 35, "weight": 0.20, "evidence": "「売れ残り＝シグナル」という新しい見方は一つの解釈の深まり", "judgment": "ビジネス的解釈としては深まったが、人間的意味の層は薄い。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 28 },
-      "classification": "low_signal",
-      "confidence": 65,
-      "strengths": ["消えゆき方に物語の可能性"],
-      "weaknesses": ["感情の扱いが浅い"],
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 30},
+      "classification": "trend_object",
+      "confidence": 62,
+      "strengths": [
+        "「売れ残りをシグナルと捉える」という見方には、ビジネス文脈で一つの解釈の深まりがある"
+      ],
+      "weaknesses": [
+        "食品ロスという人間的テーマが『データ商品』に転化され、人の物語が脱落した",
+        "善意の回収ではなくなったが、今度はその逆で、テーマが冷徹な商品化に晒されている"
+      ],
       "red_flags_triggered": [],
       "green_flags_detected": [],
-      "unique_perspective": "『消える』ことは意味の断絶だが、それがなぜ救いなのかが描かれていない",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "意味性は市場性と別と見るだろう" }],
-      "improvement_suggestions": ["『消えて楽になる』体験を物語として描く"],
-      "narrative": "コンセプトは明確になったが、人間の生への意味づけは次の課題。..."
+      "unique_perspective": "私はこの改訂の成功（ビジネス価値の向上）を否定しない。ただ、食品ロスの『意味』への問いが、v1の善意とは逆の方向——データへの還元——で失われていることに注意を促す。テーマの重さと事業の成り立ちは、両立し得る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "データ商品化はビジネスとして正しく、意味の軽さは評価の外と見るだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "構成の一貫性の改善を評価し、私より高い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "B2Bデータ事業の上に、受け取りの場に食べ手と作り手が交わる体験（v1の消費者機能の意味化）を残す",
+        "「捨てられる食を、誰かの食事に変える」という物語を、データ基盤の外殻として据える"
+      ],
+      "narrative": "この企画はv1の『善意の商品化』からv2の『データの商品化』へ、質は大きく上がったが、人間の姿はさらに遠くなった。食品ロスという、捨てられる食とそれを待つ人の物語は、合議の外でまだ誰も語っていない。事業が成功するほど、その物語を語る者はこの企画の中に必要になる。"
     }
   ],
   "recommendations": [
-    "収益モデルと技術実装を固め、プロトタイプを作成する",
-    "意味性を高める改訂（『消えて楽になる』の物語）を次回の再作成指令にする"
+    "データライセンスの初期買い手（食品メーカー2〜3社）との契約意向をMVP前に確保し、需要を実証する",
+    "重量センサー・レジAPI導入店舗を100店規模で先行展開し、参入障壁の実体と実証データを積む",
+    "消費者向け機能は受け取り専用に最小化し、CACへの投資を止める",
+    "『データ×物流×コンサル』の三点セットが新たな定型化しないよう、業界固有の運用知識を特許・ブランドで保護する"
   ],
-  "caveats": ["科学評価は不適合のため除外"]
+  "caveats": [
+    "B2Bデータライセンスの実需（支払い意思・単価）は未検証であり、現在価値の前提は想定に依拠する",
+    "POS/重量センサー導入の初期コストを誰が負担するかのモデルが未確定",
+    "食品メーカーのデータ購買予算は景気変動に左右されやすい"
+  ]
 }

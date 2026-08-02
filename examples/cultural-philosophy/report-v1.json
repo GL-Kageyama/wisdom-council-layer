@@ -1,29 +1,338 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "思想エッセイ『便利さは選択の手触りを奪う』初案",
+  "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案",
   "domain": "cultural",
   "mode": "full",
-  "evaluators_consulted": ["originality", "anti-generic-filter", "aesthetic-critic", "philosophical-evaluator", "future-potential", "meaning-evaluator", "quality-evaluator"],
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "philosophical-evaluator",
+    "meaning-evaluator",
+    "aesthetic-critic",
+    "future-potential"
+  ],
   "excluded_evaluators": [
     { "evaluator_id": "scientific-novelty", "reason": "エッセイに科学的新規性は不適合（例外的除外）" },
     { "evaluator_id": "business-value", "reason": "思想エッセイに市場性評価は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 30, "scores": [30] },
-    "quality": { "mean": 28, "scores": [28] },
-    "aesthetic": { "mean": 25, "scores": [25] },
-    "philosophical_depth": { "mean": 32, "scores": [32] },
-    "future_potential": { "mean": 30, "scores": [30] },
-    "meaning": { "mean": 33, "scores": [33] }
+    "originality": { "mean": 30, "variance": 0, "min": 30, "max": 30, "scores": [30] },
+    "quality": { "mean": 28, "variance": 0, "min": 28, "max": 28, "scores": [28] },
+    "aesthetic": { "mean": 25, "variance": 0, "min": 25, "max": 25, "scores": [25] },
+    "philosophical_depth": { "mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32] },
+    "future_potential": { "mean": 30, "variance": 0, "min": 30, "max": 30, "scores": [30] },
+    "meaning": { "mean": 33, "variance": 0, "min": 33, "max": 33, "scores": [33] }
   },
   "current_value_score": 29,
   "hidden_potential_score": 32,
   "classification": "low_signal",
-  "executive_summary": "テーマは既知の技術批判の繰り返しで、具体性が乏しい。現在価値29・潜在価値32で low_signal（現時点では価値兆候なし）。",
-  "synthesis_narrative": "哲学評価者は『テクノロジー批判の定番テーマで、独自の問いがない』と32点。美評価者は『抽象的な言い回しに終始し、感覚的な深みがない』と25点。",
-  "recommendations": [
-    "『手触り』を抽象でなく物理的感覚として具体化する",
-    "冒頭に身体的な記憶を置き、読者の感覚に届ける"
+  "disagreement_map": [
+    {
+      "dimension": "philosophical_depth",
+      "variance": 0,
+      "disputing_evaluators": ["philosophical-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "philosophical-evaluator: 『迷うこと＝場所を知る身体的な道』という問いの芽は潜在的に本物で、32点。",
+        "anti-generic-filter: その芽が抽象のままでは凡庸な技術批判に終わり、28点。"
+      ]
+    }
   ],
-  "caveats": ["科学・ビジネス評価は不適合のため除外"]
+  "consensus_summary": "6体全員が『既知の技術批判の定番を超えていない』『具体の身体経験がない』で一致し、全次元が30点前後に沈んでlow_signal。唯一の前向きな一致は、例外なく指摘された『迷いを身体知として扱う』テーマの潜在的可能性だった。",
+  "executive_summary": "初案は『ナビゲーションが迷いを奪う』という既知の技術批判の繰り返しで、身体経験の具体が皆無。全次元が30点前後で、現在価値29・潜在価値32のlow_signal（現時点では価値兆候なし）。ただし『迷い＝場所を知る身体的な道』という問いの種は、6体が例外なく指摘した。次回はその種を一人の身体の記憶として芽生えさせるべき。",
+  "synthesis_narrative": "議長として、私は各評価者の声をそのまま重ねた。独創性評価者は『「スマホが何かを奪う」という構図はもう何百回も見た。初案には新しさの種があるが、芽生えていない』と30点。凡庸性探知犬は『どの街にも当てはまる、つまり誰の言葉でもない』と28点。美の批評家は『何も濡れていない』と25点。哲学評価者は『問いの芽は本物だが、技術批判に閉じている』と32点。意味の守護者は『体験を生きている人間がいない』と33点。未来の観測者は『未来が噛みつく肉がない』と30点。低スコアの一致は、内容が凡庸なのではなく、まだ生まれていない——種は共有された。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の独自性評価",
+      "domain": "cultural",
+      "primary_score": 30,
+      "primary_score_rationale": "ナビゲーション批判の定番テーマで、既存から意味ある逸脱がない",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 32, "weight": 0.35, "evidence": "ナビ・効率化批判", "judgment": "既知の枠組み" },
+        "combinatorial_surprise": { "score": 30, "weight": 0.25, "evidence": "地図×身体の記憶", "judgment": "予測の範囲内" },
+        "distance_from_template": { "score": 28, "weight": 0.25, "evidence": "『スマホが何かを奪う』定番構図", "judgment": "テンプレートに近い" },
+        "non_obviousness": { "score": 30, "weight": 0.15, "evidence": "道に迷う経験への言及", "judgment": "誰でも思いつく" }
+      },
+      "value_vector_contribution": {
+        "originality": 30,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 70,
+      "strengths": [
+        "身体と場所の関係という切り口自体はあり得る"
+      ],
+      "weaknesses": [
+        "テクノロジー批判の定番パターンの踏襲",
+        "独自の問いがまだ立てられていない"
+      ],
+      "red_flags_triggered": [
+        "トレンドの追従",
+        "見せかけの新しさ"
+      ],
+      "green_flags_detected": [],
+      "unique_perspective": "『迷う』を失敗でなく身体知として再定義する余地はあるが、初案はそれを語れていない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "philosophical-evaluator", "predicted_stance": "問いの潜在性は評価するが、抽象度に不満を持つだろう" }
+      ],
+      "improvement_suggestions": [
+        "迷いを身体的な記憶として具体的に描く",
+        "ナビゲーション批判の定型から離れた軸を探す"
+      ],
+      "narrative": "「スマホが何かを奪う」という構図自体は、もう何百回も見た。初案には『迷うこと＝場所を知る身体的な道』という新しさの種があるが、それが芽生えていない。抽象的なままでは凡庸な技術批判に終わる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の凡庸性評価",
+      "domain": "cultural",
+      "primary_score": 28,
+      "primary_score_rationale": "批判の構図が安全圏で、固有の声がまだない",
+      "dimension_scores": {
+        "generic_language_density": { "score": 28, "weight": 0.3, "evidence": "『〜を奪っている』の定番構文", "judgment": "やや凡庸" },
+        "risk_avoidance": { "score": 26, "weight": 0.25, "evidence": "両論併記的で断言がない", "judgment": "安全な中道" },
+        "information_density": { "score": 30, "weight": 0.25, "evidence": "抽象語が並ぶが具体がない", "judgment": "薄い" },
+        "particularity": { "score": 28, "weight": 0.2, "evidence": "特定の経験・場所・場面がない", "judgment": "置き換え可能" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 28,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 72,
+      "strengths": [
+        "テーマ自体に身体性の芽がある"
+      ],
+      "weaknesses": [
+        "具体のない抽象批判",
+        "『〜を奪う』型の定型表現"
+      ],
+      "red_flags_triggered": [
+        "過剰な婉曲",
+        "ハッシュタグ的な響き"
+      ],
+      "green_flags_detected": [],
+      "unique_perspective": "初案はどの街にもどの身体にも当てはまる、つまり誰の言葉でもない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "感覚の細部がないと見るだろう" }
+      ],
+      "improvement_suggestions": [
+        "一つの迷った経験を、体の記憶として書く"
+      ],
+      "narrative": "この初案は、文法的には正しく、論理的にも一貫している。しかしどの段落にも『この人でしか書けない』一行がない。雨、角、迷いの手触り——そういう具体が一つもない限り、凡庸性の探知犬としては無罪を出せない。"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "evaluator_name": "Philosophical Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の思想的深さ評価",
+      "domain": "cultural",
+      "primary_score": 32,
+      "primary_score_rationale": "問いの方向はあるが、既知の問いを既知の仕方で繰り返している",
+      "dimension_scores": {
+        "worldview_impact": { "score": 33, "weight": 0.3, "evidence": "地図と場所の関係への示唆", "judgment": "限定的" },
+        "contribution_to_self_understanding": { "score": 32, "weight": 0.25, "evidence": "身体と場所の記憶", "judgment": "表面的" },
+        "intellectual_depth": { "score": 32, "weight": 0.25, "evidence": "『迷う』の再定義は未展開", "judgment": "構造が浅い" },
+        "novelty_of_question": { "score": 30, "weight": 0.2, "evidence": "技術が体験を奪う系の定番", "judgment": "既知の問い" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": 32,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 70,
+      "strengths": [
+        "『迷うこと』を身体知として扱う潜在的な問いは本物"
+      ],
+      "weaknesses": [
+        "前提の検討がない",
+        "抽象と具体の往復がない"
+      ],
+      "red_flags_triggered": [
+        "浅い相対主義"
+      ],
+      "green_flags_detected": [
+        "開かれた問いの芽"
+      ],
+      "unique_perspective": "『地図を知る』と『場所に住む』の違いは哲学的な問いになり得るが、初案ではその問いが『技術批判』に閉じている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "future-potential", "predicted_stance": "時代の変化で価値が上がる問いとして見るだろう" }
+      ],
+      "improvement_suggestions": [
+        "『知る』の二つの意味（命題知と身体知）を区別する"
+      ],
+      "narrative": "初案は『テクノロジーが経験を奪う』という通りのよい批判に収まっている。哲学者としては、ここに本当の問いが潜んでいると見る——迷いの中で体が街を覚えるとき、私たちは何を知っているのか。しかし初案はその問いに踏み込めていない。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の意味性評価",
+      "domain": "cultural",
+      "primary_score": 33,
+      "primary_score_rationale": "場所との関係という生の層には触れるが、一読で尽きる",
+      "dimension_scores": {
+        "existential_resonance": { "score": 34, "weight": 0.35, "evidence": "場所・帰属・迷い", "judgment": "生の問いに触れ始める" },
+        "narrative_power": { "score": 32, "weight": 0.25, "evidence": "物語の構造がない", "judgment": "平坦" },
+        "significance": { "score": 33, "weight": 0.2, "evidence": "必要性の感覚", "judgment": "中程度" },
+        "interpretive_depth": { "score": 32, "weight": 0.2, "evidence": "読み返す層がない", "judgment": "一読で尽きる" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": 33
+      },
+      "classification": "low_signal",
+      "confidence": 66,
+      "strengths": [
+        "『自分のものになった場所』という着想は人生の理解に触れる"
+      ],
+      "weaknesses": [
+        "具体の人生が不在",
+        "解釈の層が一つのみ"
+      ],
+      "red_flags_triggered": [
+        "意味の捏造"
+      ],
+      "green_flags_detected": [
+        "人生の転機を照らす可能性"
+      ],
+      "unique_perspective": "『迷わなかった街』と『迷って自分のものになった街』の差は、人生の所有についての深い問いになり得る",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "形がなければ意味も届かないと見るだろう" }
+      ],
+      "improvement_suggestions": [
+        "一人の固有の経験として迷いの記憶を書く"
+      ],
+      "narrative": "意味の守護者として、私は『ある街が自分のものになる』という着想に耳を傾けた。それは住まうことの意味への問いだ。しかし初案にはその体験を生きている人間がいない。抽象のままでは、意味は作られたもので終わる。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の美的評価",
+      "domain": "cultural",
+      "primary_score": 25,
+      "primary_score_rationale": "感覚的質感が皆無で、形式としてのまとまりも未熟",
+      "dimension_scores": {
+        "formal_coherence": { "score": 24, "weight": 0.3, "evidence": "論点の提示のみで構成が未完", "judgment": "ばらばら" },
+        "expressive_range": { "score": 25, "weight": 0.25, "evidence": "抽象語が意味を担えていない", "judgment": "表現が鈍い" },
+        "sensuous_quality": { "score": 26, "weight": 0.25, "evidence": "五感に届く言葉がない", "judgment": "平板" },
+        "aesthetic_ambition": { "score": 26, "weight": 0.2, "evidence": "試みの方向は悪くない", "judgment": "未着手" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": 25,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 68,
+      "strengths": [
+        "テーマの視覚性（迷い・街）は美的な可能性を持つ"
+      ],
+      "weaknesses": [
+        "感覚の厚みがない",
+        "散文としてのリズムがない"
+      ],
+      "red_flags_triggered": [
+        "表面の磨きだけ"
+      ],
+      "green_flags_detected": [],
+      "unique_perspective": "『迷う』は本来、身体のリズムと街のテクスチャーで描ける題材だが、初案はそれを論点に還元している",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "経験の重みがなければ意味も届かないと見るだろう" }
+      ],
+      "improvement_suggestions": [
+        "冒頭に五感を伴う一場面を置く"
+      ],
+      "narrative": "題材は美の批評家を興奮させる——雨に濡れた夜の街は、光と音と肌触りに満ちている。だが初案には何も濡れていない。抽象的な批判の骨組みだけで、散文としてはまだ息をしていない。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Analyzer",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』初案の将来性評価",
+      "domain": "cultural",
+      "primary_score": 30,
+      "primary_score_rationale": "都市と注意力の変化は味方し得るが、現状では再訪されるほどの深さがない",
+      "dimension_scores": {
+        "environmental_shift_potential": { "score": 32, "weight": 0.3, "evidence": "ナビ依存への反動", "judgment": "追い風はある" },
+        "historical_similarity": { "score": 28, "weight": 0.25, "evidence": "技術批判文芸の先例の多さ", "judgment": "前例はむしろ多い" },
+        "compounding_value": { "score": 30, "weight": 0.25, "evidence": "具体がなければ再訪の価値が薄い", "judgment": "現状では弱い" },
+        "timing_analysis": { "score": 30, "weight": 0.2, "evidence": "テーマは『今』だが中身が薄い", "judgment": "中身の問題" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 30,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 62,
+      "strengths": [
+        "『迷いの価値』への関心は社会の変化とともに高まり得る"
+      ],
+      "weaknesses": [
+        "初案では中身が不足",
+        "再訪を促す具体がない"
+      ],
+      "red_flags_triggered": [
+        "根拠のない楽観"
+      ],
+      "green_flags_detected": [
+        "進行中の変化の味方"
+      ],
+      "unique_perspective": "ナビ依存の反動として『意図的に迷うこと』が文化になれば、このテーマは浮上する。初案はその芽を含むが、まだ花にしない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "具体性のないままだと凡庸と断じるだろう" }
+      ],
+      "improvement_suggestions": [
+        "身体経験の物語を足して再訪価値を高める"
+      ],
+      "narrative": "テーマの向きは悪くない——ナビへの依存が進み、その反動として『迷いの練習』が注目される時代は来る。だが未来は希望的観測では読まない。初案には未来が噛みつく具体的な肉がない。"
+    }
+  ],
+  "recommendations": [
+    "一人の固有の迷いの記憶（雨・角・体の手触り）を冒頭に置く",
+    "『地図を知ること』と『場所に住むこと』の差を、抽象ではなく経験として描く"
+  ],
+  "caveats": [
+    "科学・ビジネス評価は次元不適合のため例外的除外",
+    "エッセイは初案の段階で、完成度評価は暫定的"
+  ]
 }

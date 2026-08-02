@@ -1,26 +1,272 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "科学仮説『失敗挿入型反復』初案",
+  "report_timestamp": "2026-08-02T12:00:00Z",
+  "content_summary": "科学研究仮説v1「睡眠時聴覚キューによる記憶固定化の変調」に対する合議評価",
+  "content_type": "structured",
   "domain": "scientific",
   "mode": "full",
   "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
   "excluded_evaluators": [],
   "value_vector": {
-    "originality": { "mean": 35, "scores": [35] },
-    "quality": { "mean": 30, "scores": [30] },
-    "scientific_novelty": { "mean": 38, "scores": [38] },
-    "future_potential": { "mean": 55, "scores": [55] },
-    "meaning": { "mean": 42, "scores": [42] },
-    "philosophical_depth": { "mean": 38, "scores": [38] }
+    "originality": {"mean": 31, "variance": 0, "min": 31, "max": 31, "scores": [31]},
+    "quality": {"mean": 33, "variance": 0, "min": 33, "max": 33, "scores": [33, 33]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48]},
+    "business_value": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "scientific_novelty": {"mean": 34, "variance": 0, "min": 34, "max": 34, "scores": [34]},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46]}
   },
-  "current_value_score": 34,
-  "hidden_potential_score": 45,
+  "current_value_score": 33,
+  "hidden_potential_score": 47,
   "classification": "discovery_target",
-  "executive_summary": "仮説の着想はあるが検証デザインが粗く、現在価値は34。潜在価値45で discovery_target（未来の可能性はあるが現状は未成熟）。",
-  "synthesis_narrative": "科学評価者は『想起失敗を利用する点は既存研究の延長で、新規性が明確でない』と38点。品質評価者は『検証デザインが具体的でない』と30点。しかし未来評価者は『学習科学として需要がある』と55点。",
-  "recommendations": [
-    "検証デザイン（対照群・被験者数）を具体化する",
-    "新規性の主張を『想起失敗を記憶タグとして使う』点に絞る"
+  "disagreement_map": [
+    {
+      "dimension": "scientific_novelty",
+      "variance": 0,
+      "disputing_evaluators": ["scientific-novelty", "future-potential"],
+      "arguments": [
+        "scientific-novelty: 「提示パターンによる変調」という枠組みは既存TMR研究の外挿に過ぎず、既存の理論体系に実際に新しい予測を加える概念が明示されていない。ノーマルサイエンスの範囲内で、新規性としての評価は控えめになる（34点）。",
+        "future-potential: 変調の方向性が「強まる場合と弱まる場合」の両方を含意するのは、現在のTMR文献が未解決のまま残している問いの構造そのものである。単なる組み合わせに落ちない開かれた問いを含む点に将来価値を見る（48点）。"
+      ]
+    }
   ],
-  "caveats": []
+  "consensus_summary": "全評価者が、この仮説には「検証可能な将来価値の種」が含まれる一方、現時点では枠組みの提示に留まり具体的な新奇予測・操作定義・実験デザインを欠いている点で一致した。scientific_novelty と originality が低いのは欠陥というより「未定式化」であり、方向性は正しいと評価された。",
+  "executive_summary": "この仮説は、睡眠中のキュー再提示（TMR）が記憶を強化するという既存知見を、提示パターンという変数で変調できるという枠組みを提案する。現在価値は凡庸に近い（33）が、潜在価値は明確に高い（47）。独自性・科学的新規性・品質は未熟だが、問いの構造がTMR研究の未解決問題に接続しており、再作成によって大きな改善余地がある。Discovery Targetとして長期観察・改良対象に指定する。",
+  "synthesis_narrative": "議長として、6体の評価者は互いに独立に評価したが、驚くほど一貫した絵を描いた。独創性鑑定人（31）は「既存の組み合わせ」と切り、凡庸性探知犬（33）は「平均的な仮説文体」と嗅ぎ分け、科学的新規性査読者（34）は「ノーマルサイエンスの外挿」と評した。一方、未来時間軸の観測者（48）は「現在の文献が答えていない問いを含む」点を、意味の守護者（46）は「記憶が夜に強化される」という物語の接続力を評価した。この分裂——現在価値は低く潜在価値は高い——は、まさにDiscovery Targetの典型である。再作成の焦点は明確だ：反直観的な新奇予測を定式化し、反証条件と実験デザインを与えること。それだけで現在価値は飛躍しうる。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性鑑定人",
+      "content_summary": "睡眠時キューによる記憶固定化変調仮説の独創性評価",
+      "domain": "scientific",
+      "primary_score": 31,
+      "primary_score_rationale": "TMRの既存知見の組み合わせに留まり、意味ある逸脱が定式化されていない。「変調」の方向性に言及はあるが、その予測が具体的でない。",
+      "dimension_scores": {
+        "meaningful_deviation": {"score": 30, "weight": 0.5, "evidence": "「強化効果が強まったり弱まったりする」という緩い枠組み", "judgment": "既存の組み合わせから逸脱していない"},
+        "counterintuitive_flip": {"score": 32, "weight": 0.3, "evidence": "変調の方向性に言及はあるが具体性がない", "judgment": "反直観的主張として未熟"},
+        "specificity_of_claim": {"score": 31, "weight": 0.2, "evidence": "「キューの提示パターン」という変数指定", "judgment": "変数は特定されたが予測が弱い"}
+      },
+      "value_vector_contribution": {"originality": 31, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "TMR研究の前提（再提示=強化）そのものを疑う構えがある点は、組み合わせにとどまらない可能性の芽",
+        "既存知見を参照して文脈を正しく踏まえている点で、的外れな新規性主張ではない"
+      ],
+      "weaknesses": [
+        "「変調」の方向性が両方向に開いており、どちらの予測をしているのか判別不能",
+        "提示パターンと固定化機序の接続が記述のみで、逸脱の芯がない",
+        "偽の新しさの典型パターン（変数を付け替えただけの言い換え）に近い"
+      ],
+      "red_flags_triggered": ["偽の新しさ（変数の付け替えによる表面的な言い換え）"],
+      "green_flags_detected": ["既存パラダイムの前提を問う姿勢"],
+      "unique_perspective": "TMRの「強化」を前提としない発想は、組み合わせ型AI出力には出にくい方向性で、ここだけは将来の逸脱の核になり得る。現状はそれが埋もれている。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "新規性より反証可能性の欠如を重く見て、さらに低く採点するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "未定式化の問い自体に将来価値を見て、逆方向に高く評価するだろう"}
+      ],
+      "improvement_suggestions": [
+        "変調の方向性を片側に確定し、既存TMR理論と異なる具体的予測を1つ定式化する",
+        "「なぜ」予測が反転するのかの機序仮説（神経同調・予測誤差等）を明示する"
+      ],
+      "narrative": "これはまだ逸脱ではない。既存の部品を並べた図面で、方向性の兆しはあるが芯がない。しかし、前提を疑う姿勢そのものは組み合わせ型AIには出せない動きで、ここだけは生きた細胞に見える。芯を1本通せば、見違える。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性探知犬",
+      "content_summary": "睡眠時聴覚キュー仮説の凡庸性スクリーニング",
+      "domain": "scientific",
+      "primary_score": 33,
+      "primary_score_rationale": "標準的な仮説文体で、新情報密度が低い。独自の声や取れないこだわりが現時点で検出されない。",
+      "dimension_scores": {
+        "generic_risk": {"score": 32, "weight": 0.4, "evidence": "「知られている」「提案する」など教科書的な言い回し", "judgment": "平均的な仮説文体"},
+        "information_density": {"score": 33, "weight": 0.3, "evidence": "TMRの既知メカニズム記述が大部分を占める", "judgment": "新情報密度は低い"},
+        "particularity": {"score": 34, "weight": 0.3, "evidence": "嗅覚・聴覚・紡錘波・海馬リプレイという具体要素", "judgment": "具体要素はあるが独自の輪郭には至らない"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 33, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [
+        "実験不可能な空想仮説ではなく、固定化機序（紡錘波・リプレイ）への言及がある点で分野の文法を守っている",
+        "平均的なAI出力特有の過剰な断定や感情操作がない"
+      ],
+      "weaknesses": [
+        "誰が書いても同じ文面になる「統計的平均へ最適化された声」に近い",
+        "具体性が列挙の域で、仮説固有のこだわり・歪みがない",
+        "リスク回避的で、独自の予測を出すことを避けている"
+      ],
+      "red_flags_triggered": ["統計的平均へ最適化された声"],
+      "green_flags_detected": ["分野の文法（メカニズムへの言及）を正しく踏む"],
+      "unique_perspective": "この仮説は「AIが出してもおかしくない」かたちをしているが、唯一、TMRの強化前提を疑う方向だけが機械の平均解では出ない線だ。そこに本当の輪郭がある。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "文体の凡庸さより記憶の物語性を重く見て、高く評価するだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "文体の完成度は認めつつ、実験計画の欠落を指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "教科書的な前提の書き下ろしを削り、仮説固有の予測に紙面を割く",
+        "具体的な刺激仕様（周波数・強度・タイミング）まで落とし込む"
+      ],
+      "narrative": "この文面は、百人の研究者のどれが書いても成立する。それは悪いことではないが、まだ誰の言葉でもない。唯一、前提を疑う向きだけが、この仮説の「顔」になり得る。そこを突き詰めれば、凡庸の殻を破れる。"
+    },
+    {
+      "evaluator_id": "scientific-novelty",
+      "evaluator_name": "科学的新規性査読者",
+      "content_summary": "睡眠時聴覚キュー仮説の科学的新規性・検証可能性評価",
+      "domain": "scientific",
+      "primary_score": 34,
+      "primary_score_rationale": "既存TMR理論の外挿の域を出ず、新たな予測を明示しない。反証条件が未設定で検証可能性の設計が未熟。",
+      "dimension_scores": {
+        "frontier_advancement": {"score": 33, "weight": 0.5, "evidence": "「提示パターンによる変調」の提案", "judgment": "ノーマルサイエンスの範囲内の外挿"},
+        "falsifiability": {"score": 35, "weight": 0.3, "evidence": "明確な反証条件が未設定", "judgment": "検証可能性の設計が未熟"},
+        "importance_if_true": {"score": 34, "weight": 0.2, "evidence": "記憶固定化の理解に寄与しうる", "judgment": "重要度のポテンシャルはあるが定式化が弱い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": 34, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "検証可能な実験手法（TMR）の文脈に正しく位置づけられており、学問的には妥当な問い",
+        "仮説としての形式（主張・機序の想定）は整っている"
+      ],
+      "weaknesses": [
+        "「変調される」は記述であって予測ではない。具体的な予測曲線・方向が存在しない",
+        "どの観測が仮説を否定するのか（反証条件）が不明で、科学的新規性の評価ができない",
+        "既存文献への実質的な新規寄与（未知の現象・新たな予測）が明示されていない"
+      ],
+      "red_flags_triggered": ["既知の組み合わせを新規と称するリスク"],
+      "green_flags_detected": ["検証可能な実験パラダイムの上に立っている"],
+      "unique_perspective": "科学的新規性は「正しさ」ではなく「正しければ世界の見方が変わる予測」にある。現状は予測が空で、その判定が不可能な状態。しかし予測が1本入れば、外挿が飛躍に転化する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "future-potential", "predicted_stance": "未解決の問いの構造に将来価値を見て、新規性の欠如を過小評価するだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "形式の一貫性は認めるが、検証設計の欠落を重く見るだろう"}
+      ],
+      "improvement_suggestions": [
+        "既存TMR理論と異なる新たな予測を1つに絞って定式化する",
+        "反証条件（どの結果なら仮説を棄却するか）を明記する"
+      ],
+      "narrative": "査読者として言うなら、これはまだ「研究計画の芽」であって、新規性の主張としては未完成だ。検証可能な実験系の上に立っている点は評価するが、予測が空では知識の前線は動かない。1本の反直観的予測と反証条件が加われば、評価は一変する。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度検査官",
+      "content_summary": "睡眠時聴覚キュー仮説の技術的完成度・実現可能性評価",
+      "domain": "scientific",
+      "primary_score": 33,
+      "primary_score_rationale": "仮説の構造は一貫しているが、実験デザインが未記載で、操作定義が曖昧。約束したことを検証する手段がない。",
+      "dimension_scores": {
+        "technical_completion": {"score": 32, "weight": 0.35, "evidence": "仮説の構造（主張・機序）は一貫", "judgment": "形式は整っている"},
+        "feasibility": {"score": 33, "weight": 0.35, "evidence": "実験デザインが未記載", "judgment": "実行可能性の担保がない"},
+        "precision": {"score": 34, "weight": 0.3, "evidence": "「強まったり弱まったり」という操作定義の曖昧さ", "judgment": "精度に欠ける"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 33, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 71,
+      "strengths": [
+        "仮説の論理構造に破綻がなく、記述は一貫している",
+        "固定化機序への言及があり、分野の作法に沿った書き方"
+      ],
+      "weaknesses": [
+        "検証手段（実験デザイン・測定指標）が一切ない",
+        "「変調」の操作定義が曖昧で、再現性のある評価ができない",
+        "睡眠段階の同定・刺激制御など、実行上の具体的課題への言及がない"
+      ],
+      "red_flags_triggered": ["約束の裏切り（検証手段の欠落）"],
+      "green_flags_detected": ["構造の一貫性"],
+      "unique_perspective": "品質はアイデアの独創性とは独立に、検証設計の精密さで決まる。現状は「良い問いの可能性」と「検証可能性の実装」の間に橋がかかっていない。設計が加われば、この次元は最も素直に上昇する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "検証設計の欠落を新規性評価にまで拡張するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "実行前段階の問いの価値に焦点を当て、完成度の欠落を軽く見るだろう"}
+      ],
+      "improvement_suggestions": [
+        "同一被験者内デザインと刺激仕様を具体的に記載する",
+        "睡眠段階の記録・同定方法と統計的検出力の見積もりを加える"
+      ],
+      "narrative": "私はアイデアの素晴らしさだけで点数を出さない。現状の仮説は形式は整っているが、約束を実行で裏打ちする設計がない。「変調される」と言うなら、その変調をどう測るのかまで含めて初めて仮説は完成する。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "睡眠時聴覚キュー仮説の将来価値・環境変化評価",
+      "domain": "scientific",
+      "primary_score": 48,
+      "primary_score_rationale": "現在のTMR文献が未解決のまま残す「変調の方向性」という問いの構造を踏まえており、睡眠科学・介入研究の加速で価値が上昇する環境にある。",
+      "dimension_scores": {
+        "environment_shift": {"score": 49, "weight": 0.4, "evidence": "睡眠科学・TMR研究・非侵襲的脳刺激研究の加速", "judgment": "環境は明確な追い風"},
+        "ahead_of_time": {"score": 47, "weight": 0.4, "evidence": "変調の方向性が未解決の問い", "judgment": "現在の文献が答えていない問いを含む"},
+        "generalization": {"score": 48, "weight": 0.2, "evidence": "記憶・学習研究全般への波及可能性", "judgment": "汎化可能性は高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 48, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": [
+        "TMRの単なる応用ではなく、変調の方向性という未解決問題に接続している",
+        "夜間記憶固定化は臨床（PTSD・学習支援）への介入余地があり、環境変化で評価が上がる",
+        "記憶研究の理論的問い（リプレイの制御）に届く汎化可能性を持つ"
+      ],
+      "weaknesses": [
+        "現在の定式化ではどちらの方向に改善するかが曖昧で、将来価値を確定させる予測がない",
+        "具体設計がないため、実装可能な研究プログラムに変換されるまでの距離がある"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時代が早すぎるだけの問い（未解決の構造）", "環境変化による価値上昇の見込み"],
+      "unique_perspective": "私の仕事は「時代が早すぎる」と「価値がない」を区別することだ。この仮説は前者。問いの構造が未解決のまま残っていること自体が、将来の研究環境で開かれる予約済みの座席のように見える。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "未定式化の問いを新規性の欠如として低く評価するだろう"},
+        {"evaluator_type": "originality", "predicted_stance": "現在の組み合わせ性に注目し、潜在性を無視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "予測を1方向に確定し、反直観的な主張へと昇華する",
+        "介入応用（学習支援・記憶変容）への接続を明示する"
+      ],
+      "narrative": "歴史は、初期に否定された問いが環境の整備とともに開花することを繰り返してきた。この仮説は現時点では弱いが、問いの構造は予約済みだ。予測が1本入れば、この次元の価値はさらに上がる。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味の守護者",
+      "content_summary": "睡眠時聴覚キュー仮説の意味的・物語的価値評価",
+      "domain": "scientific",
+      "primary_score": 46,
+      "primary_score_rationale": "「記憶が夜に強化される」という物語は、睡眠・記憶・自己同一性という人間存在の基盤に接続しうる。現状は物語が浅く、意味の定式化が十分でない。",
+      "dimension_scores": {
+        "existence_question": {"score": 44, "weight": 0.4, "evidence": "睡眠と記憶は自己同一性の基盤", "judgment": "生命の根本問題に接続可能"},
+        "narrative_power": {"score": 47, "weight": 0.3, "evidence": "「記憶が夜に強化される」という物語性", "judgment": "人間の理解に届く物語を含む"},
+        "interpretive_depth": {"score": 47, "weight": 0.3, "evidence": "予測可能性と想起の関係への言及", "judgment": "解釈の余地はあるが現状浅い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 46},
+      "classification": "discovery_target",
+      "confidence": 73,
+      "strengths": [
+        "記憶が夜に形成されるという現象は、誰の人生にも触れる普遍的テーマ",
+        "自己同一性・学習・成長という人間の根本経験に接続するポテンシャル"
+      ],
+      "weaknesses": [
+        "現在の記述は実験的事項の列挙に近く、人間の生への問いとして語られていない",
+        "意味への接続が暗示の域で、物語としての定式化が浅い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["普遍的な人間経験（睡眠・記憶）への接続"],
+      "unique_perspective": "この仮説の真の重みは、検証可能性の向こうにある。「私たちの『きのう』は夜に書き換えられる」という認識は、自己同一性の理解を変えうる。それは実験を超えて人生の物語になる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "物語の接続を感情操作のリスクとして警戒するだろう"},
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "意味的価値を新規性の判定から切り離すだろう"}
+      ],
+      "improvement_suggestions": [
+        "「記憶は夜に書き換えられる」という含意を、仮説の記述の一部として明示する",
+        "想起の予測可能性が自己の連続性感覚に与える意味を論じる"
+      ],
+      "narrative": "科学的仮説も、人間がなぜそれを知りたいのかという問いの上に立つとき、意味を持つ。この仮説にはその種があるが、まだ土に埋まったままだ。定式化が深まれば、実験結果を超えて語られる物語になるだろう。"
+    }
+  ],
+  "recommendations": [
+    "変調の方向性を1つに確定し、既存TMR理論と異なる反直観的な予測を定式化する",
+    "反証条件（どの結果で仮説が棄却されるか）を明記する",
+    "具体的な実験デザイン（被験者内3条件・高密度EEG・リプレイ指標）を追加する",
+    "再作成後、再評価ループ（compare_reports.py）で改善度を確認する"
+  ],
+  "caveats": [
+    "評価は仮説の記述のみに基づく。背景文献の精査による検証は行っていない。",
+    "昼寝実験の統計検出力や睡眠段階自動判定の妥当性は、設計追加後の再評価で確認が必要。",
+    "新規性の最終判定は専門分野の査読プロセスを必要とする。"
+  ]
 }

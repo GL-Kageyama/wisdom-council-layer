@@ -1,0 +1,315 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "映画企画『瞬きの考古学者』v1初案：記録映像の1フレームにだけ現れる謎の女性を追う映像考古学者の近未来ミステリー",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "映画企画に科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "未商業化の映画企画に市場性評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {"mean": 53, "variance": 0, "min": 53, "max": 53, "scores": [53]},
+    "quality": {"mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32, 32]},
+    "aesthetic": {"mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32]},
+    "emotional_impact": {"mean": 22, "variance": 0, "min": 22, "max": 22, "scores": [22]},
+    "future_potential": {"mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58]}
+  },
+  "current_value_score": 34,
+  "hidden_potential_score": 58,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "originality"],
+      "arguments": [
+        "感情影響評価者: 主人公に個人的な賭け金がなく、観客が誰に感情移入してよいか分からない。知的興味はあっても心を動かす軸がない（22点）。",
+        "独創性評価者: 感情は二の次である。1フレームの女という映像固有の前提こそが価値で、ここに感情軸を足すと凡庸な親子ドラマに丸まる危険がある（独創性53点は守るべき）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["quality-evaluator", "future-potential"],
+      "arguments": [
+        "品質評価者: ドラマの骨格が未完成で、三幕構成の後半が欠落している。結末が開かれたままでは作品として機能しない（32点）。",
+        "未来可能性分析者: 未完成は欠陥ではなく伸びしろである。前提の拡張可能性は大きく、環境変化で価値が上昇する（58点）。"
+      ]
+    },
+    {
+      "dimension": "aesthetic",
+      "variance": 0,
+      "disputing_evaluators": ["aesthetic-critic", "quality-evaluator"],
+      "arguments": [
+        "美的批評家: 1フレームという映像固有のモチーフは美の核になり得る。物語が未完成でも、美は先に立ち上がり得る（32点）。",
+        "品質評価者: 美の予感は評価できるが、現在は感覚的な具体化がなく、物語の骨格と未接続である（32点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、前提の独創性（1フレームにだけ現れる同一人物）は際立っており、未来可能性が高い点で一致した。同時に、主人公に個人的な賭け金がなく、調査プロシージャルの骨格が凡庸の型に近く、感情軸が不在である点でも一致した。『魅力的だが未完の種』という見立てが全員に共通している。",
+  "executive_summary": "本企画は合議の主要ミッションであるディスカバリー対象（Discovery Target）と判定された。1フレームだけに現れる老いない女性という前提は、既存の失踪者ミステリーから意味ある逸脱をしており、独創性（53）と未来可能性（58）が強く評価された。一方、主人公に個人的な賭け金がなく、受動的な調査構造に依存しているため、感情影響（22）・品質（32）・美（32）は凡庸圏に留まる。優先すべきは劇的核の明確化——主人公に具体的な個人的賭け金を与え、調査プロシージャルを能動的な対立構造へ組み替えることである。",
+  "synthesis_narrative": "議長として私は、この企画が合議の理想的な対象であることにまず言及したい。ディスカバリー対象とは、現在は理解されないが未来に価値が上昇するものだ。この企画はまさにその姿をしている。独創性評価者が『1フレームの女』という映像固有の発明を守るべきと主張し、未来可能性分析者が『記憶の所有』という主題の時代適合性を訴える一方、感情影響評価者は観客が誰に感情移入してよいか分からないと指摘し、品質評価者は三幕構成の後半の欠落を指摘した。この対立は健全である。独創性が高いのに感情と構造が低い——これは『未来の傑作の可能性』の形そのものだ。再作成において重要なのは、独創性を守りながら感情と構造を高めることであり、前提を凡庸な形に丸めてはいけない。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の独創性評価",
+      "domain": "creative",
+      "primary_score": 53,
+      "primary_score_rationale": "1フレームだけに現れる同一人物という中核前提は、既存の失踪者ミステリーから意味ある逸脱をしており、真正の独創として扱うに足る。ただし周辺構造（調査プロシージャル）は既知の型に依拠しており、60点台の卓越性には届かない。",
+      "dimension_scores": {
+        "premise_novelty": {"score": 66, "weight": 0.5, "evidence": "「年代も場所も無関係な記録映像に、ちょうど1フレームだけ写る同一の女性」", "judgment": "ミクロな痕跡からマクロな感情史を導く構造は鮮明で、オリジナルな映像的アイデア。"},
+        "meaningful_deviation": {"score": 48, "weight": 0.3, "evidence": "あらすじ第2段落以降は既存の『証拠が消える調査もの』の手順に沿う", "judgment": "前提からの逸脱は強いが、物語進行は型にはまり、逸脱が最後まで意味を運んでいない。"},
+        "recombination_risk": {"score": 40, "weight": 0.2, "evidence": "『デジタルアーカイブ×AI削除×感情分析』の組み合わせ", "judgment": "要素自体は既存SFの寄せ集めに見える危険があり、差別化は映像論のルール設計に依存する。"}
+      },
+      "value_vector_contribution": {"originality": 53, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [
+        "1フレームだけに現れる同一人物という前提が強い映像的発明",
+        "『低重要度フレームの削除』という、エラーではなく仕組みとして証拠が消える設定が緊張を生む",
+        "ミクロ視点（一瞬の表情）とマクロ視点（百年の感情史）の階層構造"
+      ],
+      "weaknesses": [
+        "調査プロシージャルの骨格はどこかで見た型で、前提ほどの逸脱がない",
+        "追跡対象に個人的な関係がなく、独創性が構造へ波及しない",
+        "AI削除モデルの設定が既存SFの類推力に留まりかねない"
+      ],
+      "red_flags_triggered": ["偽の新しさ（要素の組み合わせのみで差別化されていない）の予兆"],
+      "green_flags_detected": ["他者には思いつきにくい中核前提", "映像的モチーフが1つに統合されている"],
+      "unique_perspective": "この企画の価値は『ストーリー』ではなく『前提』にある。1フレームという単位は映像というメディアに固有のもので、小説では再現できない。この映像固有性こそ最も守るべき独自価値であり、ほかの評価者は『物語』として評価しがちで、この点を見落とす。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "主人公に個人的な賭け金がないとして、感情スコアを20点台に下げる"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "調査プロシージャルの型を『AIらしい平均解』として指摘し、品質を低く見積もる"},
+        {"evaluator_type": "future-potential", "predicted_stance": "前提の拡張可能性だけを見て、実現度を軽視して高く評価する"}
+      ],
+      "improvement_suggestions": [
+        "追跡対象と主人公の間に個人的な関係を導入し、独創性を構造へ波及させる",
+        "AI削除モデルに独自の『ルール』（何が消され何が残るか）を設計し、既存SFから差別化する",
+        "1フレームという単位の映像的意味を、主題と一貫させる"
+      ],
+      "narrative": "この企画の核は、1フレームにだけ現れる女という映像固有の発明にある。だが現在の形は、その発明が物語のなかで輝く場面を持たない。前提の輝きを構造まで運べたとき、この企画は凡庸な調査ものから大きく飛躍する。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 32,
+      "primary_score_rationale": "中核前提は非凡庸だが、周辺構造——調査プロシージャル、証拠が消える緊張、デジタルアーカイブの設定——は生成系AIが心地よく出力する型の寄せ集めで、情報密度と固有の声が薄い。",
+      "dimension_scores": {
+        "generic_structure_risk": {"score": 28, "weight": 0.4, "evidence": "『発見→証拠消失との競争→解明』の進行", "judgment": "この骨格は生成系AIが最も出力しやすい平均解の一つで、危険信号。"},
+        "specificity": {"score": 45, "weight": 0.4, "evidence": "1フレームだけの女性、感情分析アーカイブ、低重要度フレーム削除", "judgment": "固有の語彙はあるが、作品の個性を決定づける具体性にまでは達していない。"},
+        "voice": {"score": 30, "weight": 0.2, "evidence": "あらすじの文体は企画書の型に忠実で、書き手の視点が滲まない", "judgment": "企画書としての無難さが、作者の声の不在を隠している。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 32, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": [
+        "1フレームにだけ現れる女性という前提は、平均的な失踪者ミステリーではない",
+        "『低重要度フレームの自動削除』は、よくある『証拠が消える』を仕組み化しており、単なる安易な障害ではない"
+      ],
+      "weaknesses": [
+        "調査プロシージャルの骨格が生成系AIの平均解",
+        "デジタルアーカイブ×AI分析の組み合わせは既存作品の類推力が高い",
+        "主人公の人格に書き手の声がなく、誰の物語かが見えない"
+      ],
+      "red_flags_triggered": ["生成系AIの平均解（ストーリーの型）", "要素の組み合わせによる偽の新しさ"],
+      "green_flags_detected": ["情報密度の高い中核前提", "映像メディアに固有のモチーフ"],
+      "unique_perspective": "独創性評価者が『前提が新しい』と喜ぶ一方で、私はこの前提が周辺構造に囲われて窒息しかけているのを見ている。前提を評価して安心するのが最も危険な落とし穴で、凡庸に落ちるのはたいてい周辺部からである。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "originality", "predicted_stance": "中核前提だけで独創性を高く評価し、周辺構造の凡庸さを軽視する"},
+        {"evaluator_type": "future-potential", "predicted_stance": "構造の未完成を『伸びしろ』として高く評価する"},
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "映像の雰囲気に期待し、骨格の凡庸さを気にしない"}
+      ],
+      "improvement_suggestions": [
+        "調査プロシージャルの骨格を解体し、主人公固有の方法論（映像考古学者としての専門性）に置き換える",
+        "あらすじの段階で、書き手の視点が滲む『固有の声』を入れる",
+        "AI削除モデルの挙動に、観客が驚く独自ルールを設計する"
+      ],
+      "narrative": "前提は非凡庸、しかし骨格は凡庸の落とし穴ぎりぎりに立っている。再作成では周辺構造を解体し、前提の独自性を物語全体に敷き直す必要がある。さもなければ、この企画は『面白い前提の、無難な映画』に落ち着く。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 32,
+      "primary_score_rationale": "1フレームというモチーフは強い映像的核であり美の源泉になり得るが、現在のあらすじでは映像言語・感覚的な質感が未設計で、雰囲気の予感に留まる。",
+      "dimension_scores": {
+        "visual_core": {"score": 42, "weight": 0.5, "evidence": "『ちょうど1フレームだけ写り込む女性』", "judgment": "強力な映像的中心。停止と運動のあいだの緊張を生む潜勢力がある。"},
+        "sensuous_realization": {"score": 28, "weight": 0.3, "evidence": "あらすじに具体的な映像描写・音・時間の質感の設計がない", "judgment": "美は企図されているが、感覚的にはまだ具体化されていない。"},
+        "formal_coherence": {"score": 30, "weight": 0.2, "evidence": "物語の骨格（調査プロシージャル）と映像モチーフ（1フレーム）の接続が緩い", "judgment": "モチーフが形式を貫くまでに至っておらず、美と構造が未統合。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": 32, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "1フレームという映像メディア固有のモチーフが、美の核になり得る",
+        "『低重要度フレームの削除』を視覚化する素地（映像が欠落していく）は、破壊される美として成立する"
+      ],
+      "weaknesses": [
+        "映像言語が未設計で、あらすじの段階では雰囲気の予感に留まる",
+        "モチーフ（1フレーム）と物語の骨格が未接続で、美が構造を貫いていない",
+        "デジタルアーカイブという舞台の視覚的類型（無機質なサーバー群）に安住する危険"
+      ],
+      "red_flags_triggered": ["未完成の美（美の予感だけで具体化されていない）"],
+      "green_flags_detected": ["映像メディア固有のモチーフ", "欠落を描く破壊の美学の素地"],
+      "unique_perspective": "他の評価者が『物語』と『前提』を見るのに対し、私はこの企画が映像としてどう動くかを見ている。1フレームの女は、停止と運動の狭間の存在であり、映画という媒体でしか成立しない映像的発明である。この点を形にできれば、物語が未完成でも美は先に立ち上がる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "構造の未完成を指摘し、雰囲気の予感を過小評価する"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "美が感情を代替しないとして、感情軸の不在をより重視する"},
+        {"evaluator_type": "originality", "predicted_stance": "映像的発明を前提の独創性として数える"}
+      ],
+      "improvement_suggestions": [
+        "1フレームの女が現れる瞬間の映像規則（露出・焦点・粒子）を設計し、モチーフを形式として貫く",
+        "削除されるフレームの欠落を、画面の欠損として視覚化する",
+        "アーカイブの舞台を、既存の無機質サーバー像から映像の聖域として再設計する"
+      ],
+      "narrative": "この企画には強い映像的核が眠っている。だが美は現在、予感のまま放置されている。モチーフを形式へ昇華できたとき、物語の未完成を美が先導する形で作品が立ち上がる。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 22,
+      "primary_score_rationale": "主人公に個人的な賭け金がなく、観客が誰に感情移入してよいか分からない。物語は知的興味を刺激するが、心を動かす軸がない。",
+      "dimension_scores": {
+        "empathy_generation": {"score": 20, "weight": 0.5, "evidence": "主人公・真庭玲は分析チームの研究者で、対象と個人的な関係を持たない", "judgment": "観客が感情移入できる他者が存在せず、共感を生む設計が欠如。"},
+        "emotional_stake": {"score": 18, "weight": 0.3, "evidence": "『正体の特定に没頭していく』という記述", "judgment": "没頭は知的欲求であって、喪失や希望といった感情的な賭け金ではない。"},
+        "memory_persistence": {"score": 28, "weight": 0.2, "evidence": "1フレームの女というイメージ", "judgment": "イメージは残像として記憶に残るが、感情の余韻には届いていない。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": 22, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 75,
+      "strengths": [
+        "1フレームの女というイメージは、感情を伴わなくとも記憶に残る残像力を持つ",
+        "『誰かの表情』というテーマ自体が、感情的な重みを運ぶ潜勢力を持つ"
+      ],
+      "weaknesses": [
+        "主人公に個人的な賭け金がなく、感情移入の軸が不在",
+        "喪失・希望・罪悪といった感情装置が未導入",
+        "『証拠が消える』緊張は知的好奇心であって、感情の緊張ではない"
+      ],
+      "red_flags_triggered": ["感情装置の欠如（知的興味で感情を代替している）"],
+      "green_flags_detected": ["1フレームにだけ写る『誰か』という、感情を宿す余地の大きい前提"],
+      "unique_perspective": "独創性評価者は前提の面白さを見、美的批評家は映像の予感を見るが、私は観客がこの映画を観て涙するか、あるいは何も感じないかを問うている。現在の形では後者だ。しかしこの前提は『誰かを思い出す』という最も普遍的な感情と直結できる素地を持つ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "originality", "predicted_stance": "感情軸の不在を気にせず、前提の独創性を高く評価する"},
+        {"evaluator_type": "future-potential", "predicted_stance": "前提の拡張可能性だけで高く評価する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "構造の未完成を指摘するが、私の指摘する感情の不在とは別の観点"}
+      ],
+      "improvement_suggestions": [
+        "主人公に個人的な賭け金を与える（追跡対象を自分自身の記憶・身内と結ぶ）",
+        "感情の装置（喪失、再会の希望、罪悪感）を物語の骨格に組み込む",
+        "知的緊張を、感情的な選択の緊張へ置き換える"
+      ],
+      "narrative": "この企画は現在、脳を刺激するが心を動かさない。しかし1フレームの女という前提は、『忘れられた誰か』という感情の源泉に直結できる。個人的な賭け金が入れば、この企画の感情的な潜在能力が一気に解放されるだろう。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 32,
+      "primary_score_rationale": "企画の骨格（前提・設定・意図）は一貫して提示されているが、ドラマの骨格が未完成で、結末が開かれたまま、主人公の目的と障害の関係が弱い。",
+      "dimension_scores": {
+        "structural_completion": {"score": 30, "weight": 0.4, "evidence": "結末が『解明しようとする』で開かれたまま", "judgment": "三幕構成の後半（転換・決着）が未設計。"},
+        "premise_execution": {"score": 40, "weight": 0.3, "evidence": "前提・設定・意図の提示は明確", "judgment": "前提の提示は良好だが、それが構造として機能するまで至っていない。"},
+        "craft_precision": {"score": 28, "weight": 0.3, "evidence": "主人公の背景、障害の具体性、世界観のルールが未定義", "judgment": "精密さは企画書の段階として不十分。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 32, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "前提・設定・意図が明確に書かれており、企画として読み手に伝わる",
+        "1フレームの女、削除モデル、感情史という要素は相互に整合的"
+      ],
+      "weaknesses": [
+        "ドラマの骨格が未完成で、結末が開かれたまま",
+        "主人公の目的と障害（削除モデル）の関係が能動的でなく、受動的調査に留まる",
+        "世界観のルール（削除モデルは何をどう消すか）が未定義で、整合性を検証できない"
+      ],
+      "red_flags_triggered": ["骨格の未完成（三幕構成の後半が欠落）"],
+      "green_flags_detected": ["要素間の整合性", "企画としての可読性"],
+      "unique_perspective": "独創性評価者と未来可能性分析者は『前提』を評価し、私は『組み立て』を評価している。前提は素晴らしくとも、それが構造として機能しなければ作品にならない。この企画は現在、前提と構造の間に橋が架かっていない。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "originality", "predicted_stance": "構造の未完成を気にせず、前提を高く評価する"},
+        {"evaluator_type": "future-potential", "predicted_stance": "未完成を『伸びしろ』と読み替え、高く評価する"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "感情軸の不在を指摘するが、私の指摘は構造の観点"}
+      ],
+      "improvement_suggestions": [
+        "三幕構成の後半（転換点・結末の選択）を設計する",
+        "主人公の能動的な目的（何を、なぜ、どうする）を明確にする",
+        "削除モデルの挙動ルールを定義し、物語の整合性を担保する"
+      ],
+      "narrative": "前提はよく提示されている。しかしドラマの骨格が未完成で、このままでは『面白い前提の、中身のない映画』になる。再作成では構造の後半を設計し、主人公を受動的な調査者から能動的な行為者へ組み替える必要がある。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "映画企画『瞬きの考古学者』v1初案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 58,
+      "primary_score_rationale": "1フレームという映像固有の前提、デジタルアーカイブと記憶の所有を問う主題、感情史という視点は、いずれも環境変化で価値が上昇する方向にあり、展開余地が大きい。",
+      "dimension_scores": {
+        "environment_fit": {"score": 62, "weight": 0.4, "evidence": "AIによる映像分析、アーカイブの自動削除、記憶の所有という主題", "judgment": "映像のデジタル化・AIによる記憶の再構成が進む時代に、この主題の切実さは増す。"},
+        "expansion_room": {"score": 60, "weight": 0.3, "evidence": "1フレームの女、感情史、削除モデル", "judgment": "シリーズ・スピンオフ・世界観の拡張可能性を多数内包。"},
+        "timeliness_risk": {"score": 48, "weight": 0.3, "evidence": "AI削除モデルという機構の類推力", "judgment": "既存作品との差別化ができれば強みになるが、現状は類推力がリスク。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 58, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 71,
+      "strengths": [
+        "『記憶は誰のものか』という主題が、デジタル時代に価値を増す方向にある",
+        "1フレームの女はシリーズ化・メディアミックスに耐える映像的資産",
+        "感情史という視点は、映像アーカイブが進む未来に先取り的"
+      ],
+      "weaknesses": [
+        "現在の形では、前提の拡張が可能な『開いた構造』が逆に焦点を失わせている",
+        "類推力のあるAI機構が、将来の差別化を難しくする"
+      ],
+      "red_flags_triggered": ["未来の可能性が現在の価値に還元されていない（現状は種に留まる）"],
+      "green_flags_detected": ["時代適合性の高い主題", "拡張可能性の大きい中核前提"],
+      "unique_perspective": "私の役割は、この企画が『今』ではなく『未来』でどう評価されるかを考えることだ。映像アーカイブがさらに巨大化し、AIが過去の映像から『感情』を再構成する時代、この企画の主題は一層切実になる。現在の未完成は、長期的には弱点でない。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "現在の完成度の低さを過重に評価する"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "感情軸の不在を、未来可能性に関係なく指摘する"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "類推力のある機構を指摘し、未来の差別化を疑う"}
+      ],
+      "improvement_suggestions": [
+        "主題（記憶の所有）を中核にして、物語の骨格を組み直す",
+        "AI削除モデルを単なる障害でなく、主題を運ぶ機構として深化させる",
+        "感情史という視点を、独自の世界観へ拡張する"
+      ],
+      "narrative": "この企画は、現在の評価より未来の評価が高い。映像が記憶の権力装置となる時代、この主題は一層重要になる。未完成なのは欠陥ではなく、まだ形を選べる余地である。ただし、伸びしろを実現できるかは、次の再作成にかかっている。"
+    }
+  ],
+  "recommendations": [
+    "主人公に個人的な賭け金を付与する（追跡対象を主人公自身の身内と結ぶ）",
+    "能動的な対立軸（対抗者＝削除モデル／アーカイブ機構）を明確化し、物語を『調査の手続き』から『選択を迫られる競走』へ組み替える",
+    "結末を開かれた捜索から、主人公が実際に下す選択へ変える",
+    "1フレームという映像モチーフを、主題（誰が人の姿を所有するか）と一貫させる",
+    "感情操作に堕さないため、感情軸は抑制した演出で支える（反凡庸フィルターの警告に留意）"
+  ],
+  "caveats": [
+    "評価対象はコンセプト・あらすじであり、脚本・演出の実物ではない。品質・美のスコアは企画段階の上限とみなすべき",
+    "AI削除モデルという機構は既存SFの類推力が高く、差別化には映像論としての独自のルール設計が必要",
+    "今後の再作成ラウンドで過修正のリスクあり（独創的な前提を凡庸な親子ドラマに丸めないこと）"
+  ]
+}

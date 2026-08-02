@@ -1,26 +1,286 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "科学仮説『失敗挿入型反復』改訂案——検証デザイン具体化",
+  "report_timestamp": "2026-08-02T12:30:00Z",
+  "content_summary": "科学研究仮説v2「予測可能な睡眠時キューは記憶固定化を妨げる——予測誤差によるリプレイ解放仮説」に対する合議評価",
+  "content_type": "structured",
   "domain": "scientific",
   "mode": "full",
   "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
   "excluded_evaluators": [],
   "value_vector": {
-    "originality": { "mean": 45, "scores": [45] },
-    "quality": { "mean": 42, "scores": [42] },
-    "scientific_novelty": { "mean": 50, "scores": [50] },
-    "future_potential": { "mean": 58, "scores": [58] },
-    "meaning": { "mean": 40, "scores": [40] },
-    "philosophical_depth": { "mean": 36, "scores": [36] }
+    "originality": {"mean": 45, "variance": 0, "min": 45, "max": 45, "scores": [45]},
+    "quality": {"mean": 47, "variance": 0, "min": 47, "max": 47, "scores": [47, 47]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 49, "variance": 0, "min": 49, "max": 49, "scores": [49]},
+    "business_value": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "scientific_novelty": {"mean": 49, "variance": 0, "min": 49, "max": 49, "scores": [49]},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 47, "variance": 0, "min": 47, "max": 47, "scores": [47]}
   },
-  "current_value_score": 46,
-  "hidden_potential_score": 45,
+  "current_value_score": 47,
+  "hidden_potential_score": 48,
   "classification": "innovation",
-  "executive_summary": "検証デザインの具体化（対照群・n=60）と新規性の主張の明確化により、科学新規性が38→50に改善。現在価値46・潜在価値45で innovation（現在も将来も有望）。",
-  "synthesis_narrative": "再作成指令（デザイン具体化・新規性の絞り込み）が機能した。科学評価者は『想起失敗を記憶タグとして使う』という主張の新規性を認め50点。品質も30→42に改善。未来評価者は58点と引き続き高い。",
-  "recommendations": [
-    "予備実験で効果サイズを推定し、被験者数を正当化する",
-    "学習科学・教育工学への応用可能性を論文として整理する"
+  "disagreement_map": [
+    {
+      "dimension": "scientific_novelty",
+      "variance": 0,
+      "disputing_evaluators": ["scientific-novelty", "future-potential"],
+      "arguments": [
+        "scientific-novelty: 予測可能性の逆転（予測可能キュー=抑制）という主張と、反証条件を備えた実験デザインは、既存TMR理論に対して実際に新しい予測を加える。ただし神経同調による抑制機序が先行研究のどの知見と整合・対立するかは、査読で問われる点として残る（49点）。",
+        "future-potential: 同一の脳内指標（リプレイ密度・紡錘波結合）で「強化」と「抑制」の両方向を予測する設計は、将来の睡眠介入・記憶変容研究に接続可能な一般化可能性を持つ。方向が確定したことで、予約されていた問いが開かれた（49点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 「予測誤差」という語が新規性の証明として濫用されるリスクは残るが、刺激仕様（周期・強度・タイミング）が具体的に定義され、平均的な曖昧さを回避している（47点）。",
+        "quality-evaluator: 同一被験者内3条件と検証可能な予測の列挙は、実行可能性と反証可能性を両立する。ただし昼寝実験の統計検出力と睡眠段階の自動判定の妥当性は実装上の注意点で、研究計画書段階での精査を要する（47点）。"
+      ]
+    }
   ],
-  "caveats": ["仮説段階であり、実証は未完了"]
+  "consensus_summary": "全評価者が、v2が「反直観的な新奇予測＋反証条件＋具体的実験デザイン」を備え、v1の未定式化を解消した点で一致した。scientific_novelty と future_potential が最高評価（49）で、この仮説の強みが知識の前線への接続にあることを反映している。残る論点は神経同調の抑制機序の理論的整合性と実装の統計的検出力で、いずれも「欠陥」ではなく「研究計画としての次の精査項目」と位置づけられた。",
+  "executive_summary": "v2は、従来のTMR研究の前提「キュー再提示=強化」を逆転させる反直観的予測（予測可能なキューはリプレイを抑制し固定化を弱め、予測不能なキューはリプレイを解放し強化する）を、反証条件付きの具体的実験デザイン（同一被験者内3条件・高密度EEG・リプレイ強度指標）とともに提示する。現在価値は47、潜在価値は48で、両軸とも45を超えた。科学的新規性（49）と未来可能性（49）がこの仮説の核心であり、Innovationとして位置づける。",
+  "synthesis_narrative": "議長として、6体の評価者の評価は、v1の「種はあるが埋もれている」状態から「開かれた」状態へ明確に変化した。独創性鑑定人（45）は「前提を疑う逸脱が芯を持った」と評し、凡庸性探知犬（47）は「固有の輪郭を持つ具体的な仮説になった」と認めた。科学的新規性査読者（49）は「既存TMR理論に新しい予測を加えた」と前線の接続を認め、完成度検査官（47）は「反証可能な設計を備えた」と品質を評価した。未来可能性分析者（49）は「予約されていた問いが開かれた」と見た。唯一の緊張は、神経同調の抑制機序の理論的整合性をめぐる科学的新規性査読者の留保と、実装の統計的検出力への完成度検査官の注意であり、これは平均化せず研究計画の次の精査項目として保存する。この仮説は、現在価値と潜在価値の両方で高い水準に達したInnovationである。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性鑑定人",
+      "content_summary": "予測誤差によるリプレイ解放仮説の独創性評価",
+      "domain": "scientific",
+      "primary_score": 45,
+      "primary_score_rationale": "「予測可能なキューはむしろ抑制する」という反直観的逸脱が明確な芯として定式化され、既存TMR理論と異なる予測を持つに至った。",
+      "dimension_scores": {
+        "meaningful_deviation": {"score": 45, "weight": 0.5, "evidence": "「予測可能=抑制・予測不能=強化」という反転", "judgment": "既存前提への意味ある逸脱"},
+        "counterintuitive_flip": {"score": 46, "weight": 0.3, "evidence": "TMRの強化前提に対する逆転の主張", "judgment": "反直観的主張として機能している"},
+        "specificity_of_claim": {"score": 44, "weight": 0.2, "evidence": "3つの検証可能な予測の明記", "judgment": "予測の具体性が向上"}
+      },
+      "value_vector_contribution": {"originality": 45, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "「予測可能性が固定化を抑制する」という主張は、AIが出す平均解から明確に逸脱している",
+        "逸脱が記述ではなく具体的予測として成立している",
+        "既存TMRの知見を破棄せず、前提の一部を反転させる形で接続している"
+      ],
+      "weaknesses": [
+        "神経同調の抑制機序の説明が仮説の域で、実験的裏付けがない",
+        "反転の主張が強いぶん、支持が得られなかった場合の代替仮説への言及がない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["意味ある逸脱（反直観的予測）", "既存前提への挑戦"],
+      "unique_perspective": "この仮説の独自性は、組み合わせでも否定でもなく「前提の反転」という形をとった点にある。AIの平均解は通常、正統派の延長を選ぶ。この反転は、人間の研究者が理論的勇気を持ったときに現れる種類の逸脱だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "反転の独創性は認めつつ、抑制機序の理論的根拠を厳しく問うだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "反転の成立性より、開かれた問いの潜在性に焦点を当てるだろう"}
+      ],
+      "improvement_suggestions": [
+        "神経同調による抑制の先行研究（聴覚刺激の同調・干渉効果）との整合・対立関係を明記する",
+        "反転が成り立たない場合の代替仮説を1つ併記する"
+      ],
+      "narrative": "これはもう組み合わせではない。TMRの前提そのものを反転させる予測は、理論的勇気がないと出ない。まだ抑制機序の説明が薄い点が惜しいが、逸脱の芯は明確に通った。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性探知犬",
+      "content_summary": "予測誤差によるリプレイ解放仮説の凡庸性スクリーニング",
+      "domain": "scientific",
+      "primary_score": 47,
+      "primary_score_rationale": "刺激仕様と検証可能な予測が具体的に定義され、平均的な曖昧さを回避した。固有の声と輪郭を持つ。",
+      "dimension_scores": {
+        "generic_risk": {"score": 46, "weight": 0.4, "evidence": "3条件・反証条件の具体的定義", "judgment": "平均解から離脱"},
+        "information_density": {"score": 48, "weight": 0.3, "evidence": "教科書的な前提記述が削られ予測に紙面が割かれた", "judgment": "新情報密度が向上"},
+        "particularity": {"score": 47, "weight": 0.3, "evidence": "予測可能性の反転という固有の主張", "judgment": "仮説固有の輪郭が現れた"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 47, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 81,
+      "strengths": [
+        "刺激の周期・タイミングまで落ちた具体的記述で、誰が書いても同じになる平均解から離脱した",
+        "仮説固有の主張（予測可能性の反転）が文面の中心に据えられた",
+        "過剰な断定や感情操作がなく、科学的な抑制が効いている"
+      ],
+      "weaknesses": [
+        "「予測誤差」という用語が広義に使われており、分野内の用法と異なる誤読リスクがある",
+        "反証条件は明記されたが、その判定基準（効果量・有意水準）が未指定"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["固有の輪郭（反直観的主張）", "高い情報密度"],
+      "unique_perspective": "v1が「百人の誰が書いても成立する文面」なら、v2は「この仮説にしか書けない文面」になった。これは凡庸性を逃れる最大の指標だ。ただし「予測誤差」の濫用だけは、次の凡庸化の入り口として警戒する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "文体の質は認めつつ、反証条件の判定基準の不足を指摘するだろう"},
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "用語の濫用リスクを新規性主張の弱体化として捉えるだろう"}
+      ],
+      "improvement_suggestions": [
+        "「予測誤差」の定義を分野内の既存用法と整合させて限定する",
+        "反証条件に効果量と有意水準の目安を添える"
+      ],
+      "narrative": "この文面は、この仮説にしか書けない。それが凡庸性を逃れた証拠だ。あとは「予測誤差」という言葉が、概念的な強さの代わりに使われる濫用に堕ちないように、定義を締めておけばいい。"
+    },
+    {
+      "evaluator_id": "scientific-novelty",
+      "evaluator_name": "科学的新規性査読者",
+      "content_summary": "予測誤差によるリプレイ解放仮説の科学的新規性・検証可能性評価",
+      "domain": "scientific",
+      "primary_score": 49,
+      "primary_score_rationale": "既存TMR理論に「予測可能性による抑制」という新しい予測を追加し、反証条件を備えた実験デザインで検証可能にした。知識の前線を実際に押し広げる。",
+      "dimension_scores": {
+        "frontier_advancement": {"score": 49, "weight": 0.5, "evidence": "「予測可能=抑制」という既存TMR前提への新しい予測", "judgment": "既存理論に新しい予測を追加"},
+        "falsifiability": {"score": 49, "weight": 0.3, "evidence": "3つの検証可能な予測と反証条件", "judgment": "検証可能性が具体的に設計された"},
+        "importance_if_true": {"score": 49, "weight": 0.2, "evidence": "正しければTMRの理解と応用の前提が変わる", "judgment": "重要度が高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": 49, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 84,
+      "strengths": [
+        "反直観的な予測が既存TMR理論と異なる具体的な差として定式化されている",
+        "反証条件が明記され、科学的新規性の判定が可能になった",
+        "同一被験者内3条件・EEG指標・翌日テストまで検証経路が設計されている",
+        "正しければ「予測可能性」が睡眠介入の設計原理になる点で重要性が高い"
+      ],
+      "weaknesses": [
+        "神経同調による抑制機序が、聴覚刺激の干渉効果等の先行知見とどう整合するかが未整理",
+        "リプレイ強度指標（template matching / MI）の確立度と偽陽性の扱いへの言及がない",
+        "予測(2)の「同等以下に抑制」の統計的判定基準が曖昧"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["新しい予測の追加（外挿でない）", "反証可能性の設計", "重要度の高さ"],
+      "unique_perspective": "科学的新規性は正しさではなく「正しければ世界の見方が変わる予測」にある。この仮説は、同一の操作（キュー提示）がリズム次第で逆方向の効果を持つという予測を立てており、v1の外挿から前線の接続へ転化した。査読で問われるのは抑制機序の理論的整合性で、これが研究計画としての次の精査項目だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "originality", "predicted_stance": "逸脱の独創性は認めつつ、機序の理論的根拠の薄さを指摘するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "前線への接続より開かれた問いの潜在性を重視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "神経同調・予測誤差の機序に関する先行研究との整合・対立関係を文献的に整理する",
+        "リプレイ強度指標の確立度と統計的判定基準を研究計画書に明記する"
+      ],
+      "narrative": "査読者として、この仮説は「外挿」から「前線への接続」へ質的に転化した。反証可能な新しい予測を備え、重要度も高い。残る論点は機序の理論的整合性と指標の統計的堅牢性で、これは仮説の欠陥ではなく研究計画として当然行うべき精査の項目だ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度検査官",
+      "content_summary": "予測誤差によるリプレイ解放仮説の技術的完成度・実現可能性評価",
+      "domain": "scientific",
+      "primary_score": 47,
+      "primary_score_rationale": "同一被験者内3条件と検証可能な予測の列挙により、実行可能性と反証可能性を両立した。実装上の注意点は残るが、研究計画として成立する水準。",
+      "dimension_scores": {
+        "technical_completion": {"score": 47, "weight": 0.35, "evidence": "仮説・設計・予測・反証条件の一貫した構造", "judgment": "約束と検証手段が対応した"},
+        "feasibility": {"score": 47, "weight": 0.35, "evidence": "被験者内3条件・高密度EEG・テストの設計", "judgment": "実行可能性が担保された"},
+        "precision": {"score": 47, "weight": 0.3, "evidence": "刺激の周期・タイミングの具体化", "judgment": "操作定義が精緻化された"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 47, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": [
+        "検証手段（3条件・EEG指標・翌日テスト）が仮説の主張と対応している",
+        "反証条件が予測として列挙され、約束を果たす構造になった",
+        "同一被験者内デザインで個人差の統制を意識している"
+      ],
+      "weaknesses": [
+        "昼寝実験の統計検出力（被験者数・条件間の相関）の見積もりがない",
+        "睡眠段階の自動判定アルゴリズムの妥当性への言及がない",
+        "予測(2)の「同等以下」の統計的基準（非劣性・抑制定義）が曖昧"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["約束と検証手段の対応", "具体的な操作定義"],
+      "unique_perspective": "品質は設計の精密さで決まる。v2は検証経路が設計されたことで、この次元が最も素直に上昇した。残るのは統計検出力と睡眠段階同定という、研究計画書段階の精査で解決する通常の課題だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "設計の具体性は認めつつ、用語の定義不足を指摘するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "実装の精査を軽く見て、開かれた問いの価値に焦点を当てるだろう"}
+      ],
+      "improvement_suggestions": [
+        "被験者数と検出力計算の目安を研究計画書に追加する",
+        "睡眠段階自動判定の妥当性検証手順を明記する"
+      ],
+      "narrative": "アイデアは実行を通してしか現実にならない。v2は、仮説の主張と検証手段が対応し、約束を果たす構造になった。統計検出力と睡眠段階同定は、通常の研究計画の精査で解決する範囲で、もはや致命的な欠落ではない。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "予測誤差によるリプレイ解放仮説の将来価値・環境変化評価",
+      "domain": "scientific",
+      "primary_score": 49,
+      "primary_score_rationale": "方向が確定したことで、TMR研究が未解決のまま残していた問いが開かれた。睡眠介入・記憶変容研究の加速により、この仮説の価値は上昇する見込みが高い。",
+      "dimension_scores": {
+        "environment_shift": {"score": 49, "weight": 0.4, "evidence": "睡眠科学・非侵襲刺激研究の加速", "judgment": "環境は明確な追い風"},
+        "ahead_of_time": {"score": 49, "weight": 0.4, "evidence": "予測可能性という未解決の制御変数", "judgment": "予約されていた問いが開かれた"},
+        "generalization": {"score": 49, "weight": 0.2, "evidence": "予測可能性=制御原理の睡眠介入・学習支援への接続", "judgment": "汎化可能性が高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 49, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 85,
+      "strengths": [
+        "予測可能性を記憶固定化の制御変数として明示し、反転予測という開かれた問いになった",
+        "睡眠介入・PTSD記憶変容・学習支援への接続可能性が具体的になった",
+        "環境変化（睡眠科学研究の加速）で価値が上昇する見込みが高い"
+      ],
+      "weaknesses": [
+        "反転予測が支持されるか否かは未検証で、将来価値は結果に依存する",
+        "現在の応用（介入技術）までの距離はなお存在する"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["開かれた問い（未解決の制御変数）", "環境変化による価値上昇の見込み"],
+      "unique_perspective": "私は予言者ではない。可能性の地図を描く者だ。この仮説は、v1で「予約済みの座席」だった問いが、反転予測という形で開かれたものに見える。結果がどう出ても、この問いの地図は研究の次の段階に残る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "開かれた問いの潜在性より、機序の理論的整合性を優先するだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "応用への距離を、実装可能性の観点から残る課題として指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "予測可能性を制御変数とする睡眠介入研究への接続可能性を明示する",
+        "反転予測が支持されない場合も、問いが残す知見を記述する"
+      ],
+      "narrative": "歴史的に、重要な問いはしばしば「結果の正しさ」とは別に価値を持つ。この仮説は、予測可能性という制御変数を開いた。結果がどちらに転んでも、この地図は睡眠介入研究の次の世代に受け継がれる。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味の守護者",
+      "content_summary": "予測誤差によるリプレイ解放仮説の意味的・物語的価値評価",
+      "domain": "scientific",
+      "primary_score": 47,
+      "primary_score_rationale": "「記憶は夜に書き換えられる」という含意が仮説の一部として明示され、予測可能性と自己の連続性感覚の関係という意味の問いが開かれた。",
+      "dimension_scores": {
+        "existence_question": {"score": 46, "weight": 0.4, "evidence": "記憶の夜間書き換えという含意の明示", "judgment": "自己同一性の問いに接続した"},
+        "narrative_power": {"score": 48, "weight": 0.3, "evidence": "「きのうは夜に書き換えられる」という物語", "judgment": "人間の理解に届く物語になった"},
+        "interpretive_depth": {"score": 47, "weight": 0.3, "evidence": "予測可能性が想起の主体性に与える意味", "judgment": "解釈の深まりが見られる"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 47},
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": [
+        "「記憶が夜に書き換えられる」という含意が、実験的記述を超えて自己同一性の問いに接続した",
+        "予測可能性と想起の関係が、主体性・連続性という人間経験の意味論を開く",
+        "物語としての定式化が深まり、実験を超えて語られる土台ができた"
+      ],
+      "weaknesses": [
+        "意味への接続がなお補助的で、仮説の中心的問いにはなっていない",
+        "「記憶の書き換え」が含意する倫理的・存在論的問いへの言及がない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["普遍的経験（睡眠・記憶・自己）への接続", "物語としての定式化"],
+      "unique_perspective": "この仮説の深い重みは検証可能性の向こうにある。「私たちの『きのう』は夜に、その人の知らないまま書き換えられる」という認識は、自己同一性の理解を変える。予測可能性が主体性に与える意味——この問いこそ、実験を超えて人生の物語に接続する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "意味の接続を、新規性の判定とは切り離すだろう"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "物語性の強まりを、感情操作のリスクとして警戒するだろう"}
+      ],
+      "improvement_suggestions": [
+        "記憶の夜間書き換えが自己の連続性感覚に与える意味を、仮説の含意として明記する",
+        "記憶変容がもたらす倫理的・存在論的問い（記憶の真正性）への注記を加える"
+      ],
+      "narrative": "科学的仮説も、人間がなぜそれを知りたいのかという問いの上に立つとき、意味を持つ。この仮説は、種が芽を出した。予測可能性が主体性に与える意味という問いが開かれれば、この仮説は実験結果を超えて語られる物語になるだろう。"
+    }
+  ],
+  "recommendations": [
+    "神経同調による抑制機序の先行研究を文献的に整理し、理論的整合性を研究計画書に記載する",
+    "被験者数・検出力計算・統計的判定基準を研究計画書に追加する",
+    "「予測誤差」の定義を分野内の用法と整合させ、リプレイ強度指標の妥当性検証手順を明記する",
+    "パイロット実験でリプレイ指標の安定性を確認してから本実験へ進む",
+    "再評価ループ（compare_reports.py）で v1→v2 の改善を確認済み。Innovation として維持しつつ、機序の精査でさらに高みを目指す"
+  ],
+  "caveats": [
+    "評価は仮説の記述のみに基づく。背景文献の精査と実験による検証は行っていない。",
+    "予測の成否は実証に依存し、Innovation の判定は「潜在価値が高い」という意味であって、仮説の正しさを保証しない。",
+    "統計検出力・睡眠段階自動判定の妥当性は、研究計画書段階での精査を要する。"
+  ]
 }

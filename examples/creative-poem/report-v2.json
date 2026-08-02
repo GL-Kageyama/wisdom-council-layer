@@ -1,7 +1,7 @@
 {
   "report_id": "wisdom-council-report",
-  "report_timestamp": "2026-08-02T00:30:00Z",
-  "content_summary": "詩『重力を結わえる人』改訂版——第3連に光と錆びの矛盾するイメージを追加、1行で韻律を崩した",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "詩『昨日の郵便局』v2——改訂後の再評価（説明削除・結末の逆説化）",
   "content_type": "text",
   "domain": "creative",
   "mode": "full",
@@ -10,52 +10,211 @@
     "anti-generic-filter",
     "aesthetic-critic",
     "emotional-impact",
-    "future-potential",
-    "business-value",
-    "scientific-novelty",
-    "philosophical-evaluator",
-    "quality-evaluator",
-    "meaning-evaluator"
+    "meaning-evaluator",
+    "future-potential"
   ],
   "excluded_evaluators": [
-    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" }
+    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "詩に市場性評価は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] },
-    "quality": { "mean": 48, "variance": 16, "min": 46, "max": 50, "scores": [50, 46] },
-    "aesthetic": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] },
-    "emotional_impact": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
-    "future_potential": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
-    "business_value": { "mean": 12, "variance": 0, "min": 12, "max": 12, "scores": [12] },
-    "scientific_novelty": { "mean": 5, "variance": 0, "min": 5, "max": 5, "scores": [5] },
-    "philosophical_depth": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] },
-    "meaning": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] }
+    "originality": { "mean": 68, "variance": 0, "min": 68, "max": 68, "scores": [68] },
+    "quality": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
+    "aesthetic": { "mean": 36, "variance": 0, "min": 36, "max": 36, "scores": [36] },
+    "emotional_impact": { "mean": 34, "variance": 0, "min": 34, "max": 34, "scores": [34] },
+    "future_potential": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
+    "meaning": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] }
   },
   "current_value_score": 44,
-  "hidden_potential_score": 45,
+  "hidden_potential_score": 54,
   "classification": "discovery_target",
   "disagreement_map": [
     {
-      "dimension": "business_value",
+      "dimension": "quality",
       "variance": 0,
-      "disputing_evaluators": ["business-value", "originality"],
+      "disputing_evaluators": ["anti-generic-filter", "meaning-evaluator"],
       "arguments": [
-        "business-value: 詩に直接的な市場価値はない。12点。",
-        "originality: 独創性58点。市場性と芸術価値は別軸。"
+        "anti-generic-filter: 説明の連は消えたが、結語『出されなかった手紙から始まる』が観念的で抽象に依存する。38点。",
+        "meaning-evaluator: その逆説こそ詩の芯であり、結語の観念性は強みであって欠陥ではない。意味58点。"
       ]
     }
   ],
-  "consensus_summary": "作成スキルが個別評価を入力に合成した指示（光と錆びの矛盾、韻律の意図的な崩し）により、美(40→52)と品質(42→48)が改善。独創性は維持されたまま微増(55→58)。",
-  "executive_summary": "改訂により、美(40→52)と品質(42→48)が改善し、スコアが底上げされた。独創性(58)と意味(52)は維持・微増。依然 discovery_target だが、現在価値が39→44に上昇し innovation に接近。ビジネス価値(12)は変化なし。科学評価は例外的に除外。",
-  "synthesis_narrative": "作成スキルが評価を入力に合成した指示が有効に機能した。美学的評価者が最も改善を認め（比喩に矛盾する感覚的イメージが加わった）、品質評価者も『言語的冒険が増えた』と評価。独創性を壊さずに高めた点が理想的。厳格スコアリング下でも現在価値44・潜在価値45と、discovery_target（innovationに接近）を維持。次回は哲学的深さ(46)と感情(50)を狙う余地がある。",
-  "individual_reports": [],
+  "consensus_summary": "改訂指令（説明削除・定番脱却・結末の反転）が忠実に実装され、全次元が上昇（品質26→38・美27→36・感情27→34・独創性56→68）。current=44 / hidden=54 で依然 discovery_target だが、current_success に接近した。残る課題は結語の観念性と全編の温度の低さ。",
+  "executive_summary": "『昨日の郵便局』v2は、再作成スキルの指令どおり説明の連を全削し、結末を『郵便は、一度も出されなかった手紙から始まる』という逆説に反転させた。品質38・美36・感情34・独創性68と全次元が上昇し、current_value=44 / hidden=54 で discovery_target（current_success 目前）。結語の抽象度という新たな課題は残るが、v1の凡庸さはほぼ解消された。",
+  "synthesis_narrative": "再作成指令（説明削除・定番モチーフの置換・結末の出来事化）がほぼ忠実に実装され、全次元が改善した。anti-genericフィルタは結語の観念性を指摘しつつ38点と改善を認め、意味評価者は『出されなかった手紙から始まる』の逆説を最高の58点と評価。独創性評価者は『宛名欄が空の手紙が翌朝消える』という転換を68点と支持した。current_success に接近したが、結語の抽象度が広い読者の感覚的到達を制限する点で、依然 discovery_target。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "詩『昨日の郵便局』v2の独創性評価",
+      "domain": "creative",
+      "primary_score": 68,
+      "primary_score_rationale": "空白の宛名が翌朝消えるという反転と、結語の逆説が読者の予測を裏切る",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 72, "weight": 0.35, "evidence": "宛名欄が空の手紙が翌朝消える", "judgment": "場の設定を超えた逆説へ到達" },
+        "combinatorial_surprise": { "score": 68, "weight": 0.25, "evidence": "郵便×未達×空白×消失の結合", "judgment": "予想を裏切る結合" },
+        "distance_from_template": { "score": 66, "weight": 0.25, "evidence": "既存の手紙モチーフ詩との距離", "judgment": "明確に離れた" },
+        "non_obviousness": { "score": 65, "weight": 0.15, "evidence": "『郵便は、一度も出されなかった手紙から始まる』", "judgment": "結語が概念を反転させる" }
+      },
+      "value_vector_contribution": { "originality": 68, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["空白の宛名が翌朝消える、という反転が読者の予測を崩す", "結語の逆説で概念が完結せず開く"],
+      "weaknesses": ["2連目の『背中が暮らす場所』は独特だが、一部の読者には難解", "結語が示唆的すぎて解釈に依存する"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["予測を裏切る転換", "解釈を開いた結末"],
+      "unique_perspective": "『消失』を配達の別形態として描き、郵便の存在論を逆転させた点がv1にない新規性",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "結語の抽象度が高く、感覚的明快さを減点するかもしれない" }
+      ],
+      "improvement_suggestions": ["空白の手紙の『重さ』に触覚的な一行を足す", "結語をさらに一行静かに締め、抽象度を調整する"],
+      "narrative": "改訂は概念を『場の新奇さ』から『存在論の反転』へ押し上げた。『出されなかった手紙から始まる』は、読んだ瞬間に世界の前提を揺さぶる。ここに到達したことで、この詩は再び読まれる理由を持った。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "詩『昨日の郵便局』v2の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 38,
+      "primary_score_rationale": "説明の連と定番モチーフは消えたが、結語の観念性が新たな抽象への依存を残す",
+      "dimension_scores": {
+        "cliche_density": { "score": 42, "weight": 0.3, "evidence": "『ふくれ上がっている』『背中が暮らす場所』", "judgment": "定番を独自の感覚に置き換えた" },
+        "emotional_manipulation": { "score": 36, "weight": 0.3, "evidence": "結語の逆説", "judgment": "感情操作は減ったが、観念の負荷が高い" },
+        "structural_predictability": { "score": 40, "weight": 0.25, "evidence": "場→動作→消失→結語", "judgment": "直線性を脱し、空白と消失で構造に穴を開けた" },
+        "substance_over_style": { "score": 35, "weight": 0.15, "evidence": "結語の『──』", "judgment": "語りすぎは改善、結語は観念に傾く" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 38, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["説明の連が消え、行為が詩を運ぶ", "空白の宛名・消失という『書かないこと』で情感を作る手法"],
+      "weaknesses": ["結語の逆説が観念的で、一行目の具体性との落差が大きい", "『誰かの背中が暮らす場所』は一部説明に近い語順"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["見せて語らない手法への転換", "定番モチーフの脱却"],
+      "unique_perspective": "凡庸の最大の兆候は『説明』ではなく『定番の安心感』にある。この改訂はその安心感を解体した",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "結語の逆説を高く評価し、私の38点を辛めとみるだろう" }
+      ],
+      "improvement_suggestions": ["結語を抽象の逆説から、もう一段具体的な動作へ戻す", "『背中が暮らす場所』を読者が触れる感覚に近づける"],
+      "narrative": "v1が説いていたことを、v2はただ行う。説明の連は消え、定番の眠る手紙は『ふくれ上がっている』に変わり、願望の結末は消失という出来事になった。凡庸は解体されたが、結語の逆説が新たに観念の上に立ち、まだ完全に詩の肉体に降りてはいない。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "詩『昨日の郵便局』v2の美的評価",
+      "domain": "creative",
+      "primary_score": 36,
+      "primary_score_rationale": "物質的な比喩と間の造形は向上したが、結語の観念性が視覚的明快さを損なう",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 40, "weight": 0.35, "evidence": "『ふくれ上がっている』『生ぬるい』『背中が暮らす場所』", "judgment": "物質感が増した" },
+        "rhythmic_musicality": { "score": 36, "weight": 0.25, "evidence": "短い連の反復と『──』の間", "judgment": "間が効くようになった" },
+        "imagistic_concreteness": { "score": 34, "weight": 0.25, "evidence": "『折り目のまま、元の場所に戻す』", "judgment": "具体像が説明に取って代わった" },
+        "cohesion": { "score": 38, "weight": 0.15, "evidence": "消失が結語へ繋がる", "judgment": "構造が詩を統率する" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 36, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": ["『誰かの背中が暮らす場所』という、触覚に近い独自の像", "『折り目のまま戻す』という余計を削ぎ落とした動作"],
+      "weaknesses": ["結語の抽象度が高く、視覚的明快さが失われる", "全編が静かで、一瞬の大きな音がない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["物質的な比喩の獲得"],
+      "unique_perspective": "美は『多さ』ではなく『余計の無さ』にある。この改訂は余計を削った",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "結語の観念的深さを称賛し、視覚性の減点を軽視するだろう" }
+      ],
+      "improvement_suggestions": ["結語に視覚（白い紙・空の受付）を一度添える", "どこか一か所で音を立てる（封筒の音など）"],
+      "narrative": "v1の散文的な説明が消え、詩は余計なものを削ぎ落として静かになった。『折り目のまま戻す』という一行は、余白で情感を作る正しい方法だ。残るのは結語の観念性——詩が最後に視覚から飛び立ってしまい、読者の目が追えない。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "詩『昨日の郵便局』v2の情動評価",
+      "domain": "creative",
+      "primary_score": 34,
+      "primary_score_rationale": "感情が説明から行為へ移り滞留するようになったが、結語が知性側に振れ、全編の温度が低い",
+      "dimension_scores": {
+        "visceral_response": { "score": 38, "weight": 0.35, "evidence": "宛名欄が空の手紙が翌朝消える", "judgment": "事態の不気味さが情動を呼ぶ" },
+        "catharsis": { "score": 32, "weight": 0.3, "evidence": "結語の逆説", "judgment": "安堵ではなく問いを残し、感情が滞留する" },
+        "empathy_triggers": { "score": 34, "weight": 0.25, "evidence": "局員が空白の手紙を置いて帰る", "judgment": "同情ではなく共感の構造" },
+        "subtlety_of_feeling": { "score": 36, "weight": 0.1, "evidence": "『戻すだけ』の一行", "judgment": "感情が行為に沈む" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 34, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": ["感情が説明から行為へ移り、読者の胸に残る", "消失という事態が『気がする』より強い情動を持つ"],
+      "weaknesses": ["結語が知的逆説に傾き、涙より考えさせる方へ振れる", "全編の温度が低く、温かさを求める読者には冷淡に映る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情の間接化（テリングからショーイングへ）"],
+      "unique_perspective": "この改訂は『泣かせる』ことをやめて『残る』ことを選んだ。強い情動より永続する余韻",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "結語の抽象を視覚性の欠如と減点するかもしれない" }
+      ],
+      "improvement_suggestions": ["空白の手紙に、たった一行の具体的な痕跡（しわ・インクの匂い）を足す", "結語の後に一拍の沈黙を一行として残す"],
+      "narrative": "v1の『待っている気がする』は読者の涙を肩代わりしたが、v2の『翌朝、それは消えている』は読者の胸に事態として残る。感情は説明から行為へ移り、間違いなく改善した。ただし結語が知性側に振れすぎて、温かい涙より冷たい驚きを選んだ。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "詩『昨日の郵便局』v2の意味評価",
+      "domain": "creative",
+      "primary_score": 58,
+      "primary_score_rationale": "結語の逆説が未達を起点に郵便の存在論を反転させ、問いを開いたまま残す",
+      "dimension_scores": {
+        "philosophical_depth": { "score": 62, "weight": 0.35, "evidence": "『郵便は、一度も出されなかった手紙から始まる』", "judgment": "未達を起点に存在論を反転させる" },
+        "universality": { "score": 58, "weight": 0.3, "evidence": "宛名欄が空の手紙", "judgment": "誰の経験にも重なる空白" },
+        "structural_insight": { "score": 56, "weight": 0.25, "evidence": "消失が翌朝起こるという時間設計", "judgment": "物語が意味を裏付ける" },
+        "actionability_of_meaning": { "score": 55, "weight": 0.1, "evidence": "結語の『──』", "judgment": "問いが開いたまま残る" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 58 },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["『出されなかった手紙から始まる』が、届かないことの意味を存在論まで押し上げる", "空白の宛名が、個々の喪失を普遍的記号にする"],
+      "weaknesses": ["結語の逆説が強く、詩全体がその一句に従属する危険", "意味の重さが情感の軽さを上回り、読み手の体力を要求する"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["存在論的逆説", "問いを開いたままにする結末"],
+      "unique_perspective": "この詩は『喪失の詩』から『未達が存在の前提であることの詩』へ主題を反転させた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "emotional-impact", "predicted_stance": "知性に寄りすぎて温かさを失ったと見るかもしれない" }
+      ],
+      "improvement_suggestions": ["逆説を支える具体的な現実の一行を結語の前に置く", "空白そのものに重さ（封筒の厚みなど）を与える"],
+      "narrative": "v1が『届かない想い』を描いたのに対し、v2は『届かないこと自体が世界を成り立たせている』という逆説に反転した。これは喪失の詩ではなく、未達の存在論の詩になった。意味は重くなり、読者はその重さと引き換えに深さを得る。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "詩『昨日の郵便局』v2の将来性評価",
+      "domain": "creative",
+      "primary_score": 50,
+      "primary_score_rationale": "消失した空白の手紙が反復可能な結末となり、連作・別ジャンルへの扉を開いた",
+      "dimension_scores": {
+        "extensibility": { "score": 54, "weight": 0.35, "evidence": "消失した空白の手紙", "judgment": "『届かない』の逆説が連作の核になり得る" },
+        "thematic_fertility": { "score": 52, "weight": 0.3, "evidence": "宛名欄の空・翌朝の消失", "judgment": "各連が別の物語の入口になる" },
+        "audience_reach": { "score": 46, "weight": 0.25, "evidence": "存在論的逆説", "judgment": "一部の読者には敷居が高い" },
+        "sustainability": { "score": 50, "weight": 0.1, "evidence": "概念の強度と余白", "judgment": "疑問を残す結末が寿命を伸ばす" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 50, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": ["消失した空白の手紙は、読み直すたびに別の物語になる", "結語の逆説が、連作や別ジャンル（映像・挿絵）への扉を開く"],
+      "weaknesses": ["結語の観念性が、広い読者層への到達を制限する", "『背中が暮らす場所』の独自性が強く、展開を固定しがち"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["反復可能性のある結末", "ジャンル横断の余地"],
+      "unique_perspective": "価値は『完成度』ではなく『未完の余白』にある。この改訂は余白を増やした",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "余白を未完の粗さとみるかもしれない" }
+      ],
+      "improvement_suggestions": ["空白の手紙が消えた後の『受付の空気』を一行残し、連作の気配を足す", "結語を導出にせず、問いのままにする"],
+      "narrative": "v1の世界は一回で消費されたが、v2の消失した空白の手紙は何度でも読み直せる。結語の逆説は一詩の結論であると同時に、次の物語の入口でもある。この世界は、まだ終わらない。"
+    }
+  ],
   "recommendations": [
-    "さらに哲学的深さ(46)と感情(50)を強化する再作成指令を発行する",
-    "2回目の改訂後、compare_reports.py で3回目の差分を確認する"
+    "discovery_target のまま維持。current_value 44 で current_success（45以上）は目前",
+    "結語の逆説を支える具体的な一行を追加し、観念の抽象度を調整する",
+    "連作化の可能性（手紙・宛先人の視点）を探索し、世界の余白を育てる",
+    "一度 evaluate→recreate ループを止め、過修正で概念が失われていないか再確認する"
   ],
   "caveats": [
-    "scientific_novelty は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
-    "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない",
-    "厳格スコアリング適用のため、以前の非厳格なサンプルと数値の水準が異なる"
+    "scientific_novelty と business-value は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、44点でも『真に良い』に達していない",
+    "結語の観念性は評価者間で評価が分かれる余地があり、次の反復で調整すべき焦点"
   ]
 }

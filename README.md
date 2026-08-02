@@ -230,10 +230,13 @@ python utils/render_report.py report.json        # ファイルから
 **Markdown出力（読みやすい文書にまとめる）:**
 
 ```bash
-python utils/render_report.py --format md report.json               # 標準出力
-python utils/render_report.py --format md -o report.md report.json  # ファイルに保存
-python utils/render_report.py --individuals report.json             # 全評価者の個別レポートも表示
+python utils/render_report.py report.json                          # コンソール表示（バーチャート）
+python utils/render_report.py report.json -o report.md             # MDファイルに保存（拡張子で自動判定）
+python utils/render_report.py --format md report.json              # MDを標準出力
+python utils/render_report.py --individuals report.json            # 全評価者の個別レポートも表示
 ```
+
+**MD出力の仕組み**: `-o report.md` のように**出力先の拡張子が `.md` なら自動でMarkdown形式**になる。`--format md` で明示もできる。生成されるMDは見出し・表・引用で構成され、GitHub / VSCodeプレビューでそのまま読める。
 
 MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/creative-poem/report.md](wisdom-council-layer/examples/creative-poem/report.md)
 

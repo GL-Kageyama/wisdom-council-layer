@@ -1,7 +1,7 @@
 {
   "report_id": "wisdom-council-report",
   "report_timestamp": "2026-08-02T00:00:00Z",
-  "content_summary": "詩『重力を結わえる人』——見えない重荷をほどく人の物語",
+  "content_summary": "詩『昨日の郵便局』v1——届かなかった手紙を扱う郵便局の物語",
   "content_type": "text",
   "domain": "creative",
   "mode": "full",
@@ -10,79 +10,221 @@
     "anti-generic-filter",
     "aesthetic-critic",
     "emotional-impact",
-    "future-potential",
-    "business-value",
-    "scientific-novelty",
-    "philosophical-evaluator",
-    "quality-evaluator",
-    "meaning-evaluator"
+    "meaning-evaluator",
+    "future-potential"
   ],
   "excluded_evaluators": [
-    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" }
+    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "詩に市場性評価は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 55, "variance": 0, "min": 55, "max": 55, "scores": [55] },
-    "quality": { "mean": 42, "variance": 9, "min": 40, "max": 44, "scores": [44, 40] },
-    "aesthetic": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
-    "emotional_impact": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] },
-    "future_potential": { "mean": 36, "variance": 0, "min": 36, "max": 36, "scores": [36] },
-    "business_value": { "mean": 12, "variance": 0, "min": 12, "max": 12, "scores": [12] },
-    "scientific_novelty": { "mean": 5, "variance": 0, "min": 5, "max": 5, "scores": [5] },
-    "philosophical_depth": { "mean": 44, "variance": 0, "min": 44, "max": 44, "scores": [44] },
-    "meaning": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] }
+    "originality": { "mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56] },
+    "quality": { "mean": 26, "variance": 0, "min": 26, "max": 26, "scores": [26] },
+    "aesthetic": { "mean": 27, "variance": 0, "min": 27, "max": 27, "scores": [27] },
+    "emotional_impact": { "mean": 27, "variance": 0, "min": 27, "max": 27, "scores": [27] },
+    "future_potential": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] },
+    "meaning": { "mean": 54, "variance": 0, "min": 54, "max": 54, "scores": [54] }
   },
-  "current_value_score": 39,
-  "hidden_potential_score": 43,
+  "current_value_score": 34,
+  "hidden_potential_score": 50,
   "classification": "discovery_target",
   "disagreement_map": [
     {
-      "dimension": "business_value",
+      "dimension": "quality",
       "variance": 0,
-      "disputing_evaluators": ["business-value", "originality"],
+      "disputing_evaluators": ["anti-generic-filter", "originality"],
       "arguments": [
-        "business-value: 詩に直接的な市場価値はない。12点。",
-        "originality: 市場性の低さは芸術価値と別軸であり、独創性55点はむしろ長期的資産。"
+        "anti-generic-filter: 説明の連（『〜から』『気がする』）と定番モチーフ（眠る・蝋・温かい）が目立ち、結末は感情操作。26点。凡庸の典型。",
+        "originality: 『昨日しか扱わない郵便局』という場の設定は明確に非凡庸で、品質の低さは改訂で解消可能。独創性56点を維持する。"
+      ]
+    },
+    {
+      "dimension": "meaning",
+      "variance": 0,
+      "disputing_evaluators": ["meaning-evaluator", "emotional-impact"],
+      "arguments": [
+        "meaning-evaluator: 未達の手紙の重層性と『昨日しか扱わない』の時間比喩に深さを認め54点。",
+        "emotional-impact: 概念は深いが、感情が『待っている気がする』と直接述定されていて、深さが読者の実感にならない。27点。"
       ]
     }
   ],
-  "consensus_summary": "独創性(55)・意味(50)・感情(46)が「普通」よりは上だが傑出はしていない。『現在は流通していないが、価値の兆候が少しある』という見立てで概ね一致。",
-  "executive_summary": "『重力を結わえる人』は独創性(55)・意味(50)が平均より上だが、美(40)・品質(42)は凡庸域。厳格スコアリングにより、discovery_target（現在評価は限定的、潜在価値は45近傍）と判定。ビジネス価値(12)は本質的に低い。科学評価は例外的に除外。",
-  "synthesis_narrative": "厳格スコアリング（中央値約30）のもと、この詩は『普通に良い』（30-45）をやや上回る程度。独創性評価者は『重力を結わえる』という比喩に新規性を認め55点を付けたが、美学的評価者は『比喩の展開が直線的で感覚的な深みが足りない』と40点。ビジネス評価者は12点で、詩の市場性の低さを指摘。fullモードで招集された科学評価者は例外的に除外された。全体として『今はまだ埋もれているが、磨けば価値の兆候がある』作品。",
+  "consensus_summary": "独創性(56)・意味(54)が「真に良い」域に届きつつある一方、品質(26)・美(27)・感情(27)は凡庸域。『良い着想・未熟な表現』の典型で、現在価値は低いが潜在価値は50近傍。discovery_target で概ね一致。",
+  "executive_summary": "『昨日の郵便局』は、場の設定とモチーフの独創性（独創性56・意味54）が平均を上回る一方、説明過多・定番モチーフ・感情操作的な結末が表現の凡庸さ（品質26・美27・感情27）を生んでいる。厳格スコアリングのもと current_value=34 / hidden=50 で discovery_target。科学・ビジネス評価は詩に不適合のため例外的に除外。改善余地は明確（説明削除・定番脱却・結末の反転）。",
+  "synthesis_narrative": "厳格スコアリング（中央値約30）のもと、この詩は「普通に良い」をやや下回る完成度だが、概念は明確に非凡庸。独創性評価者は『昨日しか扱わない郵便局』の場に新規性を認めたが、anti-genericフィルタは説明の連と感情操作の結末を赤旗に26点と最低評価。意味評価者は未達の手紙の重層性を54点と評価したが、感情評価者はそれが実感になっていないと27点。全体として「磨けば価値になるが、今のままでは凡庸域」の discovery_target。",
   "individual_reports": [
     {
       "evaluator_id": "originality",
       "evaluator_name": "Originality Evaluator",
-      "content_summary": "詩『重力を結わえる人』の独創性評価",
+      "content_summary": "詩『昨日の郵便局』v1の独創性評価",
       "domain": "creative",
-      "primary_score": 55,
-      "primary_score_rationale": "『重力』を結わえ・ほどけるものとして捉える比喩は新しいが、展開が一方向に留まる",
+      "primary_score": 56,
+      "primary_score_rationale": "『昨日しか扱わない郵便局』という場の設定は新規だが、比喩の展開が直線的で一方向に留まる",
       "dimension_scores": {
-        "conceptual_novelty": { "score": 58, "weight": 0.35, "evidence": "重力を結わえる・吊るす・ほどく", "judgment": "比喩レベルでは新しい" },
-        "combinatorial_surprise": { "score": 55, "weight": 0.25, "evidence": "重荷×重力×紐の結合", "judgment": "予想はできる" },
-        "distance_from_template": { "score": 52, "weight": 0.25, "evidence": "既存の『重荷』詩との距離", "judgment": "中程度" },
-        "non_obviousness": { "score": 50, "weight": 0.15, "evidence": "独自の比喩運用", "judgment": "専門家を驚かせるほどではない" }
+        "conceptual_novelty": { "score": 60, "weight": 0.35, "evidence": "昨日しか扱わない郵便局、配達されなかった手紙", "judgment": "概念レベルで新規" },
+        "combinatorial_surprise": { "score": 55, "weight": 0.25, "evidence": "郵便×昨日（時間）×喪失の結合", "judgment": "意外だが予想できる範囲" },
+        "distance_from_template": { "score": 54, "weight": 0.25, "evidence": "既存の『手紙・喪失』詩との距離", "judgment": "中程度の距離" },
+        "non_obviousness": { "score": 52, "weight": 0.15, "evidence": "宛先が変わってしまった人の物語", "judgment": "専門家を驚かせるほどではない" }
       },
-      "value_vector_contribution": { "originality": 55, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": { "originality": 56, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
       "classification": "discovery_target",
-      "confidence": 70,
-      "strengths": ["重力を操作可能なものとして捉える比喩"],
-      "weaknesses": ["比喩の展開が直線的で、一つの観察で終わっている"],
+      "confidence": 72,
+      "strengths": ["『昨日しか扱わない郵便局』という場の設定が既存の喪失詩と明確に異なる", "未達の手紙を物理的な物として擬人化する視点"],
+      "weaknesses": ["比喩の展開が直線的で、『〜だから』の説明が入る", "終盤の『気がする』で概念が収束し、広がりが止まる"],
       "red_flags_triggered": [],
-      "green_flags_detected": ["比喩の新規性"],
-      "unique_perspective": "普遍テーマ（重荷）を物理的比喩で再構成した点が既存詩と少し異なる",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "市場性の低さを指摘するだろう" }],
-      "improvement_suggestions": ["比喩の意外な転換を加える（例: 光と錆びの矛盾）", "2連目で視点を反転させる"],
-      "narrative": "『重力を結わえる』という比喩は既存の重荷テーマを物理的次元で捉え直した点で新しい。しかし展開が直線的で、比喩が一つの観察で終わってしまう。..."
+      "green_flags_detected": ["場の新規性", "独創的な観察点"],
+      "unique_perspective": "普遍テーマ（喪失・待つこと）を『未達の手紙』という具体的な物理的存在で再構成した点が、観念的な喪失詩との違い",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "説明過多・直線的な展開を凡庸とみて、私の高評価に反論するだろう" },
+        { "evaluator_type": "business-value", "predicted_stance": "市場性の低さを指摘するだろうが、本合議では除外されている" }
+      ],
+      "improvement_suggestions": ["説明の連（『〜から』『気がする』）を削り、行為だけで語る", "終盤に観念を覆す転換を入れる（例: 届かない手紙が却って届く）", "2連目で視点を局員から手紙側に反転させる"],
+      "narrative": "『昨日の郵便局』という場の設定は、喪失テーマを空間と時間の比喩で捉え直した点で新しい。しかし展開が直線的で、比喩が説明と願望で閉じてしまう。概念が開けば、この世界はもっと多くの予想外を宿せる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "詩『昨日の郵便局』v1の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 26,
+      "primary_score_rationale": "定番モチーフと説明の連が詩を埋め、結末が願望の直接述定で感情を操作する",
+      "dimension_scores": {
+        "cliche_density": { "score": 22, "weight": 0.3, "evidence": "『眠っている』『まだ温かく』『蝋で封をし直す』", "judgment": "消印や手紙の定番イメージが散在する" },
+        "emotional_manipulation": { "score": 28, "weight": 0.3, "evidence": "『誰かが待っている気がする』", "judgment": "結末が願望を直接述べ、読者に感情を要求する" },
+        "structural_predictability": { "score": 30, "weight": 0.25, "evidence": "場→説明→感情の直線", "judgment": "展開が教科書通り" },
+        "substance_over_style": { "score": 25, "weight": 0.15, "evidence": "『〜から』で意味を説明する", "judgment": "見せる代わりに語る" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 26, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "low_signal",
+      "confidence": 80,
+      "strengths": ["核となる場（未達の手紙）はそれ自体が凡庸ではない"],
+      "weaknesses": ["消印・手紙・蝋というモチーフが既視感のある定番", "結末が『気がする』で観念に逃げ、感情を操作する", "1〜3連が説明と願望で埋まり、詩としての緊密さがない"],
+      "red_flags_triggered": ["感情操作的な結末", "定番モチーフの散在"],
+      "green_flags_detected": ["場の設定の非凡庸性"],
+      "unique_perspective": "概念の新しさに気を取られると、散文的な説明と定番モチーフが凡庸として隠れてしまう",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "概念の新規性を重視し、私の26点は過小評価とみるだろう" }
+      ],
+      "improvement_suggestions": ["説明の連（『〜から』『気がする』）を全削し、行為だけで描く", "定番イメージ（眠る・蝋・温かい）を独自の感覚に置き換える", "結末を観念の回収ではなく、出来事の転換にする"],
+      "narrative": "この詩の凡庸さは語彙の少なさではなく『安心の構え』にある。消印の温かさ、蝋で封をし直す行為は、読者が予想する手紙の世界をなぞるだけだ。結末の『気がする』は感情を肩代わりし、読者に残るのは安堵であって感銘ではない。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "詩『昨日の郵便局』v1の美的評価",
+      "domain": "creative",
+      "primary_score": 27,
+      "primary_score_rationale": "場の一貫性はあるが、感覚の密度が薄く、説明文の拍子が詩の音楽を殺す",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 25, "weight": 0.35, "evidence": "『生温かい消印』『蝋』", "judgment": "触感の種はあるが数が少ない" },
+        "rhythmic_musicality": { "score": 30, "weight": 0.25, "evidence": "固定されない自由律", "judgment": "呼吸は悪くないが単調" },
+        "imagistic_concreteness": { "score": 26, "weight": 0.25, "evidence": "『引出しの中の手紙』", "judgment": "観念的説明が具体像を押し潰す" },
+        "cohesion": { "score": 30, "weight": 0.15, "evidence": "場が一貫して保たれている", "judgment": "整合はあるが起伏がない" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 27, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "low_signal",
+      "confidence": 70,
+      "strengths": ["場（郵便局・引出し）が一貫して視覚的に保たれている"],
+      "weaknesses": ["感覚の密度が薄く、抽象名詞（手紙・誰か・世界）で埋まる", "リズムが平坦で、アクセントになる一行がない", "説明文の拍子（『〜から』）が詩の音楽を殺す"],
+      "red_flags_triggered": ["散文的説明の混入"],
+      "green_flags_detected": [],
+      "unique_perspective": "概念が面白いほど、読者は形（音・像）の粗さを見落とす。美の評価は概念から独立して行う",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "概念の新規性を重視し、私の低評価と衝突するだろう" }
+      ],
+      "improvement_suggestions": ["感覚形容詞を具体的な物質（紙の厚さ・封の音）に置き換える", "アクセントとなる一行を1連に加える", "説明の句読点を削り、息継ぎを造形する"],
+      "narrative": "場の設定は視覚的に保たれているが、詩は『手紙』『誰か』という抽象名詞の上を滑る。蝋や消印という具体の種はあるのに、展開が説明に使われて像にならない。リズムも平坦で、全編に一度の切れが欲しい。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "詩『昨日の郵便局』v1の情動評価",
+      "domain": "creative",
+      "primary_score": 27,
+      "primary_score_rationale": "未達の手紙という情動核は強いが、結末が感情を直接述べ、カタルシスが発生しない",
+      "dimension_scores": {
+        "visceral_response": { "score": 28, "weight": 0.35, "evidence": "未達の手紙・宛先の消失", "judgment": "素材は心に触れるが表現が間接的" },
+        "catharsis": { "score": 25, "weight": 0.3, "evidence": "『誰かが待っている気がする』", "judgment": "感情を述べて回収し、解放が起きない" },
+        "empathy_triggers": { "score": 30, "weight": 0.25, "evidence": "局員が自分の手紙を書く", "judgment": "共感点はあるが都合よく整う" },
+        "subtlety_of_feeling": { "score": 24, "weight": 0.1, "evidence": "『気がする』", "judgment": "感情が言葉に回収され、余白がない" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 27, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "low_signal",
+      "confidence": 72,
+      "strengths": ["未達の手紙という主題自体が強い情動の核を持つ"],
+      "weaknesses": ["感情を『待っている気がする』と直接述べ、読者の感情労働を肩代わりする", "局員の独白で締まり、読者に残るのは情報ではなく安堵感"],
+      "red_flags_triggered": ["感情の直接述定（テリング）"],
+      "green_flags_detected": ["情動核の存在"],
+      "unique_perspective": "この詩の涙は『未達の手紙』にあり、『気がする』という結語がその涙を遮っている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "概念の深さを高評価し、情動の不在を軽視するだろう" }
+      ],
+      "improvement_suggestions": ["結末を感情の述定から『出来事』（消える・届く）に変える", "局員の心理を削り、手紙の物理的な運命だけを描く", "読者に感情を完成させる余白を残す"],
+      "narrative": "未達の手紙、宛先が変わってしまった人——素材は確かに心に触れる。しかし結末は『待っている気がする』と感情を言葉で回収し、読者が泣く前に作者が代わりに泣いてしまう。局員の独白ではなく、手紙の運命という出来事に情動を移すべきだ。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "詩『昨日の郵便局』v1の意味評価",
+      "domain": "creative",
+      "primary_score": 54,
+      "primary_score_rationale": "未達の手紙が喪失・後悔・未送信の想いを重層し、『昨日しか扱わない』が時間と記憶の比喩として機能する",
+      "dimension_scores": {
+        "philosophical_depth": { "score": 52, "weight": 0.35, "evidence": "未達の手紙＝届けられない想い", "judgment": "喪失と待つことの普遍性に届く" },
+        "universality": { "score": 56, "weight": 0.3, "evidence": "宛先が変わってしまった人", "judgment": "多くの読者が自分の未達を重ねられる" },
+        "structural_insight": { "score": 52, "weight": 0.25, "evidence": "郵便局が『昨日』だけを扱う", "judgment": "時間と記憶の比喩として機能する" },
+        "actionability_of_meaning": { "score": 50, "weight": 0.1, "evidence": "結語の『待っている気がする』", "judgment": "意味が回収されすぎて、読者の問いが閉じる" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 54 },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": ["『未達の手紙』が喪失・後悔・未送信の想いという複数の重層を担う", "『昨日しか扱わない』が時間と記憶の仕組みを詩的に写す"],
+      "weaknesses": ["意味が結語で『待つ』に回収され、喪失の多義性が閉じる", "哲学的な問いが情緒で覆われる"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["重層的なモチーフ", "普遍テーマへの架橋"],
+      "unique_perspective": "この詩の意味は『手紙が届かないこと』ではなく『届かないことに世界が存続すること』にある。v1はまだそこに届いていない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "意味の深さを認めつつ、表現の凡庸さで大きく下げるだろう" }
+      ],
+      "improvement_suggestions": ["結語を『待つ』から『未達が世界を支える』方向へ反転させる", "局員の救済ではなく、構造の矛盾を残す", "空白・消失を意味の中心に据える"],
+      "narrative": "この詩の芯は『届けられない想い』という普遍的な喪失だが、それ自体は数えきれない詩が扱ってきた。本当の問いは、届かないことが世界を支えている、という逆説にある。v1は結語で『待つ』に回収され、その問いが閉じてしまう。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "詩『昨日の郵便局』v1の将来性評価",
+      "domain": "creative",
+      "primary_score": 46,
+      "primary_score_rationale": "郵便局という舞台は連作・別ジャンルに拡張可能だが、v1の結末が世界を一回で消費してしまう",
+      "dimension_scores": {
+        "extensibility": { "score": 48, "weight": 0.35, "evidence": "郵便局という舞台の設定", "judgment": "連作・短編・視覚化に拡張可能" },
+        "thematic_fertility": { "score": 50, "weight": 0.3, "evidence": "未達・消失・宛先の変化", "judgment": "複数の続きの芽がある" },
+        "audience_reach": { "score": 42, "weight": 0.25, "evidence": "待つ・喪失の普遍性", "judgment": "世代を超えるが、現在の形は狭い" },
+        "sustainability": { "score": 44, "weight": 0.1, "evidence": "概念の強度", "judgment": "場の設定は持ちこたえる" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 46, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": ["『昨日の郵便局』はシリーズ化しうる世界を持つ", "未達の手紙はテーマとして何年も開拓できる"],
+      "weaknesses": ["v1の結末が『待つ』で閉じ、世界が一回で消費される", "舞台設定が魅力的な分、改訂で広がる余地が未発達"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["拡張可能な世界設定"],
+      "unique_perspective": "他の評価者は完成度を見るが、私は『この世界にどれだけ住めるか』を見る。この世界は住める",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "現在の形の美しさを重視し、可能性評価を楽観視とみるだろう" }
+      ],
+      "improvement_suggestions": ["結末を閉じず、世界に疑問を残す（消える・届かないまま）", "局員以外の視点（手紙・宛先人）の連作を予感させる", "舞台の詳細（引出しの番号・消印の色）を地層として残す"],
+      "narrative": "『昨日の郵便局』という設定は、一詩で終わるにはもったいない。引出しのひとつひとつが別の物語の入口だ。しかしv1の結末は『待つ』という一回きりの救済で世界を閉じてしまい、その余白を潰している。"
     }
   ],
   "recommendations": [
-    "discovery_target として記録し、6ヶ月後に再評価する",
-    "比喩の転換を加えた改訂版を作成し、再評価する（作成→評価→再作成ループ）",
-    "autoモード（creative）なら originality・anti-generic・aesthetic・emotional + meaning・philosophical の6体で十分"
+    "discovery_target として記録し、結末の反転を中心に改訂版を作成→再評価ループへ",
+    "説明の連（『〜から』『気がする』）を全削し、行為だけで語らせる",
+    "定番モチーフ（眠る・蝋・温かい）を独自の感覚に置き換える",
+    "autoモード（creative）なら originality・anti-generic・aesthetic・emotional + meaning・future-potential の6体で十分"
   ],
   "caveats": [
-    "scientific_novelty は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
-    "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない",
-    "厳格スコアリング適用のため、以前の非厳格なサンプルと数値の水準が異なる"
+    "scientific_novelty と business-value は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、絶対スコアの水準は意図的に低い",
+    "独創性56点は概念由来で、表現の凡庸さ（品質26）と大きく乖離する点が改訂の主な焦点"
   ]
 }

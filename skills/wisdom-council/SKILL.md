@@ -290,6 +290,7 @@ Your response must be ONLY the JSON object, no other text.
 - 合議は判決を下さない。最終的な価値判断は人間の責任である（UVIN哲学）。
 - 各評価者の `unique_perspective` をレポートで尊重すること。
 - 不一致が多いほどレポートは価値がある。それはコンテンツが複雑な価値を持つ証拠である。
+- レポートの**Markdown出力**は、`python utils/render_report.py report.json -o report.md` で行う（拡張子 `.md` で自動判定）。読みやすい文書として保存・共有できる。
 
 ## Version History
 

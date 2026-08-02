@@ -1,29 +1,344 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "思想エッセイ『便利さは選択の手触りを奪う』改訂案——身体感覚の具体化",
+  "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案——身体記憶の具体化",
   "domain": "cultural",
   "mode": "full",
-  "evaluators_consulted": ["originality", "anti-generic-filter", "aesthetic-critic", "philosophical-evaluator", "future-potential", "meaning-evaluator", "quality-evaluator"],
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "philosophical-evaluator",
+    "meaning-evaluator",
+    "aesthetic-critic",
+    "future-potential"
+  ],
   "excluded_evaluators": [
     { "evaluator_id": "scientific-novelty", "reason": "エッセイに科学的新規性は不適合（例外的除外）" },
     { "evaluator_id": "business-value", "reason": "思想エッセイに市場性評価は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 48, "scores": [48] },
-    "quality": { "mean": 28, "scores": [28] },
-    "aesthetic": { "mean": 30, "scores": [30] },
-    "philosophical_depth": { "mean": 54, "scores": [54] },
-    "future_potential": { "mean": 50, "scores": [50] },
-    "meaning": { "mean": 56, "scores": [56] }
+    "originality": { "mean": 49, "variance": 0, "min": 49, "max": 49, "scores": [49] },
+    "quality": { "mean": 31, "variance": 0, "min": 31, "max": 31, "scores": [31] },
+    "aesthetic": { "mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32] },
+    "philosophical_depth": { "mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56] },
+    "future_potential": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
+    "meaning": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] }
   },
-  "current_value_score": 40,
-  "hidden_potential_score": 53,
+  "current_value_score": 42,
+  "hidden_potential_score": 51,
   "classification": "discovery_target",
-  "executive_summary": "『手で水をすくう』という身体記憶の具体化により、哲学・意味が大幅に改善。現在価値40・潜在価値53で discovery_target（執行は粗いが、思想の可能性は高い）。",
-  "synthesis_narrative": "再作成指令（物理的感覚としての『手触り』）が機能した。哲学評価者は『便利さの代償を身体感覚の喪失として描いた点に独自の問いがある』と54点。意味評価者も56点。ただし品質(28)と美(30)は低く、文体はまだ粗い。",
-  "recommendations": [
-    "文体の精緻化（品質・美を上げる改訂）を次回の再作成指令にする",
-    "『微かな抵抗』の具体例を1つに絞って深掘りする"
+  "disagreement_map": [
+    {
+      "dimension": "philosophical_depth",
+      "variance": 0,
+      "disputing_evaluators": ["philosophical-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "philosophical-evaluator: 『知る』の二つの形への問いは世界観を揺さぶる。56点。",
+        "anti-generic-filter: 深さは認めるが、文体の粗さが品質を引き下げる。31点。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "meaning-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 固有の声は冒頭の1段落しか確立していない。31点。",
+        "meaning-evaluator: 粗さを超えて一人の人生の理解に触れる。52点。"
+      ]
+    }
   ],
-  "caveats": ["科学・ビジネス評価は不適合のため除外"]
+  "consensus_summary": "独創性・哲学・意味・未来の4体が『雨の夜の身体記憶が、迷いを身体知として扱う独自の問いを生んだ』で一致しdiscovery_targetを唱えた。一方、凡庸性探知犬と美の批評家は『文体と形式はまだ粗い』とquality・aestheticの低さを一致して指摘。この『深い問い×粗い文体』の緊張が、現在価値42・潜在価値51のボーダーラインを生んでいる。",
+  "executive_summary": "『雨の夜に迷う』身体記憶の具体化が機能し、エッセイは技術批判の定型から『場所を知るとはどういうことか』への問いへと逸脱した。哲学56・意味52・独創性49が上昇し、現在価値42・潜在価値51でdiscovery_target（執行は粗いが、思想の可能性は高い）。次回の再作成指令は『文体の精緻化』。",
+  "synthesis_narrative": "議長として、私は改訂前後の変化をそのまま記録する。独創性評価者は『雨の夜の身体として迷いが現れた』と49点。凡庸性探知犬は『冒頭は本物の手触りだが、全体の声はまだ確立していない』と31点。美の批評家は『雨が降った。しかし光は一箇所だけ』と32点。哲学評価者は『地図は「いること」を教えない』という一行に足を止め56点。未来の観測者は『迷いの文化の記録になり得る』と50点。意味の守護者は『迷って自分のものになった街』に心を動かされ52点。6体のうち4体がdiscovery_targetを唱え、2体が文体の粗さを指摘する。この不一致こそ、『深さは本物、形は未熟』というこの改訂案の真実である。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の独自性評価",
+      "domain": "cultural",
+      "primary_score": 49,
+      "primary_score_rationale": "迷いを身体知として再定義する構えが独自性を生み、身体記憶の具体化で逸脱が明確になった",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 52, "weight": 0.35, "evidence": "『迷い＝失敗でなく身体知の入り口』", "judgment": "枠組みがずれた" },
+        "combinatorial_surprise": { "score": 46, "weight": 0.25, "evidence": "GPS批判×雨の夜の身体記憶", "judgment": "結合が効いている" },
+        "distance_from_template": { "score": 48, "weight": 0.25, "evidence": "ナビ批判の定型から距離を取った", "judgment": "テンプレートから離れた" },
+        "non_obviousness": { "score": 50, "weight": 0.15, "evidence": "『地図は「いること」を教えず』の着地", "judgment": "実践者も見落とす" }
+      },
+      "value_vector_contribution": {
+        "originality": 49,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "『迷う』を欠陥でなく身体知として扱う反転",
+        "雨の夜の記憶が体験の具体を与えた"
+      ],
+      "weaknesses": [
+        "後半の論理展開はまだ粗い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "カテゴリー破壊",
+        "生産的な奇妙さ"
+      ],
+      "unique_perspective": "『地図は「どこにいるか」を教えるが「そこにいること」を教えない』は、一見逆説で、実践者はなかなか言わない。この一文がエッセイ全体を逸脱に押し上げている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "着想は評価するが文体の粗さには不満を残すだろう" }
+      ],
+      "improvement_suggestions": [
+        "後半を身体記憶から論理へ滑らかに架橋する"
+      ],
+      "narrative": "初案では『スマホが何かを奪う』という百回目の構図だった。改訂案では、迷いが雨の夜の身体として現れ、エッセイはナビ批判から『場所を知るとはどういうことか』への問いへずれた。49点——独自性はようやく『意味ある逸脱』の領域に入った。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の凡庸性評価",
+      "domain": "cultural",
+      "primary_score": 31,
+      "primary_score_rationale": "具体は増えたが、文体はまだ粗く、固有の声が全体に確立していない",
+      "dimension_scores": {
+        "generic_language_density": { "score": 31, "weight": 0.3, "evidence": "冒頭は生きた言葉に変わった", "judgment": "やや改善" },
+        "risk_avoidance": { "score": 30, "weight": 0.25, "evidence": "断言はまだ少ない", "judgment": "慎重" },
+        "information_density": { "score": 32, "weight": 0.25, "evidence": "具体が増えて密度が上がった", "judgment": "改善" },
+        "particularity": { "score": 33, "weight": 0.2, "evidence": "雨の夜・角のにおい・電柱の傾き", "judgment": "固有の経験が入った" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 31,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 70,
+      "strengths": [
+        "雨の夜の記憶が『この人でしか書けない』場面になった"
+      ],
+      "weaknesses": [
+        "後半はまだ説明文",
+        "比喩のいくつかは取り換え可能"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "質感と手触り",
+        "実際の声の芽"
+      ],
+      "unique_perspective": "冒頭の身体記憶は別人の言葉では書けない。だが全体の声はまだ1段落分しか確立していない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "philosophical-evaluator", "predicted_stance": "問いの深さは品質の粗さと独立に評価するだろう" }
+      ],
+      "improvement_suggestions": [
+        "後半を『説明』から『告白』に書き直す"
+      ],
+      "narrative": "凡庸性の探知犬として、私は冒頭の『雨に打たれ、角のにおいで街を覚える』一節に嗅覚を働かせた。それは本物の手触りだ。だが残りの部分はまだ『論点の整理』で、誰が書いても同じ。声がエッセイ全体に広がるまで、31点。"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "evaluator_name": "Philosophical Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の思想的深さ評価",
+      "domain": "cultural",
+      "primary_score": 56,
+      "primary_score_rationale": "身体知と命題知の区別を経験として描き、世界観を揺さぶる問いになった",
+      "dimension_scores": {
+        "worldview_impact": { "score": 58, "weight": 0.3, "evidence": "『地図は「いること」を教えない』", "judgment": "見方を再構成する" },
+        "contribution_to_self_understanding": { "score": 56, "weight": 0.25, "evidence": "場所との身体的な関係", "judgment": "自己理解に届く" },
+        "intellectual_depth": { "score": 55, "weight": 0.25, "evidence": "身体知の構造", "judgment": "誠実な問い" },
+        "novelty_of_question": { "score": 52, "weight": 0.2, "evidence": "既知の問いを身体経験から問い直す", "judgment": "新しい仕方" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": 56,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": [
+        "『「いること」と「どこにいるか」の区別』は前提の可視化",
+        "身体記憶が具体と抽象を往復させる"
+      ],
+      "weaknesses": [
+        "身体知の哲学的な含意の展開が不十分"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "前提の可視化",
+        "開かれた問い",
+        "具体と抽象の往復"
+      ],
+      "unique_perspective": "このエッセイは地図という道具についてではなく、知るという態度について書かれている。迷いの中で体が街を覚えるとき、私たちは『命題として知る』のとは別の仕方で知っている。哲学者はここに最も近づいた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "深さは認めるが形式の未熟さを指摘するだろう" }
+      ],
+      "improvement_suggestions": [
+        "身体知と命題知の哲学的含意を1段落に凝縮する"
+      ],
+      "narrative": "哲学者として、私は『地図は「どこにいるか」を教えるが、「そこにいること」を教えない』という一行に足を止めた。これは世界の見方を再構成する問いだ。迷いの中で体が街を覚える——それは知るの別の形。56点。この問いは未完だが、本物になった。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の意味性評価",
+      "domain": "cultural",
+      "primary_score": 52,
+      "primary_score_rationale": "一人の身体経験を通じて『自分のものになった場所』の意味を照らし、人生の理解に触れる",
+      "dimension_scores": {
+        "existential_resonance": { "score": 55, "weight": 0.35, "evidence": "迷い・帰属・住まうこと", "judgment": "生の根本に触れる" },
+        "narrative_power": { "score": 52, "weight": 0.25, "evidence": "雨の夜の記憶が物語として機能", "judgment": "経験に光を当てる" },
+        "significance": { "score": 50, "weight": 0.2, "evidence": "『自分のものになった街』", "judgment": "必然性の感覚" },
+        "interpretive_depth": { "score": 50, "weight": 0.2, "evidence": "再読で新しい層", "judgment": "多層的になった" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": 52
+      },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "『迷わなかった街』と『迷って自分のものになった街』の対比",
+        "一人の固有の経験を通じた普遍"
+      ],
+      "weaknesses": [
+        "後半で意味の探求が論説に後退する"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "普遍的と個別の共存",
+        "人生の転機を照らす"
+      ],
+      "unique_perspective": "このエッセイはナビについてではない。人生で『自分のものになる』とは何かの問いである。迷った雨の夜は、一つの人生の転機を照らしている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "意味は認めるが形式の粗さを指摘するだろう" }
+      ],
+      "improvement_suggestions": [
+        "結末を『身体知』から『生きる』へ一回転させて締める"
+      ],
+      "narrative": "意味の守護者として、私は『迷って自分のものになった街』という言葉に心を動かされた。それは場所の所有の物語であり、人生の理解の一部になる。一人の雨の夜が、万人に通じる何かを語っている。52点。意味は確かに生まれた。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の美的評価",
+      "domain": "cultural",
+      "primary_score": 32,
+      "primary_score_rationale": "冒頭の場面に感覚的な厚みが出たが、全体の形式は未完成",
+      "dimension_scores": {
+        "formal_coherence": { "score": 32, "weight": 0.3, "evidence": "記憶の場面と論理の接続がまだ不自然", "judgment": "部分と全体の緊張" },
+        "expressive_range": { "score": 33, "weight": 0.25, "evidence": "雨・音・電柱の傾きが意味を担い始めた", "judgment": "表現が効き始めた" },
+        "sensuous_quality": { "score": 34, "weight": 0.25, "evidence": "雨音の反響・角のにおい", "judgment": "五感に届く場面が生まれた" },
+        "aesthetic_ambition": { "score": 30, "weight": 0.2, "evidence": "試みは始まった", "judgment": "未完成" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": 32,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "low_signal",
+      "confidence": 68,
+      "strengths": [
+        "雨の夜の場面はテクスチャーを持つ"
+      ],
+      "weaknesses": [
+        "場面と主張の継ぎ目が見える",
+        "散文全体のリズムが未成立"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "適切さの萌芽"
+      ],
+      "unique_perspective": "『帰れるようになった道は、地図で知っている道よりも確かに自分のものだった』は、形として収まる一行。この一行がエッセイの核になる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "その一行の意味の重みをより高く評価するだろう" }
+      ],
+      "improvement_suggestions": [
+        "継ぎ目を削り、感覚描写に一本通す"
+      ],
+      "narrative": "初案で『何も濡れていなかった』散文に、雨が降った。冒頭の記憶は光、音、肌触りを持つ。しかし場面が終わると再び論説の骨組みに戻り、継ぎ目が見える。美は一箇所に光った。全体に光が回るまで、32点。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Analyzer",
+      "content_summary": "思想エッセイ『迷うことは、場所を知ることの最初の形である』改訂案の将来性評価",
+      "domain": "cultural",
+      "primary_score": 50,
+      "primary_score_rationale": "ナビ依存の反動と『意図的に迷う』文化の到来に乗り、再訪の価値も生まれた",
+      "dimension_scores": {
+        "environmental_shift_potential": { "score": 52, "weight": 0.3, "evidence": "ナビ依存への反動・都市経験の再評価", "judgment": "明確な追い風" },
+        "historical_similarity": { "score": 48, "weight": 0.25, "evidence": "身体と場所の再評価の先例", "judgment": "中程度" },
+        "compounding_value": { "score": 50, "weight": 0.25, "evidence": "身体記憶は再読で新しい層を開く", "judgment": "蓄積する" },
+        "timing_analysis": { "score": 50, "weight": 0.2, "evidence": "テーマは今、中身も具体を得た", "judgment": "時代と中身が揃い始めた" }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 50,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "『迷いの練習』への関心の高まりと同調",
+        "身体記憶による再訪の深さ"
+      ],
+      "weaknesses": [
+        "文化論への接続がまだ弱い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "進行中の変化の味方",
+        "再訪の深さ"
+      ],
+      "unique_perspective": "GPSが完璧になるほど、『意図的に迷うこと』は余暇と自己修養の形になる。このエッセイはその文化の最初の記録になり得る",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "流行文芸に転がる危険を警戒するだろう" }
+      ],
+      "improvement_suggestions": [
+        "『迷いの文化』への広がりを1段落で示す"
+      ],
+      "narrative": "未来の時間軸から見ると、このエッセイの追い風は強い——ナビへの依存が進むほど、迷いの価値は反動的に上がる。しかも身体記憶は再読のたびに新しい層を開く。50点。『迷いの文化』の記録になり得る芽。"
+    }
+  ],
+  "recommendations": [
+    "文体の精緻化——後半の説明文を身体記憶の語り口に統一する（品質・美を上げる再作成指令）",
+    "『身体知と命題知』の哲学的含意を1段落に凝縮し、結末を一回転させて締める"
+  ],
+  "caveats": [
+    "科学・ビジネス評価は次元不適合のため例外的除外",
+    "哲学・意味の高評価は『問いの可能性』であり、完成原稿の到達点ではない"
+  ]
 }

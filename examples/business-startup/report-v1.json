@@ -1,191 +1,284 @@
 {
   "report_id": "wisdom-council-report",
-  "content_summary": "スタートアップ『消えゆく日記』初案——感情記録アプリ",
+  "content_summary": "FOODSIGN（フードサイン）v1 — 閉店間際フード割引マッチングアプリ",
   "domain": "business",
   "mode": "full",
-  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "future-potential", "quality-evaluator", "meaning-evaluator"],
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "quality-evaluator", "future-potential", "meaning-evaluator"],
   "excluded_evaluators": [
-    { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
+    {"evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）"},
+    {"evaluator_id": "aesthetic-critic", "reason": "企画文書に美的完成度の評価軸は不適合"},
+    {"evaluator_id": "emotional-impact", "reason": "ビジネス企画評価では主軸とならない（消費者感情はbusiness-valueが担う）"},
+    {"evaluator_id": "philosophical-evaluator", "reason": "企画段階では市場価値の検証が優先され、世界観の変容評価は時期尚早"}
   ],
   "value_vector": {
-    "originality": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
-    "quality": { "mean": 40, "variance": 16, "min": 38, "max": 42, "scores": [42, 38] },
-    "business_value": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
-    "future_potential": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
-    "meaning": { "mean": 24, "variance": 0, "min": 24, "max": 24, "scores": [24] }
+    "originality": {"mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38]},
+    "quality": {"mean": 42, "variance": 9, "min": 39, "max": 45, "scores": [45, 39]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32]},
+    "business_value": {"mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42]},
+    "scientific_novelty": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 28, "variance": 0, "min": 28, "max": 28, "scores": [28]}
   },
-  "current_value_score": 40,
-  "hidden_potential_score": 33,
+  "current_value_score": 41,
+  "hidden_potential_score": 30,
   "classification": "trend_object",
   "disagreement_map": [
     {
       "dimension": "quality",
-      "variance": 16,
-      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "variance": 9,
+      "disputing_evaluators": ["quality-evaluator", "anti-generic-filter"],
       "arguments": [
-        "anti-generic-filter: 構成は安定しているが凡庸な表現が目立つ。42点。",
-        "quality-evaluator: 機能要件は揃っているが実装前提が不明確。38点。"
+        "quality-evaluator: 機能構成が一貫しており、MVPとして企画が成立する。最低限の骨格は整っている（45）",
+        "anti-generic-filter: 消費者割引×SDGsという定番の組み合わせで、どのフードロスアプリにも当てはまる汎用企画（39）"
+      ]
+    },
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": ["business-value", "meaning-evaluator"],
+      "arguments": [
+        "business-value: 手数料10%と有料掲載で最低限の収益経路はあるが、競争優位がなくスケールしない（42）",
+        "meaning-evaluator: エコへの善意を販促に利用する構図で、価値の深まりがなく流行と共に消える（28）"
       ]
     }
   ],
-  "consensus_summary": "ビジネス価値(42)は平均的、独創性(38)は弱い。既存の日記アプリの亜種という見立てで評価者が一致。",
-  "executive_summary": "既存の日記アプリの亜種であり、差別化が弱い。現在価値40・潜在価値33で trend_object（一時的に需要はあるが持続性が不明）。",
-  "synthesis_narrative": "独創性評価者は『感情マップは見慣れた機能の組み合わせ』と38点。ビジネス評価者も『プライバシーだけでは参入障壁にならない』と42点。意味評価者は24点と低く、アプリの存在意義が不明瞭。",
+  "consensus_summary": "6名の評価者は『消費者向け割引×SDGs』という構図が既存競合（Too Good To Go系）と重なり汎用的である点では概ね一致。quality-evaluatorとbusiness-valueは企画の骨格と最低限の収益経路を評価する一方、anti-generic-filterとmeaning-evaluatorは差別化の欠如と意味の希薄さを指摘した。現時点の価値（≈41）はやや高めだが長期価値（≈30）は低く、トレンド依存の構造と判定された。",
+  "executive_summary": "FOODSIGN v1は、手数料依存の消費者向けフード割引アプリとして『無難だが汎用』の企画。差別化の欠如と競争優位の不在が最大の弱点であり、B2B在庫シグナル基盤へのピボットで解消し得る。",
+  "synthesis_narrative": "合議はv1を『流行に乗ったが実体が薄い』典型（trend_object）と判定した。消費者への割引提供には既存需要があるが、その競争で勝てる根拠が提示されていない。改善の焦点は、手数料に依存しない収益構造と、競合が容易に真似できない差別化に置かれるべきである。",
   "individual_reports": [
     {
       "evaluator_id": "originality",
-      "evaluator_name": "Originality Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』の独自性評価",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
       "domain": "business",
       "primary_score": 38,
-      "primary_score_rationale": "感情マップは既存機能の組み合わせで、差別化が弱い",
+      "primary_score_rationale": "消費者割引×SDGsは既知の組み合わせの踏襲で、概念的独創性が低い。『割引の場』の提供では既存作品からの距離が十分に取れていない。",
       "dimension_scores": {
-        "conceptual_novelty": { "score": 40, "weight": 0.35, "evidence": "感情記録＋可視化", "judgment": "見慣れた構成" },
-        "combinatorial_surprise": { "score": 35, "weight": 0.25, "evidence": "日記×感情マップ", "judgment": "予測の範囲内" },
-        "distance_from_template": { "score": 36, "weight": 0.25, "evidence": "既存日記アプリとの差", "judgment": "小さい" },
-        "non_obviousness": { "score": 38, "weight": 0.15, "evidence": "独自機能の不在", "judgment": "自明" }
+        "conceptual_novelty": {"score": 35, "weight": 0.35, "evidence": "「閉店間際の売れ残りを最大70%オフで受け渡す」はフードロス分野の既存テンプレート", "judgment": "根底のアイデアが新しくない。表面の表現だけが異なる。"},
+        "combinatorial_surprise": {"score": 40, "weight": 0.25, "evidence": "「地図検索×プッシュ通知×クーポン決済」は各要素が独立に既知", "judgment": "要素の結合が予測可能で、新しい意味を生んでいない。"},
+        "distance_from_template": {"score": 40, "weight": 0.25, "evidence": "SDGsを帯びたブランディングは本領域で多用される定型", "judgment": "ジャンルの最も近い先行作品から十分に遠いとは言えない。"},
+        "non_obviousness": {"score": 38, "weight": 0.15, "evidence": "「エコなら使われる」という導出が単純", "judgment": "熟練した実践者でも容易に思いつく範囲。非自明性が低い。"}
       },
-      "value_vector_contribution": { "originality": 38, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": 38, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "trend_object",
-      "confidence": 75,
-      "strengths": ["感情の可視化という需要はある"],
-      "weaknesses": ["差別化軸が不明確"],
-      "red_flags_triggered": ["見せかけの新しさ"],
+      "confidence": 72,
+      "strengths": [
+        "食品ロスという明確な社会的課題を起点にしている点は、起点として妥当",
+        "機能セット（地図検索・プッシュ通知・決済）は実行可能な範囲に収まっている"
+      ],
+      "weaknesses": [
+        "『割引の場』を提供するだけでは既存のフードロスアプリと差がなく、意味ある逸脱になっていない",
+        "SDGsブランディングが単なる付加であり、企画自体を変形していない"
+      ],
+      "red_flags_triggered": ["偽の新しさ（表面がフードロスというだけで、深層は既存パターンの再結合）"],
       "green_flags_detected": [],
-      "unique_perspective": "既存機能の寄せ集めで、真の新規性がない",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "市場はあるが競争が激しいと評価するだろう" }],
-      "improvement_suggestions": ["差別化軸を逆転させる（例: 消える前提）"],
-      "narrative": "感情の可視化は需要があるが、既存の日記・ムードトラッカーと違いがない。..."
+      "unique_perspective": "v1の真の問題は『需要の有無』ではなく、需要の場に新しさが一切ないことだ。同じ需要でも、廃棄の在庫データという視点に変換するだけで独創性は跳ね上がる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "需要は既に市場にあり収益経路も最低限あるとして、より高く評価するだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "構成が一貫しており企画として成立するとして、やや高めに見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "割引の『場』ではなく、店舗の廃棄在庫という『シグナル』を商品化する視点へ移す",
+        "特定業態（ベーカリー等）に特化し、業界固有の非自明なオペレーション知識を入れる"
+      ],
+      "narrative": "この企画は『安全な答え』を選んでいる。フードロスという誰も否定できない課題に寄りかかり、既存の割引市場に参入する——そこには発見も、リスクもない。独創性は勇気の関数だ。同じ市場で『在庫データの意味を変える』ことで、この企画は初めて独自の輪郭を持つ。"
     },
     {
       "evaluator_id": "anti-generic-filter",
-      "evaluator_name": "Anti-Generic Filter",
-      "content_summary": "アプリ企画『消えゆく日記』の凡庸性評価",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
       "domain": "business",
-      "primary_score": 42,
-      "primary_score_rationale": "構成は標準的だが、コンセプトに固有の声がない",
+      "primary_score": 39,
+      "primary_score_rationale": "SDGsを帯びた消費者割引アプリは、フードロス領域で最も出しやすい平均解の一つ。汎用化しても何も失われない。",
       "dimension_scores": {
-        "generic_language_density": { "score": 40, "weight": 0.30, "evidence": "『プライバシー』『可視化』の定番語", "judgment": "やや凡庸" },
-        "risk_avoidance": { "score": 45, "weight": 0.25, "evidence": "安全な市場を狙う", "judgment": "挑戦がない" },
-        "information_density": { "score": 40, "weight": 0.25, "evidence": "機能列挙に終始", "judgment": "薄い" },
-        "particularity": { "score": 42, "weight": 0.20, "evidence": "独自の体験がない", "judgment": "置き換え可能" }
+        "generic_language_density": {"score": 38, "weight": 0.30, "evidence": "「食品ロス削減という社会的価値」「SDGsを帯びたブランディング」が強みの第一に据えられる", "judgment": "価値の根拠が目的語のない善意に置かれており、言い回しが定型的。"},
+        "risk_avoidance": {"score": 42, "weight": 0.25, "evidence": "課題欄に「激戦」と書く一方、戦略的な回答を避けている", "judgment": "問題は認識するが、決断を先送りする構造。"},
+        "information_density": {"score": 40, "weight": 0.25, "evidence": "機能・収益・ターゲットが列挙されているが、数字の根拠が欠落", "judgment": "文字量に対して実証データが薄い。"},
+        "particularity": {"score": 36, "weight": 0.20, "evidence": "「どのフードロスアプリにも当てはまる」内容", "judgment": "店舗名・エリア・オペレーションなど置き換え不能な要素が皆無。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": 42, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
-      "classification": "trend_object",
-      "confidence": 70,
-      "strengths": ["実現可能性は高い"],
-      "weaknesses": ["凡庸な寄せ集め"],
-      "red_flags_triggered": ["安全な中道"],
+      "value_vector_contribution": {"originality": null, "quality": 39, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "low_signal",
+      "confidence": 75,
+      "strengths": [
+        "ターゲット（20〜40代・都心部）と手数料率（10%）が最低限明示されている"
+      ],
+      "weaknesses": [
+        "この企画文書はベーカリーでも弁当店でも、どこでもそのまま通用してしまう",
+        "「エコへの善意」が感情操作に近い形で販促の道具にされている"
+      ],
+      "red_flags_triggered": ["感情操作（SDGsを購入動機へ短絡させる）", "汎用化しても失われない企画"],
       "green_flags_detected": [],
-      "unique_perspective": "機能リストのどこにも『このアプリでしかない体験』がない",
-      "expected_disagreement_points": [{ "evaluator_type": "quality-evaluator", "predicted_stance": "完成度はそれなりと評価するだろう" }],
-      "improvement_suggestions": ["体験の独自性を1点に絞る"],
-      "narrative": "標準的な企画書の文体で、差別化の言葉が入っていない。..."
+      "unique_perspective": "私が見るのは、この企画が『誰の言葉でもない』ことだ。店舗側の実務（いつ・何が・どれだけ残るか）の細部が一つも無い。そこが埋まらない限り、これはAIが最も得意とする『平均的に正しい企画』でしかない。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "企画としての構成の一貫性を見て、凡庸さを低く評価する私よりも高い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "需要の存在に着目し、差別化の欠如を軽めに扱うだろう。"}
+      ],
+      "improvement_suggestions": [
+        "特定の実店舗の具体的な廃棄オペレーション（何時、何が、どれだけ残るか）を文書に埋め込む",
+        "善意の上に立つ売り文句を、測定可能な店舗の数値（廃棄削減率、売上への寄与）へ置き換える"
+      ],
+      "narrative": "この文書は正確だ。論理も通っている。しかし、それが最大の問題だ——どこにも傷がなく、どこにも固有の細部がない。平均解は平均的な価値しか生まない。店舗の冷蔵庫の端にある『売れ残り』という現実の具体性を語れるようになったとき、この企画は初めて誰かの企画になる。"
     },
     {
       "evaluator_id": "business-value",
-      "evaluator_name": "Business Value Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』の市場性評価",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
       "domain": "business",
       "primary_score": 42,
-      "primary_score_rationale": "需要はあるが、競争優位と収益モデルが弱い",
+      "primary_score_rationale": "フードロスへの支払い意欲は市場に実在し、手数料モデルで最低限の回収経路がある。だが競争優位が皆無で、割引競争ではマージンが消える。",
       "dimension_scores": {
-        "market_demand": { "score": 50, "weight": 0.30, "evidence": "感情記録への需要は実在", "judgment": "中程度" },
-        "growth_potential": { "score": 45, "weight": 0.25, "evidence": "既存市場は成熟", "judgment": "天井が近い" },
-        "feasibility_of_delivery": { "score": 40, "weight": 0.20, "evidence": "実装前提が不明確", "judgment": "やや不明" },
-        "competitive_advantage": { "score": 30, "weight": 0.25, "evidence": "プライバシーだけでは弱い", "judgment": "参入障壁なし" }
+        "market_demand": {"score": 48, "weight": 0.30, "evidence": "「消費者が最大70%オフで受け取る」需要は実在する", "judgment": "需要はある。しかし割引を求める消費者は値段だけで浮気する。"},
+        "growth_potential": {"score": 45, "weight": 0.25, "evidence": "フードロス削減は制度的追い風がある", "judgment": "市場は伸びるが、成長の果実を取る主体は誰かが問われる。"},
+        "feasibility_of_delivery": {"score": 45, "weight": 0.20, "evidence": "地図・決済・通知の機能は既存技術で実装可能", "judgment": "実現可能性はある。問題はそこから先の経済性。"},
+        "competitive_advantage": {"score": 30, "weight": 0.25, "evidence": "強みは「SDGsを帯びたブランディング」のみで、特許・ネットワーク効果・規模がない", "judgment": "代替可能で、資金力のある競合に一瞬で模倣される。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 42, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 42, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "trend_object",
-      "confidence": 65,
-      "strengths": ["需要の実在"],
-      "weaknesses": ["競争優位の欠如"],
-      "red_flags_triggered": ["模倣可能性"],
-      "green_flags_detected": [],
-      "unique_perspective": "プライバシーは大手が後から簡単に実装できる",
-      "expected_disagreement_points": [{ "evaluator_type": "future-potential", "predicted_stance": "市場変化で可能性はあると見るだろう" }],
-      "improvement_suggestions": ["参入障壁になる独自の仕組みを設計する"],
-      "narrative": "感情記録の需要はあるが、類似アプリが多数。差別化がないままなら価格競争に巻き込まれる。..."
-    },
-    {
-      "evaluator_id": "future-potential",
-      "evaluator_name": "Future Potential Analyzer",
-      "content_summary": "アプリ企画『消えゆく日記』の将来性評価",
-      "domain": "business",
-      "primary_score": 42,
-      "primary_score_rationale": "メンタルヘルス市場の成長に乗る可能性はある",
-      "dimension_scores": {
-        "environmental_shift_potential": { "score": 48, "weight": 0.30, "evidence": "感情・健康データへの関心増", "judgment": "追い風" },
-        "historical_similarity": { "score": 38, "weight": 0.25, "evidence": "類似アプリの成功例が少ない", "judgment": "明確な前例なし" },
-        "compounding_value": { "score": 42, "weight": 0.25, "evidence": "感情履歴は蓄積価値あり", "judgment": "中程度" },
-        "timing_analysis": { "score": 40, "weight": 0.20, "evidence": "市場は開き始めたが競合も多い", "judgment": "普通" }
-      },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 42, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
-      "classification": "discovery_target",
-      "confidence": 60,
-      "strengths": ["メンタルヘルス市場の成長"],
-      "weaknesses": ["差別化がないと埋没する"],
-      "red_flags_triggered": [],
-      "green_flags_detected": ["環境変化の味方"],
-      "unique_perspective": "感情データの蓄積は、長期的に健康サービスと繋がる可能性がある",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "現在の市場では埋没すると見るだろう" }],
-      "improvement_suggestions": ["蓄積データを活かす独自の仕組みを設計する"],
-      "narrative": "感情データへの関心は増えており、追い風はある。ただし現在の企画では他のアプリに埋もれる。..."
+      "confidence": 74,
+      "strengths": [
+        "手数料10%＋有料掲載という、想定し得る最小の収益経路はある",
+        "需要の存在は明確で、市場を創る必要がない"
+      ],
+      "weaknesses": [
+        "競争優位の源泉が「ブランド」にあり、模倣コストがゼロ",
+        "割引に敏感な消費者の獲得単価（CAC）が高く、リテンションが低い典型構造",
+        "店舗側の在庫登録オペレーション負担が、導入の致命的な摩擦になる"
+      ],
+      "red_flags_triggered": ["需要の捏造（SDGsブランディングで消費者が動くという前提の不検証）"],
+      "green_flags_detected": ["需要が実在する"],
+      "unique_perspective": "私は『需要の場』と『勝てる場所』の違いを見る。割引需要は大きいが、そこは資本力のある巨人の領分だ。勝てるのは、店舗が手放せない『廃棄のデータ』という、まだ誰も商品化していない場所である。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "originality", "predicted_stance": "需要が既に存在する点を逆に『新しさの欠如』と捉え、低く見るだろう。"},
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "エコへの善意を販促に使う構図に懐疑的で、私より低い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "取引手数料一本から、データライセンス等のリカーリング収益へ分散する",
+        "店舗の登録負担をゼロにする自動取得（レジ・センサー連携）を実装する",
+        "垂直領域（ベーカリー・精肉）に絞り、導入実績で参入障壁を築く"
+      ],
+      "narrative": "この企画は市場の地図の上で『誰でも歩ける道』を選んでいる。需要は本物だが、それでは投資家に『で、なぜ君が勝つの？』と聞かれて答えられない。フードロスという課題の周りには資本力ある競合が並んでおり、割引競争に飛び込めばマージンごと消える。儲けの源泉を『手数料』から『店舗の廃棄データ』に移す覚悟が必要だ。"
     },
     {
       "evaluator_id": "quality-evaluator",
-      "evaluator_name": "Quality Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』の完成度評価",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
       "domain": "business",
-      "primary_score": 38,
-      "primary_score_rationale": "要件は揃っているが、実装・UXの前提が不明確",
+      "primary_score": 45,
+      "primary_score_rationale": "機能・収益・ターゲットの三層が欠落なく書かれており、企画として一貫して成立する。ただし競争環境への応答が構造的に欠けている。",
       "dimension_scores": {
-        "technical_quality": { "score": 40, "weight": 0.35, "evidence": "技術要件の記述", "judgment": "普通" },
-        "precision": { "score": 38, "weight": 0.20, "evidence": "感情マップの定義が曖昧", "judgment": "不明瞭" },
-        "structure": { "score": 40, "weight": 0.25, "evidence": "機能は整理されている", "judgment": "標準的" },
-        "feasibility": { "score": 35, "weight": 0.20, "evidence": "端末内処理の実装前提なし", "judgment": "疑問" }
+        "technical_quality": {"score": 45, "weight": 0.35, "evidence": "事業概要・ターゲット・収益・機能・課題の5項目が整然と列挙されている", "judgment": "文書としての完成度は基準を満たす。欠陥はない。"},
+        "precision": {"score": 48, "weight": 0.20, "evidence": "手数料10%、有料掲載月額1万円と数値が具体的", "judgment": "数値の明示は良いが、その根拠となる市場調査が欠ける。"},
+        "structure": {"score": 44, "weight": 0.25, "evidence": "課題欄に「激戦」「店舗の手間」を挙げるが、それへの対策が未完", "judgment": "構造は一貫するが、自己指摘した問題を回収していない。"},
+        "feasibility": {"score": 44, "weight": 0.20, "evidence": "地図検索・決済・通知は既存技術で実装可能な範囲", "judgment": "MVPとしては成立するが、店舗側オペレーションが実装のボトルネック。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": 38, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "value_vector_contribution": {"originality": null, "quality": 45, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
       "classification": "trend_object",
-      "confidence": 68,
-      "strengths": ["機能要件の整理"],
-      "weaknesses": ["実装前提の欠如"],
-      "red_flags_triggered": ["説明不足"],
+      "confidence": 70,
+      "strengths": [
+        "事業の骨格（誰に・何を・どう稼ぐ）が一応揃っており、MVP化の下地がある",
+        "数値（10%、1万円）が明示され、議論の土台になる"
+      ],
+      "weaknesses": [
+        "自ら課題と挙げた「店舗の在庫更新の手間」への解決策がなく、約束を回収していない",
+        "競合との比較・差別化の記述がなく、精密さに欠ける"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構造の一貫性", "数値の明示"],
+      "unique_perspective": "完成度の観点から言えば、この企画の粗さは『欠落』ではなく『未回収の約束』だ。課題と書いたことを直すだけで、品質は一段上がる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "構成の一貫性を『平均的』と切り捨て、私より低い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "収益経路を認めつつ、競争優位の弱さをより強く批判するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "課題欄で挙げた店舗オペレーション問題に、具体的な解決手段（自動取得等）を明記する",
+        "競合比較の章を追加し、なぜ選ばれるかを実証的に書く"
+      ],
+      "narrative": "文書としては欠陥がない。しかし完成度は『欠陥のなさ』ではなく『約束の回収』だ。この企画は店舗の手間という問題を指摘しながら、その答えを持たない。粗さを指摘するだけでなく直し方まで示せる企画が、次の評価で品質を上げるだろう。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
+      "domain": "business",
+      "primary_score": 32,
+      "primary_score_rationale": "フードロス規制という環境変化は追い風だが、割引アプリ自体に複利で価値が蓄積する性質がなく、流行が去れば消える。",
+      "dimension_scores": {
+        "environmental_shift_potential": {"score": 38, "weight": 0.30, "evidence": "食品ロス削減は政策・消費者の双方で進行中の変化", "judgment": "環境は有利だが、恩恵は割引アプリに限らず領域全体へ広がる。"},
+        "historical_similarity": {"score": 30, "weight": 0.25, "evidence": "類似は「正当に否定された」のではなく「代替された」クーポン系の系譜", "judgment": "過去の革新の構造（賛否両論・理解不足）とは非類似。"},
+        "compounding_value": {"score": 26, "weight": 0.25, "evidence": "割引取引は消費されたら終わりで、蓄積する資産がない", "judgment": "一度使ったら価値が尽きる使い捨て構造。"},
+        "timing_analysis": {"score": 32, "weight": 0.20, "evidence": "割引アプリ市場は既に飽和気味", "judgment": "『時代が早すぎる』のではなく、『場が埋まっている』。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 32, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "low_signal",
+      "confidence": 66,
+      "strengths": [
+        "食品ロス規制の強まりという追い風の存在は確か"
+      ],
+      "weaknesses": [
+        "価値が時間とともに蓄積する構造（データ・ネットワーク）を持たない",
+        "割引市場の飽和により、未来の環境変化で価値が大きく上昇する余地が小さい"
+      ],
+      "red_flags_triggered": ["一過性の価値（流行に依存し、流行が去れば無価値）"],
       "green_flags_detected": [],
-      "unique_perspective": "『端末内処理』の技術的実現方法が書かれていない",
-      "expected_disagreement_points": [{ "evaluator_type": "anti-generic-filter", "predicted_stance": "凡庸な企画書と見るだろう" }],
-      "improvement_suggestions": ["技術スタックと実装前提を明記する"],
-      "narrative": "機能リストは整理されているが、実装の土台が不明。..."
+      "unique_perspective": "未来の時間軸から見ると、この企画の本質的な弱点は『在庫データを捨てている』ことだ。店舗の売れ残り情報は毎日蓄積する資産なのに、割引の場で消費してしまっている。データを貯める方向へ向ければ、未来価値は一変する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "現在の市場需要に着目し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "originality", "predicted_stance": "将来のデータ化の可能性を、現在の独創性とは別に評価するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "割引取引で終わらせず、店舗の廃棄在庫データを蓄積する資産として設計する",
+        "データが増えるほど予測精度が上がる構造（複利）を企画に組み込む"
+      ],
+      "narrative": "私は歴史のアナロジーで物を見る。クーポン・割引系のビジネスは、時代を超えて『代替される運命』にある。しかしこの企画の周りには毎晩、明日には捨てられる在庫という生データが積まれていく。それを捨てずに貯める構造に変えた瞬間、この企画は『流行』から『資産』になる。"
     },
     {
       "evaluator_id": "meaning-evaluator",
-      "evaluator_name": "Meaning Evaluator",
-      "content_summary": "アプリ企画『消えゆく日記』の意味性評価",
+      "evaluator_name": "意味評価者（意味の守護者）",
+      "content_summary": "FOODSIGN v1 — 閉店間際フード割引マッチングアプリ",
       "domain": "business",
-      "primary_score": 24,
-      "primary_score_rationale": "アプリの存在意義・人間の生への繋がりが薄い",
+      "primary_score": 28,
+      "primary_score_rationale": "食品ロスという人間的テーマを扱いながら、その意味に踏み込まず、善意を割引の販促に還元している。人生の理解に触れるものが何もない。",
       "dimension_scores": {
-        "existential_resonance": { "score": 22, "weight": 0.35, "evidence": "感情記録の意味づけなし", "judgment": "薄い" },
-        "narrative_power": { "score": 25, "weight": 0.25, "evidence": "ユーザー体験の物語なし", "judgment": "なし" },
-        "significance": { "score": 25, "weight": 0.20, "evidence": "必要性が不明", "judgment": "弱い" },
-        "interpretive_depth": { "score": 25, "weight": 0.20, "evidence": "単機能", "judgment": "浅い" }
+        "existential_resonance": {"score": 22, "weight": 0.35, "evidence": "「食品ロス削減」「SDGs」が掲げられるが、廃棄される食とそれを食べる人への問いがない", "judgment": "消費者の節約と店舗の損益という表層に留まり、存在の問いに触れない。"},
+        "narrative_power": {"score": 26, "weight": 0.25, "evidence": "語られる物語は「安く買える」だけ", "judgment": "物語が平坦で、人間の経験に何も加えない。"},
+        "significance": {"score": 35, "weight": 0.20, "evidence": "フードロス自体は重要課題", "judgment": "テーマの重要さは必然だが、企画そのものが不可欠とは感じられない。"},
+        "interpretive_depth": {"score": 32, "weight": 0.20, "evidence": "「売れ残り＝価値のないもの」という前提に無自覚", "judgment": "一度読めば意味が尽き、多層性がない。"}
       },
-      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 24 },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 28},
       "classification": "low_signal",
-      "confidence": 70,
-      "strengths": [],
-      "weaknesses": ["存在意義が不明瞭"],
-      "red_flags_triggered": [],
-      "green_flags_detected": [],
-      "unique_perspective": "感情を『記録して終わり』にする点に、人間の生への配慮がない",
-      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "意味性は市場性と別と見るだろう" }],
-      "improvement_suggestions": ["感情の『消え方』に物語を持たせる"],
-      "narrative": "感情を記録するだけでは、なぜ人間にとって重要なのかが伝わらない。..."
+      "confidence": 64,
+      "strengths": [
+        "「売れ残り＝廃棄」という日常の不可視の無駄を可視化する題材そのものは価値がある"
+      ],
+      "weaknesses": [
+        "善意（SDGs）を割引購入という消費行動に回収してしまい、意味の深まりがない",
+        "「売れ残った食は劣ったもの」という前提を無批判に踏襲している"
+      ],
+      "red_flags_triggered": ["感情操作（エコへの善意を販促の道具にする）"],
+      "green_flags_detected": ["テーマの潜在的な重さ"],
+      "unique_perspective": "私は、この企画が食品ロスの『意味』を一度も問わないことに注目する。なぜ私たちは、その日のうちに食べられなかった食をゴミと呼ぶのか。その問いに触れずに、割引の仕組みだけを立てても、人の心に残るものにはならない。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "収益経路と需要を評価し、意味の軽さはビジネスとして無関係と見るだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "企画の骨格の完成度を評価し、私より高い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "廃棄される食を『ゴミ』ではなく『誰かの食事になるもの』と捉え直す物語を企画に据える",
+        "受け取りの場面に、食べ手と作り手が交わる体験を設計する"
+      ],
+      "narrative": "この企画は『無駄を減らす』という善行の言葉を持ちながら、その善の根っこにある人間的な問い——捨てられる食と、それを待つ人——を一度も語らない。価値を交換可能な点数に換えられるものとして扱う限り、これは流行で終わる。意味は、偶然にではなく設計されて生まれる。"
     }
   ],
   "recommendations": [
-    "差別化軸を明確にする（永続保存ではなく『消える前提』に反転）",
-    "再作成し、compare_reports.py で改善を確認"
+    "消費者向け割引市場での正面競争をやめ、小売店舗の『売り切れロス』を自動取得する基盤へ軸足を移す",
+    "収益を取引手数料一本から、データライセンス・物流・コンサルティングの複数柱へ分散する",
+    "特定垂直領域（ベーカリー・精肉）に特化し、導入済み店舗数で参入障壁を築く",
+    "店舗側の在庫登録負担をゼロにする（レジAPI・IoTセンサー連携）"
   ],
-  "caveats": ["科学評価は不適合のため除外"]
+  "caveats": [
+    "v1はコンセプト段階であり、実需要の検証（インタビュー・MVP）がない",
+    "SDGsを帯びたブランディングが実際の購入行動へ転換するかは未検証",
+    "手数料10%が店舗の粗利率と整合するか不明"
+  ]
 }

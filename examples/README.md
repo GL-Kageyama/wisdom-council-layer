@@ -16,6 +16,7 @@
 - `input.md` — 評価対象のコンテンツ（v1・v2）
 - `report-v1.json` — 初回評価（厳格スコア）
 - `report-v2.json` — 改訂後の再評価（ループの改善を実演）
+- `report.md` — v2のMarkdown表示（GitHub / VSCodeプレビューで読める）
 
 ## 使い方
 
