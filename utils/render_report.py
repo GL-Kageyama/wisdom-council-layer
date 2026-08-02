@@ -155,27 +155,6 @@ def render_council(obj):
         for i, r in enumerate(recs, 1):
             print(f"  {i}. {r}")
 
-    fb = obj.get("rebuild_feedback")
-    if fb:
-        print("\n【再作成指令（rebuild_feedback）】作成→評価→再作成ループ用")
-        top = fb.get("top_priorities") or []
-        if top:
-            print("  🎯 最優先:")
-            for i, p in enumerate(top, 1):
-                print(f"    {i}. {p}")
-        changes = fb.get("concrete_changes") or []
-        if changes:
-            print("  🔧 具体的な変更:")
-            for c in changes:
-                src = c.get("source_evaluator", "?")
-                imp = c.get("expected_impact", "")
-                print(f"    · [{src}] {c.get('directive', '')}  ({imp})")
-        keep = fb.get("preserve") or []
-        if keep:
-            print("  🔒 失ってはいけない強み:")
-            for k in keep:
-                print(f"    · {k}")
-
     caves = obj.get("caveats") or []
     if caves:
         print("\n【注意点】")

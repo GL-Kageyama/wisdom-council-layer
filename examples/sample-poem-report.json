@@ -86,30 +86,6 @@
     "詩集の一篇として複数作品と合わせて評価する（単体の商業化は見込まない）",
     "autoモード（creative）なら originality・anti-generic・aesthetic・emotional + meaning・philosophical の6体で十分"
   ],
-  "rebuild_feedback": {
-    "top_priorities": [
-      "美学的な深みを上げる（aesthetic 62）",
-      "言語的冒険を加えて品質を上げる（quality 58の要因）"
-    ],
-    "concrete_changes": [
-      {
-        "source_evaluator": "aesthetic-critic",
-        "current_weakness": "比喩の展開が直線的、感覚的な深みが平均+α",
-        "directive": "第3連の『重力』の比喩に矛盾する感覚的イメージ（光と錆び）を混ぜ、比喩の転換を加える",
-        "expected_impact": "aesthetic 62 → 75"
-      },
-      {
-        "source_evaluator": "quality-evaluator",
-        "current_weakness": "言語的冒険が少なく、韻律が安定しすぎている",
-        "directive": "途中の1行で韻律を意図的に崩し、不協和音的な行を挿入する",
-        "expected_impact": "quality 58 → 70"
-      }
-    ],
-    "preserve": [
-      "『重力を結わえる』という比喩の新規性（originality 78）",
-      "目に見えない重荷への共感（meaning 66, emotional 68）"
-    ]
-  },
   "caveats": [
     "scientific_novelty は詩に不適合（fullモードのため招集された）",
     "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない"

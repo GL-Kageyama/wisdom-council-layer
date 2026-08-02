@@ -42,38 +42,14 @@
       ]
     }
   ],
-  "consensus_summary": "前回の再作成指令（rebuild_feedback）により、美(62→75)と品質(58→70)が明確に改善。独創性は維持されたまま微増。",
+  "consensus_summary": "前回の再作成指示（下流スキルが個別評価を入力に合成）により、美(62→75)と品質(58→70)が明確に改善。独創性は維持されたまま微増。",
   "executive_summary": "改訂により、美学的深み(62→75)と品質(58→70)が改善し、全体的なスコアが底上げされた。独創性(80)と意味(70)は維持・微増。依然 discovery_target だが、現在価値が49→54に上昇した。ビジネス価値(18)と科学新規性(5)は変化なし（形式の本質的限界）。",
-  "synthesis_narrative": "rebuild_feedbackの指示（光と錆びの矛盾したイメージ、韻律の意図的な崩し）が有効に機能した。美学的評価者が最も改善を認め、品質評価者も『言語的冒険が加わった』と評価。独創性を壊さずに高めた点が理想的で、preserve指令（比喩の新規性・共感）が機能した。次回は感情的な深さ(72)と哲学的深さ(62)を狙う余地がある。",
+  "synthesis_narrative": "下流スキルが評価を入力に合成した指示（光と錆びの矛盾したイメージ、韻律の意図的な崩し）が有効に機能した。美学的評価者が最も改善を認め、品質評価者も『言語的冒険が加わった』と評価。独創性を壊さずに高めた点が理想的で、弱点修正で既存の強み（比喩の新規性・共感）が失われなかった。次回は感情的な深さ(72)と哲学的深さ(62)を狙う余地がある。",
   "individual_reports": [],
   "recommendations": [
     "さらに哲学的深さ(62)と感情(72)を強化する再作成指令を発行する",
     "2回目の改訂後、compare_reports.py で3回目の差分を確認する"
   ],
-  "rebuild_feedback": {
-    "top_priorities": [
-      "哲学的深さを上げる（philosophical_depth 62）",
-      "感情的な余白を増やす（emotional 72 → 目標75以上）"
-    ],
-    "concrete_changes": [
-      {
-        "source_evaluator": "philosophical-evaluator",
-        "current_weakness": "『背負っていることに気づかない』が一つの観察で終わっている",
-        "directive": "最終連に、重荷を降ろした後の『空虚さ』にも触れる一行を加え、重荷の両義性を描く",
-        "expected_impact": "philosophical_depth 62 → 72"
-      },
-      {
-        "source_evaluator": "emotional-impact",
-        "current_weakness": "優しさが一方向（他者への尽くし）に偏っている",
-        "directive": "第4連に『誰にもほどいてもらえない夜』を挿入し、尽くす人自身の孤独を描く",
-        "expected_impact": "emotional 72 → 78"
-      }
-    ],
-    "preserve": [
-      "矛盾する感覚的イメージ（光と錆び）による美的深み（aesthetic 75）",
-      "『重力を結わえる』の概念的新規性（originality 80）"
-    ]
-  },
   "caveats": [
     "scientific_novelty は詩に不適合（fullモードのため招集された）",
     "ビジネス価値は詩という形式の本質的限界であり、欠陥ではない"

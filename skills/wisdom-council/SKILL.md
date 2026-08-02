@@ -86,6 +86,8 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 
 ### Phase 3: Synthesis（統合）
 
+**評価結果は常に統合する。** 個々の評価者出力は内部の素材であり、成果物は常に統合されたValue Reportである。
+
 1. すべての評価者のJSON出力を収集する。
 2. 各出力を `schemas/value-output.schema.json` に対して検証する。
 3. 合成 Value Vector を構築する（各次元の平均・分散・範囲）。
@@ -102,16 +104,17 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 - **平均化や和解を試みない。**
 - 可能ならば、この不一致自体が価値のシグナルであることを指摘する（激しく割れるコンテンツはしばしば最も興味深い）。
 
-### Phase 5: Rebuild Feedback Synthesis（再作成指令の合成）
+### Phase 5: Input-Ready Output（入力として使いやすい出力）
 
-**これは「作成 → 評価 → 再作成」ループのための出力である。** 単なる評価で終わらせず、次にどう作り直すかを具体的に指示する。
+**このレイヤーの評価結果は、それ自体が最終成果ではない。** 下流のスキル（例: 再作成・改善指示を合成する専用スキル）への**入力**として設計されている。
 
-1. **top_priorities**: 各評価者の `improvement_suggestions` と `weaknesses` から、再作成時に**最初に対処すべき1〜3件**を選ぶ。スコアへの影響が大きい順。
-2. **concrete_changes**: 各優先事項について、評価者のid・現在の弱点・**適用可能な具体的な変更指示**・期待されるスコア変化を記録する。
-   - `directive` は「〜を改善する」ではなく「『X』を『Y』に変更する」「3連目に比喩の転換を加える」のように**直接適用できる指示**にする。
-3. **preserve**: 弱点を直す過程で失ってはいけない強み（高スコア次元の源泉）を明記する。
-   - 独創性の高い作品を「平凡にする」方向の修正を防ぐ。
-4. `rebuild_feedback` の指針: **下げた次元を上げる**ことを優先し、**上げた次元を保つ**ことを常に両立させる。
+入力として使いやすくするため:
+
+1. **全評価者の生データを完全に保存する**（`individual_reports`）。特に `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は下流スキルが再作成の材料として使う。
+2. **フィールド名は固定・一貫**（`schemas/value-output.schema.json` 準拠）。下流スキルはパスを決め打ちで読める。
+3. **合成で生データを捨てない**。executive_summary や synthesis_narrative はあくまで補助であり、評価の素材（スコア・根拠・弱点）は必ず JSON に残す。
+4. **再作成指示（directive）そのものは生成しない。** それは専用スキルの責務。このレイヤーは「評価の素材」を整えて渡す。
+5. **成果物は常に統合されたValue Reportである。** 個々の評価者出力は内部素材であり、単体で出力しない。
 
 ## Value Report の構造
 
@@ -152,18 +155,6 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
   "synthesis_narrative": "detailed synthesis in the chairperson's voice",
   "individual_reports": ["full JSON of each evaluator's output"],
   "recommendations": ["suggested next steps for the human decision-maker"],
-  "rebuild_feedback": {
-    "top_priorities": ["1-3 directives that must be addressed first"],
-    "concrete_changes": [
-      {
-        "source_evaluator": "evaluator id that flagged it",
-        "current_weakness": "specific weakness with evidence",
-        "directive": "actionable change to apply when recreating",
-        "expected_impact": "projected score change, e.g. 'aesthetic 62 → 75'"
-      }
-    ],
-    "preserve": ["strengths that must NOT be lost during revision"]
-  },
   "caveats": ["limitations, what was not assessed, confidence gaps"]
 }
 ```
@@ -237,9 +228,11 @@ Each evaluator returns JSON conforming to
 
 ### Step 3: Build the composite Value Vector
 
-For each dimension in the value vector, compute the mean, variance,
-min, and max across evaluators who scored it. Dimensions with no
-scores remain null.
+Always integrate: the final deliverable is the unified Value Report,
+never a bare collection of individual evaluator outputs. For each
+dimension in the value vector, compute the mean, variance, min, and
+max across evaluators who scored it. Dimensions with no scores remain
+null.
 
 ### Step 4: Build the Disagreement Map
 
@@ -259,14 +252,13 @@ Output the complete Value Report as specified in the structure
 section. Preserve every evaluator's full report in
 `individual_reports`.
 
-### Step 7: Write rebuild_feedback
+### Step 7: Preserve input-ready data
 
-Synthesize `rebuild_feedback` from the evaluators' improvement
-suggestions and weaknesses, so the content can be recreated in an
-improved form. Directive must be concrete ("change X to Y"), not
-vague ("improve X"). Always include `preserve` so revision does not
-destroy existing strengths. This output powers the create → evaluate
-→ recreate loop.
+Do NOT synthesize recreation directives — that is a separate skill's
+job. Instead, ensure the report keeps every evaluator's raw material
+(weaknesses, improvement_suggestions, expected_disagreement_points,
+full narratives) intact in `individual_reports`, so a downstream
+recreation skill can consume them as its input.
 
 ## Output Format
 

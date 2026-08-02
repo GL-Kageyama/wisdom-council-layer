@@ -67,21 +67,26 @@ python utils/validate_output.py < output.json
 | ツール | 役割 |
 |--------|------|
 | `utils/validate_output.py` | 評価者出力のスキーマ検証 |
-| `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・再作成指令） |
-| `utils/compare_reports.py` | 改訂前後の差分比較（作成→評価→再作成ループ用） |
+| `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・次元間の対立） |
+| `utils/compare_reports.py` | 改訂前後の差分比較（評価→再作成ループ用） |
 
-## 作成 → 評価 → 再作成 ループ
+## 評価出力は「入力」として設計されている
 
-合議は `rebuild_feedback`（再作成指令）を出力する。これを使って作品を改善し、ループさせる。
+**このレイヤーの評価結果は、それ自体が最終成果ではない。** 下流のスキル（再作成・改善指示を合成する専用スキル）への**入力**である。
 
+- 合議は**再作成指示そのものを生成しない**。それは専用スキルの責務。
+- 代わりに、`individual_reports` に各評価者の**生の素材**（`weaknesses`・`improvement_suggestions`・`expected_disagreement_points`・`narrative`）を完全に保存する。
+- フィールド名は固定・一貫（`schemas/value-output.schema.json` 準拠）で、下流スキルがパスを決め打ちで読める。
+- 合成ナラティブ（executive_summary等）は補助であり、生データを捨てない。
+
+**評価 → 再作成ループ:**
 ```
-評価 → rebuild_feedback（最優先・具体的変更・保持すべき強み）
-  → 再作成（directive適用） → 再評価 → compare_reports.py で改善度確認 → 繰り返し
+評価 → 下流スキルが評価を入力に指示を合成 → 再作成 → 再評価
+  → compare_reports.py で改善度確認 → 繰り返し
 ```
 
 指針:
-- **preserve**（失ってはいけない強み）を守り、修正で既存の高次元を壊さない。
-- `concrete_changes` の directive は「改善する」ではなく「XをYに変える」の具体形にする。
+- 平均だけで判断せず、分散と不一致も見る。
 - 改善が頭打ちになったらループを止める（過修正は元の良さを失わせる）。
 
 ## 重要原則
