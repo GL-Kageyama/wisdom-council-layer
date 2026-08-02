@@ -1,0 +1,23 @@
+{
+  "name": "wisdom-council-layer",
+  "version": "1.0.0",
+  "description": "Multi-agent AI value evaluation system — 10 evaluator skills and a council orchestrator that produce structured Value Reports preserving disagreement, discovering hidden potential (Discovery Targets) beyond generic AI output.",
+  "author": {
+    "name": "GL-Kageyama"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "ai",
+    "evaluation",
+    "value",
+    "multi-agent",
+    "skills",
+    "council",
+    "originality"
+  ],
+  "mcpServers": {},
+  "skills": [
+    "./skills/"
+  ]
+}

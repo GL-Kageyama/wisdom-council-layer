@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wisdom-council/value-output/1.0.0",
+  "title": "Wisdom Council Evaluator Output",
+  "description": "All evaluator outputs in the Wisdom Council Layer MUST conform to this schema. Evaluators score only the dimensions within their expertise; all other dimensions are null.",
+  "type": "object",
+  "required": [
+    "evaluator_id",
+    "evaluator_name",
+    "content_summary",
+    "domain",
+    "primary_score",
+    "primary_score_rationale",
+    "dimension_scores",
+    "value_vector_contribution",
+    "classification",
+    "confidence",
+    "strengths",
+    "weaknesses",
+    "unique_perspective",
+    "expected_disagreement_points",
+    "narrative"
+  ],
+  "properties": {
+    "evaluator_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Kebab-case identifier of the evaluator."
+    },
+    "evaluator_name": {
+      "type": "string",
+      "description": "Human-readable display name of the evaluator."
+    },
+    "evaluation_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of the evaluation. Optional; not required for reproducibility checks."
+    },
+    "content_summary": {
+      "type": "string",
+      "description": "One-line summary of what was evaluated."
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["creative", "scientific", "business", "social", "digital", "cultural"],
+      "description": "Primary domain being assessed."
+    },
+    "primary_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "The evaluator's overall score for this content through its own lens."
+    },
+    "primary_score_rationale": {
+      "type": "string",
+      "description": "Concise explanation of why this primary score was assigned."
+    },
+    "dimension_scores": {
+      "type": "object",
+      "description": "Per-dimension breakdown. Dimension names are evaluator-specific.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["score", "weight", "evidence", "judgment"],
+        "properties": {
+          "score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Relative weight of this dimension within this evaluator's framework."
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Specific, quotable evidence from the content."
+          },
+          "judgment": {
+            "type": "string",
+            "description": "Interpretive assessment of this dimension."
+          }
+        }
+      }
+    },
+    "value_vector_contribution": {
+      "type": "object",
+      "description": "This evaluator's contribution to the council's composite Value Vector. Only the evaluator's own dimension(s) are non-null.",
+      "properties": {
+        "originality": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "quality": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "aesthetic": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "emotional_impact": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "future_potential": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "business_value": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "scientific_novelty": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "philosophical_depth": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "meaning": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["current_success", "discovery_target", "trend_object", "low_signal"],
+      "description": "The evaluator's placement of this content in the 2x2 value matrix."
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "How confident this evaluator is in its own assessment."
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Specific strength with supporting evidence."
+      }
+    },
+    "weaknesses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Specific weakness with supporting evidence."
+      }
+    },
+    "red_flags_triggered": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Which red flags were detected, if any."
+    },
+    "green_flags_detected": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Which green flags were detected, if any."
+    },
+    "unique_perspective": {
+      "type": "string",
+      "description": "What only THIS evaluator sees that others would likely miss."
+    },
+    "expected_disagreement_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evaluator_type", "predicted_stance"],
+        "properties": {
+          "evaluator_type": {
+            "type": "string",
+            "description": "Type of evaluator expected to disagree (e.g., 'business-value', 'aesthetic-critic')."
+          },
+          "predicted_stance": {
+            "type": "string",
+            "description": "How that evaluator would likely judge this content differently."
+          }
+        }
+      },
+      "description": "Where this evaluator anticipates conflict with other perspectives."
+    },
+    "improvement_suggestions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Actionable suggestions for increasing value in this dimension."
+    },
+    "narrative": {
+      "type": "string",
+      "description": "2-3 paragraph analysis in the evaluator's own voice. Captures what cannot be reduced to numbers."
+    }
+  },
+  "additionalProperties": false
+}
