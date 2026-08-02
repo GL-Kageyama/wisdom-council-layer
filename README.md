@@ -104,7 +104,9 @@ wisdom-council-layer/
 │   ├── scientific-hypothesis/         # 科学仮説
 │   ├── cultural-philosophy/           # 思想エッセイ
 │   ├── digital-oss/                   # OSSソフトウェア
-│   └── architecture-house/            # 個人邸設計（建築）
+│   ├── architecture-house/            # 個人邸設計（建築）
+│   ├── creative-watercolor/           # 画像生成プロンプト（水彩）
+│   └── creative-photography/          # 画像生成プロンプト（写真）
 └── utils/
     ├── validate_output.py             # 出力バリデーション
     ├── render_report.py               # 視覚化（コンソール / Markdown）

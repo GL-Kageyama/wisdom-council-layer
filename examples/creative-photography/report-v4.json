@@ -1,0 +1,600 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案：名前を呼ばれて笑いの途中で振り返る少女と、頬の赤・電源の灯る自動販売機という決定的な瞬間を導入した（境界域）",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "写真生成プロンプトに科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "写真生成プロンプトに市場性評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "reason": "写真生成プロンプトに哲学的評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "reason": "写真生成プロンプトに意味評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {
+      "mean": 46,
+      "variance": 0,
+      "min": 46,
+      "max": 46,
+      "scores": [
+        46
+      ]
+    },
+    "quality": {
+      "mean": 52,
+      "variance": 1,
+      "min": 51,
+      "max": 53,
+      "scores": [
+        51,
+        53
+      ]
+    },
+    "aesthetic": {
+      "mean": 49,
+      "variance": 0,
+      "min": 49,
+      "max": 49,
+      "scores": [
+        49
+      ]
+    },
+    "emotional_impact": {
+      "mean": 53,
+      "variance": 0,
+      "min": 53,
+      "max": 53,
+      "scores": [
+        53
+      ]
+    },
+    "future_potential": {
+      "mean": 56,
+      "variance": 0,
+      "min": 56,
+      "max": 56,
+      "scores": [
+        56
+      ]
+    }
+  },
+  "current_value_score": 50,
+  "hidden_potential_score": 56,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": [
+        "anti-generic-filter",
+        "quality-evaluator"
+      ],
+      "arguments": [
+        "反凡庸フィルター: 『名前を呼ばれて振り返る』というきっかけが、被写体を定番の型から完全に個別化した。残る語彙はフィルム文法に絞られている（51点）。",
+        "品質評価者: きっかけ・動作・頬の赤・舞台の光が一つの決定的な瞬間に束ねられ、絵の揺れはほぼ最小に達した。構図の最終的な決定が残る（53点）。"
+      ]
+    },
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": [
+        "emotional-impact",
+        "originality"
+      ],
+      "arguments": [
+        "感情影響評価者: 『名前を呼ばれて振り返る』という切迫が、観る者が物語を完成させる決定的な入口になった。頬の赤が『走ってきた』という背景の物語を運ぶ（53点）。",
+        "独創性評価者: 物語の決定打は入ったが、動作の型（振り返る少女）の骨格は残っており、完全な個別の逸脱にはもう一歩である（46点）。"
+      ]
+    },
+    {
+      "dimension": "future_potential",
+      "variance": 0,
+      "disputing_evaluators": [
+        "future-potential",
+        "anti-generic-filter"
+      ],
+      "arguments": [
+        "未来可能性分析者: この瞬間は連作の決定版になり得る。『名前を呼ばれる』というきっかけは、何度でも別の時間・別の相手に反復できる資産だ（56点）。",
+        "反凡庸フィルター: 決定版の可能性は高いが、語彙の最終的な削減（buzzingなど微細な過剰）で、複製可能性を完全に断つ余地が残る（51点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、『名前を呼ばれて笑いの途中で振り返る』というきっかけと、頬の赤・電源の灯る自動販売機という舞台が、被写体を定番から完全に個別化し、プロンプトを『決定的な一枚の設計図』に仕上げた点で一致した。同時に、動作の型の骨格の残存と、語彙の最終的な削減、構図の決定という、イノベーション到達直前の仕上げ課題でも一致した。",
+  "executive_summary": "v4改訂案は現在価値50・潜在価値56に達し、ディスカバリー対象とイノベーションの境界（borderline）と判定された。『名前を呼ばれて振り返る』というきっかけが物語を完成させ、感情影響（53）が頂点に近づいた。独創性（46）と美（49）も上昇したが、動作の型の骨格の残存が、イノベーションへの最終的な一歩を止めている。次の改訂で型の残りを切り、語彙を最終的に削れば、この一枚はイノベーションへ足を踏み入れる。",
+  "synthesis_narrative": "議長として私は、この改訂がディスカバリー対象の出口に立ったことを述べたい。感情影響評価者は『名前を呼ばれて振り返る』という切迫が物語の決定打になったと述べ、品質評価者は絵の揺れが最小に達したと確認した。独創性評価者は、動作の型の骨格がまだ残っていると指摘し、反凡庸フィルターは微細な語彙の過剰を警告した。現在価値50は境界の上に立つ。次の改訂で、型の骨格を最終的に切り、語彙を絞り、構図を決定すれば、この一枚はイノベーションとして認められる。ただし、過剰な仕上げはスナップの自発性を失わせる——型を切るのと、自発性を保つのを両立させること。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 46,
+      "primary_score_rationale": "『名前を呼ばれて振り返る』というきっかけが、被写体を定番の型から個別化した。頬の赤と電源の灯る自動販売機が物語の背景を運ぶが、『振り返る少女』という動作の型の骨格はまだ残っている。",
+      "dimension_scores": {
+        "premise_novelty": {
+          "score": 50,
+          "weight": 0.5,
+          "evidence": "「mid-laugh as she looks back, has just heard her name called」",
+          "judgment": "きっかけが顔を個別化した。"
+        },
+        "meaningful_deviation": {
+          "score": 44,
+          "weight": 0.3,
+          "evidence": "「cheeks flushed from running, buzzing vending machine」",
+          "judgment": "舞台が物語の背景を運ぶ。"
+        },
+        "recombination_risk": {
+          "score": 44,
+          "weight": 0.2,
+          "evidence": "「ノスタルジーの型＋決定的瞬間」",
+          "judgment": "型の骨格が残る。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": 46,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 70,
+      "strengths": [
+        "名前を呼ばれた、というきっかけが顔を個別化した",
+        "頬の赤が『走ってきた』という背景の物語を内包する",
+        "自動販売機の光が、懐かしさの舞台を決定づける"
+      ],
+      "weaknesses": [
+        "『振り返る少女』という動作の型の骨格が残る",
+        "笑いの最高点という固有の瞬間まで仕上がっていない",
+        "型の残存が、完全な個別の逸脱を止めている"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "きっかけによる個別化",
+        "背景に内包された物語"
+      ],
+      "unique_perspective": "この一枚は『振り返る少女』という型と、『名前を呼ばれた少女』という物語の間にある。笑いの最高点という被写体固有の瞬間に仕上がったとき、型の骨格は消え、この一枚は他に代えがたくなる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "きっかけの感情を高く評価する"
+        },
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "語彙の最終削減を求める"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "構図の決定を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "笑いの最高点で振り返る、という固有の瞬間に仕上げる",
+        "型の骨格を切るため、動作を被写体の物語に結びつける",
+        "舞台の小道具を最終的に絞り、決定画にする"
+      ],
+      "narrative": "この一枚は型と物語の間に立っている。笑いの最高点に仕上がったとき、型は消え、この一枚は他に代えがたくなる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 51,
+      "primary_score_rationale": "『名前を呼ばれて振り返る』というきっかけが、被写体を定番の型から完全に個別化した。頬の赤と電源の灯る自動販売機が物語の背景を運び、残る語彙はほぼフィルム文法に絞られている。",
+      "dimension_scores": {
+        "generic_structure_risk": {
+          "score": 52,
+          "weight": 0.4,
+          "evidence": "「名前を呼ばれて振り返る・頬の赤」",
+          "judgment": "構造が個別の物語に到達した。"
+        },
+        "specificity": {
+          "score": 53,
+          "weight": 0.4,
+          "evidence": "「cheeks flushed from running, buzzing vending machine」",
+          "judgment": "固有の語彙が決定打になった。"
+        },
+        "voice": {
+          "score": 48,
+          "weight": 0.2,
+          "evidence": "「舞台の選択が書き手の視点を滲ませる」",
+          "judgment": "声が確立しつつある。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 51,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 72,
+      "strengths": [
+        "きっかけが被写体を定番から個別化した",
+        "頬の赤が『走ってきた』という背景の物語を一枚に内包した",
+        "語彙がほぼフィルム文法に絞られ、複製可能性が低下した"
+      ],
+      "weaknesses": [
+        "『buzzing』など微細な過剰修飾が残り、削減余地がある",
+        "動作の型の骨格が、生成される絵の個別性を僅かに揺らす",
+        "自発性（スナップ感）を保つための最終調整が要る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "きっかけによる完全な個別化",
+        "語彙の最終収束"
+      ],
+      "unique_perspective": "私は『同じプロンプトで同じ絵が二度出るか』を問うている。『名前を呼ばれた』というきっかけは、生成器が同じ絵を二度出せない要因だ。あとは微細な過剰を削り、自発性を保つ最終調整で、複製は完全に断たれる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "解釈の収束を評価する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "物語の決定打を評価する"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の骨格を指摘する"
+        }
+      ],
+      "improvement_suggestions": [
+        "『buzzing』など微細な過剰修飾を削り、語彙を最終的に絞る",
+        "自発性を保つため、説明しすぎない余白を残す",
+        "結びに『authentic snapshot, not styled』を入れて編集語彙を排除する"
+      ],
+      "narrative": "『名前を呼ばれた』というきっかけは、生成器が同じ絵を二度出せない要因だ。微細な過剰を削れば、複製は完全に断たれる。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 49,
+      "primary_score_rationale": "振り返る視線と、髪を直す手の仕草が画を決定づけ、頬の赤と自動販売機の光が感情の光を運ぶ。美は『懐かしさの型』から『決定的な瞬間の美』へ移った。",
+      "dimension_scores": {
+        "visual_core": {
+          "score": 52,
+          "weight": 0.5,
+          "evidence": "「mid-laugh as she looks back, one hand lifting to tuck hair」",
+          "judgment": "視線と手の仕草が画を決める。"
+        },
+        "sensuous_realization": {
+          "score": 48,
+          "weight": 0.3,
+          "evidence": "「頬の赤・自動販売機の光・フィルム退色」",
+          "judgment": "光と肌の質感が感情を運ぶ。"
+        },
+        "formal_coherence": {
+          "score": 46,
+          "weight": 0.2,
+          "evidence": "「snapshot feel と決定的瞬間が束ねられた」",
+          "judgment": "形式と物語が統合された。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": 49,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 71,
+      "strengths": [
+        "振り返る視線と手の仕草が、画の中心を決定づけた",
+        "頬の赤が『走ってきた』という身体の時間を美に運ぶ",
+        "自動販売機の光が、退色フィルムの色と二重の懐かしさを生む"
+      ],
+      "weaknesses": [
+        "動作の型の骨格が、美の個別性を僅かに揺らす",
+        "構図の最終的な決定（光の当たる位置）が残る",
+        "語彙の微細な過剰が、決定画の純度を下げる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "視線と手による画の決定",
+        "身体の時間を運ぶ美"
+      ],
+      "unique_perspective": "私は髪を直す手の仕草に注目している。それは『走ってきた・呼ばれた・振り返った』という一瞬の身体の記憶だ。この仕草が笑いの最高点に当たるとき、美は型ではなく、この一枚だけの時間になる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "構図の決定を求める"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の骨格を指摘する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "身体の時間の切なさを評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "光の当たる位置（自動販売機の光が頬に当たる）を決定画にする",
+        "髪を直す手の仕草を、笑いの最高点に結びつける",
+        "語彙を絞り、決定画の純度を上げる"
+      ],
+      "narrative": "髪を直す手の仕草は一瞬の身体の記憶だ。それが笑いの最高点に当たるとき、美はこの一枚だけの時間になる。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 53,
+      "primary_score_rationale": "『名前を呼ばれて振り返る』というきっかけが、観る者が物語を完成させる決定的な入口になった。頬の赤が『走ってきた』という背景の物語を運び、切迫が最高点に近い。",
+      "dimension_scores": {
+        "empathy_generation": {
+          "score": 55,
+          "weight": 0.5,
+          "evidence": "「名前を呼ばれて振り返る・笑いの途中」",
+          "judgment": "きっかけが共感を決定づける。"
+        },
+        "emotional_stake": {
+          "score": 52,
+          "weight": 0.3,
+          "evidence": "「the moment is about to break into motion」",
+          "judgment": "切迫が最高点に近い。"
+        },
+        "memory_persistence": {
+          "score": 52,
+          "weight": 0.2,
+          "evidence": "「頬の赤・夕暮れ・呼ばれた名前」",
+          "judgment": "普遍的な記憶に深く触れる。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": 53,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 74,
+      "strengths": [
+        "名前を呼ばれた、というきっかけが物語を決定づけた",
+        "『動き出そうとしている』という切迫が、観る者の期待を誘う",
+        "頬の赤が『走ってきた』という身体の物語を内包する"
+      ],
+      "weaknesses": [
+        "動作の型の骨格が、感情の個別性を僅かに揺らす",
+        "笑いの最高点という、最も強い感情の瞬間に仕上がっていない",
+        "余白の使い方がまだ少し説明過多で、切なさの余韻が削がれている"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "きっかけによる物語の決定",
+        "身体の物語の内包"
+      ],
+      "unique_perspective": "この一枚の感情の中心は『呼ばれた名前』だ。観る者は誰が呼んだのか、何を言うのかを想像する。その余白こそが感情の源泉で、笑いの最高点に仕上げれば、観る者の想像はさらに深くなる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の骨格を指摘する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "身体の時間の美を評価する"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "余白の整理を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "笑いの最高点で振り返る、という最も強い瞬間に仕上げる",
+        "余白を整理し、説明過多を削って切なさの余韻を残す",
+        "きっかけ（呼ばれた名前）を、感情の源泉として残す"
+      ],
+      "narrative": "この一枚の感情の中心は呼ばれた名前だ。観る者は誰が呼んだのかを想像する。笑いの最高点に仕上げれば、その想像はさらに深くなる。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 53,
+      "primary_score_rationale": "きっかけ・動作・頬の赤・舞台の光が一つの決定的な瞬間に束ねられ、絵の揺れはほぼ最小に達した。被写体の物語がフィルム仕様と完全に接続し、プロンプトは設計どおりの一枚を生む。",
+      "dimension_scores": {
+        "structural_completion": {
+          "score": 54,
+          "weight": 0.4,
+          "evidence": "「きっかけ・動作・頬の赤・舞台の光が一つの瞬間に束ねられた」",
+          "judgment": "一枚の絵として閉じた。"
+        },
+        "premise_execution": {
+          "score": 54,
+          "weight": 0.3,
+          "evidence": "「被写体の物語がフィルム仕様と完全に接続」",
+          "judgment": "前提が完全に機能した。"
+        },
+        "craft_precision": {
+          "score": 50,
+          "weight": 0.3,
+          "evidence": "「語彙の最終削減が残る」",
+          "judgment": "精度は最高域に近い。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 53,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 71,
+      "strengths": [
+        "きっかけ・動作・舞台が一つの決定的な瞬間に束ねられた",
+        "頬の赤と自動販売機の光が、生成器の解釈を一意に絞る",
+        "技術仕様と被写体の物語が完全に接続した"
+      ],
+      "weaknesses": [
+        "構図の最終的な決定（光の当たり方）が残る",
+        "微細な過剰修飾が、解釈の純度を僅かに下げる",
+        "型の骨格が、絵の個別性を最後まで完全には保証しない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "一枚の絵としての完全な閉じ",
+        "解釈の最小化"
+      ],
+      "unique_perspective": "私は生成器の絵の揺れ幅を見ている。このプロンプトは設計図としてほぼ完成した。あとは光の当たり方という構図の最終決定と、微細な語彙の削減で、揺れは最小になり、設計どおりの一枚が生成される。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "語彙の最終削減を求める"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "光の決定画を求める"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "余白の整理を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "光の当たり方（自動販売機の光が頬に当たる）を構図として確定する",
+        "微細な過剰修飾を削り、解釈の純度を上げる",
+        "余白を残しつつ、物語の決定打を維持する"
+      ],
+      "narrative": "このプロンプトは設計図としてほぼ完成した。光の当たり方と語彙の最終削減で、設計どおりの一枚が生成される。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v4改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 56,
+      "primary_score_rationale": "『名前を呼ばれる』というきっかけが、この一枚を連作の決定版にした。呼ばれた名前・夕暮れ・走ってきた頬の赤は、何度でも別の時間・別の相手に反復できる資産だ。",
+      "dimension_scores": {
+        "environment_fit": {
+          "score": 57,
+          "weight": 0.4,
+          "evidence": "「Y2Kノスタルジー＋呼ばれた名前の物語」",
+          "judgment": "時代に個人的な物語が完全に接続された。"
+        },
+        "expansion_room": {
+          "score": 57,
+          "weight": 0.3,
+          "evidence": "「名前を呼ばれる瞬間・夕暮れの帰り道」",
+          "judgment": "連作の決定版になり得る。"
+        },
+        "timeliness_risk": {
+          "score": 54,
+          "weight": 0.3,
+          "evidence": "「型の残存の解消」",
+          "judgment": "差別化はほぼ確立。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 56,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "『名前を呼ばれる』が、反復できる物語の中心になった",
+        "夕暮れの帰り道という舞台が、連作（朝・雨・冬）に耐える",
+        "差別化が確立し、将来の再評価に耐える構造になった"
+      ],
+      "weaknesses": [
+        "現在価値（50）が潜在価値（56）にまだ追いついていない",
+        "構図の最終決定が、連作の一貫性に影響する",
+        "型の骨格の残存が、将来の完全な差別化の最終障害を残す"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "反復可能な物語の中心",
+        "連作の決定版の確立"
+      ],
+      "unique_perspective": "私はこの一枚が連作の最初の絵として機能するかを見ている。『名前を呼ばれる』というきっかけは、朝・雨・冬という別の時間に反復でき、夕暮れの自動販売機は舞台を固定する。この一枚がイノベーションになれば、シリーズ全体が価値を増す。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "語彙の最終削減を求める"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "構図の決定を求める"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の骨格を指摘する"
+        }
+      ],
+      "improvement_suggestions": [
+        "連作の一貫性のため、構図と舞台を最終的に固定する",
+        "型の残存を解消し、将来の完全な差別化を確立する",
+        "現在価値を潜在価値へ追いつかせるため、仕上げの決定打を入れる"
+      ],
+      "narrative": "この一枚は連作の最初の絵になる。『名前を呼ばれる』というきっかけは別の時間に反復でき、イノベーションになればシリーズ全体が価値を増す。"
+    }
+  ],
+  "recommendations": [
+    "動作の型の骨格を最終的に切る：『振り返る』を、被写体固有の一瞬（笑いの最高点で振り返る）へ仕上げる",
+    "語彙を最終的に削る：『buzzing』など微細な過剰修飾を落とし、フィルム文法だけに絞る",
+    "構図を決定する：振り返る視線と、自動販売機の光を一つの決定画に束ねる",
+    "『authentic snapshot, not styled』で編集語彙を排除し、複製可能性を断つ",
+    "スナップの自発性を保つ：説明しすぎない。余白を観る者に残す"
+  ],
+  "caveats": [
+    "評価対象は画像生成プロンプトであり、実写画像ではない",
+    "現在価値50は境界の上にあり、仕上げを誤ると再び定番へ寄る",
+    "過剰な仕上げは、スナップの自発性（このループの最大の強み）を失わせる"
+  ]
+}

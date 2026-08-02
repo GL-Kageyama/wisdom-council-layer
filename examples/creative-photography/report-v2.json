@@ -1,0 +1,604 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案：半笑いで振り返る少女を導入し、スタイル語彙を削って被写体の表情に軸を置いた",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "写真生成プロンプトに科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "写真生成プロンプトに市場性評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "reason": "写真生成プロンプトに哲学的評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "reason": "写真生成プロンプトに意味評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {
+      "mean": 35,
+      "variance": 0,
+      "min": 35,
+      "max": 35,
+      "scores": [
+        35
+      ]
+    },
+    "quality": {
+      "mean": 46,
+      "variance": 1,
+      "min": 45,
+      "max": 47,
+      "scores": [
+        45,
+        47
+      ]
+    },
+    "aesthetic": {
+      "mean": 43,
+      "variance": 0,
+      "min": 43,
+      "max": 43,
+      "scores": [
+        43
+      ]
+    },
+    "emotional_impact": {
+      "mean": 39,
+      "variance": 0,
+      "min": 39,
+      "max": 39,
+      "scores": [
+        39
+      ]
+    },
+    "future_potential": {
+      "mean": 50,
+      "variance": 0,
+      "min": 50,
+      "max": 50,
+      "scores": [
+        50
+      ]
+    }
+  },
+  "current_value_score": 41,
+  "hidden_potential_score": 50,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": [
+        "emotional-impact",
+        "originality"
+      ],
+      "arguments": [
+        "感情影響評価者: 半笑いで振り返る少女は、観る者が物語を補完できる初めての感情の顔だ。『笑いかけようとしている』という余白が、共感の入口になる（39点）。",
+        "独創性評価者: 『振り返る半笑いの少女』は、Y2Kノスタルジー画像の定番モチーフに接近しており、まだ個別の逸脱とは言えない（35点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": [
+        "anti-generic-filter",
+        "quality-evaluator"
+      ],
+      "arguments": [
+        "反凡庸フィルター: 語彙の重複は減ったが、『半笑いの少女』は生成系AIが喜ぶ定番被写体で、顔の固有性までは達していない（45点）。",
+        "品質評価者: 被写体の骨格（人物・表情・動作）が初めて定義され、技術層との接続が始まった。表情の具体性はまだ予感の段階だ（47点）。"
+      ]
+    },
+    {
+      "dimension": "future_potential",
+      "variance": 0,
+      "disputing_evaluators": [
+        "future-potential",
+        "anti-generic-filter"
+      ],
+      "arguments": [
+        "未来可能性分析者: 被写体に顔が入ったことで、再作成ループが『一枚の深化』へ向かう構造になった。反復の価値が上がった（50点）。",
+        "反凡庸フィルター: 深化の方向性は良いが、顔がまだ定番の表情に留まる限り、将来の差別化は確実でない（45点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、被写体に『半笑いで振り返る少女』という顔が導入され、スタイル語彙が削られたことで、プロンプトが『素材のリスト』から『一枚の写真の設計図』へ進んだ点で一致した。同時に、表情がまだ定番のモチーフに近く、物語の一瞬と場所の具体化が次の課題である点でも一致した。",
+  "executive_summary": "v2改訂案は引き続きディスカバリー対象と判定された。被写体の導入により感情影響（24→39）が大きく上昇し、品質（46）・美（43）が被写体の顔に束ねられ始めた。独創性（35）は『定番の半笑い』に留まり、既視感からの逸脱は次の課題である。次は表情の固有性（笑いの途中・呼ばれた名前）と、時間を刻む場所の小道具を足すことだ。",
+  "synthesis_narrative": "議長として私は、被写体の導入が合議の焦点を変えたことを述べたい。感情影響評価者は『初めての感情の顔』を確認し、品質評価者は技術層との接続が始まったと述べた。一方、反凡庸フィルターは『半笑いの少女』が生成系AIの定番モチーフに接近していると警告し、独創性評価者も既視感の残存を指摘した。顔は入ったが、その顔はまだ誰でもない。次の再作成で、この顔に固有の一瞬（笑いの途中、呼ばれた名前、走り出す直前）を与えることが、凡庸の罠からの脱出になる。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 35,
+      "primary_score_rationale": "被写体に顔が導入されたことは前進だが、『半笑いで振り返る少女』はY2Kノスタルジー画像の定番モチーフに接近しており、既視感からの逸脱はまだ個別化されていない。",
+      "dimension_scores": {
+        "premise_novelty": {
+          "score": 38,
+          "weight": 0.5,
+          "evidence": "「glancing back, a half-smile about to break into laughter」",
+          "judgment": "顔は入ったがモチーフは定番に接近している。"
+        },
+        "meaningful_deviation": {
+          "score": 33,
+          "weight": 0.3,
+          "evidence": "「hair stuck to her lips, handheld snapshot」",
+          "judgment": "逸脱はまだ予感の段階。"
+        },
+        "recombination_risk": {
+          "score": 33,
+          "weight": 0.2,
+          "evidence": "「Portra/Superia + 28mm に被写体が初めて接続」",
+          "judgment": "組み合わせに軸が生まれ始めた。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": 35,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 64,
+      "strengths": [
+        "被写体に『振り返る半笑い』という感情の顔が入った",
+        "スタイル語彙が削られ、技術仕様が被写体に束ねられ始めた",
+        "『笑いかけようとしている』という余白が物語の種になる"
+      ],
+      "weaknesses": [
+        "『半笑いの少女』は定番モチーフで、既視感が残る",
+        "表情の固有性（笑いの途中・何がきっかけか）が未定義",
+        "場所が静かな住宅街のまま抽象で、時代の刻印がない"
+      ],
+      "red_flags_triggered": [
+        "定番モチーフへの接近（ノスタルジー画像の型）"
+      ],
+      "green_flags_detected": [
+        "被写体の導入",
+        "スタイル削減による技術層の強化"
+      ],
+      "unique_perspective": "顔は入ったが、その顔はまだ『Y2K画像の顔』だ。笑いの途中、呼ばれた名前、走り出す直前——固有の一瞬が入って初めて、その顔は誰かになる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "顔の導入を高く評価する"
+        },
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "定番性をより厳しく見る"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "表情が美の着地になったと評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "表情を『笑いの途中・目を閉じて』へ具体化する",
+        "物語の一瞬（呼ばれて振り返る）を入れて顔を個別化する",
+        "場所に時間の小道具を足し、ルックをこの一枚固有にする"
+      ],
+      "narrative": "顔は入った。しかしその顔はまだ『Y2K画像の顔』だ。固有の一瞬が入って、その顔は初めて誰かになる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 45,
+      "primary_score_rationale": "語彙の重複が削られ、被写体の表情という一貫した軸が生まれた。ただし『半笑いの少女』は生成系AIが喜ぶ定番モチーフで、顔の固有性までは達していない。",
+      "dimension_scores": {
+        "generic_structure_risk": {
+          "score": 44,
+          "weight": 0.4,
+          "evidence": "「半笑いで振り返る少女、hair blowing」",
+          "judgment": "定番被写体への接近はあるが構造は平均解を脱した。"
+        },
+        "specificity": {
+          "score": 47,
+          "weight": 0.4,
+          "evidence": "「glancing back, hair stuck to lips, quiet Japanese residential street」",
+          "judgment": "固有の語彙が増えたが、決定打はまだない。"
+        },
+        "voice": {
+          "score": 42,
+          "weight": 0.2,
+          "evidence": "「削られた語彙の分だけ、書き手の選択が見えるようになった」",
+          "judgment": "声の芽が生まれた。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 45,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 67,
+      "strengths": [
+        "語彙の重複が削られ、情報密度が上がった",
+        "被写体の表情がプロンプトの軸になり、スタイルが後景に退いた",
+        "『髪が唇に張り付く』という微細な詳細が固有の質感を生む"
+      ],
+      "weaknesses": [
+        "『半笑いで振り返る少女』は定番モチーフで、平均解に接近している",
+        "物語の一瞬がまだ『笑いかけようとしている』という予感の段階",
+        "場所がまだ抽象で、時代の刻印がない"
+      ],
+      "red_flags_triggered": [
+        "定番モチーフへの接近"
+      ],
+      "green_flags_detected": [
+        "語彙削減による密度上昇",
+        "被写体中心の構造"
+      ],
+      "unique_perspective": "私は『同じプロンプトを別の生成系AIに渡しても同じ顔が出るか』を問うている。『半笑いの少女』はまだ出る。固有の表情（笑いの途中・呼ばれた名前）が入れば、同じ顔は二度と出ない。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "骨格の定義をより評価する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "表情が着地になったと評価する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "物語の種をより高く評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "定番の『半笑い』を、動作の切迫（笑いの途中・足が浮く）で置き換える",
+        "物語の一瞬を明示し、顔を個別化する",
+        "場所に時代の小道具（電柱・自動販売機・夕暮れ）を足す"
+      ],
+      "narrative": "語彙は削られ、軸は顔に移った。しかし『半笑いの少女』はまだ同じ顔を再現できる。固有の一瞬が入れば、その顔は複製を拒む。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 43,
+      "primary_score_rationale": "振り返る表情という視線の着地が導入され、退色フィルムの美が初めて誰かの顔に宿り始めた。ただし表情の光はまだ予感の段階で、画を決定づけるまでには至っていない。",
+      "dimension_scores": {
+        "visual_core": {
+          "score": 48,
+          "weight": 0.5,
+          "evidence": "「glancing back, half-smile, hair stuck to lips」",
+          "judgment": "視線と表情が画の中心に来た。"
+        },
+        "sensuous_realization": {
+          "score": 40,
+          "weight": 0.3,
+          "evidence": "「film tones, grain, flash mix + 表情の光」",
+          "judgment": "感覚が顔に宿り始めた。"
+        },
+        "formal_coherence": {
+          "score": 40,
+          "weight": 0.2,
+          "evidence": "「snapshot feel, shallow depth of field」",
+          "judgment": "形式と被写体の接続が始まった。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": 43,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 66,
+      "strengths": [
+        "振り返る半笑いが視線の着地になり、画に中心が生まれた",
+        "退色セピア緑が『振り返る少女』の時代の重みを運ぶ",
+        "『髪が唇に張り付く』という詳細が、感覚的な生々しさを足す"
+      ],
+      "weaknesses": [
+        "表情がまだ定番で、美の光が個別化されていない",
+        "場所が抽象のままで、背景が表情に寄り添っていない",
+        "形式（スナップ感）と被写体の接続がまだ緩い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "視線の着地の導入",
+        "パレットと表情の接続"
+      ],
+      "unique_perspective": "美はついに誰かの顔に宿り始めた。だがその表情はまだ『定番の微笑み』だ。笑いの途中という動きの光、夕暮れの小道具という背景の光が入れば、同じパレットが全く違う一枚を生む。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "形式の完成度を評価する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "表情の感情をより評価する"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "定番性を指摘する"
+        }
+      ],
+      "improvement_suggestions": [
+        "表情を『笑いの途中・目を閉じて』へ動かし、美の光を動的にする",
+        "背景に時間の小道具を足し、表情に寄り添う画を完成させる",
+        "ブレとフォーカスを、被写体の動きの一瞬に結びつける"
+      ],
+      "narrative": "美は誰かの顔に宿り始めた。あとはその顔の光を個別化すれば、同じパレットが初めてこの一枚だけの美になる。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 39,
+      "primary_score_rationale": "半笑いで振り返る少女は、観る者が物語を補完できる初めての感情の顔だ。『笑いかけようとしている』という余白が共感の入口になるが、賭け金の切迫はまだない。",
+      "dimension_scores": {
+        "empathy_generation": {
+          "score": 42,
+          "weight": 0.5,
+          "evidence": "「glancing back, half-smile about to break into laughter」",
+          "judgment": "初めて共感できる顔が存在する。"
+        },
+        "emotional_stake": {
+          "score": 34,
+          "weight": 0.3,
+          "evidence": "「笑いかけようとしている余白」",
+          "judgment": "賭け金はまだ予感の段階。"
+        },
+        "memory_persistence": {
+          "score": 40,
+          "weight": 0.2,
+          "evidence": "「振り返る半笑いという残像」",
+          "judgment": "残像が生まれた。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": 39,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 71,
+      "strengths": [
+        "初めて『誰か』が存在し、共感の入口が開いた",
+        "『笑いかけようとしている』という余白が、観る者の想像を誘う",
+        "振り返るという動作が、切なさの気配を運ぶ"
+      ],
+      "weaknesses": [
+        "感情の賭け金（何が起きているのか）が未定義",
+        "表情が定番の微笑みに留まり、個人の物語がまだ見えない",
+        "ノスタルジーがまだルックの領域で、物語の余韻に達していない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "共感の入口の開通",
+        "余白による想像の誘発"
+      ],
+      "unique_perspective": "この顔は『誰か』になったが、まだ『どの物語の誰か』ではない。呼ばれた名前、走り出す直前、夕暮れの帰り道——一つの切迫が入れば、観る者はその顔の物語を自分で完成させる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "定番モチーフへの接近を指摘する"
+        },
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "平均解への接近を警告する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "表情の美を評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語の一瞬（呼ばれて振り返る・走り出す直前）を入れて切迫を足す",
+        "表情を『笑いの途中』へ動かし、感情の動きを明示する",
+        "夕暮れや帰り道など、観る者の記憶に触れる舞台を足す"
+      ],
+      "narrative": "この顔は『誰か』になった。あとは切迫の一瞬が入れば、観る者はその顔の物語を自分で完成させる。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 47,
+      "primary_score_rationale": "被写体の骨格（人物・表情・動作）が初めて定義され、技術層との接続が始まった。表情の具体性はまだ予感の段階で、生成器の解釈を一意に絞る決定打は残っている。",
+      "dimension_scores": {
+        "structural_completion": {
+          "score": 48,
+          "weight": 0.4,
+          "evidence": "「glancing back, half-smile, hair stuck to lips」",
+          "judgment": "被写体の骨格が初めて定義された。"
+        },
+        "premise_execution": {
+          "score": 50,
+          "weight": 0.3,
+          "evidence": "「技術仕様と被写体の接続が始まった」",
+          "judgment": "前提が機能し始めた。"
+        },
+        "craft_precision": {
+          "score": 43,
+          "weight": 0.3,
+          "evidence": "「定番の半笑いに留まり、決定打が未定」",
+          "judgment": "精度は改善途上。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 47,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 66,
+      "strengths": [
+        "被写体の骨格が定義され、プロンプトが『設計図』になった",
+        "スタイル語彙の削減が、生成器の解釈の分散を減らした",
+        "技術仕様（35mm・28mm・f/2.8）と被写体の接続が始まった"
+      ],
+      "weaknesses": [
+        "『半笑い』という表情がまだ予感で、解釈が分かれる",
+        "物語の一瞬が未定義で、生成される絵の多様性が残る",
+        "構図の決定打（手・背景・動作の切迫）がまだない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "被写体の骨格の定義",
+        "語彙削減による解釈の収束"
+      ],
+      "unique_perspective": "私は生成器に渡したときの絵の揺れ幅を見ている。被写体の骨格が入ったことで揺れは減ったが、『半笑い』はまだ解釈が分かれる。動作の切迫と構図の決定打が入れば、絵の揺れは最小になり、設計どおりの一枚が生成される。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "定番性をより厳しく見る"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "物語の余白を評価する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "視線の着地を評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "表情を『笑いの途中・目を閉じて』へ具体化し、解釈を一意にする",
+        "動作の切迫（足が浮く・振り返る）を入れて、動きの一瞬を固定する",
+        "構図の決定打を一つ足し、背景と被写体を接続する"
+      ],
+      "narrative": "被写体の骨格が入り、プロンプトは設計図になった。あとは表情と動作の切迫を固定し、生成器の解釈を最小まで絞ることだ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v2改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 50,
+      "primary_score_rationale": "被写体に顔が入ったことで、再作成ループが『一枚の深化』へ向かう構造になった。Y2Kノスタルジーに個人的な感情の顔が接続され、連作・シリーズの可能性も広がる。ただし定番への接近は差別化の課題を残す。",
+      "dimension_scores": {
+        "environment_fit": {
+          "score": 52,
+          "weight": 0.4,
+          "evidence": "「Y2Kノスタルジー + 被写体の感情の顔」",
+          "judgment": "ノスタルジーに個人的な顔が接続された。"
+        },
+        "expansion_room": {
+          "score": 50,
+          "weight": 0.3,
+          "evidence": "「振り返る表情・夕暮れ・帰り道」",
+          "judgment": "連作の可能性が広がる。"
+        },
+        "timeliness_risk": {
+          "score": 47,
+          "weight": 0.3,
+          "evidence": "「定番の半笑いに接近」",
+          "judgment": "差別化はまだ。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 50,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "被写体の顔が、ノスタルジーに個人的な感情を接続した",
+        "振り返る表情は連作（朝・夕・四季）に耐える反復軸になり得る",
+        "技術仕様が明確で、再作成の反復が精密にできる"
+      ],
+      "weaknesses": [
+        "『半笑いの少女』の既視感が、将来の差別化を難しくする",
+        "物語の一瞬が未定で、連作の方向性がまだ開いている",
+        "顔の固有性が上がらないと、反復が単なるルックの反復に戻る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "被写体という反復軸",
+        "ノスタルジー＋個人的感情の接続"
+      ],
+      "unique_perspective": "私はこのプロンプトが今後5回の再作成でどう深化するかを見ている。技術仕様と被写体の両方が定まれば、反復は毎回一枚の絵を深くする。固有の一瞬が入れば、このループは『顔を育てる』プロセスになる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "定番性の持続を懸念する"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "決定打の欠如を指摘する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "切迫の一瞬を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "固有の物語の一瞬を確立し、連作の方向性を決める",
+        "既視感を避ける独自の仕様を一つ確立する",
+        "顔の固有性を、反復の軸として育てる"
+      ],
+      "narrative": "このループは『一枚の深化』へ向かう構造になった。固有の一瞬が入れば、反復は毎回顔を育てるプロセスになる。"
+    }
+  ],
+  "recommendations": [
+    "表情の固有性を上げる：『半笑い』から『笑いの途中・目を閉じて・名前を呼ばれて振り返る』へ具体化する",
+    "物語の一瞬を足す：『走り出す直前・足が浮きかけている』という動作の切迫を入れる",
+    "場所に時間を刻む：電柱・自動販売機・夕暮れなど、時代を刻む小道具を足す",
+    "残るスタイルの重複をさらに削り、フィルム文法だけに絞る",
+    "構図の決定打（視線・手・背景）を一つ確立する"
+  ],
+  "caveats": [
+    "評価対象は画像生成プロンプトであり、実写画像ではない",
+    "『半笑いの少女』は定番モチーフに接近しており、次の改訂で固有性を上げないと再び凡庸化する",
+    "フィルム美の土台を維持しつつ、被写体の強化を続けること"
+  ]
+}

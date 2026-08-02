@@ -6,8 +6,10 @@
 
 | フォルダ | ジャンル | 分類の推移（v1 → v2） |
 |----------|---------|----------------------|
-| `creative-poem/` | 詩 | discovery_target → discovery_target（改善） |
+| `creative-poem/` | 詩 | discovery_target → current_success |
 | `creative-film/` | 映画企画 | discovery_target → innovation |
+| `creative-watercolor/` | 画像生成プロンプト（水彩） | discovery_target → innovation |
+| `creative-photography/` | 画像生成プロンプト（写真） | discovery_target → innovation |
 | `business-startup/` | 事業 | trend_object → current_success |
 | `scientific-hypothesis/` | 科学仮説 | discovery_target → innovation |
 | `cultural-philosophy/` | 思想エッセイ | low_signal → discovery_target |

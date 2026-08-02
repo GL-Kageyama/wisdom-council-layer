@@ -1,0 +1,602 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案：笑いの途中・走り出す直前の瞬間と、夕暮れの電柱と自動販売機という物語の舞台を導入した",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "写真生成プロンプトに科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "写真生成プロンプトに市場性評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "reason": "写真生成プロンプトに哲学的評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "reason": "写真生成プロンプトに意味評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {
+      "mean": 40,
+      "variance": 0,
+      "min": 40,
+      "max": 40,
+      "scores": [
+        40
+      ]
+    },
+    "quality": {
+      "mean": 50,
+      "variance": 1,
+      "min": 49,
+      "max": 51,
+      "scores": [
+        49,
+        51
+      ]
+    },
+    "aesthetic": {
+      "mean": 46,
+      "variance": 0,
+      "min": 46,
+      "max": 46,
+      "scores": [
+        46
+      ]
+    },
+    "emotional_impact": {
+      "mean": 48,
+      "variance": 0,
+      "min": 48,
+      "max": 48,
+      "scores": [
+        48
+      ]
+    },
+    "future_potential": {
+      "mean": 53,
+      "variance": 0,
+      "min": 53,
+      "max": 53,
+      "scores": [
+        53
+      ]
+    }
+  },
+  "current_value_score": 46,
+  "hidden_potential_score": 53,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": [
+        "anti-generic-filter",
+        "quality-evaluator"
+      ],
+      "arguments": [
+        "反凡庸フィルター: 笑いの途中・目を閉じるという表情と、足が浮く動作の切迫が、被写体を定番から引き離した。残る語彙の重複はごく僅かだ（49点）。",
+        "品質評価者: 表情・動作・舞台が一つの瞬間に束ねられ、プロンプトが一枚の絵として閉じ始めた。解釈の揺れは大幅に減った（51点）。"
+      ]
+    },
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": [
+        "emotional-impact",
+        "anti-generic-filter"
+      ],
+      "arguments": [
+        "感情影響評価者: 『笑いの途中・走り出す直前』という切迫が、観る者が物語を完成させる入口を開いた。夕暮れの帰り道が普遍的な記憶に触れる（48点）。",
+        "反凡庸フィルター: 感情の余白は良くなったが、『笑っている少女』という型の気配がまだ残っており、固有の物語の決定打にはもう一歩である（49点）。"
+      ]
+    },
+    {
+      "dimension": "originality",
+      "variance": 0,
+      "disputing_evaluators": [
+        "originality",
+        "aesthetic-critic"
+      ],
+      "arguments": [
+        "独創性評価者: 定番の『半笑い』は脱したが、『笑いの途中で走り出す少女』という動作は、ノスタルジー画像の型から完全には離れていない（40点）。",
+        "美的批評家: 夕暮れの電柱と自動販売機という背景が、表情の光に時間の重みを与え、美が一枚の絵として立ち上がり始めた（46点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、笑いの途中・目を閉じた表情と、走り出す直前の動作、夕暮れの電柱と自動販売機という舞台が、被写体を定番から引き離し、プロンプトを『一枚の絵』へ閉じ始めた点で一致した。同時に、型の気配がまだ残り、固有の物語の決定打と、残る語彙の最終的な削減が次の課題である点でも一致した。",
+  "executive_summary": "v3改訂案はディスカバリー対象を維持した。動作の切迫（笑いの途中・走り出す直前）と舞台の具体化（夕暮れ・電柱・自動販売機）により、感情影響（48）と品質（50）が上昇し、プロンプトは『一枚の絵の設計図』として閉じ始めた。独創性（40）と美（46）は、型からの完全な離脱と決定打の確立が次の課題である。残る語彙を削り、物語の決定打（呼ばれた名前・振り返る瞬間）を確立すれば、この一枚はイノベーションの境界へ達する。",
+  "synthesis_narrative": "議長として私は、この改訂が凡庸の罠を実際に抜けつつあることを確認したい。感情影響評価者は切迫が共感の入口を開いたと述べ、品質評価者はプロンプトが一枚の絵として閉じ始めたと確認した。反凡庸フィルターは型の気配の残存を警告し、独創性評価者は動作の型からの完全な離脱を求める。この緊張は健全だ。残る課題は、笑いの型を個人的な物語の決定打（呼ばれた名前、振り返る瞬間）で置き換え、語彙を最終的に削ること。それを越えたとき、この一枚はディスカバリー対象からイノベーションへ足を踏み入れる。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 40,
+      "primary_score_rationale": "『笑いの途中・走り出す直前』という動作の切迫が、定番の『半笑い』から被写体を引き離した。夕暮れの電柱と自動販売機という舞台が時間の重みを加えたが、ノスタルジー画像の型から完全には離れていない。",
+      "dimension_scores": {
+        "premise_novelty": {
+          "score": 44,
+          "weight": 0.5,
+          "evidence": "「mid-laugh, eyes squeezed shut with joy, about to run, one foot lifting」",
+          "judgment": "動作の切迫が定番を脱し始めた。"
+        },
+        "meaningful_deviation": {
+          "score": 38,
+          "weight": 0.3,
+          "evidence": "「dusk, phone poles and a vending machine」",
+          "judgment": "舞台が時間の重みを足した。"
+        },
+        "recombination_risk": {
+          "score": 36,
+          "weight": 0.2,
+          "evidence": "「ノスタルジーの型＋動作の切迫」",
+          "judgment": "組み合わせは改善途上。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": 40,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 66,
+      "strengths": [
+        "笑いの途中・目を閉じた表情が、定番の微笑みを脱した",
+        "『走り出す直前・足が浮く』という切迫が、一枚の物語を予感させる",
+        "夕暮れの電柱と自動販売機が、時代の刻印を足した"
+      ],
+      "weaknesses": [
+        "『笑っている少女』という型の気配がまだ残る",
+        "物語のきっかけ（何が笑いを誘ったのか）が未明示",
+        "動作の型がノスタルジー画像の定番に接近する危険"
+      ],
+      "red_flags_triggered": [
+        "ノスタルジーの型への残存"
+      ],
+      "green_flags_detected": [
+        "動作の切迫",
+        "時代を刻む舞台"
+      ],
+      "unique_perspective": "この一枚は『笑っている少女』から『呼ばれて振り返る少女』へ変わる一歩手前だ。きっかけの一語（名前を呼ばれた）が入れば、動作は型から個別の物語になる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "切迫を高く評価する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "舞台の美を評価する"
+        },
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "型の残存を警告する"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語のきっかけ（呼ばれて振り返る）を明示し、型から個別の物語へ変える",
+        "動作の切迫を、固有の瞬間（足が浮く）としてさらに固定する",
+        "舞台の小道具を減らして、一つの決定画に絞る"
+      ],
+      "narrative": "この一枚は型を抜ける一歩手前だ。きっかけの一語が入れば、動作は型から個別の物語になる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 49,
+      "primary_score_rationale": "笑いの途中・目を閉じた表情と、走り出す直前の動作、夕暮れの電柱と自動販売機が、被写体を定番から引き離した。残る語彙の重複は僅かで、書き手の選択が滲み始めた。",
+      "dimension_scores": {
+        "generic_structure_risk": {
+          "score": 50,
+          "weight": 0.4,
+          "evidence": "「笑いの途中・足が浮く・夕暮れ」",
+          "judgment": "構造が平均解を脱した。"
+        },
+        "specificity": {
+          "score": 51,
+          "weight": 0.4,
+          "evidence": "「dusk, phone poles, vending machine, eyes squeezed shut」",
+          "judgment": "固有の語彙が決定打に近づいた。"
+        },
+        "voice": {
+          "score": 46,
+          "weight": 0.2,
+          "evidence": "「舞台の選択が書き手の視点を滲ませ始めた」",
+          "judgment": "声が生まれた。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 49,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 69,
+      "strengths": [
+        "動作の切迫が『笑っている少女』という定番を脱した",
+        "夕暮れ・電柱・自動販売機という選択に、書き手の視点が滲む",
+        "語彙の重複が大幅に減り、情報密度が上がった"
+      ],
+      "weaknesses": [
+        "『笑っている少女』の型の気配がまだ残る",
+        "物語のきっかけが未明示で、決定打に一歩届かない",
+        "舞台の小道具がやや説明過多で、選択の削減余地がある"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "書き手の視点の出現",
+        "語彙の最終的な収束"
+      ],
+      "unique_perspective": "私は『同じプロンプトで同じ絵が二度出るか』を問うている。笑いの途中と夕暮れの舞台が入ったことで、絵の揺れは大きく減った。あとはきっかけの一語が入れば、この一枚は複製を拒む。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "解釈の収束を評価する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "切迫の感情を評価する"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の残存を指摘する"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語のきっかけを明示し、決定打を完成させる",
+        "説明過多の小道具を削り、一つの決定画に絞る",
+        "結びに『authentic snapshot, not styled』を入れて編集語彙を排除する"
+      ],
+      "narrative": "笑いの途中と夕暮れが、この一枚を複製から遠ざけた。きっかけの一語が入れば、複製は完全に拒まれる。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 46,
+      "primary_score_rationale": "笑いの途中という動きの光が導入され、夕暮れの電柱と自動販売機という背景の光が、表情に時間の重みを与えた。美が一枚の絵として立ち上がり始めた。",
+      "dimension_scores": {
+        "visual_core": {
+          "score": 50,
+          "weight": 0.5,
+          "evidence": "「mid-laugh, eyes squeezed shut, dusk」",
+          "judgment": "表情の光が動きを持った。"
+        },
+        "sensuous_realization": {
+          "score": 44,
+          "weight": 0.3,
+          "evidence": "「夕暮れの光・自動販売機の光・フィルムの退色」",
+          "judgment": "光が二重の色を持つ。"
+        },
+        "formal_coherence": {
+          "score": 43,
+          "weight": 0.2,
+          "evidence": "「snapshot feel と被写体の切迫が接続」",
+          "judgment": "形式と被写体が束ねられた。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": 46,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": [
+        "笑いの途中・目を閉じた表情が、光を動的にした",
+        "夕暮れの光と自動販売機の光の二重が、退色フィルムの色と調和する",
+        "足が浮く切迫が、ブレという形式と結びつく素地になった"
+      ],
+      "weaknesses": [
+        "舞台の小道具がやや多めで、決定画への削減余地がある",
+        "表情の光がまだ個別の物語に到達していない",
+        "形式（スナップ感）と被写体の接続は改善途上"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "動きの光の導入",
+        "二重の光による時間の表現"
+      ],
+      "unique_perspective": "私は夕暮れの自動販売機の光に注目している。それは懐かしさの光だ。この光が笑いの途中の顔に当たるとき、退色フィルムの美は単なるルックから、時間を写す美になる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "構図の決定を求める"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の残存を指摘する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "光の切なさを評価する"
+        }
+      ],
+      "improvement_suggestions": [
+        "光の二重（夕暮れ＋自動販売機）を、一つの決定画に束ねる",
+        "小道具を絞り、表情の光を主役にする",
+        "ブレを、足が浮く瞬間の動きに結びつける"
+      ],
+      "narrative": "夕暮れの自動販売機の光は懐かしさの光だ。それが笑いの途中の顔に当たるとき、美は時間を写す美になる。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "『笑いの途中・走り出す直前』という切迫が、観る者が物語を完成させる入口を開いた。夕暮れの電柱と自動販売機という帰り道の舞台が、普遍的な記憶に触れる。",
+      "dimension_scores": {
+        "empathy_generation": {
+          "score": 50,
+          "weight": 0.5,
+          "evidence": "「mid-laugh, eyes squeezed shut with joy」",
+          "judgment": "感情が動きで示された。"
+        },
+        "emotional_stake": {
+          "score": 46,
+          "weight": 0.3,
+          "evidence": "「about to run — one foot already lifting」",
+          "judgment": "切迫が賭け金の気配を生む。"
+        },
+        "memory_persistence": {
+          "score": 48,
+          "weight": 0.2,
+          "evidence": "「夕暮れ・電柱・自動販売機の帰り道」",
+          "judgment": "普遍的な記憶に触れる。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": 48,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 73,
+      "strengths": [
+        "感情が『笑っている』ではなく『笑いの途中』という動きで示された",
+        "走り出す直前の切迫が、物語の続きを予感させる",
+        "夕暮れの帰り道が、観る者自身の記憶に触れる"
+      ],
+      "weaknesses": [
+        "物語のきっかけが未明示で、感情の原因が観る者任せ",
+        "型の気配が残り、個別の物語までは未到達",
+        "切迫の余白がまだ弱く、切なさの最高点に達していない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "動きとしての感情",
+        "普遍的な記憶に触れる舞台"
+      ],
+      "unique_perspective": "この一枚は『夕暮れに走り出す少女』という、観る者の誰もが持つ記憶の一瞬に触れている。きっかけの一語が入れば、その記憶は観る者自身の物語として立ち上がる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "型の残存を指摘する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "光の切なさを評価する"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "物語の一意化を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語のきっかけ（呼ばれて振り返る）を明示し、感情の原因を与える",
+        "切迫を『足が浮く・笑いの途中』でさらに固定する",
+        "帰り道の舞台を、観る者の記憶に触れる一語で絞る"
+      ],
+      "narrative": "この一枚は夕暮れに走り出す少女という、誰もが持つ記憶の一瞬に触れている。きっかけが入れば、その記憶は観る者自身の物語になる。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 51,
+      "primary_score_rationale": "表情・動作・舞台が一つの瞬間に束ねられ、プロンプトが一枚の絵として閉じ始めた。生成器の解釈の揺れは大幅に減り、設計どおりの絵が生成される確度が上がった。",
+      "dimension_scores": {
+        "structural_completion": {
+          "score": 52,
+          "weight": 0.4,
+          "evidence": "「笑いの途中・足が浮く・夕暮れの舞台」",
+          "judgment": "一枚の絵として閉じ始めた。"
+        },
+        "premise_execution": {
+          "score": 52,
+          "weight": 0.3,
+          "evidence": "「被写体・動作・舞台が一つの瞬間に束ねられた」",
+          "judgment": "前提が機能した。"
+        },
+        "craft_precision": {
+          "score": 48,
+          "weight": 0.3,
+          "evidence": "「語彙の重複が減り、解釈の揺れが収束」",
+          "judgment": "精度が上がった。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 51,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": [
+        "被写体・動作・舞台が一つの瞬間に束ねられた",
+        "語彙の重複が減り、生成器の解釈が収束した",
+        "夕暮れ・自動販売機の光が、色調の設計と整合する"
+      ],
+      "weaknesses": [
+        "物語のきっかけが未明示で、感情の原因の解釈が残る",
+        "小道具がやや多めで、構図の決定打が未確定",
+        "型の気配が、生成される絵の個別性を僅かに損なう"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "一枚の絵への閉じ",
+        "解釈の収束"
+      ],
+      "unique_perspective": "私は生成器の絵の揺れ幅を見ている。笑いの途中・足が浮く・夕暮れという指定で、揺れは大きく収束した。あとは物語のきっかけと構図の決定打が入れば、絵の揺れは最小になり、設計どおりの一枚が生成される。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "型の残存を警告する"
+        },
+        {
+          "evaluator_type": "aesthetic-critic",
+          "predicted_stance": "光の構成を評価する"
+        },
+        {
+          "evaluator_type": "emotional-impact",
+          "predicted_stance": "きっかけの一意化を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語のきっかけを明示し、感情の原因の解釈を消す",
+        "小道具を一つに絞り、構図の決定打を確定する",
+        "結びの語（authentic snapshot）で編集語彙を排除する"
+      ],
+      "narrative": "プロンプトは一枚の絵として閉じ始めた。きっかけと構図の決定打が入れば、設計どおりの一枚が生成される。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "写真画像生成プロンプト『Y2Kスナップの少女』v3改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 53,
+      "primary_score_rationale": "笑いの途中・走り出す直前という切迫と、夕暮れの電柱と自動販売機という舞台が、ノスタルジーに個人的な記憶を接続した。連作・シリーズの決定版になり得る方向性が確立されつつある。",
+      "dimension_scores": {
+        "environment_fit": {
+          "score": 54,
+          "weight": 0.4,
+          "evidence": "「Y2Kノスタルジー＋夕暮れの帰り道」",
+          "judgment": "時代に個人的記憶が接続された。"
+        },
+        "expansion_room": {
+          "score": 54,
+          "weight": 0.3,
+          "evidence": "「笑いの途中・走り出す直前・夕暮れ」",
+          "judgment": "連作の決定版になり得る。"
+        },
+        "timeliness_risk": {
+          "score": 50,
+          "weight": 0.3,
+          "evidence": "「型の残存」",
+          "judgment": "差別化はほぼ確立。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 53,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [
+        "ノスタルジーに『夕暮れの帰り道』という個人的記憶が接続された",
+        "笑いの途中という切迫が、連作（朝・夕・四季）に耐える反復軸になった",
+        "舞台と光の設計が、シリーズ化に一貫性を与える"
+      ],
+      "weaknesses": [
+        "型の気配が、将来の完全な差別化の障害を残す",
+        "物語のきっかけが未定で、連作の中心的な瞬間が未確定",
+        "現在価値（46）が潜在価値（53）にまだ追いついていない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "個人的記憶の接続",
+        "連作に耐える反復軸"
+      ],
+      "unique_perspective": "私はこの一枚が連作の決定版になり得るかを見ている。夕暮れの帰り道という舞台と笑いの途中という切迫は、朝・雨・冬という別の時間に反復できる。きっかけの一語が入れば、このシリーズは中心的な瞬間を持つ。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "型の残存を懸念する"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "現在の完成度を評価する"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "決定打を求める"
+        }
+      ],
+      "improvement_suggestions": [
+        "物語のきっかけを確立し、連作の中心的な瞬間を確定する",
+        "型からの完全な離脱で、将来の差別化を確実にする",
+        "現在価値を潜在価値へ追いつかせるため、決定打を入れる"
+      ],
+      "narrative": "この一枚は連作の決定版になり得る。きっかけの一語が入れば、シリーズは中心的な瞬間を持つ。"
+    }
+  ],
+  "recommendations": [
+    "物語の決定打を確立する：『誰かに名前を呼ばれて、笑いの途中で振り返る』という具体的なきっかけを入れる",
+    "型の残りを削る：『cozy nostalgic』『dreamy』など残る重複修飾を最終的に落とす",
+    "構図を決定する：振り返る視線と、夕暮れの自動販売機の光を一つの画に束ねる",
+    "『authentic snapshot, not styled』という結びで、編集的な語彙を排除する",
+    "フィルム仕様（35mm・28mm・f/2.8・Portra/Superia）は最終段階でも維持する"
+  ],
+  "caveats": [
+    "評価対象は画像生成プロンプトであり、実写画像ではない",
+    "『笑っている少女』の型の気配が残っており、決定打が入らないと再び定番に寄る",
+    "過剰な説明（感情の明示しすぎ）は、スナップの自発性を損なうリスクがある"
+  ]
+}
