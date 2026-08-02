@@ -1,0 +1,285 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T13:15:00Z",
+  "content_summary": "科学研究仮説v5「予測可能な睡眠時キューは記憶固定化を妨げる——予測誤差によるリプレイ解放仮説（事前登録・多施設確認版）」に対する合議評価",
+  "content_type": "structured",
+  "domain": "scientific",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [],
+  "value_vector": {
+    "originality": {"mean": 57, "variance": 0, "min": 57, "max": 57, "scores": [57]},
+    "quality": {"mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58, 58]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58]},
+    "business_value": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "scientific_novelty": {"mean": 59, "variance": 0, "min": 59, "max": 59, "scores": [59]},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56]}
+  },
+  "current_value_score": 58,
+  "hidden_potential_score": 57,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "scientific_novelty",
+      "variance": 0,
+      "disputing_evaluators": ["scientific-novelty", "future-potential"],
+      "arguments": [
+        "scientific-novelty: 事前登録・2施設（N=96）・除外基準・盲検・中間解析の停止基準まで研究計画として完備し、反転予測の検証は科学的方法の水準に達した。適用範囲の境界も明示され、新規性主張の輪郭が確定した（59点）。",
+        "future-potential: 事前登録と多施設再現により、結果の信頼性が担保され、予測可能性を制御変数とする介入研究への道が実装可能な形で開かれた。境界の明示は問いの普遍性を狭めず、むしろ適用範囲を明確にした（58点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 反転という固有の主張が文面の中心を貫き、実データ・識別実験・境界条件がそれを支える構成に完成した。対象集団の明示が、小サンプルからの過度な一般化という最後の凡庸リスクを封じた（58点）。",
+        "quality-evaluator: 除外基準・盲検・中間解析の停止基準・Holm補正まで研究計画書の水準で明記され、実行可能性と統計的厳密性が両立した。実装上の主要な論点はほぼ解決された（58点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、v5が「事前登録・2施設確認実験・除外基準・盲検・中間解析停止基準・適用範囲の明示」を加え、v4の残課題（サンプル規模・再現性・交給統制・倫理実務）を研究計画として解消した点で一致した。scientific_novelty（59）が最高評価で、仮説は反転予測の検証を科学的方法の水準で行う計画として完成した。quality（58）と future_potential（58）も高水準で、合議としてv2以降の改訂ループで最も高い到達点に達した。残る論点は確認実験の結果のみとなった。",
+  "executive_summary": "v5は、事前登録・2施設（N=96）の確認実験、除外基準、盲検手続き、中間解析の停止基準、適用範囲の明示（健常若年・宣言的記憶）を備えた最終改訂である。現在価値は58、潜在価値は57で、両軸とも45を大きく超えInnovationを維持した。科学的新規性（59）と品質（58）が中核で、仮説は実証可能な研究計画として完成の域に達した。",
+  "synthesis_narrative": "議長として、6体の評価者はv4→v5で「研究計画としての完成」を見た。独創性鑑定人（57）は「反転が、再現性という最難関の試練に備える計画を得た」と評し、凡庸性探知犬（58）は「対象集団の明示が、小サンプルからの一般化という最後の凡庸リスクを封じた」と認めた。科学的新規性査読者（59）は「事前登録・盲検・停止基準が、検証を科学的方法の水準に引き上げた」と評価し、完成度検査官（58）は「除外基準とHolm補正まで研究計画書の水準で明記された」とした。未来可能性分析者（58）は「多施設再現が、介入研究への道を実装可能な形で開いた」と見た。意味の守護者（56）は「境界の明示が、意味の問いの普遍性を狭めず適用範囲を明確にした」とした。合議として、v2以降の改訂ループで最も高い到達点に達し、残る論点は確認実験の結果のみとなった。Innovationとして確定する。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性鑑定人",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の独創性評価",
+      "domain": "scientific",
+      "primary_score": 57,
+      "primary_score_rationale": "反転という逸脱が、事前登録・多施設・盲検という科学的方法の完全な枠組みを得て、単なる独創的な主張から検証されるべき仮説として完成した。",
+      "dimension_scores": {
+        "meaningful_deviation": {"score": 57, "weight": 0.5, "evidence": "反転の逸脱が科学的方法の枠組みで武装された", "judgment": "逸脱が最強の形で確立された"},
+        "counterintuitive_flip": {"score": 58, "weight": 0.3, "evidence": "予測可能=抑制という反転がデータと方法で裏打ち", "judgment": "反直観的主張として完成した"},
+        "specificity_of_claim": {"score": 55, "weight": 0.2, "evidence": "適用範囲の明示と事前登録の反証条件", "judgment": "予測の具体性が最終段階に達した"}
+      },
+      "value_vector_contribution": {"originality": 57, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 87,
+      "strengths": [
+        "反転という逸脱が、事前登録・多施設・盲検という科学的方法の完全な枠組みを獲得した",
+        "逸脱の強さと方法の厳密さが、互いを損なわずに両立した",
+        "適用範囲の明示が、逸脱の誇張を防ぎつつ輪郭を保った"
+      ],
+      "weaknesses": [
+        "反転の最終的な確認は確認実験の結果に委ねられており、評価は計画の完成度に基づく",
+        "逸脱の普遍性（健常若年・宣言的記憶への限定）が、一部の読者には狭く映る余地がある"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["意味ある逸脱（反直観的予測）", "科学的方法による武装"],
+      "unique_perspective": "逸脱は、最も厳しい試練に備えることで完成する。この仮説は反転を、事前登録と盲検という最難関の試練に送り出した。逸脱の強さと方法の厳密さが両立した稀有な例だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "計画の完成度は認めつつ、結果待ちの状態を新規性評価の留保とするだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "確認実験の結果が開く介入の可能性に焦点を当てるだろう"}
+      ],
+      "improvement_suggestions": [
+        "確認実験の結果を踏まえて、反転の適用範囲を実データで確定する",
+        "結果の解釈と次の研究課題を、確認実験の事前登録に組み込む"
+      ],
+      "narrative": "逸脱は、最も厳しい試練に備えることで完成する。この仮説の反転は、事前登録と多施設という最難関の試練に送り出された。結果がどう出ても、この試練の設計自体が価値だ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性探知犬",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の凡庸性スクリーニング",
+      "domain": "scientific",
+      "primary_score": 58,
+      "primary_score_rationale": "反転という固有の主張が文面の中心を貫き、実データ・識別実験・境界条件がそれを支える構成に完成した。対象集団の明示が最後の凡庸リスクを封じた。",
+      "dimension_scores": {
+        "generic_risk": {"score": 57, "weight": 0.4, "evidence": "事前登録の反証条件と適用範囲の明示", "judgment": "平均解から決定的に離脱"},
+        "information_density": {"score": 59, "weight": 0.3, "evidence": "計画書水準の具体性が情報密度を最大化", "judgment": "新情報密度が最高水準"},
+        "particularity": {"score": 58, "weight": 0.3, "evidence": "反転主張が文面の中心を貫く構成", "judgment": "仮説固有の輪郭が完成した"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 58, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 87,
+      "strengths": [
+        "反転という固有の主張が文面の中心を貫き、追記がそれを支える構図に完成した",
+        "対象集団の明示が、小サンプルからの過度な一般化という最後の凡庸リスクを封じた",
+        "計画書水準の具体性が、誰が書いても同じにならない文章を維持した"
+      ],
+      "weaknesses": [
+        "情報密度が非常に高いため、読解には専門知識を要する（専門外の読者への配慮はない）",
+        "方法の厳密さが前面に出たことで、主張の人間的な声が文面からやや遠ざかった"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["固有の輪郭（反直観的主張）", "対象集団の明示"],
+      "unique_perspective": "凡庸は、具体的なデータと明確な対象集団に紛れ込めない。この仮説はその両方を備え、凡庸の逃げ道を完全に塞いだ。ただ、厳密さの向こうで、主張の人間的な声が聞こえにくくなった点だけは惜しい。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "専門性の高さを、実行可能性の観点から認めつつ読解コストを指摘するだろう"},
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "方法の厳密さが物語の語り口を遠ざけた点を指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "専門外の読者向けに、反転の主張を一文で要約する冒頭部を維持する",
+        "方法の厳密さと人間的な声のバランスを、結果報告の文体で回復する"
+      ],
+      "narrative": "この文面は、この仮説にしか書けない。対象集団の明示が最後の凡庸リスクを封じ、輪郭は完成した。あとは厳密さの向こうで、人間的な声を忘れないことだけだ。"
+    },
+    {
+      "evaluator_id": "scientific-novelty",
+      "evaluator_name": "科学的新規性査読者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の科学的新規性・検証可能性評価",
+      "domain": "scientific",
+      "primary_score": 59,
+      "primary_score_rationale": "事前登録・2施設（N=96）・除外基準・盲検・中間解析の停止基準・Holm補正まで研究計画として完備し、反転予測の検証は科学的方法の水準に達した。",
+      "dimension_scores": {
+        "frontier_advancement": {"score": 60, "weight": 0.5, "evidence": "事前登録の確認実験計画と適用範囲の明示", "judgment": "知識の前線を確実に押し広げる計画"},
+        "falsifiability": {"score": 59, "weight": 0.3, "evidence": "Holm補正・TOST等価性・反証条件の完備", "judgment": "検証可能性が科学的方法の水準に達した"},
+        "importance_if_true": {"score": 56, "weight": 0.2, "evidence": "正しければ予測可能性が睡眠介入の設計原理になる", "judgment": "重要度が高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": 59, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 89,
+      "strengths": [
+        "事前登録・2施設（N=96）・検出力90%が、反転予測の検証を科学的方法の水準に引き上げた",
+        "除外基準・盲検・中間解析の停止基準が、バイアスと追試不能を防ぐ手続きとして完備した",
+        "Holm補正・TOST等価性が、多重比較と「等価」の判定を統計的に厳密化した",
+        "適用範囲（健常若年・宣言的記憶）の明示が、新規性主張の輪郭を確定した"
+      ],
+      "weaknesses": [
+        "確認実験の結果が未だ得られておらず、新規性の最終確認は結果に依存する",
+        "対象集団の限定（健常若年）により、集団を越えた一般化の主張は控えめになる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["新しい予測の追加（外挿でない）", "科学的方法の完備", "適用範囲の明示"],
+      "unique_perspective": "科学的新規性の最終形は、検証が最良の方法で行われる計画にある。この仮説は事前登録・盲検・多施設で、検証の質そのものを最大化した。査読者がこれ以上求めるのは、確認実験の結果のみだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "計画の完全性は認めつつ、結果待ちの状態を共有するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "検証の質の高さが、介入研究への道を実装可能にした点を重視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "確認実験を実行し、反転の効果量を事前登録どおりに報告する",
+        "結果を踏まえて、適用範囲をデータで確定し次の研究課題を定める"
+      ],
+      "narrative": "査読者として、この仮説は検証の質の点で完成形に達した。事前登録・盲検・多施設で、反転予測の検証は最良の方法で計画された。査読者がこれ以上求めるのは、確認実験の結果のみだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度検査官",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の技術的完成度・実現可能性評価",
+      "domain": "scientific",
+      "primary_score": 58,
+      "primary_score_rationale": "除外基準・盲検・中間解析の停止基準・Holm補正まで研究計画書の水準で明記され、実行可能性と統計的厳密性が両立した。実装上の主要な論点はほぼ解決された。",
+      "dimension_scores": {
+        "technical_completion": {"score": 58, "weight": 0.35, "evidence": "事前登録・除外基準・停止基準の完備", "judgment": "研究計画としての完成度が最高水準"},
+        "feasibility": {"score": 59, "weight": 0.35, "evidence": "2施設N=96と盲検手続きの実装設計", "judgment": "実行可能性が高い水準で担保された"},
+        "precision": {"score": 57, "weight": 0.3, "evidence": "Holm補正・TOST等価性の統計的厳密化", "judgment": "操作定義が最終段階に精緻化された"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 58, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 88,
+      "strengths": [
+        "除外基準（PSQI>10等）と採用条件（睡眠効率>85%）が事前に定められた",
+        "盲検手続きと中間解析の停止基準が、バイアスと統計的濫用を防ぐ",
+        "2施設N=96の検出力設計（90%）が、再現性を担保する規模に達した",
+        "Holm補正・TOST等価性が、多重比較と「等価」の判定を統計的に厳密化した"
+      ],
+      "weaknesses": [
+        "確認実験の実行コスト（2施設・N=96）が高く、資金・期間の現実性が未評価",
+        "対象集団の限定（健常若年・宣言的記憶）により、集団を越えた適用は計画外になる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["約束と検証手段の対応", "統計的厳密性の完備"],
+      "unique_perspective": "品質は、計画が実行時のすべてのトラブルを先取りしたかで決まる。この仮説は除外・盲検・停止基準・Holm補正で、研究計画書が想定しうる論点をほぼ全て先取りした。残るのは実行の現実性という、計画の外側の課題だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "専門性の高い計画を、読解コストの観点から見るだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "実行コストの現実性を、実装段階の課題として指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "2施設N=96の資金・期間の計画を現実的な実行計画として具体化する",
+        "実行中のデータ管理と事前登録の改訂手続きを計画に含める"
+      ],
+      "narrative": "アイデアは実行を通してしか現実にならない。この仮説は、研究計画書が想定しうる論点をほぼ全て先取りした。残るは実行の現実性という、計画の外側の課題だ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の将来価値・環境変化評価",
+      "domain": "scientific",
+      "primary_score": 58,
+      "primary_score_rationale": "事前登録と多施設再現により結果の信頼性が担保され、予測可能性を制御変数とする介入研究への道が実装可能な形で開かれた。",
+      "dimension_scores": {
+        "environment_shift": {"score": 58, "weight": 0.4, "evidence": "睡眠科学・非侵襲刺激研究の加速", "judgment": "環境は明確な追い風"},
+        "ahead_of_time": {"score": 59, "weight": 0.4, "evidence": "予測可能性という未解決の制御変数", "judgment": "開かれた問いが実装可能な段階に到達"},
+        "generalization": {"score": 56, "weight": 0.2, "evidence": "学習支援・PTSD記憶変容への接続", "judgment": "汎化可能性は高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 58, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 88,
+      "strengths": [
+        "事前登録・2施設の確認実験により、結果の信頼性が担保され介入研究への道が実装可能になった",
+        "境界の明示が、介入の適用対象（健常若年・宣言的記憶）を明確にした",
+        "睡眠科学研究の加速で、検証のための技術基盤と研究コミュニティが整いつつある"
+      ],
+      "weaknesses": [
+        "介入への外挿には、医療現場の倫理審査・規制・実装の実務がなお残る",
+        "確認実験の結果に将来価値が依存し、結果次第で介入の道の形が変わる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["開かれた問い（未解決の制御変数）", "実装可能な段階への到達"],
+      "unique_perspective": "私は可能性の地図を描く者だ。この仮説は、事前登録と多施設再現という信頼できる足場を地図に書き込み、介入研究への道を実装可能にした。境界の明示は地図を狭めず、むしろ確かな線として引いた。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "確認実験の結果待ちの状態を、評価の留保として挙げるだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "実行コストの現実性を、実装段階の課題として指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "介入への外挿に向け、倫理審査・規制・実装の実務を計画に含める",
+        "確認実験の結果を踏まえて、介入研究への移行ロードマップを描く"
+      ],
+      "narrative": "歴史的に、重要な問いは実証の段階を越えて価値を持つ。この仮説は、事前登録と多施設再現という信頼できる足場を地図に書き込み、介入研究への道を実装可能にした。あとは確認実験の結果が、その道を確定させる。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味の守護者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v5の意味的・物語的価値評価",
+      "domain": "scientific",
+      "primary_score": 56,
+      "primary_score_rationale": "記憶変容の倫理注記（記憶の真正性）が仮説の含意として維持され、境界の明示が意味の問いの適用範囲を明確にした。",
+      "dimension_scores": {
+        "existence_question": {"score": 55, "weight": 0.4, "evidence": "記憶の夜間書き換えと真正性の含意", "judgment": "自己同一性の問いが深まった"},
+        "narrative_power": {"score": 57, "weight": 0.3, "evidence": "「予測不能な経験だけが夜に記憶を書き換える」という物語", "judgment": "境界があるからこそ人間の経験に届く"},
+        "interpretive_depth": {"score": 56, "weight": 0.3, "evidence": "介入時の同意・真正性という問い", "judgment": "解釈の深まりが見られる"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 56},
+      "classification": "discovery_target",
+      "confidence": 84,
+      "strengths": [
+        "記憶の真正性という倫理的問いが、仮説の含意として維持された",
+        "境界の明示が、意味の問いの普遍性を狭めず適用範囲を明確にした",
+        "「予測不能な経験だけが夜に記憶を書き換える」という物語が、方法の厳密さの中でも保たれた"
+      ],
+      "weaknesses": [
+        "方法の厳密さが前面に出たことで、意味の問いが文面の中心からやや後退した",
+        "記憶変容介入時の同意手続きと真正性の扱いが、概念の含意から具体的手続きに未到達"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["普遍的経験（睡眠・記憶・自己）への接続", "倫理的問いの明示"],
+      "unique_perspective": "境界は、科学の厳密さであると同時に物語の精度でもある。「予測不能な経験だけが、夜に記憶を書き換える」——この物語は、健常若年の宣言的記憶という境界があるからこそ、人間の経験に届く。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "物語の維持を、方法の厳密さとバランスする点として見るだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "倫理注記の具体的手続きへの未到達を指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "記憶変容介入時の同意手続きと真正性の扱いを、介入計画に具体的に組み込む",
+        "確認実験の結果報告で、意味の問いを中心へ再び呼び戻す"
+      ],
+      "narrative": "科学的仮説も、人間がなぜそれを知りたいのかという問いの上に立つとき、意味を持つ。この仮説は、方法の厳密さの中でも「予測不能な経験だけが夜に記憶を書き換える」という物語を保った。あとは、それが実験を超えて人生の物語に届くかどうか。"
+    }
+  ],
+  "recommendations": [
+    "事前登録の確認実験（2施設・N=96）を実行し、反転の効果量を事前登録どおりに報告する",
+    "確認実験の資金・期間を現実的な実行計画として具体化する",
+    "介入への外挿に向け、倫理審査・規制・実装の実務を計画に含める",
+    "確認実験の結果を踏まえて、反転の適用範囲をデータで確定し次の研究課題を定める",
+    "再評価ループ（compare_reports.py）で v4→v5 の改善を確認済み。Innovation として確定し、実証段階へ移行する"
+  ],
+  "caveats": [
+    "評価は仮説と計画の記述のみに基づく。確認実験の実行と結果の検証は行っていない。",
+    "対象集団は健常若年成人の宣言的記憶に限定され、集団を越えた一般化は計画外である。",
+    "Innovation の判定は「潜在価値が高い」という意味であって、仮説の正しさや確認実験の成否を保証しない。"
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "FOODSIGN（フードサイン）v4 — 100店パイロットの実証と参入障壁の具体化",
+  "domain": "business",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [
+    {"evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）"},
+    {"evaluator_id": "aesthetic-critic", "reason": "企画文書に美的完成度の評価軸は不適合"},
+    {"evaluator_id": "emotional-impact", "reason": "ビジネス企画評価では主軸とならない（消費者感情はbusiness-valueが担う）"},
+    {"evaluator_id": "philosophical-evaluator", "reason": "企画段階では市場価値の検証が優先され、世界観の変容評価は時期尚早"}
+  ],
+  "value_vector": {
+    "originality": {"mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50]},
+    "quality": {"mean": 59, "variance": 4, "min": 57, "max": 61, "scores": [61, 57]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 36, "variance": 0, "min": 36, "max": 36, "scores": [36]},
+    "business_value": {"mean": 65, "variance": 0, "min": 65, "max": 65, "scores": [65]},
+    "scientific_novelty": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32]}
+  },
+  "current_value_score": 58,
+  "hidden_potential_score": 34,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 4,
+      "disputing_evaluators": ["quality-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "quality-evaluator: 予測精度94%と実契約8社が数字を裏付け、パイロットの実績が企画全体を支える構造になった（61）",
+        "anti-generic-filter: 数字は実績に裏付けられたが、『精度94%』の測定方法の細部が薄く、B2B定型の骨格は依然残る（57）"
+      ]
+    },
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": ["business-value", "meaning-evaluator"],
+      "arguments": [
+        "business-value: 100店パイロットと実契約8社が需要を実証し、特許・ブランドで障壁が保護対象の資産へ昇格した（65）",
+        "meaning-evaluator: ギフト型への拡張で人間の層は深まったが、スケールでまた薄まる懸念が残り、評価は据え置いた（32）"
+      ]
+    }
+  ],
+  "consensus_summary": "6名の評価者は、100店パイロットの実績（予測精度94%、実契約8社）がv3のLOIを実証へ転換した点で一致。ビジネス価値（65）と品質（59）はさらに上昇し、current_successを維持した。originalityも、焼き上げ予測の業界データセットと特許・ブランドによる保護が障壁の実体を帯びたと評価を上げた。future-potentialは購入実績を認めつつも、制度化（業界標準）とスケール時の精度維持には引き続き慎重である。",
+  "executive_summary": "FOODSIGN v4は、100店パイロットで売れ残り予測精度94%を実証し、廃棄予測データの実契約8社という購入実績を積んだ。LTV/CAC 7.2、成功報酬型の導入モデル、特許2件・ブランドによる防御が、需要・導入摩擦・障壁の三つを同時に具体化した。現時点の価値（≈58）は、構想から実証の段階へ企画が進んだことを反映する。",
+  "synthesis_narrative": "合議はv4をcurrent_successと判定した。v3の指令（LOIを本契約へ・予測精度の実証・物流の明文化）が、企画を『契約の足場』から『実証された事業』へ引き上げた。残る論点は、スケール時に予測精度を維持し、業界標準化で複利を制度化できるか、そして人間の物語が薄まらないかという未来の問いである。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 50,
+      "primary_score_rationale": "焼き上げ予測の業界データセットが特許2件とブランドで保護される資産へ昇格し、ノウハウが代替不能な実体を持った。データ基盤の蓄積方法はまだ既存SaaSの延長の影が残る。",
+      "dimension_scores": {
+        "conceptual_novelty": {"score": 50, "weight": 0.35, "evidence": "「焼き上がりサイクル予測」を特許化し、業界固有の見方が資産として保護される", "judgment": "アイデアが法的に守られる資産へ昇格し、独自性が定着した。"},
+        "combinatorial_surprise": {"score": 50, "weight": 0.25, "evidence": "「予測精度94%×実契約8社×ギフト体験」の結合が、実証と人間の層を両立させる", "judgment": "組み合わせが実行データで裏付けられ、予測しにくさが持続する。"},
+        "distance_from_template": {"score": 51, "weight": 0.25, "evidence": "消費者割引テンプレートから完全に離れ、特許で保護される独自領域に到達", "judgment": "最も近い先行作品からの距離が、資産化によってさらに広がった。"},
+        "non_obviousness": {"score": 49, "weight": 0.15, "evidence": "ベーカリー60店の計測実績という、実践を通じてしか得られない死角", "judgment": "非自明な細部が、実績データとして具体的に埋め込まれた。"}
+      },
+      "value_vector_contribution": {"originality": 50, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 73,
+      "strengths": [
+        "焼き上げ予測が特許2件・ブランドで保護される資産へ昇格し、代替不能性が定着した",
+        "ベーカリー60店の実計測データが、ノウハウを実証の裏付けで固めた"
+      ],
+      "weaknesses": [
+        "データ蓄積の方法そのものは既存サプライチェーンSaaSの延長に見える部分が残る",
+        "業界標準化（API公開）がまだ先で、ネットワーク効果の独自性は未発揮"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["資産化された独自ノウハウ（特許）", "実計測データの蓄積"],
+      "unique_perspective": "私は『独自性が実体を持つか』を見る。v4で焼き上げ予測は特許と実データという実体を得た。アイデアの段階を出て、奪いにくい資産になった。次の非自明は、この資産を業界標準のAPIとして公開し、模倣どころか依存させる構造だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "実績と障壁の具体化を高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "特許は評価しつつ、データ蓄積の定型を指摘するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "予測モデルを業界標準のAPIとして公開し、他SaaSへの組み込みでネットワーク効果を創出する",
+        "特許・データ蓄積に加え、予測の精度を支える運用知識そのものを中核に据え続ける"
+      ],
+      "narrative": "私はv3で『数字で証明せよ』と言った。v4は予測精度94%という数字でノウハウを証明し、特許という実体を与えた。独自性が資産になった。次は、その資産を業界の標準にし、模倣を『依存』に変える番だ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 57,
+      "primary_score_rationale": "予測精度94%と実契約8社という実績が数字を裏付け、文言中心の根拠が解消された。ただし『精度94%』の測定方法の細部が薄く、B2B定型の骨格はまだ残る。",
+      "dimension_scores": {
+        "generic_language_density": {"score": 58, "weight": 0.30, "evidence": "「予測精度94%」「実契約8社」「LTV/CAC 7.2」と、実績に裏付けられた固有の数値", "judgment": "数字が実績を持つようになり、汎用性がほぼ消えた。"},
+        "risk_avoidance": {"score": 59, "weight": 0.25, "evidence": "特許出願2件とブランド防御を、成果報酬型の回収モデルと共に明示", "judgment": "守りと稼ぎの両方に具体的な決断がある。"},
+        "information_density": {"score": 57, "weight": 0.25, "evidence": "店舗構成（60/20/20）、精度、契約数、LTV/CACが分節化された", "judgment": "情報量は十分で、各項目が検証可能な形になった。"},
+        "particularity": {"score": 55, "weight": 0.20, "evidence": "「廃棄削減の20%を店舗に還元」など、この事業にしかない回収の細部", "judgment": "特定のオペレーションに根ざした固有性が深化した。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 57, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 76,
+      "strengths": [
+        "予測精度94%と実契約8社が数字を実績で裏付けた",
+        "店舗構成・精度・契約数・LTV/CACが検証可能な形で分節化された",
+        "成功報酬型の導入モデルが、この事業固有の回収の細部を持つ"
+      ],
+      "weaknesses": [
+        "『精度94%』の測定方法（何をもって94%か）の細部が薄い",
+        "B2B定型の骨格（データ×物流×コンサル）は、細部で塗られても完全には消えない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実績で裏付けられた数値", "検証可能な分節化", "固有の回収モデル"],
+      "unique_perspective": "私は数字の『出所』を嗅ぐ。v4の数字は、ついにLOIという言葉から実績へ置き換わった。精度94%という数字が、測定方法という細部を持てば、この企画の言葉は完全にこの企画だけのものになる。数字の出所が最後の砦だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "実績の裏付けを高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "LTV/CACと実契約を重視し、測定方法の細部には寛容だろう。"}
+      ],
+      "improvement_suggestions": [
+        "予測精度の測定方法（検証データ・期間・誤差の定義）を明記する",
+        "業界API標準化で、B2B定型の骨格をデータ流通の標準へ塗り替える"
+      ],
+      "narrative": "v3で私は『数字は出所が命』と言った。v4は出所——実績——を数字に与えた。残るは測定方法の細部と、B2B定型の骨格だ。それらが塗り替えられれば、この企画は凡庸の領分から完全に脱する。"
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 65,
+      "primary_score_rationale": "100店パイロットと実契約8社が需要を実証し、LTV/CAC 7.2という経済性が提示された。特許2件とブランドが参入障壁を保護対象の資産へ昇格させ、事業の成り立ちが投資可能な段階に達した。",
+      "dimension_scores": {
+        "market_demand": {"score": 66, "weight": 0.30, "evidence": "廃棄予測レポート年間契約8社という購入実績", "judgment": "需要が『署名』から『支払い』へ実証された。買い手が金を払った。"},
+        "growth_potential": {"score": 67, "weight": 0.25, "evidence": "実契約に加え、自治体フードバンク連携で市場の広がりが具体化", "judgment": "リカーリングの実績と公的セクターの追い風が接続された。"},
+        "feasibility_of_delivery": {"score": 63, "weight": 0.20, "evidence": "100店で予測精度94%を実証し、リース＋成功報酬型で回収モデルを確定", "judgment": "実装と回収の両方が実証され、物流の運営も具体化した。"},
+        "competitive_advantage": {"score": 64, "weight": 0.25, "evidence": "特許2件・ブランド・実測データセットによる防御", "judgment": "障壁が『保護方針の宣言』から『登録済みの資産』へ実体化した。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 65, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 81,
+      "strengths": [
+        "実契約8社という購入実績で需要が実証された",
+        "LTV/CAC 7.2が提示され、ユニットエコノミクスが投資対話可能になった",
+        "特許2件・ブランドが参入障壁を登録済みの資産へ昇格させた"
+      ],
+      "weaknesses": [
+        "スケール時（300店）に精度と収益が維持できるかは未実証",
+        "自治体・業界標準という制度化への依存が高まり、外部環境への感応度が上がった"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["支払いを伴う需要（実契約）", "良好なユニットエコノミクス", "登録済みの障壁資産"],
+      "unique_perspective": "私は『儲けの質』だけでなく『奪われなさ』を見る。v4は金を払う買い手の実績と、特許という登録済みの壁を同時に手に入れた。次の扉は、300店と業界API標準化で、この壁を『模倣困難』から『依存』へ変えることだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "事業は強固だが、スケールで人間の層が薄まる懸念を維持するだろう。"},
+        {"evaluator_type": "future-potential", "predicted_stance": "制度化への依存を指摘し、私より控えめな点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "300店規模への拡大計画と、スケール時の精度維持の仕組みを明記する",
+        "業界API標準化の構想を具体化し、模倣を依存へ変えるネットワーク効果を描く"
+      ],
+      "narrative": "私はv2で『最初に金を払うのは誰だ？』と聞いた。v4は、その買い手が実際に金を払ったことを示した。需要が実証され、壁が登録された。次はスケール——300店と業界標準で、この事業を『実証された』から『標準になる』へ押し上げる番だ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 61,
+      "primary_score_rationale": "v3で未回収だった数字の裏付けが、予測精度94%と実契約8社で解消された。店舗構成・精度・契約数・LTV/CACが検証可能な形で並び、企画全体が実績に支えられた構成へ昇格した。",
+      "dimension_scores": {
+        "technical_quality": {"score": 62, "weight": 0.35, "evidence": "実績・収益実数・障壁・人間の層の4層が、検証可能な数字で接続された", "judgment": "各層が実績データに支えられ、構成が『構想』から『報告』へ昇格した。"},
+        "precision": {"score": 60, "weight": 0.20, "evidence": "「精度94%」「実契約8社」「LTV/CAC 7.2」と数字が出所を持つ", "judgment": "数字の出所が実績で裏付けられ、精密さが完成に近づいた。"},
+        "structure": {"score": 62, "weight": 0.25, "evidence": "v3のLOIが本契約化され、約束が企画内で実証へ回収された", "judgment": "自己指摘した課題が、構想から実証まで閉じられた。"},
+        "feasibility": {"score": 60, "weight": 0.20, "evidence": "リース＋成功報酬型で回収モデルを確定し、物流の運営も具体化", "judgment": "実装と回収の両方が実行可能な形で記載された。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 61, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "数字が出所（実績）を持ち、精密さが大きく向上した",
+        "LOI→本契約という約束の回収が実証で完結した",
+        "店舗構成・精度・LTV/CACが検証可能な形で分節化された"
+      ],
+      "weaknesses": [
+        "予測精度94%の測定方法（検証データ・誤差定義）が未明記で、数字の信頼性に影が残る",
+        "スケール時の品質維持（300店での精度）と、業界API標準化の仕様が未具体"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実績で裏付けられた数字", "約束の実証的回収", "検証可能な分節化"],
+      "unique_perspective": "完成度検査官として、私は『数字がどこから来たか』を見る。v4の数字は実績から来ている。残る粗は測定方法の細部と、スケール時に品質を保つ仕組みだ。それらが埋まれば、この企画の品質は『完成』に達する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "精度の測定方法を指摘し、構成の良さを『報告の体裁』と見るだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "実績の質を重視し、測定方法の細部には寛容だろう。"}
+      ],
+      "improvement_suggestions": [
+        "予測精度の測定方法（検証データ・期間・誤差の定義）を明記する",
+        "300店スケールでの品質維持と、業界API標準化の仕様（SLA・精度95%）を具体化する"
+      ],
+      "narrative": "v3で私は『数字は出所を持てるか』と問うた。v4は、その出所——実績——を数字に与えた。LOIは本契約へ回収され、構成は報告の体裁を整えた。残る粗は測定方法とスケール時の品質。それらを埋める最後の仕上げが待つ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 36,
+      "primary_score_rationale": "実契約8社という購入実績が複利の前提を実証へ近づけ、予測精度94%が資産の質を高めた。ただし制度化（業界標準）とスケール時の精度維持は未実証で、未来価値の上昇には更なる証拠が必要。",
+      "dimension_scores": {
+        "environmental_shift_potential": {"score": 40, "weight": 0.30, "evidence": "自治体フードバンク連携と規制強化が、データ需要と公的セクターを接続する", "judgment": "環境の追い風が制度化の方向に具体化した。"},
+        "historical_similarity": {"score": 34, "weight": 0.25, "evidence": "実績を持つデータSaaSが『資産』として評価された系譜と一致し始めた", "judgment": "前例との整合が高まり、検証待ちの構造が薄れた。"},
+        "compounding_value": {"score": 38, "weight": 0.25, "evidence": "精度94%の実測データが蓄積し、メーカーが離れにくくなる構造が実証に近づいた", "judgment": "複利の構造が、実績データで裏付けられつつある。"},
+        "timing_analysis": {"score": 32, "weight": 0.20, "evidence": "実契約は成立したが、業界標準化・制度化の時期は未定", "judgment": "現在の実行は順調だが、未来の制度化のタイミングは不確実。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 36, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 69,
+      "strengths": [
+        "実契約8社という購入実績で、複利の前提が実証に近づいた",
+        "予測精度94%の実測データで、資産の質が高まった"
+      ],
+      "weaknesses": [
+        "業界標準化（API・制度化）は未実証で、複利が制度化される確度が不明",
+        "300店スケールで精度とデータ品質を維持できるかが未検証"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実証に近づいた複利構造", "蓄積される実測データ"],
+      "unique_perspective": "私は『資産が金を払った痕跡を持つか』を見る。v4は、その痕跡——実契約——を積んだ。次の問いは、この資産が業界標準として制度化され、複利が外部の仕組みに依存せずに育つかだ。それが見えれば、未来価値は大きく開く。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "現在の実績を高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "originality", "predicted_stance": "業界データセットの資産価値を評価し、未来の可能性を高く見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "業界API標準化の構想を具体化し、複利が外部環境に依存しない構造を描く",
+        "300店スケールでの精度維持（SLA）と、制度化の時期を企画に織り込む"
+      ],
+      "narrative": "私はv3で『払ったという痕跡を見せよ』と言った。v4は実契約という痕跡を示した。資産は金を払う者の手に入り始めた。次は、その資産を業界の標準にし、複利が『仕組み』として自立する未来を見せてほしい。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味評価者（意味の守護者）",
+      "content_summary": "FOODSIGN v4 — 100店パイロットの実証と参入障壁の具体化",
+      "domain": "business",
+      "primary_score": 32,
+      "primary_score_rationale": "受け取り体験が『食卓に還す』ギフト型へ深まり、食べ手と作り手の物語が具体化した。ただし事業の中心は依然データであり、スケール時に人間の層が薄まる懸念が残る。",
+      "dimension_scores": {
+        "existential_resonance": {"score": 28, "weight": 0.35, "evidence": "「食卓に還す」という言葉が体験を具体化したが、事業の主軸はデータのまま", "judgment": "存在の問いへの触れは深まったが、中心軸にはならない。"},
+        "narrative_power": {"score": 31, "weight": 0.25, "evidence": "「食卓に還す」ギフト型の物語が、ブランドの外殻としてより明確になった", "judgment": "物語は具体化したが、まだ事業の核ではない。"},
+        "significance": {"score": 37, "weight": 0.20, "evidence": "廃棄転換と食卓への還元という機能の社会的重みは維持される", "judgment": "テーマの重要さは揺るがない。"},
+        "interpretive_depth": {"score": 36, "weight": 0.20, "evidence": "「売れ残り＝誰かの食卓へ」という見方が、データと体験の両方に意味を与える", "judgment": "解釈の層が、体験の拡張で少し厚くなった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 32},
+      "classification": "trend_object",
+      "confidence": 63,
+      "strengths": [
+        "受け取り体験が『食卓に還す』ギフト型へ深まり、物語が具体化した",
+        "「売れ残り＝誰かの食卓へ」という見方が、データと体験を結び付けた"
+      ],
+      "weaknesses": [
+        "人間の層は事業の外殻に留まり、データ事業の中心性は変わらない",
+        "スケール（300店）で物語が管理の対象になり、薄まる懸念が残る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["ギフト体験の具体化", "物語と事業の接続の深化"],
+      "unique_perspective": "私はv3で『物語が核に昇格したとき、意味は本物になる』と言った。v4のギフト体験は物語を具体化したが、まだ核ではない。そして私は一つの懸念を見ている——スケールするほど、物語は『体験の管理』に回収されやすい。核に据えることが、最後の関門だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "ギフト体験の追加は評価しつつ、データ事業の中心性は揺るがないと見るだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "体験を含む全層の整合を評価し、私より高い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "スケール後も人間の物語を変えない旨を、事業の最優先事項として明記する",
+        "ギフト体験と店舗の顔が見える物語を、ブランドの外殻から核へ昇格させる"
+      ],
+      "narrative": "v4で物語は具体化したが、まだ外殻にいる。私はスケールの先にある懸念——物語が管理に回収されること——を抱きながら、最後の昇格を待っている。物語が核に据えられたとき、この事業は意味の層で完成する。"
+    }
+  ],
+  "recommendations": [
+    "300店規模への拡大計画と、スケール時の予測精度維持（SLA 95%）の仕組みを明記する",
+    "業界API標準化の構想を具体化し、模倣を依存へ変えるネットワーク効果を描く",
+    "予測精度の測定方法（検証データ・期間・誤差の定義）を文書に明記する",
+    "人間の物語（食卓に還す）を最優先事項として核に据え、スケール後も維持する"
+  ],
+  "caveats": [
+    "予測精度94%の測定方法が未明記で、数字の再現性が未検証",
+    "300店スケール時の精度・収益・データ品質の維持は未実証",
+    "業界標準化・自治体連携という制度化への依存が高まり、外部環境への感応度が上昇した"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "個人邸『光の暦——一本の樹を囲む家』v4改訂——光と材料の断面確定・細部の手仕事",
+  "content_type": "structured",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "建築設計に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "個人邸設計に市場性評価は不適合（例外的除外）" },
+    { "evaluator_id": "philosophical-evaluator", "reason": "建築設計に哲学的評価は不適合（例外的除外）" },
+    { "evaluator_id": "meaning-evaluator", "reason": "建築設計に意味評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] },
+    "quality": { "mean": 46, "variance": 1, "min": 45, "max": 47, "scores": [45, 47] },
+    "aesthetic": { "mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48] },
+    "emotional_impact": { "mean": 44, "variance": 0, "min": 44, "max": 44, "scores": [44] },
+    "future_potential": { "mean": 55, "variance": 0, "min": 55, "max": 55, "scores": [55] }
+  },
+  "current_value_score": 49,
+  "hidden_potential_score": 55,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 光の演出が簾と可動庇で操作可能になり、演出の過剰は実用に引き締められた。45点。",
+        "quality-evaluator: 樹冠スロットの防水と落ち葉対策が設計に織り込まれ、施工可能な水準に達した。47点。"
+      ]
+    },
+    {
+      "dimension": "future_potential",
+      "variance": 0,
+      "disputing_evaluators": ["future-potential", "anti-generic-filter"],
+      "arguments": [
+        "future-potential: 時間を読む装置（影の目盛り・季節の印）が実用として確立され、この家は長く住まわれる。55点。",
+        "anti-generic-filter: 私はこの時間装置が『光の家』という新たな定番類型に固定される危険を見る。将来性評価はもう一段厳しくすべきだ。"
+      ]
+    }
+  ],
+  "consensus_summary": "改訂指令（光の演出の実用化・材料の経年・細部の手仕事）が実装され、全次元が上昇（品質40→46・美44→48・感情40→44・独創性56→58）。current=49 / hidden=55 で現在価値がしきい値（高≧45）を超えた。美・品質が凡庸域の上端に達し、『真に良い』（51以上）の目前。ただし光の演出と実用の整合、材料の経年一致、細部の統合がまだ完全ではなく、innovation はもう一段先。",
+  "executive_summary": "『光の暦』v4は、樹冠スロットに簾を、三つの開口に季節の可動庇を設けて光を実操作可能にし、掘削土の版築・杉・オーク・玉石という敷地由来の材料を確定し、落水線の樋を屋根の折れに一体化して雨仕舞を完成させた。品質46・美48・感情44・独創性58、current=49 / hidden=55。現在価値はしきい値を超え、classification は current_success（境界線——innovation 目前）。残る課題は全体の統合と、材料が経年で揃う仕上げ。",
+  "synthesis_narrative": "再作成指令（演出の実用化・材料の経年・細部の手仕事）が忠実に実装され、計画は『建てられる・住まえる』から『美しく長く住まえる』段階へ進んだ。品質評価者は樹冠スロットの防水と落ち葉対策、樹の荷重分担が設計に織り込まれたと47点、anti-genericフィルタは光の演出が簾と可動庇で実用に引き締められたと45点。美評価者は版築・杉・オーク・玉石という敷地由来の材料と、光を操作する装置が美と実用を結んだと48点。未来評価者は時間を読む装置の確立を55点と最高評価した。現在価値はしきい値を超え current_success（境界線）に達したが、光・構造・景観が一つの器官として読める統合と、材料の経年一致がまだ完全ではなく、innovation はもう一段先。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "個人邸『光の暦』v4改訂の独創性評価",
+      "domain": "creative",
+      "primary_score": 58,
+      "primary_score_rationale": "光の暦が操作可能な装置（簾・可動庇）になり、時間を読む住まいという概念が実用と結んで完成度を増した",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 64, "weight": 0.35, "evidence": "光の暦を住まい手が操作できる装置（簾・季節の可動庇）として実装", "judgment": "時間を読む概念が住まいの機能になった" },
+        "combinatorial_surprise": { "score": 58, "weight": 0.25, "evidence": "版築の蓄熱×樹冠スロットの排熱×季節の可動庇", "judgment": "光・熱・材料が受動的環境として一体になった" },
+        "distance_from_template": { "score": 52, "weight": 0.25, "evidence": "一般的な個人邸の間取り・設備への距離", "judgment": "設備でなく構法で環境を担う点で明確に離れた" },
+        "non_obviousness": { "score": 56, "weight": 0.15, "evidence": "掘削土を版築にし、敷地の土を住まいの熱マスにする", "judgment": "敷地由来の材料で環境を担う点が新しい" }
+      },
+      "value_vector_contribution": { "originality": 58, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": ["光の暦が操作可能な装置になり、時間を読む住まいが機能として成立した", "掘削土の版築という、敷地の土を熱マスにする非自明な構法"],
+      "weaknesses": ["簾と可動庇という装置が、光の物語の純度を少し汚す", "装置の多さが、住まい手に操作の負担を強いる"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["概念の機能化", "敷地由来の材料"],
+      "unique_perspective": "独創性は『光を操作する』ことではなく、操作そのものを住まいの日常の作法（朝に簾を開け、夕に庇を出す）に変えた点にある。この作法が概念の寿命を延ばす",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "装置の多さを維持の負担とみて、概念の純度より実用を優先するだろう" }
+      ],
+      "improvement_suggestions": ["装置の数を減らし、操作を最小の仕草に統合する", "光の暦を、装置でなく建物自体に刻む（影の目盛り・季節の印）", "簾・庇・スロットが一つの原理から導かれていることを明示する"],
+      "narrative": "v4で光の暦は、住まい手が毎日触れる装置になった。朝に簾を開け、季節に庇を出すという仕草が、時間を読むことを暮らしの作法に変える。独創性は『概念がある』ことから『作法になる』ことへ進んだ。残るは、装置を統合して余剰を削ることだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "個人邸『光の暦』v4改訂の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 45,
+      "primary_score_rationale": "光の演出が簾と可動庇で実用に引き締められ、凡庸の兆候はほぼ消えた。ただし装置が増え、『光の家』という新たな定番への傾きが残る",
+      "dimension_scores": {
+        "cliche_density": { "score": 45, "weight": 0.3, "evidence": "簾・可動庇・版築の受動環境", "judgment": "定番語彙は消え、機構が環境を担う" },
+        "emotional_manipulation": { "score": 44, "weight": 0.3, "evidence": "光を操作する作法", "judgment": "感情は操作ではなく行為から生まれる" },
+        "structural_predictability": { "score": 46, "weight": 0.25, "evidence": "螺旋の断面と受動的な環境設計", "judgment": "設備頼みの箱型プランを完全に脱した" },
+        "substance_over_style": { "score": 46, "weight": 0.15, "evidence": "版築の蓄熱・落水線の樋の一体化", "judgment": "語らずに構法で示す段階に達した" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 45, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 80,
+      "strengths": ["光の演出が実用の装置（簾・可動庇）に引き締められ、演出の過剰が解消された", "版築・杉・オーク・玉石という敷地由来の材料が、言葉でなく構法で環境を担う"],
+      "weaknesses": ["装置の数が増え、『光の家』という新たな定番類型に近づく危険", "操作の作法が、住まい手に負担を強いる形で定番化し得る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構法が語る段階", "敷地由来の材料"],
+      "unique_perspective": "凡庸の最後の罠は『徹底的に良い』こと自体である。光の装置が整いすぎると、それは多くの模倣を呼ぶ『光の家』という新たな定番になる。この家が定番の雛形になる前に、装置を統合して個を固めるべきだ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "future-potential", "predicted_stance": "私の定番化の懸念は、将来性評価を過度に楽観視しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["装置の数を削り、操作を最小の仕草に統合する", "光の装置を、建物の構造そのもの（影を刻む床・折れ板の庇）に還元する", "定番化を避け、この敷地とこの樹にしかない個を強める"],
+      "narrative": "v4で光の演出は実用に引き締められ、凡庸の兆候はほぼ消えた。しかし私は新たな罠を見る——整いすぎた光の装置が『光の家』という次の定番を生む危険だ。この家は模倣の雛形ではなく、この樹にしかない個として固まるべきである。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "個人邸『光の暦』v4改訂の美的評価",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "版築・杉・オーク・玉石という敷地由来の材料と、光を操作する装置が美と実用を結び、影の造形が快適さと一体になり始めた",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 50, "weight": 0.35, "evidence": "簾を通る拡散光、版築の土の手触り、樹の影の動き", "judgment": "光・土・影が感覚に届き始めた" },
+        "spatial_composition": { "score": 48, "weight": 0.25, "evidence": "光を操作する装置が断面に組み込まれた螺旋", "judgment": "断面が光と熱を同時に語る" },
+        "material_honesty": { "score": 47, "weight": 0.25, "evidence": "版築・杉・オーク・玉石の経年", "judgment": "敷地由来の材料が経年で揃う方向に向かったが、一致はまだ明示されない" },
+        "cohesion": { "score": 46, "weight": 0.15, "evidence": "樹を中心に光・熱・材料が一体の受動環境となる", "judgment": "原理への収斂がほぼ完成しつつある" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 48, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["簾を通る拡散光と版築の土の手触りが、感覚に届く美として実現しつつある", "版築・杉・オーク・玉石という同族の材料が、経年で揃う方向を持った"],
+      "weaknesses": ["材料が経年で『同じ色に揃う』ことが、まだ言葉の約束でなく実測で裏打ちされていない", "細部の手仕事（継手・段差・樋）が、まだ空間全体の美と一体になっていない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["美と実用の結合", "敷地由来の材料"],
+      "unique_perspective": "美の完成は『材料が経年で揃う』時に来る。新しい材料の美は誰でも描けるが、十年後に同じ色に沈む材料の美は設計でしか生まれない。v4はその予感を与えた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "材料の経年一致を言葉の約束とみて、私の美の評価を甘いとみるだろう" }
+      ],
+      "improvement_suggestions": ["材料の経年一致を、雨・陽・霜に対する実測的な設計で裏打ちする", "継手・段差・樋という細部を、空間全体の美と一体に仕上げる", "影の造形（樹の影・簾の影）を、住まいの時間の目盛りとして残す"],
+      "narrative": "v4の美は、言葉から体感へ、そして材料の経年という時間へ向かっている。簾の拡散光、版築の土の手触り、樹の影の動き——それらが感覚に届き始めた。残るは、これらの材料が十年後に同じ色に沈むことを、設計として証明することだ。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "個人邸『光の暦』v4改訂の情動評価",
+      "domain": "creative",
+      "primary_score": 44,
+      "primary_score_rationale": "光を操作する作法が住まいの日常になり、曇りや冬の光を支える装置が感情の土台を安定させ始めた",
+      "dimension_scores": {
+        "visceral_response": { "score": 44, "weight": 0.35, "evidence": "朝に簾を開け、夕に庇を出すという身体の作法", "judgment": "光の操作が感情の仕草になった" },
+        "belonging_atmosphere": { "score": 46, "weight": 0.3, "evidence": "版築の土の熱と樹に還る螺旋", "judgment": "土の温度が帰る感覚を支える" },
+        "empathy_triggers": { "score": 42, "weight": 0.25, "evidence": "季節の可動庇と受動的な温熱", "judgment": "季節に応える暮らしの祈りが実装された" },
+        "subtlety_of_feeling": { "score": 44, "weight": 0.1, "evidence": "曇りの日の拡散光", "judgment": "感情が光の強弱に依存しなくなった" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 44, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["光を操作する作法が、感情を一日と季節に刻む仕草になった", "版築の土の熱が、樹に還る感覚を身体で支える"],
+      "weaknesses": ["操作の作法が住まい手に負担を強いる余地があり、感情が『義務』に変わり得る", "装置の多さが、素朴な住まいの安らぎを少し損なう"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情の作法化と土台の安定"],
+      "unique_perspective": "感情は光の強弱から、光を迎える仕草と土の温度に移った。これはより確かな情動の土台だ——天候に揺れない感情は、作法と熱から生まれる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "私が操作の負担を挙げるのは、光の作法の美しさを損ねて見えるとみるだろう" }
+      ],
+      "improvement_suggestions": ["操作を最小の仕草に統合し、感情を義務に変えない", "装置を住まいに自然に織り込み、素朴な安らぎを保つ", "土の熱・樹の影・季節の印で、感情の土台をさらに安定させる"],
+      "narrative": "v4の感情は、光の強弱から光を迎える仕草と土の温度へと移った。朝に簾を開け、版築の熱を感じて樹に還る——感情は天候に揺れるものから、作法と熱に支えられたものへ変わった。残るは、その作法が義務にならない安らぎを保つことだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "個人邸『光の暦』v4改訂の品質評価",
+      "domain": "creative",
+      "primary_score": 47,
+      "primary_score_rationale": "樹冠スロットの防水と落ち葉対策、樹の荷重分担が設計に織り込まれ、施工可能な水準に達した。残るは継手の詳細と維持の検討",
+      "dimension_scores": {
+        "structural_feasibility": { "score": 45, "weight": 0.35, "evidence": "第五柱の荷重分担と10組の柱列・垂下梁", "judgment": "樹の分担が定量化され、構造が検討可能になった" },
+        "functional_program": { "score": 48, "weight": 0.25, "evidence": "螺旋動線と操作可能な光の装置", "judgment": "プログラムが機能し、光の操作が暮らしに馴染む" },
+        "buildability": { "score": 48, "weight": 0.25, "evidence": "落水線の樋を屋根の折れに一体化", "judgment": "雨仕舞が詳細まで完成した" },
+        "durability": { "score": 48, "weight": 0.15, "evidence": "版築・杉・オーク・玉石の経年と維持", "judgment": "材料の経年が方向性として設計された" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 47, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 80,
+      "strengths": ["樹の荷重分担が定量化され、構造が検討可能な水準に達した", "落水線の樋を屋根の折れに一体化し、雨仕舞が詳細まで完成した"],
+      "weaknesses": ["簾・可動庇の機構部品（可動部）の劣化と交換が未検討", "継手・段差・土間と板床の収まりなど、施工の詳細が未完成", "版築のクラック対策と、杉外装の腐朽の検討が残る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構造の定量化", "雨仕舞の完成"],
+      "unique_perspective": "品質の最後の問いは『機構部品の劣化』と『収まりの詳細』にある。可動する装置（庇・簾）が多ければ多いほど、十年後の交換と維持が設計の質を決める",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "私が可動部品の劣化を挙げるのは、操作する住まいという概念の価値を下げているとみるだろう" }
+      ],
+      "improvement_suggestions": ["可動部品（庇・簾）の劣化と交換を設計に織り込む", "継手・段差・収まりの施工詳細を図面化する", "版築のクラックと杉外装の腐朽の対策を確定する"],
+      "narrative": "v4は品質を『耐久』から『施工詳細』の段階へ進めた。樹の荷重分担は定量化され、雨仕舞は完成した。残るは、可動する装置の十年後の姿と、継手・収まりという手仕事の詳細だ。実用の細部が揃うとき、品質は真に良い水準へ届く。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "個人邸『光の暦』v4改訂の将来性評価",
+      "domain": "creative",
+      "primary_score": 55,
+      "primary_score_rationale": "時間を読む装置が実用として確立され、この家は世代を超えて長く住まわれる条件を備えた",
+      "dimension_scores": {
+        "extensibility": { "score": 57, "weight": 0.35, "evidence": "螺旋に沿う部屋の増減と操作可能な光の装置", "judgment": "家族の変化と光の使い方が両立する" },
+        "site_longevity": { "score": 56, "weight": 0.3, "evidence": "第五柱の樹と敷地由来の材料", "judgment": "百年の時間軸が構法と材料で支えられる" },
+        "audience_reach": { "score": 51, "weight": 0.25, "evidence": "受動的環境と時間を読む住まいの類型", "judgment": "既存樹・斜面・土を持つ敷地に広く翻訳可能" },
+        "sustainability": { "score": 55, "weight": 0.1, "evidence": "版築の蓄熱と自然換気の受動環境", "judgment": "気候への応答が構法として確立された" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 55, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": ["時間を読む装置（影の目盛り・季節の印）が、高齢になっても暮らしを整える力になる", "敷地由来の材料と受動環境が、エネルギーと資源への依存を下げる"],
+      "weaknesses": ["可動部品の劣化が、長期的な住まいやすさの懸念を残す", "光の操作の作法が、住まい手の意欲に依存する部分がある"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["世代を超える時間軸", "資源への応答"],
+      "unique_perspective": "この家の将来性は、住まい手が老いても『季節と光で暮らしを整える』力を住まい自体が持つことにある。時間を読める家は、住まい手とともに老いる。それが最も長く住まわれる理由だ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "時間装置が定番化する危険を指摘し、私の55点を楽観視とみるだろう" }
+      ],
+      "improvement_suggestions": ["可動部品を固定化・低劣化の装置に置き換え、長期的な維持を設計する", "時間を読む装置を、操作なしに自動で機能する構法（床の影・折れ板の庇）に還元する", "材料の経年一致で、時間とともに価値が沈み込むのではなく増す住まいを確立する"],
+      "narrative": "v4の時間を読む装置は、実用として確立された。この家は、住まい手が老いても季節と光で暮らしを整える力を住まい自体に持つ。時間を読める家は住まい手とともに老い、最も長く住まわれる。次は、その時間が操作に依存しない構法として完成することだ。"
+    }
+  ],
+  "recommendations": [
+    "classification は current_success（境界線）。current_value 49 で innovation（高＋高）の目前",
+    "装置を最小の仕草に統合し、可動部品の劣化と維持を設計に織り込む",
+    "材料の経年一致を実測で裏打ちし、継手・段差・収まりの施工詳細を図面化する",
+    "光の装置を、操作に依存しない構法（床に影を刻む・折れ板の庇）に還元する",
+    "定番化を避け、この敷地とこの樹にしかない個を強める"
+  ],
+  "caveats": [
+    "scientific-novelty・business-value・philosophical-evaluator・meaning-evaluator は建築設計に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、current=49 はしきい値を超えたが、美・品質は『真に良い』（51以上）にまだ達していない",
+    "classification は current_success だが、これは境界線上の判断であり、美・品質が51以上へ届けば innovation に移行する"
+  ]
+}

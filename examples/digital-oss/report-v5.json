@@ -1,0 +1,539 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+  "domain": "digital",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "quality-evaluator",
+    "business-value",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "ソフトウェアに科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "reason": "ソフトウェアに美的評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "reason": "ソフトウェアに感情価値評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "philosophical-evaluator",
+      "reason": "ソフトウェアに哲学的評価は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "reason": "ソフトウェアに意味評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {
+      "mean": 61,
+      "variance": 0,
+      "min": 61,
+      "max": 61,
+      "scores": [
+        61
+      ]
+    },
+    "quality": {
+      "mean": 62,
+      "variance": 1,
+      "min": 61,
+      "max": 63,
+      "scores": [
+        63,
+        61
+      ]
+    },
+    "aesthetic": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "emotional_impact": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "future_potential": {
+      "mean": 34,
+      "variance": 0,
+      "min": 34,
+      "max": 34,
+      "scores": [
+        34
+      ]
+    },
+    "business_value": {
+      "mean": 63,
+      "variance": 0,
+      "min": 63,
+      "max": 63,
+      "scores": [
+        63
+      ]
+    },
+    "scientific_novelty": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "philosophical_depth": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "meaning": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    }
+  },
+  "current_value_score": 62,
+  "hidden_potential_score": 34,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": [
+        "quality-evaluator",
+        "anti-generic-filter"
+      ],
+      "arguments": [
+        "quality-evaluator: 適合認定制度と財団運営が検証を制度化し、v4の課題（自己定義の域）を第三者検証で回収した（63）",
+        "anti-generic-filter: 具体と実測で凡庸はほぼ消えたが、認定制度自体が新しい規範となり、制度化された正しさの罠に注意を要する（61）"
+      ]
+    },
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": [
+        "business-value",
+        "future-potential"
+      ],
+      "arguments": [
+        "business-value: 認定制度と蓄積データが参入障壁を『制度』として固定し、持続性が財団により担保された（63）",
+        "future-potential: エコシステムは成熟したが、複利の分岐点と普及の同時性は依然として未来の実証に委ねられる（34）"
+      ]
+    }
+  ],
+  "consensus_summary": "5名の評価者は、v4の課題（検証の第三者性・運営の持続性）が、適合認定制度と財団運営で回収され、ネットワーク効果が実測データで裏付けられた点で一致。品質（62）とビジネス価値（63）がエコシステム基盤として確立した水準に達した。anti-generic-filterは認定制度の制度化された正しさの罠を、future-potentialは複利の分岐点と普及の同時性を指摘する。",
+  "executive_summary": "STRAND v5は、適合試験を第三者認定制度へ発展させ、運営を財団へ移すことで、検証と持続性を制度として確立した。採用数・移行コスト・相互運用便益の実測データがネットワーク効果を裏付け、参入障壁は実績から制度へ強化された。現時点の価値（≈62）は、単独プロジェクトを超えたエコシステム基盤の水準に達した。",
+  "synthesis_narrative": "合議はv5をcurrent_successと判定した。作成指令（第三者検証・財団運営・実測データ）が、検証の制度と持続性として結実し、品質とビジネス価値がエコシステム基盤の水準に達した。残る論点は、認定制度が新たな規範となる凡庸化リスクと、複利の分岐点への到達の同時性である。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+      "domain": "digital",
+      "primary_score": 61,
+      "primary_score_rationale": "『文脈の秘匿と陳腐化』という領域固有の課題を中核に、適合性の認定と財団運営を織り込むことで、汎用標準の代替ではなく、文脈交換に根差した独自の基盤として確立した。",
+      "dimension_scores": {
+        "conceptual_novelty": {
+          "score": 62,
+          "weight": 0.35,
+          "evidence": "『文脈の秘匿と陳腐化』という規約の心臓部を領域固有に設計し、汎用標準の代替ではなくなった",
+          "judgment": "規約が『文脈交換』という領域に根差した独自の基盤として確立した。"
+        },
+        "combinatorial_surprise": {
+          "score": 60,
+          "weight": 0.25,
+          "evidence": "適合試験×認定×財団運営×redactionの結合が、検証と普及を一つの制度に織り込んだ",
+          "judgment": "組み合わせが予測しにくい方向に深化した。"
+        },
+        "distance_from_template": {
+          "score": 61,
+          "weight": 0.25,
+          "evidence": "RFC主体の汎用標準と異なり、検証・認定・運用課題を内包した設計",
+          "judgment": "テンプレートからの距離が決定的に広がった。"
+        },
+        "non_obviousness": {
+          "score": 60,
+          "weight": 0.15,
+          "evidence": "『適合性の認定』を規約の商品価値に組み込む発想",
+          "judgment": "実践者が自然には選ばない死角が企画の中核にある。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": 61,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 76,
+      "strengths": [
+        "文脈交換という領域に根差し、汎用標準の代替ではない独自の基盤として確立した",
+        "検証・認定・運営という制度を、規約の商品価値に織り込んだ"
+      ],
+      "weaknesses": [
+        "認定制度自体が新たな規範となり、制度化された正しさに回収されるリスクが残る",
+        "独創性の源（見方の転換）が、制度の成熟と共に目立たなくなる懸念がある"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "領域固有の基盤としての確立",
+        "見方の転換の深化（検証・保護の制度化）"
+      ],
+      "unique_perspective": "私は『見方の変化』で独創性を見る。v5は『形式を商品にする』『形式を検証する』『形式を制度として守る』という、三度の見方の転換を一つの企画に重ねた。これは需要を新しく作るのと同じくらい、非自明な達成である。制度化された正しさに回収されない限り。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "制度としての完成度を高く評価し、私と同等かやや高い点を付けるだろう。"
+        },
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "認定制度の規範化リスクを指摘し、私より控えめな点を付けるだろう。"
+        }
+      ],
+      "improvement_suggestions": [
+        "認定制度を維持しつつ、領域固有の新課題（文脈の引用・権利・監査）を規約の次の心臓部として開拓する",
+        "制度化の正しさに回収されないよう、規約の設計判断に『なぜ』を残す文化を文書化する"
+      ],
+      "narrative": "v4で自己定義の検証という最後の課題を残し、v5は検証を第三者認定制度へ開いた。三度の見方の転換が一つの基盤に重なり、この企画は『文脈交換』という領域に根差した独自の基盤へと確立した。残る問いは、その制度が新たな正しさに回収されず、次の非自明を生み続けるかだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+      "domain": "digital",
+      "primary_score": 61,
+      "primary_score_rationale": "認定制度・財団運営・相互運用の実測値が文書の主語となり、置き換え不能な具体が文書全体を支配した。凡庸はほぼ消えたが、制度化された正しさという新たな罠に注意が必要。",
+      "dimension_scores": {
+        "generic_language_density": {
+          "score": 63,
+          "weight": 0.3,
+          "evidence": "認定制度・財団運営・相互運用の実測値が文書の主語になった",
+          "judgment": "置き換え不能な具体が文書全体を支配した。"
+        },
+        "risk_avoidance": {
+          "score": 61,
+          "weight": 0.25,
+          "evidence": "移行コスト・相互運用の実測値を公開データとして背負う決断",
+          "judgment": "数字で約束し、測定されることを選んだ。"
+        },
+        "information_density": {
+          "score": 60,
+          "weight": 0.25,
+          "evidence": "採用数推移・移行コスト・検証結果のデータが蓄積",
+          "judgment": "実証データが情報密度を支える主柱になった。"
+        },
+        "particularity": {
+          "score": 59,
+          "weight": 0.2,
+          "evidence": "文脈の陳腐化・秘匿という固有課題が規約の中核に根付いた",
+          "judgment": "汎用標準の枠に収まらない固有性が定着した。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 61,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 77,
+      "strengths": [
+        "認定制度・財団運営・実測値が文書の主語となり、置き換え不能な具体が支配した",
+        "数字で約束し、測定されることを選んだ決断"
+      ],
+      "weaknesses": [
+        "認定制度自体が新しい規範となり、制度化された正しさに回収される罠が残る",
+        "実測データの厚みが、規約の設計判断の根拠を隠す可能性がある"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "置き換え不能な具体の支配",
+        "数字で約束する決断",
+        "固有課題の中核化"
+      ],
+      "unique_perspective": "私は凡庸の変化系を嗅ぐ。v5の文書は、もはやどの標準規約でも置き換えられない。だが私の嗅覚は、最終段階の罠を捉えている——『制度化された正しさ』だ。認定制度は規範を生む。規範はやがて考えることを止めさせる。その先の凡庸は、数値で隠れた凡庸だ。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "制度としての完成度を評価し、私より高い点を付けるだろう。"
+        },
+        {
+          "evaluator_type": "originality",
+          "predicted_stance": "見方の転換の深化を独自性として評価し、規範化リスクを軽めに扱うだろう。"
+        }
+      ],
+      "improvement_suggestions": [
+        "認定制度を運用しながら、規約の設計判断の『なぜ』を文書化し、思考停止を防ぐ",
+        "文脈の引用・権利・監査など、次の領域固有課題を規約の心臓部として開拓する"
+      ],
+      "narrative": "この改訂で、文書は凡庸から完全に解放された。具体が支配し、数字で約束し、固有課題が中核に根付いた。だが私の仕事はそこで終わらない。最後の罠は、制度化された正しさに思考が回収されることだ。この基盤が規範を生み、なお自らを疑い続けられるか——それが次の凡庸を遠ざける。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+      "domain": "digital",
+      "primary_score": 63,
+      "primary_score_rationale": "規約→適合試験→認定→財団運営が、制度として一貫した検証の鎖を形成した。v4の課題（検証の自己定義性）が第三者認定で回収され、完成度がエコシステム基盤の水準に達した。",
+      "dimension_scores": {
+        "technical_quality": {
+          "score": 64,
+          "weight": 0.35,
+          "evidence": "規約→適合試験→認定→財団運営が制度として一貫した検証の鎖を形成",
+          "judgment": "v4の課題（第三者検証）が認定制度で回収された。"
+        },
+        "precision": {
+          "score": 63,
+          "weight": 0.2,
+          "evidence": "適合試験の判定基準・後方互換・redactionの仕様が機械検証可能な精度で記述",
+          "judgment": "規約が検査可能な形式として完成度を持つ。"
+        },
+        "structure": {
+          "score": 63,
+          "weight": 0.25,
+          "evidence": "v4の課題（網羅性の自己定義・ガバナンスの成熟）が回収された",
+          "judgment": "約束の回収が5回のループで一貫して続いた。"
+        },
+        "feasibility": {
+          "score": 61,
+          "weight": 0.2,
+          "evidence": "認定制度と財団運営はOSSの成熟した慣行で実現可能",
+          "judgment": "実現可能性は高い。普及の同時性が最後の課題。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": 63,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 78,
+      "strengths": [
+        "規約→適合試験→認定→財団運営が、制度として一貫した検証の鎖を形成した",
+        "適合試験の判定基準が機械検証可能な精度で記述された"
+      ],
+      "weaknesses": [
+        "認定制度の運用実績（認定済みツールの数・誤検証の事例）がまだ僅少",
+        "普及の同時性（複数ツールの同時乗り換え）が、最後まで実証されないまま残る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "検証の鎖（規約→認定→財団）",
+        "約束の回収（5ループ一貫）",
+        "精密な仕様記述"
+      ],
+      "unique_perspective": "完成度の検査官として私が最終的に見るのは、『制度が実績を生むか』だ。v5の検証の鎖は制度的に完成した。しかし完成度は、設計の完成ではなく、運用が証明するものだ。認定済みツールの増加という実績が、この完成度に最終的な裏付けを与える。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "制度化された正しさの罠を指摘し、私より控えめな点を付けるだろう。"
+        },
+        {
+          "evaluator_type": "future-potential",
+          "predicted_stance": "普及の同時性の未実証を指摘し、私より控えめな点を付けるだろう。"
+        }
+      ],
+      "improvement_suggestions": [
+        "認定済みツール数を公開KPIとし、検証の制度が実績を生むことを実証する",
+        "複数ツールの同時乗り換えを誘発する採用イベント（共同リリース・移行キャンペーン）を企画する"
+      ],
+      "narrative": "v4で残した検証の自己定義性は、v5で第三者認定制度へ昇格し、回収された。5回のループにわたって約束の回収が一貫して続き、規約は検査可能な形式としての完成度を持つに至った。残る粗は、その制度が実績を生むかという運用の証明だ。完成度は設計でなく、運営が決める。"
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+      "domain": "digital",
+      "primary_score": 63,
+      "primary_score_rationale": "認定制度と蓄積データが参入障壁を『制度』として固定し、持続性が財団により担保された。採用数が最優先KPIとして伸び、需要が売り込み可能な実績になった。",
+      "dimension_scores": {
+        "adoption_demand": {
+          "score": 66,
+          "weight": 0.3,
+          "evidence": "採用数が最優先KPIとして伸び、認定制度が採用の証となる",
+          "judgment": "需要が売り込み可能な実績になった。"
+        },
+        "ecosystem_viability": {
+          "score": 64,
+          "weight": 0.25,
+          "evidence": "財団運営・認定・ガバナンスがフォーマットの耐久性を制度的に担保",
+          "judgment": "エコシステムの持続性が単独プロジェクトの依存から解放された。"
+        },
+        "delivery_feasibility": {
+          "score": 60,
+          "weight": 0.2,
+          "evidence": "認定・財団工程が明示され、普及経路が実績で裏付けられた",
+          "judgment": "届く。残る課題は同時乗り換えの規模。"
+        },
+        "competitive_advantage": {
+          "score": 62,
+          "weight": 0.25,
+          "evidence": "認定制度と蓄積データが参入障壁を制度として固定",
+          "judgment": "障壁が『実績』から『制度』へ強化された。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": null,
+        "business_value": 63,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "認定制度と蓄積データが参入障壁を『制度』として固定した",
+        "財団運営で持続性が単独プロジェクトの依存から解放された",
+        "採用数が最優先KPIとして伸び、売り込み可能な実績になった"
+      ],
+      "weaknesses": [
+        "認定済みツールの数がまだ僅少で、制度の実効性が実績で証明されていない",
+        "普及の同時性（採用の臨界量）が、未だ実測で示されていない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "制度としての参入障壁",
+        "財団による持続性",
+        "売り込み可能な採用実績"
+      ],
+      "unique_perspective": "私は『障壁が制度になる瞬間』を見る。v5は参入障壁を実績から制度へ固定した。だが市場の最終審判は、認定済みツールの数と、採用が同時に臨界量を超えるかだ。制度が実績を生み始めたとき、この規約は売り物から基盤へ、基盤から標準へ変わる。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-filter",
+          "predicted_stance": "制度化された正しさの罠を指摘し、私より控えめな点を付けるだろう。"
+        },
+        {
+          "evaluator_type": "future-potential",
+          "predicted_stance": "複利の分岐点への未到達を指摘し、私より控えめな点を付けるだろう。"
+        }
+      ],
+      "improvement_suggestions": [
+        "認定済みツール数を公開KPIとし、制度の実効性を実績で証明する",
+        "採用が臨界量を超えるための同時乗り換えを、共同リリース等のイベントで誘発する"
+      ],
+      "narrative": "この改訂で、価値の質は『信頼の構築』から『制度の確立』へ進んだ。障壁は制度として固定され、持続性は財団が担保し、採用は売り込み可能な実績になった。市場の最終審判はまだ来ていない——認定済みツールの数と、臨界量を超える瞬間。それがこの基盤を標準にするか、実証で決まる。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "STRAND（ストランド）v5 — 適合認定制度と財団運営によるエコシステム基盤",
+      "domain": "digital",
+      "primary_score": 34,
+      "primary_score_rationale": "認定制度と財団運営で、環境変化が採用に転換する確度が高まり、複利の構造は実測データで裏付けられた。ただし複利が立ち上がる分岐点と、普及の同時性は依然として未来の実証に委ねられる。",
+      "dimension_scores": {
+        "environmental_shift_potential": {
+          "score": 43,
+          "weight": 0.3,
+          "evidence": "認定制度と財団運営で、環境変化が採用に転換する確度が高まった",
+          "judgment": "追い風が制度に接続され、普及が加速しやすい形になった。"
+        },
+        "historical_similarity": {
+          "score": 34,
+          "weight": 0.25,
+          "evidence": "規約の系譜と部分的に重なるが、独自の検証制度で差異化されている",
+          "judgment": "実証が進み、否定される見込みは薄い。"
+        },
+        "compounding_value": {
+          "score": 34,
+          "weight": 0.25,
+          "evidence": "採用数の拡大と実測データの蓄積で複利が働き始めた",
+          "judgment": "複利の分岐点に近づいているが、まだ手前。"
+        },
+        "timing_analysis": {
+          "score": 28,
+          "weight": 0.2,
+          "evidence": "同時乗り換えの規模が未確定で、ブレークアウトの時期は未だ読めない",
+          "judgment": "成熟は進んだが、普及の決定的瞬間は未来にある。"
+        }
+      },
+      "value_vector_contribution": {
+        "originality": null,
+        "quality": null,
+        "aesthetic": null,
+        "emotional_impact": null,
+        "future_potential": 34,
+        "business_value": null,
+        "scientific_novelty": null,
+        "philosophical_depth": null,
+        "meaning": null
+      },
+      "classification": "trend_object",
+      "confidence": 69,
+      "strengths": [
+        "認定制度と財団運営で、環境変化が採用に転換する確度が高まった",
+        "複利の価値構造が実測データで裏付けられ、分岐点に接近している"
+      ],
+      "weaknesses": [
+        "複利が立ち上がる分岐点（採用の臨界量）は、未だ未来の実証に委ねられる",
+        "普及の同時性が決定的瞬間の鍵であり、その予測は不可能に近い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": [
+        "複利構造の実測化",
+        "環境成熟の制度への接続",
+        "分岐点への接近"
+      ],
+      "unique_perspective": "私は未来の観測者として、この企画が『基盤』へ近づく速度を見ている。v5は複利の構造を実測データで裏付け、分岐点に接近した。しかし未来の時間軸では、接近と到達は別物だ。採用の臨界量を超える瞬間が来るか——それが現在の私に、ただ一つ予測できない点として残る。",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "business-value",
+          "predicted_stance": "制度としての確立を重視し、私より高い点を付けるだろう。"
+        },
+        {
+          "evaluator_type": "quality-evaluator",
+          "predicted_stance": "完成度の高さを認めつつ、普及の実績をより強く要求するだろう。"
+        }
+      ],
+      "improvement_suggestions": [
+        "認定済みツール数を公開KPIとし、複利の分岐点への接近を数値で可視化する",
+        "採用の同時乗り換えを誘発するイベントを軸に、普及の決定的瞬間を企画として設計する"
+      ],
+      "narrative": "私はこの5回のループで、資産が『元本』から『基盤』へ変わる過程を見てきた。v5では複利の構造が実測で裏付けられ、分岐点が視界に入った。だが未来の観測者として、私は接近と到達を区別する。臨界量を超える瞬間——採用の同時乗り換え——が起きたとき、この企画は未来価値の領域へ進む。それは、今はまだ現在の未来にある。"
+    }
+  ],
+  "recommendations": [
+    "認定済みツール数を公開KPIとし、検証の制度が実績を生むことを実証する",
+    "複数ツールの同時乗り換えを誘発する採用イベント（共同リリース・移行キャンペーン）を企画する",
+    "規約の設計判断の『なぜ』を文書化し、認定制度の規範化が思考を停止させない文化を保つ",
+    "文脈の引用・権利・監査など、次の領域固有課題を規約の心臓部として開拓し、非自明を維持する"
+  ],
+  "caveats": [
+    "認定済みツールの数が僅少で、制度の実効性が実績で証明されていない",
+    "複利の分岐点（採用の臨界量）と普及の同時性は、未だ実測で示されていない",
+    "認定制度が新たな規範となり、制度化された正しさに回収されるリスクが残る"
+  ]
+}

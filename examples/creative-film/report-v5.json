@@ -1,0 +1,293 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "映画企画『瞬きの考古学者』v5改訂案：母の自己犠牲を説明ゼロで空の椅子に委ね、復元→公開→継承のクライマックスを抑制の最高点で完成させた近未来ミステリー",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "映画企画に科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "未商業化の映画企画に市場性評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {"mean": 68, "variance": 0, "min": 68, "max": 68, "scores": [68]},
+    "quality": {"mean": 66, "variance": 0, "min": 66, "max": 66, "scores": [66, 66]},
+    "aesthetic": {"mean": 65, "variance": 0, "min": 65, "max": 65, "scores": [65]},
+    "emotional_impact": {"mean": 73, "variance": 0, "min": 73, "max": 73, "scores": [73]},
+    "future_potential": {"mean": 75, "variance": 0, "min": 75, "max": 75, "scores": [75]}
+  },
+  "current_value_score": 68,
+  "hidden_potential_score": 75,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "anti-generic-filter"],
+      "arguments": [
+        "感情影響評価者: 母の選択を観客が玲と同時に読み、同時に継承を感じる能動的な共感が完成した。空の椅子と玲の一瞬の瞬きが、説明ゼロで喪失と継承を同時に立ち上げる（73点）。",
+        "反凡庸フィルター: 抑制は演出の成果として作品の声そのものになり、感情操作を完全に克服した。ただしこの静けさは観客の注意深さを要求し、静謐さの伝達が残る課題である（品質66点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["quality-evaluator", "aesthetic-critic"],
+      "arguments": [
+        "品質評価者: 復元→公開→空の椅子という閉じが物語を確実に完結させ、余白は具体の場面で担保され、企画段階の品質は上限に達した。残るのは脚本・演出の実物による最終検証である（66点）。",
+        "美的批評家: 最も静かな瞬間が最も強い美になった。玲の瞬きがフレームと同期する瞬間、美は鑑賞から身体の記憶へ変わり、観客の目に刻まれる（65点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "v5では、全評価者が『復元→公開→継承というクライマックスが、抑制の最高点として作品全体を完成させた』ことで一致した。母の自己犠牲は説明ゼロで空の椅子に委ねられ、感傷を排除した選択の重みが最高点に達した。感情影響（73）と品質（66）が頂点に立ち、独創性（68）は体験そのものとして結晶化した。残る一致した課題は、脚本・演出の実物による最終検証と、静謐な体験を観客へ伝える第一幕の入口の設計である。",
+  "executive_summary": "改訂案はイノベーション（Innovation）を最高域で維持した。現在価値は64→68、潜在価値は73→75へ上昇し、三回の再作成指令（説明の最小化・映像文法の場面化・抑制の最高点）がすべて統合された。感情影響（73）と品質（66）が頂点に達し、独創性（68）と美（65）は体験の独創性と余白の完成度として結晶化した。この企画は、あらすじの段階で到達し得る最高の完成度に達した。残る課題は、脚本・演出の実物による検証と、静謐な体験へ観客を導く入口の設計である。",
+  "synthesis_narrative": "議長として私は、v5が三つの再作成指令を統合し、抑制の最高点で作品を完成させたことを確認したい。v2で反凡庸フィルターが警告した『母の自己犠牲は感情操作の入り口』は、空の椅子という映像的余白への置き換えによって完全に克服された。感情影響評価者は、観客が玲と同時に母の選択を読み、同時に継承を感じる能動的な共感の完成を確認した。品質評価者は、企画段階の品質が上限に達し、残るのは脚本・演出の実物による検証だと述べた。美的批評家は、最も静かな瞬間が最も強い美になることを指摘した。合議は一致してイノベーションを維持する。この企画は、あらすじの段階で到達し得る最高の完成度に達した。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 68,
+      "primary_score_rationale": "全指令の統合により、母の自己犠牲の真実が説明ゼロのまま観客が玲と同じ経験で読む地点に達した。復元と公開のクライマックスが、前提の神秘と構造の独創を一体化した。",
+      "dimension_scores": {
+        "premise_novelty": {"score": 72, "weight": 0.4, "evidence": "1フレームの母、空の椅子、瞬きの文法", "judgment": "前提の神秘が作品全体の核として完成した。"},
+        "meaningful_deviation": {"score": 68, "weight": 0.4, "evidence": "復元→公開というクライマックスの一体化", "judgment": "逸脱が前提から映像文法、場面、結末まで貫いた。"},
+        "recombination_risk": {"score": 60, "weight": 0.2, "evidence": "断片映像と空の椅子", "judgment": "類推力の残滓は完全に消え、独自の記号で統一された。"}
+      },
+      "value_vector_contribution": {"originality": 68, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "母の選択を観客が玲と同時に読む『体験の独創性』が完成した",
+        "復元と公開が一体化し、前提から結末まで逸脱が貫いた",
+        "空の椅子という、説明ゼロで自己犠牲を語る映像が作品の核になった"
+      ],
+      "weaknesses": [
+        "体験の独創性が高すぎるため、観客への伝達に最大の注意が要る",
+        "余白の完成度に依存する構造は、演出次第で神秘が空虚になる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["観客が再建する体験", "回顧的に意味を変える構造"],
+      "unique_perspective": "この企画の独創性は、もはや『前提』や『構造』ではなく『体験』そのものになった。観客は玲と同時に母の選択を読み、同時に自分の過去を永久保存するか選ぶ。この共同再建は、あらすじでは書き切れず、映画でしか成立しない。v5は、その体験を作品全体の核として完成させた。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "体験の実装を脚本で検証することを求める"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "余白の完成度を高く評価する"}
+      ],
+      "improvement_suggestions": [
+        "観客が母の選択に到達する手がかり（瞬きの意味、空の椅子）を、第一幕から映像的に敷く",
+        "復元→公開のクライマックスを、体験として反復・増幅できる構造にする"
+      ],
+      "narrative": "独創性は体験そのものになった。観客は玲と同時に母の選択を読み、同時に継承を感じる。残る課題は、その体験を観客に確実に渡す映像的な準備だけだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 66,
+      "primary_score_rationale": "感情操作の装置は解体されたまま、復元と公開のクライマックスが行為と余白の重みで完成した。書き手の声（客観的な抑制）が作品全体を貫き、凡庸の罠は完全に消えた。",
+      "dimension_scores": {
+        "generic_structure_risk": {"score": 66, "weight": 0.4, "evidence": "復元→公開のクライマックス、行為としての選択", "judgment": "生成系AIの平均解から完全に離脱した。"},
+        "specificity": {"score": 68, "weight": 0.4, "evidence": "空の椅子、瞬きの同期、公開の手", "judgment": "固有の語彙が作品の全層を決定づけた。"},
+        "voice": {"score": 62, "weight": 0.2, "evidence": "語らない結末、抑制の最高点", "judgment": "書き手の声が確立し、作品全体を貫く。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 66, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "母の自己犠牲が説明ゼロで作品の核になり、感情操作の装置を完全に排除した",
+        "抑制が『演出の成果』として、作品の声そのものになった",
+        "クライマックスが感傷でなく行為の重みで成立する"
+      ],
+      "weaknesses": [
+        "静謐な完成度は、観客の注意深さを要求する",
+        "抑制の美学が、派手な演出に慣れた観客には物足りなく映る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情操作の完全な排除", "確立された書き手の声"],
+      "unique_perspective": "v2で私は母の自己犠牲という装置を警告した。v5はその警告を完全に克服した——動機は語られず、空の椅子がそれを語る。抑制はもはや設計ではなく『作品の声』だ。凡庸の罠はなく、残るのは『この静けさに観客が耳を傾けるか』という伝達の問いだけだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "抑制の最高点を高く評価する"},
+        {"evaluator_type": "future-potential", "predicted_stance": "静謐さの伝達を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "第一幕に、観客を静けさへ導く入口の場面を設計する",
+        "復元→公開のクライマックスを、抑制の最高点として脚本に実装する"
+      ],
+      "narrative": "抑制は作品の声になった。母の自己犠牲は空の椅子に委ねられ、感情操作の罠は完全に消えた。残る課題は、この静けさへ観客を導く入口の設計だ。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 65,
+      "primary_score_rationale": "復元→公開のクライマックスが、抑制の最高点として結晶化した。無音と空の椅子が、感傷を排除した最も強い美を生み、形式と物語の完全な一体化を達成した。",
+      "dimension_scores": {
+        "visual_core": {"score": 70, "weight": 0.5, "evidence": "復元シークエンス、空の椅子、瞬きの同期", "judgment": "物語と美が同じ動きで進む形式が完成した。"},
+        "sensuous_realization": {"score": 60, "weight": 0.3, "evidence": "無音、公開の手、玲の一瞬の瞬き", "judgment": "感覚的な具体化がクライマックスで結実した。"},
+        "formal_coherence": {"score": 64, "weight": 0.2, "evidence": "重要度重み＝永続保存の形式", "judgment": "世界のルールが作品の形式を最後まで貫く。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": 65, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": [
+        "復元→公開のクライマックスが『儀式』として完成し、最も静かな瞬間が最も強い美になった",
+        "空の椅子が、説明ゼロで自己犠牲を語る映像的余白として完結した",
+        "無音の設計が、感傷を排除した身体の緊張で感情を運ぶ"
+      ],
+      "weaknesses": [
+        "完成度が高いほど、演出の失敗が致命的になる",
+        "静謐な美は、観客の映像リテラシーを選ぶ"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["儀式としての映像イベント", "余白の美の完成"],
+      "unique_perspective": "私はこの映画のクライマックスを、玲の一瞬の瞬きがフレームと同期する瞬間に置く。そこで観客は、自分の瞬きが母のフレームと同じリズムであることに気づく。美はここで、鑑賞から身体の記憶へ変わる。これこそ、映画でしか成立しない美学である。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "演出の実装を脚本段階で検証することを求める"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "抑制の最高点を高く評価する"}
+      ],
+      "improvement_suggestions": [
+        "クライマックスの瞬きと無音の時間を、脚本段階で精密に設計する",
+        "空の椅子のカットを、作品全体のリズムの頂点として配置する"
+      ],
+      "narrative": "美は抑制の最高点で完成した。最も静かな瞬間が最も強い美になり、観客の身体に記憶される。残る課題は、その時間を実際の映像として精密に実装することだ。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 73,
+      "primary_score_rationale": "観客が母の選択を玲と同時に読み、同時に自分の過去を永久保存するか選ぶ構造が完成した。感情は感傷でなく、選択の重みと余白の完成度で最高点に達した。",
+      "dimension_scores": {
+        "empathy_generation": {"score": 74, "weight": 0.5, "evidence": "顔を知らない母、瞬きの同期、復元する玲", "judgment": "観客は玲と同一の再建作業で深く共感する。"},
+        "emotional_stake": {"score": 74, "weight": 0.3, "evidence": "公開＝玲自身の過去の永続保存という選択", "judgment": "選択が観客自身の問いとして最高の賭け金になる。"},
+        "memory_persistence": {"score": 70, "weight": 0.2, "evidence": "空の椅子、玲の一瞬の瞬き", "judgment": "映像が身体の記憶として長く残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": 73, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 83,
+      "strengths": [
+        "母の選択を観客が玲と同時に読む能動的な共感が完成した",
+        "公開という選択が、観客自身の過去の保存という問いになる",
+        "瞬きの同期が、母と玲と観客を同一の身体へ結ぶ最高の感情装置になる"
+      ],
+      "weaknesses": [
+        "観客が母の選択に到達できない場合、感情は成立しない",
+        "完成度が高いほど、演出の失敗が感情の破綻につながる"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感傷を排除した選択の重み", "能動的な共感の完成"],
+      "unique_perspective": "この企画の感情の頂点は、玲が公開した後、画面が空の椅子に留まる瞬間だ。母はもういない。だが玲の瞬きがフレームと同期したとき、観客は母が『玲の中に』残ったことに気づく。説明ゼロで、最も深い喪失と継承が同時に立ち上がる。これが感傷でなく感情の力だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "抑制の最高点を評価するが、伝達の入口を指摘する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "観客依存の着地を最終検証する"}
+      ],
+      "improvement_suggestions": [
+        "母の選択への手がかりを、第一幕から映像的に確実に敷く",
+        "クライマックスの無音と空の椅子の時間を、感情の着地点として精密に設計する"
+      ],
+      "narrative": "感情は選択の重みと余白の完成度で最高点に達した。観客は玲と同時に母の選択を読み、同時に継承を感じる。残る課題は、その着地点を観客に確実に渡す映像の精密さだけだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 66,
+      "primary_score_rationale": "復元→公開のクライマックスが抑制の最高点として実装され、物語が確実に閉じた。余白は具体的な場面で担保され、企画段階の品質として最高の完成度に達した。",
+      "dimension_scores": {
+        "structural_completion": {"score": 68, "weight": 0.4, "evidence": "復元→公開→空の椅子という閉じ", "judgment": "三幕構成が結末まで確実に機能する。"},
+        "premise_execution": {"score": 66, "weight": 0.3, "evidence": "瞬きの文法が復元と公開と継承を貫く", "judgment": "前提が作品全体を機能させている。"},
+        "craft_precision": {"score": 64, "weight": 0.3, "evidence": "無音の設計、瞬きの同期、断片映像の提示", "judgment": "脚本の精密さが企図を超えて具体化した。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 66, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "復元→公開→空の椅子という閉じが、物語を確実に完結させる",
+        "余白が具体の場面で担保され、企画段階の品質が最高に達した",
+        "瞬きの同期が、クライマックスの時間を映像的に設計している"
+      ],
+      "weaknesses": [
+        "最高度の完成度は、演出の実装ができなければ成立しない",
+        "あくまで企画段階で、脚本・演出の実物の検証が残る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["場面としての閉じ", "企画段階の最高品質"],
+      "unique_perspective": "v4で私は『余白を具体の場面で担保せよ』と述べた。v5はその回答を完成させた。復元→公開→空の椅子という閉じは、観客が母の選択を読む時間を設計している。品質は企画段階の上限に達した。残るのは、この設計を脚本・演出の実物として検証することだけだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "演出の実装を完全に求める"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "観客依存の着地を最終確認する"}
+      ],
+      "improvement_suggestions": [
+        "クライマックスの時間軸（復元の長さ・無音・空の椅子）を脚本として書き切る",
+        "第一幕からの手がかりの配置を、最終的に検証する"
+      ],
+      "narrative": "品質は企画段階の最高点に達した。余白は場面で担保され、物語は確実に閉じる。残る課題は、この設計を脚本・演出の実物として検証することだ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "映画企画『瞬きの考古学者』v5改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 75,
+      "primary_score_rationale": "復元→公開→継承というクライマックスが、個人の記憶と社会的監視の二重性を維持したまま完成した。瞬きの文法という映像言語が、作品を超えて何度も回収できる資産として確立された。",
+      "dimension_scores": {
+        "environment_fit": {"score": 76, "weight": 0.4, "evidence": "AIによる映像再構成、記憶の所有", "judgment": "記憶が権力化する未来に、この主題の切実さは頂点に達する。"},
+        "expansion_room": {"score": 75, "weight": 0.3, "evidence": "復元シークエンス、空の椅子、継承のモチーフ", "judgment": "映像言語として何度も回収できる資産になった。"},
+        "timeliness_risk": {"score": 74, "weight": 0.3, "evidence": "独自の記号（瞬き・空の椅子）", "judgment": "差別化が完全に独自ルールで担保された。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 75, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": [
+        "瞬きの文法が、他作品が持ち出せない映像言語資産として完成した",
+        "個人と社会の二重性が、継承という結末で統合された",
+        "静謐な完成度が、長期的に記憶される作品の形になっている"
+      ],
+      "weaknesses": [
+        "静謐な体験は観客を選び、初期の市場的な広がりを制限する",
+        "映像言語の強さが、シリーズ展開で物語性を薄める危険を伴う"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["映像言語としての資産", "二重性の統合"],
+      "unique_perspective": "私はこの企画が、前提の価値から映像言語の価値、そして『継承』という主題の価値へ三段階で深化したと見る。瞬きの文法は、単独作を超えて、続編・前日譚・メディアミックスで何度も回収できる。未来の価値は、この言語を体系化し、観客に伝える力にかかっている。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "静謐さの伝達を懸念する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "シリーズ展開での物語性を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "瞬きの文法を、独立した映像言語として体系化し、ブランド資産として管理する",
+        "静謐さを維持しつつ、シリーズ展開に耐える物語性を映像言語で担保する"
+      ],
+      "narrative": "この企画は映像言語と継承という主題の価値で完成した。瞬きの文法は何度も回収できる資産であり、未来の射程は最も広い。残る課題は、その言語を観客と市場へどう伝えるかだ。"
+    }
+  ],
+  "recommendations": [
+    "復元→公開→空の椅子のクライマックスを、時間・無音・瞬きの同期を含む脚本として書き切る",
+    "第一幕から母の選択への手がかりを映像的に敷き、観客の着地点を担保する",
+    "静謐な体験へ観客を導く入口の場面を設計する",
+    "瞬きの文法を、独立した映像言語として体系化し、資産化する",
+    "脚本・演出の実物による最終検証を実施する"
+  ],
+  "caveats": [
+    "評価対象は企画・あらすじであり、脚本・演出の実物ではない。品質・美のスコアは企画段階の上限",
+    "完成度が高いほど演出の失敗が致命的になる。最高度の完成度は実装なしでは成立しない",
+    "イノベーション判定は『現在価値・潜在価値ともに45以上』の基準を満たしたもの。完成作の実物検証は未実施"
+  ]
+}

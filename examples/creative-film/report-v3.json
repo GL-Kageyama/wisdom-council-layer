@@ -1,0 +1,293 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "映画企画『瞬きの考古学者』v3改訂案：母の失踪の真実を説明せず映像の余白に委ね、瞬きの文法という映像文法で欠落を復元する近未来ミステリー",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "映画企画に科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "未商業化の映画企画に市場性評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {"mean": 62, "variance": 0, "min": 62, "max": 62, "scores": [62]},
+    "quality": {"mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56, 56]},
+    "aesthetic": {"mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58]},
+    "emotional_impact": {"mean": 66, "variance": 0, "min": 66, "max": 66, "scores": [66]},
+    "future_potential": {"mean": 71, "variance": 0, "min": 71, "max": 71, "scores": [71]}
+  },
+  "current_value_score": 60,
+  "hidden_potential_score": 71,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "anti-generic-filter"],
+      "arguments": [
+        "感情影響評価者: 説明ゼロが観客の想像を能動的にし、喪失は感傷ではなく客観的な欠落の重みで心を動かす（66点）。",
+        "反凡庸フィルター: 余白と省略への依存は評価するが、脚本段階で具体の場面に置き換えられなければ、感情の温度が下がり観客を置き去りにする危険がある（品質56点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["quality-evaluator", "aesthetic-critic"],
+      "arguments": [
+        "品質評価者: 余白は美辞麗句ではなく、復元シークエンスという具体の場面で担保されなければ成立しない。省略は設計の成果であって、設計の省略ではない（56点）。",
+        "美的批評家: 復元＝欠落の回復という形式は、物語と美が同じ動きで進むことを可能にし、余白は最も強い美になり得る（58点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "v3では、全評価者が『説明の最小化と映像文法の具体化が、前提の神秘と構造の完成を同時に前進させた』ことで一致した。母の自己犠牲は説明を剥がされ、感傷ではなく客観的な欠落として描かれるようになり、感情操作の罠から解放された。残る一致した懸念は、余白への依存を脚本の具体場面で担保し、観客が母の選択に到達できる手がかりを映像的に準備することである。",
+  "executive_summary": "改訂案はイノベーション（Innovation）を維持した。現在価値は57→60、潜在価値は66→71へ上昇し、v2の再作成指令（説明の最小化・映像文法の具体化・母の自己犠牲の抑制）が忠実に反映された。美（58）と品質（56）が特に伸び、復元＝欠落の回復という映像文法がモチーフを構造から形式へ貫いた。感情影響（66）は、説明を削ったことで観客の能動的な共感を生んだ。残る課題は、余白を美辞麗句でなく具体の場面で担保し、観客が母の選択に到達できる手がかりを映像的に敷くことである。",
+  "synthesis_narrative": "議長として私は、v3がv2の再作成指令を忠実に反映したことを確認したい。v2で最も重かった警告は、反凡庸フィルターの『母の自己犠牲は感情操作の入り口』というものだった。v3はこれに正面から応えた——動機を説明せず、空の椅子という映像的余白に委ねることで、装置そのものが解体された。独創性評価者は、説明の削除が前提の神秘を強め、瞬きの文法が独創性を映像文法まで波及させたと述べた。美的批評家は、復元＝欠落の回復という、物語と美が同じ動きで進む形式の確立を評価した。品質評価者は、余白は具体の場面で担保されなければ成立しないという、新たな品質課題を指摘した。合議は一致してイノベーションを維持する。次の再作成では、余白の美と具体の場面のバランスが決定的である。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 62,
+      "primary_score_rationale": "説明が最小化され、母の失踪の真実が映像の余白に委ねられたことで、1フレームの母という前提の神秘が保たれた。瞬きの文法という復元方法が、独創性を構造から映像文法へ波及させた。",
+      "dimension_scores": {
+        "premise_novelty": {"score": 68, "weight": 0.4, "evidence": "1フレームにだけ写る母、瞬きのリズムで残された痕跡", "judgment": "中核前提の神秘が説明で侵食されず維持された。"},
+        "meaningful_deviation": {"score": 62, "weight": 0.4, "evidence": "復元＝画面の欠落が満たされる映像シークエンス", "judgment": "逸脱が構造だけでなく映像文法まで波及した。"},
+        "recombination_risk": {"score": 52, "weight": 0.2, "evidence": "監視実験の説明が削られ、断片映像と空の椅子になった", "judgment": "既知のディストピアSF類推力が後退した。"}
+      },
+      "value_vector_contribution": {"originality": 62, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "説明ゼロで母の失踪の真実を余白に委ねたため、回顧的独創性（既に見た映像が裏返る）が強まった",
+        "瞬きの文法＝復元の映像文法という、映像アーカイブの舞台でしか成立しない方法が立った",
+        "『誰が人の姿を所有するか』が映像の形そのものになった"
+      ],
+      "weaknesses": [
+        "断片映像（被検体のテストリール）の意味が観客に伝わるかは演出次第",
+        "余白の多用が、情報不足と誤読の危険を伴う"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["映像メディア固有の方法論", "回顧的に意味を変える構造"],
+      "unique_perspective": "説明の最小化は、独創性にとっては追い風である。母の動機を語らないことで、観客は玲と同じ手順で映像を再発見する。この共同発見が、独創性を『鑑賞される作品』から『観客が再建する体験』へ昇格させた。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "感情の余白は共感を強めるが、情報不足への不安を指摘するかもしれない"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "余白が過剰だと構造の曖昧さを指摘する"}
+      ],
+      "improvement_suggestions": [
+        "瞬きの文法の規則を、観客が追える形で物語の早い段階に映像的に示す",
+        "断片映像を『説明』でなく『見せる』だけで成立させる演出をさらに磨く"
+      ],
+      "narrative": "v3で独創性は映像文法まで到達した。説明を削ったことで、前提の神秘と回顧性が強まり、復元という方法が物語を決定づけた。残る課題は、余白が情報不足にならないよう、観客に同じ推理の手がかりを与えることだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 56,
+      "primary_score_rationale": "調査プロシージャルの型は解体され、復元という主人公固有の映像行為に置き換わった。母の自己犠牲は説明を剥がされ、観客の判断に委ねられた。感情操作の入り口は封鎖されつつあるが、余白に頼る危うさが残る。",
+      "dimension_scores": {
+        "generic_structure_risk": {"score": 58, "weight": 0.4, "evidence": "復元＝欠落を満たすシークエンス、公開という選択", "judgment": "受動的調査ものの平均解から完全に脱した。"},
+        "specificity": {"score": 60, "weight": 0.4, "evidence": "瞬きの文法、欠落のリズム、破壊されたテストリール", "judgment": "固有の語彙が映像の作りまで決定づけている。"},
+        "voice": {"score": 48, "weight": 0.2, "evidence": "説明ゼロ、客観的な欠落の描写", "judgment": "抑制という書き手の声は立ったが、脚本としての実装はまだ企図の段階。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 56, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 73,
+      "strengths": [
+        "母の自己犠牲が説明を剥がされ、感情操作の装置ではなくなった",
+        "復元の映像行為が主人公固有で、一般化できない",
+        "抑制された語り口が『書き手の声』として滲み始めた"
+      ],
+      "weaknesses": [
+        "余白と省略に依存する構造は、脚本段階で空白のまま動かなくなる危険",
+        "瞬きの文法が分かりにくいと、観客を置き去りにする"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["固有の方法論", "感情操作からの脱却"],
+      "unique_perspective": "私はv2で母の自己犠牲を感情操作の入り口と警告した。v3はその警告に正面から応えた——動機を説明せず、客観的な欠落として描くことで、装置が解体された。だが新しい罠は、余白の美しさに頼りすぎて脚本が『やった感』に堕ちる危険だ。省略は演出の成果であって、設計の省略ではない。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "抑制は共感を深めると見るが、冷たさを指摘するかもしれない"},
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "余白の美を高く評価する"}
+      ],
+      "improvement_suggestions": [
+        "瞬きの文法の規則を、物語が進む前に観客が『読める』形で提示する",
+        "脚本段階で、余白を美辞麗句でなく具体の場面で担保する"
+      ],
+      "narrative": "母の自己犠牲という装置は、説明を剥がされたことで感情操作の罠から解放された。固有の方法論と書き手の声が立ち、凡庸の骨格は解体された。残る課題は、余白に依存した設計が脚本で実際に動くかを実証することだ。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 58,
+      "primary_score_rationale": "復元＝画面の欠落が満たされる映像文法が具体化された。瞬きの文法というリズムが、物語の骨格と映像の形式を貫く中心言語になった。",
+      "dimension_scores": {
+        "visual_core": {"score": 64, "weight": 0.5, "evidence": "復元シークエンス＝欠落が満たされる過程、瞬きのリズム", "judgment": "モチーフが物語の骨格を貫く映像言語として機能する。"},
+        "sensuous_realization": {"score": 50, "weight": 0.3, "evidence": "空の椅子、破壊されたテストリール、欠落していくフレーム", "judgment": "感覚的な具体化が設計に現れ始めた。"},
+        "formal_coherence": {"score": 58, "weight": 0.2, "evidence": "重要度重み＝何が残り何が消えるか、の一致", "judgment": "世界のルールと映像形式の一致がさらに強固になった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": 58, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 76,
+      "strengths": [
+        "復元＝欠落の回復という、物語と美が同じ動きで進む形式が確立された",
+        "瞬きの文法という、映画という媒体でしか成立しない映像リズム",
+        "空の椅子という、説明ゼロで喪失を語る映像的余白"
+      ],
+      "weaknesses": [
+        "復元シークエンスの長さとテンポの設計はまだ企図の段階",
+        "余白の美が、観客の離脱や情報不足を招く危険を伴う"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["モチーフと構造の一体化", "破壊の美学の構造化"],
+      "unique_perspective": "私が見たいのは、この映画の中央で画面がどのように『満ちていくか』である。欠落が埋まる復元シークエンスは、観客に玲と同じ時間の体験を強いる。美はここで、物語から独立した『儀式』の地位を得る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "余白への依存が構造の曖昧さを招くと指摘する"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "抑制が感情の温度を下げると見る"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスの長さ・テンポ・音（無音の使い方）を脚本段階で設計する",
+        "空の椅子の映像が持つ時間を、余白の美として成立させる"
+      ],
+      "narrative": "v3で美は予感から文法へ進んだ。復元＝欠落の回復という形式は、物語と美を同じ動きで運び、瞬きのリズムが映像の中心言語になった。残る課題は、このシークエンスを実際のテンポと音で設計することだ。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 66,
+      "primary_score_rationale": "母の動機を説明しない選択が、観客の想像を引き出し、共感を能動的にした。喪失は客観的な欠落（空の椅子、消えていくフレーム）として描かれ、感傷でなく重みで心を動かす位置に立った。",
+      "dimension_scores": {
+        "empathy_generation": {"score": 68, "weight": 0.5, "evidence": "3歳で母を失い顔を知らない玲、瞬きという遺伝のしぐさ", "judgment": "欠落と身体の記憶が能動的な共感を生む。"},
+        "emotional_stake": {"score": 68, "weight": 0.3, "evidence": "復元した最後の1フレームを公開するか、破棄するか", "judgment": "観客が追える具体的な選択が賭け金を生む。"},
+        "memory_persistence": {"score": 60, "weight": 0.2, "evidence": "瞬きのリズム、空の椅子", "judgment": "残像と欠落のイメージが記憶に残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": 66, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 78,
+      "strengths": [
+        "説明ゼロが観客の想像を働かせ、共感が能動的になった",
+        "喪失が客観的な欠落として描かれ、感傷操作を回避した",
+        "瞬きという、母と玲を結ぶ身体の記憶が感情の軸になる"
+      ],
+      "weaknesses": [
+        "余白への依存が強く、脚本段階で感情の温度が下がる危険",
+        "観客が母の選択（子を守るため消えた）を読めない場合、感情が着地しない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["喪失と選択が構造に組み込まれた", "感傷を回避した抑制"],
+      "unique_perspective": "私はv2で、感情が設定から構造へ昇格したと述べた。v3では、さらに余白の設計によって『感情が観客の仕事になった』。観客は玲と同じ推理を辿り、同じ場所で母の選択に到達する。この共同発見が、感傷とは別の、より深い共感を生む。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "抑制は評価するが、冷たさを指摘する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "余白の多さが結末の曖昧さを招くと指摘する"}
+      ],
+      "improvement_suggestions": [
+        "観客が母の選択に到達できる手がかり（瞬きの意味）を、物語の早い段階で映像的に示す",
+        "クライマックスの選択の場面を、感情を語らずに見せる行為として実装する"
+      ],
+      "narrative": "感情は観客の仕事になった。説明を削ったことで、共感は能動的になり、喪失は感傷でなく欠落の重みで描かれる。残る課題は、観客が母の選択に到達できる手がかりを、映像的に確実に準備することだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 56,
+      "primary_score_rationale": "物語の後半が、復元シークエンスと公開という選択によって設計され、構造が完成に近づいた。説明の最小化が、余白の多い脚本の精密さという新たな品質課題を生んだ。",
+      "dimension_scores": {
+        "structural_completion": {"score": 60, "weight": 0.4, "evidence": "復元＝クライマックス、公開という結末の選択", "judgment": "三幕構成の後半が具体的な場面として設計された。"},
+        "premise_execution": {"score": 56, "weight": 0.3, "evidence": "瞬きの文法が追跡と復元の方法になる", "judgment": "前提が構造を貫いて機能する段階に達した。"},
+        "craft_precision": {"score": 52, "weight": 0.3, "evidence": "説明の最小化、断片映像による提示", "judgment": "余白を精密に制御する脚本技法が今後の鍵になる。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 56, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "復元シークエンスがクライマックスとして設計された",
+        "公開という選択が結末を持ち、物語が評価可能な形に閉じた",
+        "説明の最小化が、映像で語る訓練を要求する"
+      ],
+      "weaknesses": [
+        "余白に依存する脚本は、場面としての具体性がないと動かない",
+        "断片映像の意味の提示タイミングが、物語の分かりやすさを左右する"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構造の完成", "余白の設計"],
+      "unique_perspective": "私は品質を『物語が実際に動くか』で測る。v3の危険は、説明の最小化が『美辞麗句としての余白』に堕ちることだ。省略は脚本が具体的な場面を持って初めて成立する。復元シークエンスを、時間軸・音・カットで書き切れるかが、この企画の品質の分水嶺になる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "余白の美を高く評価し、私の構造への懸念を過剰と見る"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "観客の想像への依存を評価する"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスを、時間と音を含む場面として脚本化する",
+        "断片映像の提示タイミングを、観客の推理に合わせて設計する"
+      ],
+      "narrative": "物語は復元と公開という場面で閉じ始めた。説明の最小化は品質に新たな課題を与える——余白を具体の場面で担保すること。これができれば、この企画は企画段階を超える。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "映画企画『瞬きの考古学者』v3改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 71,
+      "primary_score_rationale": "監視実験の類推力が説明から削られ、断片映像として沈んだことで、差別化が独自の映像ルール（瞬きの文法）で担保された。記憶の所有という主題の時代適合性はさらに強まった。",
+      "dimension_scores": {
+        "environment_fit": {"score": 72, "weight": 0.4, "evidence": "AIによる映像再構成と記憶の所有", "judgment": "記憶が権力化する未来に、この主題の切実さは増す。"},
+        "expansion_room": {"score": 70, "weight": 0.3, "evidence": "瞬きの文法、復元シークエンス、断片映像", "judgment": "映像言語として再利用可能な資産が揃った。"},
+        "timeliness_risk": {"score": 70, "weight": 0.3, "evidence": "監視実験の説明の削除", "judgment": "既存SFの類推力が後退し、差別化が固まった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 71, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 77,
+      "strengths": [
+        "個人の記憶と社会的監視の二重性が、どちらにも寄らず保たれている",
+        "瞬きの文法は、他の作品が持ち出せない映像資産になる",
+        "説明の削除が、未来の差別化を独自ルールで担保した"
+      ],
+      "weaknesses": [
+        "余白の設計が観客を選ぶ場合、市場的な広がりが限られる",
+        "静謐なトーンのままでは、シリーズ展開に耐えるドラマ性が弱い"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["主題の時代適合性", "拡張可能な映像的資産"],
+      "unique_perspective": "v3の本質的な進展は、この企画が『前提の価値』から『映像言語の価値』へ移行したことだ。瞬きの文法という再利用可能な映像言語は、単独作を超えて、メディアミックスやシリーズで何度も回収できる資産になる。これは種から作品を超えて『言語』への変化である。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "余白への依存を構造の弱さと見る"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "静謐さが感情の広がりを制限する"}
+      ],
+      "improvement_suggestions": [
+        "瞬きの文法を、映像言語として独立して語れる形に体系化する",
+        "静謐なトーンを維持しつつ、ドラマの起伏を映像的に作る"
+      ],
+      "narrative": "この企画は前提の価値から映像言語の価値へ移行した。瞬きの文法という資産は、作品を超えて何度も回収できる。未来の価値を決めるのは、この言語をどれだけ体系化できるかだ。"
+    }
+  ],
+  "recommendations": [
+    "復元シークエンスを、時間・音・カットを伴う場面として脚本化する",
+    "瞬きの文法の規則を、観客が追える形で物語の早い段階に映像的に示す",
+    "母の選択（子を守るための消滅）への手がかりを、第一幕から映像的に敷く",
+    "断片映像は説明せず、見せるだけで成立させる演出を磨く",
+    "静謐さを維持しつつ、観客を引き込む第一幕の入口を設計する"
+  ],
+  "caveats": [
+    "評価対象は企画・あらすじであり、脚本・演出の実物ではない。品質・美のスコアは企画段階の上限",
+    "余白への依存は、脚本段階で具体の場面に置き換えられない場合、空白のまま動かない危険",
+    "イノベーション判定は『現在価値・潜在価値ともに45以上』の基準を満たしたもの。完成作の実物検証は未実施"
+  ]
+}

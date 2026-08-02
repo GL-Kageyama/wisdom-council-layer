@@ -26,6 +26,17 @@ AIは平均的で完成度の高いアウトプットを生成できる。しか
 - **不一致こそシグナル**: 評価者間の対立は平均化せず、そのまま保存する。
 - **生成より評価**: AI時代の競争領域は「どれだけ作れるか」から「どれだけ価値あるものを見抜けるか」へ移る。
 
+## 役割分担（このリポジトリの位置づけ）
+
+> **このリポジトリは評価（Evaluation）のために存在する。作品の作成（Generation）は、適切な他の手段が利用可能ならそちらに譲る。**
+
+| 役割 | 担当 |
+|------|------|
+| **作成（Generation）** | 生成AI・専用の作成スキル・他のツール（このリポジトリは**作らない**） |
+| **評価（Evaluation）** | このリポジトリ。作成されたものを多視点で評価し、次回の作成に渡す材料（`weaknesses`・`improvement_suggestions`）を整える |
+
+**原則**: 「作る人」と「評価する人」を分離し、それぞれの専門に任せる。このレイヤーは評価の専門家であり、**作成は他の手段に譲る**。作成手段がなければ、評価結果を人間が受けて次を作る。
+
 ## アーキテクチャ
 
 ```
@@ -48,10 +59,12 @@ AIは平均的で完成度の高いアウトプットを生成できる。しか
 ### 3層構造
 
 ```
-Layer 1: Generation Layer（生成するAI）
+Layer 1: Generation Layer（生成するAI）※ このプロジェクトの外。適切な他の手段に委ねる
 Layer 2: Evaluation Layer（評価するAI）← このプロジェクト
 Layer 3: Meta Value Layer（価値基準そのものを考えるAI）← 将来フェーズ
 ```
+
+**このプロジェクトが担うのは Layer 2（評価）のみ。** Layer 1（生成）は生成AI・作成スキルなど適切な手段に譲る。
 
 ## ディレクトリ構造
 
@@ -89,7 +102,9 @@ wisdom-council-layer/
 │   ├── creative-film/                 # 映画企画
 │   ├── business-startup/              # 事業
 │   ├── scientific-hypothesis/         # 科学仮説
-│   └── cultural-philosophy/           # 思想エッセイ
+│   ├── cultural-philosophy/           # 思想エッセイ
+│   ├── digital-oss/                   # OSSソフトウェア
+│   └── architecture-house/            # 個人邸設計（建築）
 └── utils/
     ├── validate_output.py             # 出力バリデーション
     ├── render_report.py               # 視覚化（コンソール / Markdown）

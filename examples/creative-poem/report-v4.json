@@ -1,0 +1,220 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "詩『昨日の郵便局』v4——改訂後の再評価（受付の空気・問いとしての結語）",
+  "content_type": "text",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "meaning-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "詩に市場性評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 68, "variance": 0, "min": 68, "max": 68, "scores": [68] },
+    "quality": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
+    "aesthetic": { "mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48] },
+    "emotional_impact": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
+    "future_potential": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
+    "meaning": { "mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48] }
+  },
+  "current_value_score": 52,
+  "hidden_potential_score": 44,
+  "classification": "trend_object",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "meaning-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 説明は完全に消え、行為と痕跡が詩を運ぶ。ただし結語の問い『〜か』が修辞的で、答えを読者に委ねる形に近い。品質50点。",
+        "meaning-evaluator: 『昨夜の重さか、明日の宛先か』——二つの時間を手紙が架橋する構造こそ意味であり、問いのまま残すのは強み。意味48点。"
+      ]
+    }
+  ],
+  "consensus_summary": "再作成指令（痕跡の深化・嗅覚の付与・結語の問い化）が実装され、品質50・美48・感情42とクラフト系がさらに上昇。独創性68を維持し、意味48は『昨夜の重さか、明日の宛先か』という問いの形で開いた。current=52 / hidden=44 で、潜在価値が実現に転じ trend_object に分類。",
+  "executive_summary": "『昨日の郵便局』v4は、しわに『インクの匂い』という嗅覚を加え、受付の空気を一行残して連作の気配を足した。結語を『昨夜の重さか、明日の宛先か』という問いのままに開き、概念と情感を閉じずに残した。品質50・美48・感情42とクラフト系が上昇し、current_value=52 / hidden=44 で trend_object（現在価値が支配的、潜在は実現途上）。",
+  "synthesis_narrative": "指令どおり、痕跡は『しわ＋インクの匂い』へ深化し、詩は嗅覚まで持った。結語の問い『昨夜の重さか、明日の宛先か』は、意味を開いたまま残しつつ、過去と未来を手紙に架橋する。未来評価者は潜在が実現途上にあるとし40点、意味評価者は問いの開きを48点と評価。current が hidden を上回り、詩は『発見される価値』から『届く価値』へ移行した。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "詩『昨日の郵便局』v4の独創性評価",
+      "domain": "creative",
+      "primary_score": 68,
+      "primary_score_rationale": "『昨夜の重さか、明日の宛先か』という二時間の架橋が、概念を閉じずに開く",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 72, "weight": 0.35, "evidence": "宛名欄が空の手紙の痕跡＝しわ", "judgment": "場の設定を超えた存在論に到達" },
+        "combinatorial_surprise": { "score": 68, "weight": 0.25, "evidence": "郵便×痕跡×嗅覚×二つの時間", "judgment": "予想を裏切る結合が続く" },
+        "distance_from_template": { "score": 66, "weight": 0.25, "evidence": "既存の手紙モチーフ詩との距離", "judgment": "明確に離れたまま" },
+        "non_obviousness": { "score": 64, "weight": 0.15, "evidence": "『そのしわは、昨夜の重さか。それとも、明日の宛先か。』", "judgment": "問いが概念を閉じず開く" }
+      },
+      "value_vector_contribution": { "originality": 68, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 80,
+      "strengths": ["しわを『昨夜』と『明日』に二重に開く問いが、v3を超える解釈の余白を生む", "インクの匂いが概念に嗅覚の芯を足す"],
+      "weaknesses": ["問いの形式がやや洗練されすぎ、独創の荒々しさが薄れる", "二つの時間の架橋は、読み手によっては技巧と映る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間の二重化", "痕跡による概念の持続"],
+      "unique_perspective": "独創は『新しい単語』ではなく『新しい時間の接続』でも作れる。この詩は過去と未来を一つのしわで結んだ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "問いの修辞性を、凡庸への逆戻りとみるかもしれない" }
+      ],
+      "improvement_suggestions": ["問いを残したまま、そのあとに一拍の沈黙（改行）を足す", "インクの匂いをさらに別の具体（消印の裏の滑り）で裏打ちする"],
+      "narrative": "しわは過去（昨夜の重さ）と未来（明日の宛先）を同時に指すようになった。同じ痕跡から二つの時間が読めるのは、v3にない解釈の開きだ。問いは技巧に見える危険をはらむが、この詩では概念そのものを開く働きをしている。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "詩『昨日の郵便局』v4の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 50,
+      "primary_score_rationale": "説明は完全に消え、行為・痕跡・問いが詩を運ぶ。修辞的な問いの危険だけが残る",
+      "dimension_scores": {
+        "cliche_density": { "score": 52, "weight": 0.3, "evidence": "『インクの匂い』『白い受付』", "judgment": "定番を嗅覚・視覚の独自感覚に置き換えた" },
+        "emotional_manipulation": { "score": 48, "weight": 0.3, "evidence": "結語の問い『〜か』", "judgment": "感情操作はなく、問いが読者を巻き込む" },
+        "structural_predictability": { "score": 52, "weight": 0.25, "evidence": "場→動作→消失→痕跡→問い", "judgment": "問いで構造に開きを残した" },
+        "substance_over_style": { "score": 46, "weight": 0.15, "evidence": "結語の二重の問い", "judgment": "語りすぎはゼロ。問いはやや修辞的" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 78,
+      "strengths": ["説明と定番が跡形もなく消え、詩がすべて行為と痕跡で立つ", "問いの結語が、感情を操作せずに読者を参加させる"],
+      "weaknesses": ["結語の二重問いが修辞的で、『答えなさい』と言われている気配がある", "後半の四行が少し飾られ、散文的な確かさが薄れる"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["見せて語らない手法の完成", "問いによる読者参加"],
+      "unique_perspective": "凡庸への最後の逃げ道は『修辞』だ。問いが美しいほど、それは答えを求める形に近づく。この改訂はその境界を歩いている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "問いの開きを意味の強みと評価し、私の修辞の指摘を辛めとみるだろう" }
+      ],
+      "improvement_suggestions": ["問いのあとに、読者が答えなくていいと許す一行（沈黙・動作）を足す", "後半の四行の飾りを削り、散文的な確かさに戻す"],
+      "narrative": "説明はゼロ、定番は消え、詩は行為と痕跡と問いだけで立つ。残る危険は結語の修辞が『読者に答えを求める』形に近づくことだけだ。問いは強いが、その先に一拍の沈黙があれば、この詩は凡庸の罠から完全に自由になる。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "詩『昨日の郵便局』v4の美的評価",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "嗅覚・視覚・聴覚が揃い、間の造形が完成に近づいた",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 52, "weight": 0.35, "evidence": "『しわとインクの匂い』『白い受付』", "judgment": "視・聴・嗅の三感覚が詩に揃った" },
+        "rhythmic_musicality": { "score": 48, "weight": 0.25, "evidence": "短い連と問いの『か』の反復", "judgment": "問いの音が拍を揃えた" },
+        "imagistic_concreteness": { "score": 46, "weight": 0.25, "evidence": "『机に残っている』", "judgment": "抽象語が消え、具体像が残る" },
+        "cohesion": { "score": 46, "weight": 0.15, "evidence": "しわ→匂い→問いが一つの流れに繋がる", "judgment": "構造が詩を統率する" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 48, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 76,
+      "strengths": ["『インクの匂い』が、しわという視覚に嗅覚という新たな次元を足す", "白い受付の余白と、問いのあとの沈黙が詩全体を静かに統率する"],
+      "weaknesses": ["問いの二行がやや対句的に整いすぎ、散文的な揺らぎが薄れる", "前半の二連が既に完成度が高く、後半との落差が味わいの対象になる"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["三感覚の獲得", "余白と沈黙の造形"],
+      "unique_perspective": "美は『全てを足す』ことより『一つの音を残す』こと。この詩はインクの匂いで、消えたものを嗅がせる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "emotional-impact", "predicted_stance": "問いの整いを、温度の不足とみるかもしれない" }
+      ],
+      "improvement_suggestions": ["問いの対句を一度崩し、散文的な一行を混ぜて揺らぎを戻す", "結語のあとに改行の沈黙を残し、詩を静かに着地させる"],
+      "narrative": "白い受付、しわ、インクの匂い——v3の視覚と聴覚に嗅覚が加わり、詩は五感のうち三つを揃えた。問いの対句は整いすぎて、詩の揺らぎを薄める危険がある。しかし全体としては、余白と沈黙で情感を作る手法が完成に近づいている。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "詩『昨日の郵便局』v4の情動評価",
+      "domain": "creative",
+      "primary_score": 42,
+      "primary_score_rationale": "インクの匂いが温度を保ち、問いの結語が感情を開いたまま残す",
+      "dimension_scores": {
+        "visceral_response": { "score": 46, "weight": 0.35, "evidence": "しわとインクの匂い", "judgment": "嗅覚が消えた手紙の存在を実感させる" },
+        "catharsis": { "score": 40, "weight": 0.3, "evidence": "問いの結語", "judgment": "安堵ではなく問いを残し、感情が滞留する" },
+        "empathy_triggers": { "score": 42, "weight": 0.25, "evidence": "局員が空白の手紙を置いて帰る", "judgment": "共感の構造が温かいまま保たれる" },
+        "subtlety_of_feeling": { "score": 44, "weight": 0.1, "evidence": "『引き出しが戻る音』『机に残っている』", "judgment": "感情が音と沈黙に沈む" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 42, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 72,
+      "strengths": ["インクの匂いが、消えた手紙を読者の鼻先に呼び戻す", "『昨夜の重さか、明日の宛先か』が、哀しみを過去と未来に分けて残す"],
+      "weaknesses": ["問いの整いが、感情を考えへと上品に移し替える危険がある", "全編の静けさが、一瞬の大きな感情の波を持たない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["嗅覚による情動の間接化", "問いによる感情の開放"],
+      "unique_perspective": "この詩の哀しみは『消えたこと』より『まだ続いていること』にある。問いはその続きを読者の側に委ねた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "問いの修辞性を感情の回避とみるかもしれない" }
+      ],
+      "improvement_suggestions": ["問いのあとに、感情が沈む一拍の沈黙を一行として残す", "どこか一か所で、読者の胸を直接叩く具体的な言葉を入れる"],
+      "narrative": "インクの匂いは消えた手紙を読者の鼻先によみがえらせ、哀しみは過去と未来に分かれて残る。問いは感情を閉じず、むしろ開いた。静けさは深いが、一瞬の大きな波がない——その分、余韻は長い。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "詩『昨日の郵便局』v4の将来性評価",
+      "domain": "creative",
+      "primary_score": 40,
+      "primary_score_rationale": "潜在は実現途上。連作の芽（明日の宛先）は残るが、詩自体は自己充足に近づいた",
+      "dimension_scores": {
+        "extensibility": { "score": 42, "weight": 0.35, "evidence": "『明日の宛先』という問い", "judgment": "連作の入口は残るが、実現が進んだ" },
+        "thematic_fertility": { "score": 42, "weight": 0.3, "evidence": "しわ・インクの匂い・受付の空気", "judgment": "各連が別の物語の入口になる" },
+        "audience_reach": { "score": 38, "weight": 0.25, "evidence": "問いの形", "judgment": "広い読者に届く形になった" },
+        "sustainability": { "score": 40, "weight": 0.1, "evidence": "痕跡の完成度", "judgment": "詩は自己充足し、余白が狭まった" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 40, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 74,
+      "strengths": ["『明日の宛先』という問いが、宛先人の物語という連作への扉を残す", "痕跡の世界が、映像・挿絵・連詩に耐える密度を持つ"],
+      "weaknesses": ["詩が自己充足し、未開拓の余白がv3より狭まった", "完成度が上がるほど、『次』が読み手の側に移る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実現途上の潜在", "ジャンル横断の余地"],
+      "unique_perspective": "価値は『完成』と『未完』の間にある。この詩は完成に近づき、潜在が現在価値へ転化しつつある",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "潜在の減少を価値の減少とみるかもしれない。私は実現とみる" }
+      ],
+      "improvement_suggestions": ["問いを残したまま最終形に収束させ、連作の芽を種として保存する", "これ以上広げず、完成形として確定させる"],
+      "narrative": "『明日の宛先』という問いは、この詩の向こうに別の物語が続くことを約束する。だが詩そのものは自己充足に近づき、潜在は現在価値へ転化しつつある。芽はまだ生きているが、それが育つ場所はもう、この一編の中にはほとんどない。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "詩『昨日の郵便局』v4の意味評価",
+      "domain": "creative",
+      "primary_score": 48,
+      "primary_score_rationale": "『昨夜の重さか、明日の宛先か』が過去と未来を手紙に架橋し、意味を開いたまま残す",
+      "dimension_scores": {
+        "philosophical_depth": { "score": 48, "weight": 0.35, "evidence": "『そのしわは、昨夜の重さか。それとも、明日の宛先か。』", "judgment": "未達が時間そのものを問いに開く" },
+        "universality": { "score": 50, "weight": 0.3, "evidence": "しわ・インクの匂い", "judgment": "誰の机にも残る痕跡に重ねられる" },
+        "structural_insight": { "score": 48, "weight": 0.25, "evidence": "問いが過去と未来を架橋する構造", "judgment": "時間設計が意味を運ぶ" },
+        "actionability_of_meaning": { "score": 46, "weight": 0.1, "evidence": "結語の『〜か』", "judgment": "問いが読者の側に意味の作業を残す" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 48 },
+      "classification": "trend_object",
+      "confidence": 78,
+      "strengths": ["問いが『未達が郵便を支える』という意味を、断定せずに開いたまま運ぶ", "しわを過去と未来に架橋し、一つの痕跡に二つの時間を住まわせた"],
+      "weaknesses": ["問いの対句が意味を美しくまとめすぎ、未達の痛みが薄まる", "概念の芯（未達が世界を支える）が、技巧の下にやや隠れた"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間の架橋による意味の開き", "痕跡として残る未達"],
+      "unique_perspective": "この詩の意味は『手紙が届かない』ことではなく、届かない痕跡が時間をまたいで残ることにある。問いはそのまたぎを読者に委ねる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "問いの修辞性を、意味の隠蔽とみるかもしれない" }
+      ],
+      "improvement_suggestions": ["問いのあとに、概念の芯を像として示す一行（毎朝の受付など）を残す", "対句の整いを一度崩し、未達の痛みを戻す"],
+      "narrative": "しわは昨夜の重さと明日の宛先を同時に運ぶ。未達は時間の架橋になり、意味は断定を避けて読者の側に開いた。問いは強いが、概念の芯が技巧の下にやや隠れ始めた——次の反復で、その芯を像として明け渡す必要がある。"
+    }
+  ],
+  "recommendations": [
+    "trend_object として記録。current 52 は current_success 圏内、hidden 44 は実現途上",
+    "結語の問いを保ったまま、最終形として全編の拍を安定させる",
+    "インクの匂い・受付の空気を連作（宛先人の視点）へ展開する芽を残す",
+    "過修正に注意。概念（未達が郵便を支える）の芯が失われていないか再確認する"
+  ],
+  "caveats": [
+    "scientific_novelty と business-value は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、52点は『真に良い』水準を明確に超えている",
+    "hidden 44 は潜在の実現途上を示し、次の反復で current に転化する見込み"
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "映画企画『瞬きの考古学者』v4改訂案：復元シークエンスをクライマックス＝映画の中心映像イベントとして確立し、公開という選択を手の行為として実装した近未来ミステリー",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    {
+      "evaluator_id": "scientific-novelty",
+      "reason": "映画企画に科学的新規性は不適合（例外的除外）"
+    },
+    {
+      "evaluator_id": "business-value",
+      "reason": "未商業化の映画企画に市場性評価は不適合（例外的除外）"
+    }
+  ],
+  "value_vector": {
+    "originality": {"mean": 65, "variance": 0, "min": 65, "max": 65, "scores": [65]},
+    "quality": {"mean": 61, "variance": 0, "min": 61, "max": 61, "scores": [61, 61]},
+    "aesthetic": {"mean": 61, "variance": 0, "min": 61, "max": 61, "scores": [61]},
+    "emotional_impact": {"mean": 69, "variance": 0, "min": 69, "max": 69, "scores": [69]},
+    "future_potential": {"mean": 73, "variance": 0, "min": 73, "max": 73, "scores": [73]}
+  },
+  "current_value_score": 64,
+  "hidden_potential_score": 73,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "anti-generic-filter"],
+      "arguments": [
+        "感情影響評価者: 公開という選択が手の行為として実装され、観客は玲と同時に『自分の過去を永久保存するか』を選ぶ。感傷でなく判断の重みで感情が運ばれる（69点）。",
+        "反凡庸フィルター: 静謐なクライマックスの完成度は評価するが、この体験へ観客を引き込む入口（第一幕）の設計がなければ、静けさは伝わらず届かない（品質61点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["quality-evaluator", "aesthetic-critic"],
+      "arguments": [
+        "品質評価者: 余白は具体の場面で担保され、クライマックスは確実に閉じる。次の段階は、復元シークエンスの時間設計を実際の脚本の時間軸で検証することである（61点）。",
+        "美的批評家: 復元シークエンスは『儀式』の地位を持ち、無音と手の映像が感傷を排除した身体の緊張で感情を運ぶ。この時間設計こそが美を決定する（61点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "v4では、全評価者が『復元シークエンスが場面として確立され、公開という選択が行為として実装された』ことで一致した。v3で指摘された余白の問題は、手の行為という具体の場面で担保され、企画段階の品質が最高域に入った。残る一致した懸念は、静謐な体験へ観客を引き込む第一幕の入口の設計と、時間設計の脚本化である。",
+  "executive_summary": "改訂案はイノベーション（Innovation）を維持しつつ前進した。現在価値は60→64、潜在価値は71→73へ上昇した。復元シークエンスの場面化が品質（61）と美（61）を押し上げ、公開という選択の行為としての実装が感情影響（69）を高めた。瞬きの文法は映像言語として完成に近づき、独創性（65）は『観客が再建する体験』として結晶化した。残る課題は、静謐なクライマックスへ観客を導く第一幕の入口と、時間・無音を含む脚本化である。",
+  "synthesis_narrative": "議長として私は、v4がv3の指令（余白を具体の場面で担保する）を忠実に反映したことを確認したい。v3で品質評価者が指摘した『省略は具体の場面を持って成立する』は、公開という手の行為によって回答された。美的批評家は、復元シークエンスが『儀式』の地位を得て、観客に玲と同じ時間の体験を強いることを評価した。感情影響評価者は、観客が玲と同時に『自分の過去を永久保存するか』を選ぶ、能動的な共感の完成を確認した。反凡庸フィルターは、凡庸の罠は消えたが、静けさへ観客を導く入口の設計が残る課題だと述べた。合議は一致してイノベーションを維持する。次は、この体験を観客へ確実に渡す映像の精密さが問われる。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の独創性評価",
+      "domain": "creative",
+      "primary_score": 65,
+      "primary_score_rationale": "復元シークエンスが物語のクライマックス＝映画の中心映像イベントとして設計され、逸脱が映像文法から場面へ昇格した。前提の神秘は保たれたまま、独創性が『観客が再建する体験』として結晶化した。",
+      "dimension_scores": {
+        "premise_novelty": {"score": 70, "weight": 0.4, "evidence": "1フレームの母、瞬きの文法", "judgment": "前提の神秘が場面として結晶化した。"},
+        "meaningful_deviation": {"score": 65, "weight": 0.4, "evidence": "クライマックス＝復元シークエンスという映像イベント", "judgment": "逸脱が映像文法を場面まで貫いた。"},
+        "recombination_risk": {"score": 56, "weight": 0.2, "evidence": "断片映像の扱い", "judgment": "類推力の残滓はさらに後退した。"}
+      },
+      "value_vector_contribution": {"originality": 65, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 77,
+      "strengths": [
+        "復元シークエンスが『観客が同じ時間を体験する』独自のクライマックスになった",
+        "前提の神秘が説明ゼロのまま、場面の重みで保たれた",
+        "瞬きの文法が、物語全体を貫く構造的独創として完成した"
+      ],
+      "weaknesses": [
+        "復元シークエンスに依存するため、そこが失敗すると企画全体が弱る",
+        "体験の独創性が高いほど、凡庸な観客への入口が狭くなる危険"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["映像メディア固有の方法論", "観客が再建する体験"],
+      "unique_perspective": "私は、この企画が『作品』から『体験』へ移行したと見る。復元シークエンスは、観客に玲と同一の再建作業を強いる唯一無二の場面だ。この『体験の独創性』は、あらすじでは書き切れない——映画でしか成立しない。そこにこの企画の最も守るべき価値がある。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "クライマックスの場面としての実装を脚本段階で検証することを求める"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "シークエンスへの依存の危うさを指摘する"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスを、時間・音・カットの設計を伴う場面として書き切る",
+        "体験の独創性を、観客に手がかりを与えて共有可能にする"
+      ],
+      "narrative": "独創性は場面まで到達した。復元シークエンスという体験が、この企画の唯一無二の価値になった。残る課題は、それを実際の映像場面として実装し、観客と共有できる形にすることだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルター",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の凡庸性スクリーニング（品質次元へ貢献）",
+      "domain": "creative",
+      "primary_score": 61,
+      "primary_score_rationale": "復元シークエンスが主人公固有の映像行為として、公開という選択が具体的な場面の行為として実装され、生成系AIの平均解から遠く離れた。感情操作の装置は解体されたまま、選択の行為が感情を運ぶ。",
+      "dimension_scores": {
+        "generic_structure_risk": {"score": 62, "weight": 0.4, "evidence": "クライマックス＝復元シークエンス、公開という行為", "judgment": "平均解から完全に離脱した。"},
+        "specificity": {"score": 64, "weight": 0.4, "evidence": "公開ボタンに触れる手、再生を止めない手、瞬きの同期", "judgment": "固有の語彙が場面の行為にまで具体化した。"},
+        "voice": {"score": 54, "weight": 0.2, "evidence": "語らない選択、沈黙のクライマックス", "judgment": "抑制という書き手の声が確立された。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 61, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "公開という選択が、語りでなく『手の行為』として実装された",
+        "クライマックスが感傷を排除し、行為の重みで成立する",
+        "瞬きの同期など、主人公固有の身体的な語彙が場面を決定づける"
+      ],
+      "weaknesses": [
+        "復元シークエンスに全ドラマを載せるため、前段の伏線が弱いと崩れる",
+        "静謐なクライマックスは、配給する側の理解を得にくい"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["固有の身体語彙", "感情操作からの脱却"],
+      "unique_perspective": "v3で私は余白への依存を警戒した。v4はその警戒に応えた——余白が『手の行為』という具体的な場面で担保された。省略は設計から成果になった。だが新しい問いは、この静謐さが観客に届くための『入口の設計』だ。凡庸の罠はもうない。残るのは伝達の問題である。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "emotional-impact", "predicted_stance": "行為の重みで感情を運ぶことを高く評価する"},
+        {"evaluator_type": "future-potential", "predicted_stance": "静謐さの市場での伝達を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスへ至る前段に、観客が同行できる伏線のリズムを設計する",
+        "静謐さを維持しつつ、入口（第一幕）で観客を引き込む場面を作る"
+      ],
+      "narrative": "余白は具体の行為になった。公開という選択が手の動きとして実装され、凡庸の罠は消えた。残る課題は、この静謐な体験へ観客を引き込む入口の設計だ。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "美的批評家",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の美的完成度評価",
+      "domain": "creative",
+      "primary_score": 61,
+      "primary_score_rationale": "復元シークエンスが映画の中心映像イベントとして、瞬きの文法がその時間の設計者として確立された。無音の使い方と手の映像が、感覚的な具体化を前進させた。",
+      "dimension_scores": {
+        "visual_core": {"score": 66, "weight": 0.5, "evidence": "復元シークエンス＝欠落が満ちる儀式、瞬きの同期", "judgment": "物語と美が同じ動きで進む形式が結晶化した。"},
+        "sensuous_realization": {"score": 55, "weight": 0.3, "evidence": "無音、公開ボタンに触れる手、空の椅子の時間", "judgment": "感覚的な具体化が場面の細部に現れた。"},
+        "formal_coherence": {"score": 61, "weight": 0.2, "evidence": "重要度重み＝保存条件と映像形式の一致", "judgment": "世界のルールが形式を貫く度合いがさらに強まった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": 61, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 79,
+      "strengths": [
+        "復元シークエンスが『儀式』の地位を持ち、観客に同じ時間の体験を強いる",
+        "無音と手の映像が、感傷でなく身体の緊張で感情を運ぶ",
+        "空の椅子の時間が、説明ゼロで喪失を語る映像的余白として完成した"
+      ],
+      "weaknesses": [
+        "復元シークエンスのテンポ設計に失敗すると、全体が間延びする",
+        "静謐な形式は、観客の映像リテラシーを選ぶ"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["儀式としての映像イベント", "無音の設計"],
+      "unique_perspective": "私が最も見たいのは、復元シークエンスの『時間』だ。欠落が満ちる速度、玲の瞬きとフレームの同期、無音の長さ——この時間の設計が、この映画の美を決定する。美はここで、物語を運ぶだけでなく、観客に『記憶が満ちる感覚』そのものを体験させる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "テンポ設計の実証を脚本段階で求める"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "無音の重みを高く評価する"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスの時間設計（速度・無音・同期）を詳細な脚本段階で固める",
+        "空の椅子のカットを、余白の美として映画全体のリズムに組み込む"
+      ],
+      "narrative": "復元シークエンスは美の中心となった。無音と手の映像が、感傷を排除した身体の緊張で感情を運ぶ。残る課題は、その時間を実際のテンポとして書き切ることだ。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "感情影響評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の感情への影響評価",
+      "domain": "creative",
+      "primary_score": 69,
+      "primary_score_rationale": "公開という選択が『手の行為』として実装され、説明ゼロのまま観客が母の選択に到達する構造が完成した。感情は感傷でなく、行為と余白の重みで運ばれる。",
+      "dimension_scores": {
+        "empathy_generation": {"score": 70, "weight": 0.5, "evidence": "顔を知らない母、瞬きという遺伝のしぐさ、復元する玲", "judgment": "観客は玲と同じ再建作業で共感する。"},
+        "emotional_stake": {"score": 71, "weight": 0.3, "evidence": "公開ボタンに触れる手、玲自身の幼少映像の永続保存", "judgment": "選択が具体的な行為として観客の賭け金になる。"},
+        "memory_persistence": {"score": 64, "weight": 0.2, "evidence": "瞬きの同期、空の椅子", "judgment": "映像が残像として強く記憶に残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": 69, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": [
+        "公開という選択が、観客自身の問いとして具体の行為に昇格した",
+        "説明ゼロで母の選択に到達させる、能動的な共感の構造",
+        "瞬きの同期が、母と玲と観客を同一の身体へ結ぶ"
+      ],
+      "weaknesses": [
+        "観客が母の選択に到達できない場合、感情は着地しない",
+        "クライマックスの静謐さが、観客の感情の温度を測りにくくする"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["能動的な共感", "感傷を排除した選択の重み"],
+      "unique_perspective": "v3で私は『感情が観客の仕事になった』と述べた。v4はそれを完成させた——公開ボタンに触れる手は、観客がその場で下すべき判断そのものだ。観客は玲と同時に『自分の過去を永久保存するか』を選ぶ。ここに、感傷とは異なる、判断の重みによる感情がある。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "行為の重みを評価するが、入口の設計を指摘する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "観客依存の感情の着地を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "母の選択（子を守るための消滅）への手がかりを、映像として第一幕で準備する",
+        "クライマックスの無音の長さを、感情の着地点として設計する"
+      ],
+      "narrative": "感情は判断の重みになった。公開という行為が観客自身の問いとして立ち上がり、感傷を排除した共感の構造が完成した。残る課題は、その着地点を観客に確実に渡すことだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "品質評価者",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の完成度・構造品質評価",
+      "domain": "creative",
+      "primary_score": 61,
+      "primary_score_rationale": "復元シークエンスがクライマックスの場面として、公開という選択が行為として実装され、構造の完成度が飛躍した。余白は具体の場面で担保され、企画段階の品質が最高域に入った。",
+      "dimension_scores": {
+        "structural_completion": {"score": 64, "weight": 0.4, "evidence": "復元シークエンス＝クライマックス、公開という結末の行為", "judgment": "三幕構成の後半が場面として完成した。"},
+        "premise_execution": {"score": 61, "weight": 0.3, "evidence": "瞬きの文法が復元と公開を貫く", "judgment": "前提が構造全体を機能させている。"},
+        "craft_precision": {"score": 58, "weight": 0.3, "evidence": "手の映像、無音、断片映像の提示タイミング", "judgment": "脚本の精密さが企図から具体へ進んだ。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 61, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 77,
+      "strengths": [
+        "クライマックスが具体的な場面として設計され、物語が確実に閉じる",
+        "余白が場面の行為で担保され、美辞麗句に堕ちていない",
+        "復元シークエンスの時間設計が、品質を次の段階へ引き上げる"
+      ],
+      "weaknesses": [
+        "復元シークエンスに全ドラマを載せるため、前段の充実が必要",
+        "あくまで企画段階で、脚本の実物の完成度は未検証"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["場面としてのクライマックス", "余白の具体的担保"],
+      "unique_perspective": "v3で私は『省略は具体の場面を持って成立する』と述べた。v4はその問いに答えた——公開という選択が手の行為として実装され、余白が担保された。品質は企画段階の上限に達しつつある。次の段階は、この設計を実際の脚本の時間軸で検証することだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "aesthetic-critic", "predicted_stance": "テンポ設計の完全な実証を求める"},
+        {"evaluator_type": "emotional-impact", "predicted_stance": "観客依存の着地を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "復元シークエンスを含む脚本の時間軸を設計し、実際の場面として検証する",
+        "前段の伏線（瞬きの意味）を、クライマックスの重みが立つよう設計する"
+      ],
+      "narrative": "品質は場面の実装で大きく前進した。余白は担保され、クライマックスは確実に閉じる。残る課題は、この設計を脚本の実物として検証することだ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "映画企画『瞬きの考古学者』v4改訂案の長期的可能性評価",
+      "domain": "creative",
+      "primary_score": 73,
+      "primary_score_rationale": "復元シークエンスという映像言語が、単独作を超えて再利用可能な資産として確立された。個人と社会の二重性はどちらにも寄らず、環境変化で価値が一層上昇する方向に定まった。",
+      "dimension_scores": {
+        "environment_fit": {"score": 74, "weight": 0.4, "evidence": "AIによる映像再構成、記憶の所有", "judgment": "記憶が権力化する未来に主題の切実さは増す。"},
+        "expansion_room": {"score": 73, "weight": 0.3, "evidence": "復元シークエンス、瞬きの文法、断片映像", "judgment": "映像言語として何度も回収できる資産になった。"},
+        "timeliness_risk": {"score": 72, "weight": 0.3, "evidence": "監視実験の類推力の完全な後退", "judgment": "差別化が独自ルールで確実に担保された。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 73, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 79,
+      "strengths": [
+        "復元シークエンスが、他作品が持ち出せない映像言語資産として確立した",
+        "個人と社会の二重性が、どちらにも寄らず均衡を保つ",
+        "静謐なトーンが、長期的な記憶に残る作品の形になっている"
+      ],
+      "weaknesses": [
+        "静謐な体験は観客を選び、初期の市場的な広がりを制限する",
+        "映像言語が強すぎると、シリーズ展開で物語性が薄まる危険"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["映像言語としての資産", "主題の時代適合性"],
+      "unique_perspective": "私はこの企画が『言語の価値』に到達したと見る。瞬きの文法と復元の体験は、単独作を超えて、続編・前日譚・メディアミックスで何度も回収できる。未来の価値は、この言語をいかに体系化し、観客に伝えるかにかかっている。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "静謐さの伝達を懸念する"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "シリーズ展開での物語性を懸念する"}
+      ],
+      "improvement_suggestions": [
+        "瞬きの文法を、独立した映像言語として体系化し、資産化する",
+        "静謐さを維持しつつ、観客を引き込む第一幕の入口を強化する"
+      ],
+      "narrative": "この企画は映像言語の価値に到達した。復元の体験は何度も回収できる資産であり、未来の射程は広がる。残る課題は、その言語を観客にどう伝えるかだ。"
+    }
+  ],
+  "recommendations": [
+    "復元シークエンスの時間設計（速度・無音・瞬きの同期）を脚本段階で書き切る",
+    "観客を静けさへ導く第一幕の入口の場面を設計する",
+    "母の選択への手がかり（瞬きの意味）を第一幕から映像的に敷く",
+    "静謐さを維持しつつ、シリーズ展開に耐える物語性を映像言語で担保する",
+    "クライマックスの無音の長さを、感情の着地点として設計する"
+  ],
+  "caveats": [
+    "評価対象は企画・あらすじであり、脚本・演出の実物ではない。品質・美のスコアは企画段階の上限",
+    "復元シークエンスへの依存が強く、その場面の設計に失敗すると企画全体が弱る",
+    "イノベーション判定は『現在価値・潜在価値ともに45以上』の基準を満たしたもの。完成作の実物検証は未実施"
+  ]
+}

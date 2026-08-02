@@ -1,0 +1,231 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "個人邸『光の暦——一本の樹を囲む家』v1初案——樹を中心にした環状住宅の粗い骨格",
+  "content_type": "structured",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "建築設計に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "個人邸設計に市場性評価は不適合（例外的除外）" },
+    { "evaluator_id": "philosophical-evaluator", "reason": "建築設計に哲学的評価は不適合（例外的除外）" },
+    { "evaluator_id": "meaning-evaluator", "reason": "建築設計に意味評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
+    "quality": { "mean": 24, "variance": 1, "min": 23, "max": 25, "scores": [23, 25] },
+    "aesthetic": { "mean": 30, "variance": 0, "min": 30, "max": 30, "scores": [30] },
+    "emotional_impact": { "mean": 28, "variance": 0, "min": 28, "max": 28, "scores": [28] },
+    "future_potential": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] }
+  },
+  "current_value_score": 33,
+  "hidden_potential_score": 46,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 吹き抜け・木の温もり・小さな中庭という住宅広告の定番語彙が執行を凡庸にしている。23点。",
+        "quality-evaluator: 定番語彙より構造の欠如（荷重経路の不明・平屋根の雨仕舞）こそ致命的で、樹の話を別にすれば計画はまだ建てられない。25点。"
+      ]
+    },
+    {
+      "dimension": "originality",
+      "variance": 0,
+      "disputing_evaluators": ["originality", "anti-generic-filter"],
+      "arguments": [
+        "originality: 樹齢150年の樹を第五柱として構造の中心に据える環状計画は、概念レベルで個人邸の定番と明確に異なる。独創性50点。",
+        "anti-generic-filter: 骨格は新しくとも、その周囲の執行が住宅広告の語彙で埋まっており、概念の新奇さが凡庸の執行に埋もれる。"
+      ]
+    }
+  ],
+  "consensus_summary": "独創性(50)・未来(46)が『無難』をやや上回る一方、品質(24)・美(30)・感情(28)は凡庸域。樹を中心に据える骨格という良い着想が、光・構造・動線の粗い執行に埋もれている典型。current=33 / hidden=46 で discovery_target で概ね一致。",
+  "executive_summary": "『光の暦——一本の樹を囲む家』は、樹齢150年のコナラを構造の中心（第五柱）に据える環状計画という独創性（50）を持つが、光・構造・動線が口先の約束に留まり、品質24・美30・感情28と凡庸域。厳格スコアリングのもと current=33 / hidden=46 で discovery_target。改善余地は明確（屋根の雨仕舞・荷重経路の明示・回遊動線・断面の起伏）。",
+  "synthesis_narrative": "厳格スコアリング（中央値約30）のもと、この計画は『良い着想・未熟な執行』の典型。独創性評価者は中心樹という空間のアンカーを50点と認めたが、anti-genericフィルタは定番語彙と感情の約束を赤旗に23点、品質評価者は構造概念のすり替えと平屋根の雨仕舞を25点と最低評価した。美・感情は概念の種を認めつつ、空間の体感が描けていないと30点前後。全体として『磨けば価値になる』の discovery_target。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "個人邸『光の暦』v1初案の独創性評価",
+      "domain": "creative",
+      "primary_score": 50,
+      "primary_score_rationale": "樹を中心に住まいを環状に巻くという空間の類型は新しいが、光・構造・動線の展開がまだ口先に留まる",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 58, "weight": 0.35, "evidence": "樹齢150年のコナラを『第五柱』として構造の中心に据える環状計画", "judgment": "概念は住宅の定番から明確に離れる" },
+        "combinatorial_surprise": { "score": 50, "weight": 0.25, "evidence": "樹×光（朝昼夕）×環状動線の結合", "judgment": "意外だが半ば予想できる範囲" },
+        "distance_from_template": { "score": 44, "weight": 0.25, "evidence": "一般的な個人邸（四角い箱＋吹き抜け）からの距離", "judgment": "環状・中心樹で距離を取るが、細部は未加工" },
+        "non_obviousness": { "score": 45, "weight": 0.15, "evidence": "樹を耐力要素として使う発想", "judgment": "専門家を驚かせるほどではない" }
+      },
+      "value_vector_contribution": { "originality": 50, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": ["樹を耐力要素（第五柱）に据える環状計画は、個人邸の定番構成と明確に異なる", "朝昼夕の光に部屋を割り当てる『光の暦』の着想"],
+      "weaknesses": ["『樹が支える』と記すのみで、荷重経路が曖昧", "光の計画が『朝昼夕』と述べるだけで断面に落ちていない", "環状と言いながら実際の動線は廊下の行き止まりだらけ"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["中心樹という空間のアンカー", "光を時間軸にした概念"],
+      "unique_perspective": "この計画の新しさは『樹を残す』ことではなく『樹に支えられる』ことにあり、v1はまだその意味を語り切れていない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "執行の凡庸さを挙げ、私の独創性評価を甘いとみるだろう" }
+      ],
+      "improvement_suggestions": ["構造図に樹を『第五柱』として明記し、荷重経路を見せる", "光の計画を断面図に落とす（冬至・夏至・春分の三断面）", "動線を一本の回遊に統合し、行き止まりを全廃する"],
+      "narrative": "環状に住まいを巻き、樹を構造の中心に置くという骨格は、個人邸の文法を打ち変える可能性を持つ。しかしv1では、その骨格が光と構造の言葉にまだ翻訳されていない。概念が断面と図面に降りてくれば、この家は予想外を宿せる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "個人邸『光の暦』v1初案の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 23,
+      "primary_score_rationale": "『吹き抜け』『木の温もり』『自然に包まれる暮らし』といった住宅広告の定番語彙で肉付けされており、概念の新奇さが執行の凡庸さに埋まる",
+      "dimension_scores": {
+        "cliche_density": { "score": 20, "weight": 0.3, "evidence": "『オーク材と土壁』『小さな中庭』『自然に包まれる』", "judgment": "住宅カタログの常套句が散在" },
+        "emotional_manipulation": { "score": 25, "weight": 0.3, "evidence": "『樹に抱かれて暮らす』という触れ込み", "judgment": "情感を言葉で約束し、建築で実現していない" },
+        "structural_predictability": { "score": 24, "weight": 0.25, "evidence": "べた基礎・平屋根・行き止まり廊下", "judgment": "平面が型どおりで、環状の約束と矛盾" },
+        "substance_over_style": { "score": 22, "weight": 0.15, "evidence": "『樹が支える』と述べるだけ", "judgment": "見せる代わりに唱える" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 23, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "low_signal",
+      "confidence": 80,
+      "strengths": ["中心樹という骨格そのものは凡庸ではない"],
+      "weaknesses": ["吹き抜け・木の温もり・中庭という定番の装備が概念に貼り付く", "感情を『自然と暮らす』で約束して、空間で証明しない", "平屋根が樹の落水線を傷め、計画の誠実さが疑われる"],
+      "red_flags_triggered": ["定番語彙の散在", "感情の約束（自然志向のセンチメンタル）"],
+      "green_flags_detected": ["樹を構造に巻き込むという非凡庸な骨格"],
+      "unique_perspective": "新奇な中心樹に目を奪われると、その周囲に積まれた『吹き抜け』『木の温もり』という住宅広告の語彙が凡庸として潜む",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "骨格の新規性を重視し、23点は過小評価とみるだろう" }
+      ],
+      "improvement_suggestions": ["定番装備（吹き抜け・中庭・木の温もり）を一つずつ原理から導き直す", "感情を言葉で約束せず、光・構造・材料で実現する", "平屋根をやめ、樹の落水線から逃げる屋根形にする"],
+      "narrative": "この計画の凡庸は、中心樹の新奇さに紛れて入り込んだ定番語彙にある。『自然に包まれる暮らし』は、建築で証明されない限り住宅広告の言葉だ。骨格が独創的だからこそ、執行の凡庸さは隠れてしまう。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "個人邸『光の暦』v1初案の美的評価",
+      "domain": "creative",
+      "primary_score": 30,
+      "primary_score_rationale": "樹を中心に据える空間の骨格は美の芯になり得るが、光・材料・断面が未形成で、美が言葉の約束のまま留まる",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 28, "weight": 0.35, "evidence": "『オーク材と土壁』『樹の下の中庭』", "judgment": "感覚の種はあるが数が少なく具体がない" },
+        "spatial_composition": { "score": 30, "weight": 0.25, "evidence": "環状の計画とスプリットレベルの不在", "judgment": "骨格はあるが、断面に起伏がない" },
+        "material_honesty": { "score": 32, "weight": 0.25, "evidence": "土壁・木・樹という素材の揃え", "judgment": "素材の意志は良いが経年が未検討" },
+        "cohesion": { "score": 31, "weight": 0.15, "evidence": "中心樹が全体を一つに束ねようとする", "judgment": "整合の原理はあるが実現していない" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 30, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": ["樹を中心に据えることで、空間全体が一つの焦点に収束する骨格", "土壁・木・樹という、同族の素材による静かな揃え"],
+      "weaknesses": ["光が言葉の約束のままで、空間の体感が描けない", "平らな断面が単調で、アクセントになる立体がない", "材料の経年（雨・霜・樹との出会い）が未検討"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["中心にアンカーを持つ空間構成"],
+      "unique_perspective": "美は『樹を守る』という物語ではなく、樹と建物が交わる接点（樹冠・落水線・影）に生まれる。v1はその接点を避けている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "私の美的関心は構造未解決の前に無力で、計画の成立を優先するだろう" }
+      ],
+      "improvement_suggestions": ["光の計画を断面図に落とし、影の造形を具体化する", "樹と建物の接点（樹冠・落水線・足元）を設計対象にする", "スプリットレベルを導入し、断面に起伏を与える"],
+      "narrative": "中心樹が空間を一つの焦点に束ねる骨格は、美の核になり得る。しかしv1は光を言葉で約束し、断面は平らで、樹との接点を避けている。美は樹と建物が交わる境界に宿るのに、その境界がまだ設計されていない。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "個人邸『光の暦』v1初案の情動評価",
+      "domain": "creative",
+      "primary_score": 28,
+      "primary_score_rationale": "『樹に抱かれて暮らす』という触れ込みは情動の約束だが、動線が行き止まり、光が具体化されず、住まう感覚が言葉に置き換えられている",
+      "dimension_scores": {
+        "visceral_response": { "score": 26, "weight": 0.35, "evidence": "樹冠の下の中庭", "judgment": "素材は心に触れるが、空間として実感できない" },
+        "belonging_atmosphere": { "score": 30, "weight": 0.3, "evidence": "樹に帰る住まい", "judgment": "住まいの核はあるが演出に傾く" },
+        "empathy_triggers": { "score": 28, "weight": 0.25, "evidence": "朝昼夕の光に部屋を割り当てる", "judgment": "暮らしの祈りは伝わるが、実装が弱い" },
+        "subtlety_of_feeling": { "score": 26, "weight": 0.1, "evidence": "『自然に包まれる』", "judgment": "感情を言葉で回収し、余白がない" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 28, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": ["樹に帰るという住まいの核が、強い情動の中心になり得る"],
+      "weaknesses": ["感情を『自然に包まれる暮らし』と直接述べ、空間で証明しない", "行き止まりの動線が、暮らしの呼吸を滞らせる"],
+      "red_flags_triggered": ["感情の直接述定（テリング）"],
+      "green_flags_detected": ["中心樹という情動核の存在"],
+      "unique_perspective": "この家の感動は『樹を残した』という物語ではなく、樹冠の下で過ごす日常そのものにある。v1は物語を語って日常を描いていない",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "情動の約束が空間に実体化していない点を、美の欠如として減点するだろう" }
+      ],
+      "improvement_suggestions": ["感情を言葉で約束せず、光と動線という行為で住まう感覚をつくる", "行き止まりを廃し、樹に立ち戻る動線に感情を委ねる", "朝昼夕の光の割り当てを、実際の身体の動作に落とす"],
+      "narrative": "『樹に抱かれて暮らす』という約束は美しいが、v1はそれを言葉で回収してしまう。動線は行き止まりだらけで、光は具体化されず、住まう感覚が体に届かない。樹の下で過ごす日常そのものを描けば、この家は心に残る。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "個人邸『光の暦』v1初案の品質評価",
+      "domain": "creative",
+      "primary_score": 25,
+      "primary_score_rationale": "構造は『樹が支える』と唱えるのみで荷重経路が不明、平屋根が樹を傷め、べた基礎が斜面を無視しており、建てる品質に届かない",
+      "dimension_scores": {
+        "structural_feasibility": { "score": 22, "weight": 0.35, "evidence": "『樹が支える』と記すのみ、屋根の折れも荷重経路も不明", "judgment": "構造が概念にすり替えられている" },
+        "functional_program": { "score": 27, "weight": 0.25, "evidence": "朝昼夕の部屋割り、環状の住まい方", "judgment": "プログラムの着想は良いが動線が行き止まり" },
+        "buildability": { "score": 26, "weight": 0.25, "evidence": "べた基礎で斜面を均す", "judgment": "敷地の既存条件を工法で潰している" },
+        "durability": { "score": 27, "weight": 0.15, "evidence": "平屋根の落水線と樹の関係", "judgment": "雨仕舞の失敗が予見される" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 25, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "low_signal",
+      "confidence": 78,
+      "strengths": ["朝昼夕の光に部屋を割り当てるプログラムの骨子は健全"],
+      "weaknesses": ["構造の荷重経路が図面にない（概念の代用）", "平屋根が樹の落水線を傷め、雨仕舞が成立しない", "斜面をべた基礎で均し、地形の意味を捨てている", "動線に行き止まりがあり、機能動線が非効率"],
+      "red_flags_triggered": ["構造概念のすり替え", "敷地条件の無視"],
+      "green_flags_detected": ["健全なプログラム着想"],
+      "unique_perspective": "独創性が高ければ高いほど、構造の欠如は見逃されやすい。この計画は『樹が支える』という一句で構造の問いを閉じてしまっている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "私の品質評価は概念の価値を無視したとみるだろう" }
+      ],
+      "improvement_suggestions": ["構造図を描く：柱列と梁の位置、樹の荷重分担を明示", "屋根を樹の落水線から逃がし、雨仕舞を成立させる", "斜面に沿って半層ずつ降りる断面とし、地形に従う", "動線を一本化して行き止まりを廃す"],
+      "narrative": "概念は『樹が支える』という一句に構造を委ね、品質としての問いを開いていない。平屋根は樹を傷め、べた基礎は地形を均し、動線は行き止まりだ。着想が良いだけに、この粗さは惜しい。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "個人邸『光の暦』v1初案の将来性評価",
+      "domain": "creative",
+      "primary_score": 46,
+      "primary_score_rationale": "中心樹というアンカーは長期の住まいとして拡張可能だが、v1の執行が粗く、世界が一回で消費される",
+      "dimension_scores": {
+        "extensibility": { "score": 48, "weight": 0.35, "evidence": "環状の計画は家族構成の変化に部屋を増減できる", "judgment": "中心を軸に拡張可能" },
+        "site_longevity": { "score": 47, "weight": 0.3, "evidence": "樹齢150年の樹を残す意志", "judgment": "時間軸のある住まいの種がある" },
+        "audience_reach": { "score": 42, "weight": 0.25, "evidence": "樹を中心にした個人邸の類型", "judgment": "多くの敷地に翻訳可能だが、現在の形は狭い" },
+        "sustainability": { "score": 44, "weight": 0.1, "evidence": "斜面と樹という既存条件", "judgment": "資源への応答は構想のみ" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 46, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 68,
+      "strengths": ["中心樹という時間軸（150年）が、住まいに寿命を与える", "環状計画は家族構成の変化に耐える拡張性を持つ"],
+      "weaknesses": ["v1の執行が粗く、骨格の魅力が伝わらない", "光・構造が構想のみで、『光の暦』という世界が未開拓"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間軸のある空間概念", "拡張可能な骨格"],
+      "unique_perspective": "他の評価者は完成度を見るが、私は『この敷地に百年住めるか』を見る。樹を残す計画はその条件を最初から満たしている",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "私の将来性評価は現在の凡庸さを甘く見ているとみるだろう" }
+      ],
+      "improvement_suggestions": ["光の暦という時間概念を、実際の影・季節の装置として実装する", "環状の拡張性を、家族構成の変化と対応させて明示する", "斜面の既存条件（水・風・日当たり）を地層として残す"],
+      "narrative": "樹齢150年の樹を中心に据える計画は、一邸で終わるにはもったいない時間軸を持つ。環状の骨格は家族の変化に耐え、光の暦は何世代もの住まいを照らせる。しかしv1は構想を描くだけに留まり、その世界に住む感覚をまだ渡していない。"
+    }
+  ],
+  "recommendations": [
+    "discovery_target として記録し、v2で構造・動線・屋根形を具体化して再評価する",
+    "構造図に樹を『第五柱』として明記し、荷重経路を隠さず示す",
+    "平屋根をやめ、樹の落水線から逃げる屋根形にする",
+    "動線を一本の回遊に統合し、行き止まりを全廃する",
+    "光の計画を断面図に落とし、斜面に沿うスプリットレベルを導入する"
+  ],
+  "caveats": [
+    "scientific-novelty・business-value・philosophical-evaluator・meaning-evaluator は建築設計に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、絶対スコアの水準は意図的に低い",
+    "独創性50点は概念由来で、執行の凡庸さ（品質24）と大きく乖離する点が改訂の主な焦点"
+  ]
+}

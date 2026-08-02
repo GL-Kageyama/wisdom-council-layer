@@ -1,0 +1,288 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "FOODSIGN（フードサイン）v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+  "domain": "business",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [
+    {"evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）"},
+    {"evaluator_id": "aesthetic-critic", "reason": "企画文書に美的完成度の評価軸は不適合"},
+    {"evaluator_id": "emotional-impact", "reason": "ビジネス企画評価では主軸とならない（消費者感情はbusiness-valueが担う）"},
+    {"evaluator_id": "philosophical-evaluator", "reason": "企画段階では市場価値の検証が優先され、世界観の変容評価は時期尚早"}
+  ],
+  "value_vector": {
+    "originality": {"mean": 53, "variance": 0, "min": 53, "max": 53, "scores": [53]},
+    "quality": {"mean": 63, "variance": 4, "min": 61, "max": 65, "scores": [65, 61]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 37, "variance": 0, "min": 37, "max": 37, "scores": [37]},
+    "business_value": {"mean": 70, "variance": 0, "min": 70, "max": 70, "scores": [70]},
+    "scientific_novelty": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 31, "variance": 0, "min": 31, "max": 31, "scores": [31]}
+  },
+  "current_value_score": 62,
+  "hidden_potential_score": 34,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 4,
+      "disputing_evaluators": ["quality-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "quality-evaluator: 予測精度SLA（95%）・API仕様・300店の品質維持計画まで明記され、企画が『標準になる』段階の仕様書として完成した（65）",
+        "anti-generic-filter: 精度SLAとAPIで数字と標準が具体化したが、『データ×物流×コンサル×API』と柱が増え、統合の複雑さという新たな定型の予感がある（61）"
+      ]
+    },
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": ["business-value", "meaning-evaluator"],
+      "arguments": [
+        "business-value: 30社契約・MRR 9,000万円・API配布でネットワーク効果が描かれ、事業が『標準』を狙える段階へ到達した（70）",
+        "meaning-evaluator: 人間の物語は核に据えられたが、スケールする事業の中でその物語が管理され、薄まっていく懸念は消えない（31）"
+      ]
+    }
+  ],
+  "consensus_summary": "6名の評価者は、300店スケール・業界API標準化・予測精度SLA（95%）という構想が、企画を『実証された事業』から『標準を狙う事業』へ引き上げた点で一致。ビジネス価値（70）と品質（63）は最終ラウンドで最も高まり、current_successを強く維持した。future-potentialは業界標準化で複利の制度化に近づいたと評価を上げ、meaning-evaluatorは物語が核に据えられたことを認めつつも、スケール時の意味の薄まりという持続的な懐疑を最後まで保持した。",
+  "executive_summary": "FOODSIGN v5は、全国300店で予測精度94%を維持し、焼き上げ予測を業界標準APIとして公開する構想で、ネットワーク効果と模倣の構造的困難を同時に描いた。データライセンス30社・MRR 9,000万円・予測精度SLA（95%）がユニットエコノミクスと標準化の両面を完成させた。現時点の価値（≈62）は、5回のループを経て『構想』から『標準を狙う実証事業』へ到達したことを示す。",
+  "synthesis_narrative": "合議はv5をcurrent_successと判定した。v4の指令（300店スケール・API標準化・測定方法・物語の核化）が、企画を実証と標準の両面で仕上げた。残る問いは、業界標準としての制度化が実際に成立するか、そしてスケールの中で人間の物語が本当に生き残るか——未来の時間軸に委ねられる。5回のループは、反凡庸の指示が毎回企画を具体化へ押し、頭打ちではなく収束に向かって改善したことを示す。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 53,
+      "primary_score_rationale": "焼き上げ予測を業界標準APIとして公開する構想が、独占データを模倣困難から『依存』へ変える新たな非自明を生んだ。データ基盤の蓄積方法の独自性が、標準化という視点で最終的に補完された。",
+      "dimension_scores": {
+        "conceptual_novelty": {"score": 53, "weight": 0.35, "evidence": "「焼き上げ予測を業界標準APIとして公開する」という、囲い込みと逆の戦略", "judgment": "独占の逆転——公開による標準化——が、領域の常識に反する新しさを生む。"},
+        "combinatorial_surprise": {"score": 53, "weight": 0.25, "evidence": "「独占データ×API標準×食卓に還す物語」の結合が、模倣と意味の両方に答える", "judgment": "ビジネスと人間の層が、一つの構造で接続された。"},
+        "distance_from_template": {"score": 54, "weight": 0.25, "evidence": "消費者割引テンプレートはもちろん、B2BデータSaaSの『囲い込み』定型からも外れた", "judgment": "最も近い先行作品からの距離が、標準化戦略で最終的に最大となった。"},
+        "non_obviousness": {"score": 52, "weight": 0.15, "evidence": "独占資産を公開して標準を作るという逆張りは、実践者が通常選ばない死角", "judgment": "見て「なるほど」とはなるが、自然には思いつきにくい。"}
+      },
+      "value_vector_contribution": {"originality": 53, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 74,
+      "strengths": [
+        "独占データを業界標準APIとして公開する逆張りが、新たな意味ある逸脱を生んだ",
+        "模倣困難から『依存』への転換という、ビジネスと独自性の両立が描かれた"
+      ],
+      "weaknesses": [
+        "API標準化の実現には業界側の採用が前提で、独自性の帰結が外部に委ねられる",
+        "標準になるまでの間に、より資金力のある競合が同等の標準を提案し得る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["逆張りの標準化戦略", "独占と公開の両立"],
+      "unique_perspective": "私はv2から『手法でなく業界独自の知識を中核に』と言い続けた。v5はその知識を『公開して標準にする』という、最も大胆な形で中核に据えた。独占が弱点になる領域で、公開が最強の防御になる——これが最終ラウンドの非自明だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "標準化によるネットワーク効果を高く評価し、私と同程度かより高い点を付けるだろう。"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "柱の増加による統合の複雑さを指摘するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "業界API標準を他SaaSに組み込む具体的な採用プラン（パイロット20社の進捗）を継続して実証する",
+        "標準を巡る競合との競走を想定し、独自の運用知識でデータの質を差別化し続ける"
+      ],
+      "narrative": "この5回のループで、私はこの企画が『同じ市場の見方を変える』から始まり、『独占を公開で標準にする』という逆張りに到達するのを見た。独自性は手法から知識へ、知識から標準へと姿を変えた。次の戦いは、その標準を巡る競走だ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 61,
+      "primary_score_rationale": "予測精度SLA（95%）・API仕様・300店の品質維持計画まで具体化され、数字と標準が実務の言葉になった。ただし柱が増えて統合の複雑さという新たな定型の予感があり、完全な脱凡庸には至らない。",
+      "dimension_scores": {
+        "generic_language_density": {"score": 62, "weight": 0.30, "evidence": "「予測精度SLA 95%」「API利用料 月額20万円×20社」「特許3件」と実務の細部", "judgment": "企画が実装の言葉で語られ、汎用性がほぼ消滅した。"},
+        "risk_avoidance": {"score": 63, "weight": 0.25, "evidence": "独占を公開で標準にするという、リスクを取った戦略的決断", "judgment": "囲い込まず公開する——判断を下し、反論を呼び込む覚悟が最終的に完成した。"},
+        "information_density": {"score": 60, "weight": 0.25, "evidence": "契約数・MRR・SLA・API仕様・特許が、統合された1つの事業像を形作る", "judgment": "情報量は最大だが、柱の多さが統合の複雑さを生む。"},
+        "particularity": {"score": 58, "weight": 0.20, "evidence": "「焼き上げ予測API」「食卓に還す」など、他企画に置き換えられない細部", "judgment": "この事業固有の言葉が、全体を貫いている。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 61, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 77,
+      "strengths": [
+        "SLA・API仕様・特許3件まで実務の言葉で書かれ、汎用表現が消滅した",
+        "「囲わず公開する」という、リスクを取った戦略的決断が明確である",
+        "この事業固有の細部（焼き上げAPI・食卓に還す）が全体を貫く"
+      ],
+      "weaknesses": [
+        "収益柱がデータ・物流・コンサル・APIと増え、統合の複雑さという新たな定型の予感がある",
+        "300店での精度維持がSLAで約束されたが、その達成手段の細部が未記載"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実務言語への深化", "リスクを取った戦略決断", "事業固有の細部の貫通"],
+      "unique_perspective": "私は5回のループで、この企画が『平均的な正しさ』の言葉から、この事業だけの言葉へ書き換わるのを見た。最後に残る凡庸の匂いは『柱の多さ』だ。標準という1つの軸に統合できれば、この企画は凡庸の領分を完全に脱する。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "仕様書としての完成度を評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "ネットワーク効果を重視し、統合の複雑さには寛容だろう。"}
+      ],
+      "improvement_suggestions": [
+        "300店での精度維持手段（人員・運用・監視）を具体化し、SLAの裏付けを補強する",
+        "収益柱を『予測API』という1つの軸に統合し、柱の多さによる複雑さを解消する"
+      ],
+      "narrative": "v1の私は『店舗の冷蔵庫の現実を語れ』と言った。v5の企画は、その現実を焼き上げAPIという標準の言葉にまで高めた。最後の凡庸の匂いは柱の多さだけだ。1つの軸に統合されれば、この企画は凡庸の領分を完全に脱する。"
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 70,
+      "primary_score_rationale": "30社契約・MRR 9,000万円・API配布によるネットワーク効果が描かれ、事業が『実証』から『標準』を狙える段階へ到達した。模倣コストの構造的増大とリカーリング収益の拡大が、投資家が求める最終形を満たす。",
+      "dimension_scores": {
+        "market_demand": {"score": 71, "weight": 0.30, "evidence": "データライセンス契約30社・MRR 9,000万円と需要が拡大し、SLAで価値が約束される", "judgment": "需要は実証から拡大の局面に入った。契約の質（継続率）が次の焦点。"},
+        "growth_potential": {"score": 72, "weight": 0.25, "evidence": "業界API配布（20社）で市場の果実を自社だけでなく標準として取り込む", "judgment": "成長が線形から、標準による複利的な市場支配へ変わる。"},
+        "feasibility_of_delivery": {"score": 68, "weight": 0.20, "evidence": "300店で精度94%を維持し、予測精度SLA（95%）で品質を約束", "judgment": "スケール実行の道筋が具体化した。達成手段の細部はこれから。"},
+        "competitive_advantage": {"score": 69, "weight": 0.25, "evidence": "特許3件・独占データ・業界API標準で模倣コストを構造的に高くする", "judgment": "障壁が『模倣困難』から『標準による依存』へ昇格した。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 70, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": [
+        "30社契約・MRR 9,000万円でリカーリング収益のスケールが描けた",
+        "業界API標準化で、成長が複利的な市場支配へ変わる構造が提示された",
+        "特許3件・独占データ・API標準で、模倣コストを構造的に高くした"
+      ],
+      "weaknesses": [
+        "標準になるためには業界の採用が前提で、その実現リスクが事業に内包される",
+        "SLA（95%）の達成手段と、スケール時の継続率（チャーン）が未実証"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["スケールするリカーリング収益", "ネットワーク効果（API標準）", "構造的な模倣障壁"],
+      "unique_perspective": "私はv2で『そのデータに最初に金を払うのは誰だ？』と聞いた。v5は、その買い手が30社に増え、業界が標準として依存する未来を描いた。『金を払う者』から『標準として依存する者』へ——これがこの事業が到達した最終形だ。残るは実行だけだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "標準化するほど物語が管理され、人間の層が薄まると指摘するだろう。"},
+        {"evaluator_type": "future-potential", "predicted_stance": "標準化の制度化リスクに注目し、私と同程度か控えめな点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "業界APIの採用実績（パイロット20社の進捗）とSLA達成の運用体制を実証で示す",
+        "契約継続率（チャーン）とスケール時のユニットエコノミクスをKPIとして明記する"
+      ],
+      "narrative": "5回のループで、この企画は『手数料の風まかせ』から『標準として依存される事業』まで登り詰めた。私はv2で最初の買い手を問い、v5でその買い手が業界全体になる未来を見た。次の評価で問われるのは、実行がその未来に追いつくかだ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 65,
+      "primary_score_rationale": "v4で残った課題（測定方法・スケール時の品質維持・API仕様）が、予測精度SLA（95%）・300店品質計画・API配布構想で回収された。企画は『構想』から『標準になる仕様書』の段階へ完成した。",
+      "dimension_scores": {
+        "technical_quality": {"score": 66, "weight": 0.35, "evidence": "実績・収益・標準化・人間の層が、SLAとAPI仕様を橋にして統合された", "judgment": "各層が標準化という1つの方向へ収束し、構成が完成形に達した。"},
+        "precision": {"score": 64, "weight": 0.20, "evidence": "「SLA 95%」「MRR 9,000万円」「特許3件」と、数字が出所と約束を持つ", "judgment": "数字が実績と責任（SLA）を同時に負う、精密さの完成形。"},
+        "structure": {"score": 66, "weight": 0.25, "evidence": "v4の課題（測定・スケール・API）を、SLAと標準化構想で回収した", "judgment": "約束の回収が、実証から仕様化まで完結した。"},
+        "feasibility": {"score": 63, "weight": 0.20, "evidence": "300店の品質維持計画と、標準化を実現する採用プランが具体化", "judgment": "実行の道筋は示されたが、達成手段の細部は未だこれから。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 65, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 76,
+      "strengths": [
+        "予測精度SLA（95%）と300店の品質維持計画で、v4の未回収課題を回収した",
+        "API仕様まで明記され、企画が『標準になる仕様書』の段階へ完成した",
+        "約束の回収が、実証から仕様化まで一貫して完結した"
+      ],
+      "weaknesses": [
+        "SLA達成の手段（人員・運用・監視）の細部が未記載で、約束の裏付けが未完",
+        "収益柱の多さによる統合の複雑さが、仕様書としての精密さを僅かに濁す"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["約束の回収（SLA・API）", "標準化への収束", "仕様書としての完成"],
+      "unique_perspective": "完成度検査官として、私は5回のループで『約束の回収』が毎回次の約束を生むのを見てきた。v5はSLAとAPI仕様で最後の粗を埋め、企画を『標準になる仕様書』の段階に完成させた。残る粗は、達成手段の細部——実行が約束に追いつくかだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "柱の多さと統合の複雑さを指摘し、私より控えめな点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "標準化の構想を重視し、達成手段の細部には寛容だろう。"}
+      ],
+      "improvement_suggestions": [
+        "SLA達成の運用体制（精度監視・人員・改善プロセス）を明記し、約束を裏付ける",
+        "収益柱を『予測API』という1つの軸に統合し、仕様書としての精密さを完成させる"
+      ],
+      "narrative": "v1の私は『課題を挙げるだけでなく直し方まで示せる企画が品質を上げる』と言った。v5は、5回のループで毎回の約束を回収し、最後に標準化という直し方を仕様書として示した。残るは、その約束を実行が裏付けることだ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 37,
+      "primary_score_rationale": "業界API標準化の構想が、複利の構造を外部環境から自立させる方向へ向かう。300店での精度維持と標準化の実現という未来の前提は、実証されつつあるが完全には確定していない。",
+      "dimension_scores": {
+        "environmental_shift_potential": {"score": 41, "weight": 0.30, "evidence": "食品ロス規制と自治体連携に加え、業界API標準が環境変化の波を自社標準に取り込む", "judgment": "環境の追い風を、標準として内部化する方向へ向かった。"},
+        "historical_similarity": {"score": 35, "weight": 0.25, "evidence": "標準化したデータ基盤がプラットフォームとして評価された系譜と一致する", "judgment": "資産から標準へ——前例のある成功構造に近づいた。"},
+        "compounding_value": {"score": 39, "weight": 0.25, "evidence": "APIで他SaaSに組み込まれるほど、データと予測精度が業界全体で蓄積する", "judgment": "複利が自社の外に広がり、ネットワーク効果として強化される。"},
+        "timing_analysis": {"score": 33, "weight": 0.20, "evidence": "標準化の採用は業界側の意思に依存し、その時期は未確定", "judgment": "制度の整備と採用のタイミングには、依然として不確実性が残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 37, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 70,
+      "strengths": [
+        "業界API標準化で、複利の構造が自社の外に広がるネットワーク効果へ強化された",
+        "300店・SLA 95%で、未来の前提（精度維持）が実証の方向へ進んだ"
+      ],
+      "weaknesses": [
+        "標準化は業界側の採用に依存し、その確度は外部に委ねられている",
+        "スケール時の精度・継続率という未来の前提は、まだ完全には実証されていない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["標準化による複利の自立", "ネットワーク効果の具体化"],
+      "unique_perspective": "私はv3で『資産は誰かが金を払って初めて価値になる』、v4で『制度化に依存しない複利を』と言った。v5は、資産を業界標準として公開することで、複利を外部の仕組みに依存しない『自ら広がる構造』へ変えた。残るは、標準化が実際に採用されるという、最後の実証だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "ネットワーク効果を現在の価値として高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "標準化するほど物語が薄まるとの懸念を共有するだろう。"}
+      ],
+      "improvement_suggestions": [
+        "業界API採用の実績（パイロット20社）を積み、標準化の前提を実証する",
+        "スケール時の精度・継続率の実測データを蓄積し、複利の未来を継続的に検証する"
+      ],
+      "narrative": "5回のループで、この企画の未来価値は『一過性の流行』の構造から『標準として自ら広がる資産』の構造へ変わった。私は未来の時間軸から、複利が外部に依存せず育つ姿を見た。最後の実証——標準化の採用——が、この可能性を未来に確定させる。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味評価者（意味の守護者）",
+      "content_summary": "FOODSIGN v5 — 300店スケール・業界API標準化と人間的意味層の両立",
+      "domain": "business",
+      "primary_score": 31,
+      "primary_score_rationale": "人間の物語（食卓に還す）が最優先事項として核に明記され、v4の懸念に応えた。ただし標準化するほど物語が管理の対象になり、スケールの中で薄まるという構造的な懸念は、最後まで完全には晴れない。",
+      "dimension_scores": {
+        "existential_resonance": {"score": 27, "weight": 0.35, "evidence": "「食卓に還す」が核に明記されたが、標準APIという事業の主軸はデータのまま", "judgment": "存在の問いへの触れは継続するが、中心軸にはならない。"},
+        "narrative_power": {"score": 29, "weight": 0.25, "evidence": "「ゴミから誰かの食事へ」という物語が、ブランドの核として明記された", "judgment": "物語は核に据えられたが、スケールの中で語り続けられる保証はない。"},
+        "significance": {"score": 36, "weight": 0.20, "evidence": "廃棄転換と食卓への還元の社会的重みは維持される", "judgment": "テーマの重要さは揺るがない。"},
+        "interpretive_depth": {"score": 35, "weight": 0.20, "evidence": "「売れ残り＝誰かの食卓へ」の見方が、標準化する事業の上に据えられた", "judgment": "解釈の層は維持されるが、深化は限定的。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 31},
+      "classification": "trend_object",
+      "confidence": 64,
+      "strengths": [
+        "「食卓に還す」物語が事業の核として明記され、v4の懸念に応えた",
+        "「ゴミから誰かの食事へ」の語り直しが、ブランドの中核として据えられた"
+      ],
+      "weaknesses": [
+        "標準化するほど物語は管理の対象になり、スケールの中で薄まる構造的懸念が残る",
+        "物語は『最優先事項』の明記に留まり、体験としての深まりは限定的"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["物語の核への昇格", "語り直しの明確化"],
+      "unique_perspective": "私はv2で『事業が成功するほど、その物語を語る者が企画の中に必要になる』と言い、v4で『物語が核に据えられたとき意味は本物になる』と言った。v5は物語を核に明記した。それでも私は、標準APIという巨大な事業の上で、その物語が語り続けられるか——スケールという最も厳しい関門を、最後まで監視し続ける。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "物語の核化を評価しつつ、標準化事業の中心性は揺るがないと見るだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "物語を含む全層の統合を評価し、私より高い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "スケールの中で物語が管理されないよう、店舗の顔が見える物語を体験として継続運用する仕組みを設計する",
+        "データの冷徹さと人間の層を、物語だけでなく体験として統合する機能を事業の核に組み込む"
+      ],
+      "narrative": "5回のループを経て、この企画はデータ事業として大きく育った。物語は核に据えられたが、私は意味の守護者として最後まで一つの問いを持ち続ける——標準APIという巨大な事業が成功するほど、『捨てられる食を、誰かの食事に変える』という物語は、本当に語り続けられるのか。合議の外で、その答えはまだ実証されていない。"
+    }
+  ],
+  "recommendations": [
+    "業界APIの採用実績（パイロット20社の進捗）を積み、標準化の前提を実証する",
+    "SLA達成の運用体制（精度監視・人員・改善プロセス）を明記し、95%の約束を裏付ける",
+    "契約継続率（チャーン）とスケール時のユニットエコノミクスをKPIとして定期的に監視する",
+    "店舗の顔が見える物語を体験として継続運用する仕組みを設計し、スケール後も人間の層を核に保つ"
+  ],
+  "caveats": [
+    "業界API標準化は採用者の意思に依存し、標準になる確度は未実証",
+    "300店・SLA 95%の達成手段と、スケール時の契約継続率は未検証",
+    "標準化するほど人間の物語が管理され薄まる懸念は、構造的に解消されていない"
+  ]
+}

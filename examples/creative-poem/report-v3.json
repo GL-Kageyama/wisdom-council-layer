@@ -1,0 +1,220 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "詩『昨日の郵便局』v3——改訂後の再評価（結語の具象化・音と視覚の付与）",
+  "content_type": "text",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "meaning-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "詩に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "詩に市場性評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 68, "variance": 0, "min": 68, "max": 68, "scores": [68] },
+    "quality": { "mean": 44, "variance": 0, "min": 44, "max": 44, "scores": [44] },
+    "aesthetic": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
+    "emotional_impact": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
+    "future_potential": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] },
+    "meaning": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] }
+  },
+  "current_value_score": 48,
+  "hidden_potential_score": 52,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "meaning-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 結語は『しわの重さ』で具象化され説明は消えたが、『そこにいる』が最後に示唆へ寄る。品質44点。",
+        "meaning-evaluator: 『出さなかった手紙は、しわの重さでそこにいる』——意味は像として詩に沈み、耐久性を得た。意味52点。その差は減点ではなく着眼の違い。"
+      ]
+    }
+  ],
+  "consensus_summary": "再作成指令（結語の具象化・空白の手紙への触覚・音と視覚・温度の回復）が実装され、品質44・美42・感情38とクラフト系が上昇。独創性68・意味52を維持しつつ、結語は『しわの重さ』という具象に降りた。current=48 / hidden=52 で、現在価値と潜在価値の両方が高水準となり innovation に到達。",
+  "executive_summary": "『昨日の郵便局』v3は、v2の結語の観念性を『しわの重さ』という触覚の痕跡へ具象化し、『引き出しが戻る音』で一拍の音を、白い受付の視覚で閉じた。品質44・美42・感情38とクラフト系が着実に上昇し、独創性68・意味52は維持された。current_value=48 / hidden=52 で innovation（現在価値と潜在価値の両方が高水準）に到達した。",
+  "synthesis_narrative": "指令どおり、空白の手紙に『しわ』という物理的な痕跡を与え、結語を抽象の逆説から『しわの重さでそこにいる』という具象の断言に降ろした。美評価者は白い受付としわの対比を、情動評価者は温度の回復を認めた。未来評価者は『しわ』が連作の入口になるとして潜在価値52を維持。anti-genericフィルタは『そこにいる』にわずかな示唆の残りを見るが、全体的な凡庸さは完全に解消された。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "詩『昨日の郵便局』v3の独創性評価",
+      "domain": "creative",
+      "primary_score": 68,
+      "primary_score_rationale": "結語が『しわの重さ』という物理的な痕跡へ具象化され、概念が予測を裏切る形を保つ",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 72, "weight": 0.35, "evidence": "宛名欄が空の手紙が翌朝消え、しわだけが残る", "judgment": "場の設定を超えて物体に残る逆説へ到達" },
+        "combinatorial_surprise": { "score": 68, "weight": 0.25, "evidence": "郵便×未達×空白×しわの結合", "judgment": "消失のあとを残す発想が予想を裏切る" },
+        "distance_from_template": { "score": 66, "weight": 0.25, "evidence": "既存の手紙モチーフ詩との距離", "judgment": "明確に離れたまま" },
+        "non_obviousness": { "score": 62, "weight": 0.15, "evidence": "『出さなかった手紙は、しわの重さでそこにいる』", "judgment": "具象化しても概念は反転し続ける" }
+      },
+      "value_vector_contribution": { "originality": 68, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": ["『しわ』が消失のあとを物体として残す、v2にない新規の転換", "結語の具象化が概念を失わず、むしろ触覚に落とした"],
+      "weaknesses": ["『そこにいる』が最後に示唆へ寄り、概念の開きがやや閉じる", "手紙の『重さ』はまだ抽象名詞に近い"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["消失の痕跡を物体に残す転換", "具象化した存在論"],
+      "unique_perspective": "消えることと残ることを同時に成立させる『しわ』という二重性が、この改訂の独創性の芯",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "『しわの重さ』の重さという語が感覚的明快さをわずかに損なうとみるかもしれない" }
+      ],
+      "improvement_suggestions": ["『重さ』をインクの匂いや紙の厚みなど、別の一つの具体に置き換える", "結語の示唆を、問いの形に倒して概念を開き直す"],
+      "narrative": "概念は具象化を経ても失われず、むしろ触覚を得て新しい。『しわ』は消えた手紙が世界に残した実体であり、v2の抽象的な逆説に肉体を与えた。あとは『そこにいる』の示唆がやや概念を閉じること——開きを保てば、この詩はもう一段驚く。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "詩『昨日の郵便局』v3の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 44,
+      "primary_score_rationale": "説明と定番は完全に消え、行為と痕跡が詩を運ぶ。結語『そこにいる』にわずかな示唆の残り",
+      "dimension_scores": {
+        "cliche_density": { "score": 48, "weight": 0.3, "evidence": "『ふくれ上がっている』『しわ』", "judgment": "定番を独自の感覚に置き換えた" },
+        "emotional_manipulation": { "score": 44, "weight": 0.3, "evidence": "結語の『そこにいる』", "judgment": "感情操作は消え、観念の負荷も減った" },
+        "structural_predictability": { "score": 46, "weight": 0.25, "evidence": "場→動作→消失→痕跡", "judgment": "消失のあとを残す構造が直線を脱した" },
+        "substance_over_style": { "score": 36, "weight": 0.15, "evidence": "結語の『──』", "judgment": "語りすぎは解消、ただし最後の一行が示唆に傾く" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 44, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 78,
+      "strengths": ["消失のあとに『しわ』を残す構造が、説明を一切必要としない", "空白・痕跡で情感を作る手法が完成に近づいた"],
+      "weaknesses": ["結語『そこにいる』が、最後の一行で再び示唆に寄る", "『重さ』は抽象名詞で、具体の徹底という点で一歩残る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["見せて語らない手法の完成", "定番モチーフの完全な解体"],
+      "unique_perspective": "凡庸は『説明』と『定番』だけでなく、結語の示唆という逃げにも宿る。この改訂はその逃げをほぼ塞いだ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "『そこにいる』の示唆を意味の維持と評価し、私の減点を辛めとみるだろう" }
+      ],
+      "improvement_suggestions": ["『そこにいる』を、動作（鍵を回す・灯を消す）に置き換える", "『重さ』をインクの匂いという嗅覚の具体へ"],
+      "narrative": "v2の観念的な逆説は『しわ』という物体に降り、説明と定番は跡形もなく消えた。凡庸の最大の逃げ道だった結語の示唆も、ほぼ塞がれた。残るは『そこにいる』の一行が、最後に詩を観念の岸へ引き戻すかどうかだけだ。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "詩『昨日の郵便局』v3の美的評価",
+      "domain": "creative",
+      "primary_score": 42,
+      "primary_score_rationale": "音（引き出し）と視覚（白い受付）が加わり、間の造形が完成に近づいた",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 46, "weight": 0.35, "evidence": "『引き出しが戻る音』『しわ』", "judgment": "触覚・聴覚の密度が増した" },
+        "rhythmic_musicality": { "score": 42, "weight": 0.25, "evidence": "短い連の反復と『──』の間", "judgment": "音が一つ入り、拍に刻みが生まれた" },
+        "imagistic_concreteness": { "score": 40, "weight": 0.25, "evidence": "『白い受付には何もない』", "judgment": "具体像が観念に取って代わった" },
+        "cohesion": { "score": 42, "weight": 0.15, "evidence": "しわが結語へ繋がる", "judgment": "構造が詩を統率する" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 42, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 76,
+      "strengths": ["『白い受付には何もない』という、余白で情感を作る視覚", "『引き出しが戻る音』という、全編で一度の大きな音"],
+      "weaknesses": ["結語の『重さ』という語が、触覚の具体をわずかに損なう", "前半と後半のテンポの差がまだ揃いきらない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["聴覚・触覚・視覚の三感覚の獲得"],
+      "unique_perspective": "美は多さではなく余計の無さ。この改訂は『重さ』という抽象を除けば、ほぼ余計を削り切った",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "結語の『そこにいる』を、具象の上の意味と評価するだろう" }
+      ],
+      "improvement_suggestions": ["『重さ』をインクの匂いに置き、嗅覚で閉じる", "前半の二連の拍を、後半の問いと揃える"],
+      "narrative": "v2の結語は視覚から飛び立っていたが、v3は白い受付という視覚に降り立ち、引き出しの音で詩に刻みを入れた。『しわ』は触覚として残る。あとは『重さ』という最後の抽象を嗅覚や物質へ置き換えれば、この詩は感覚だけで完結する。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "詩『昨日の郵便局』v3の情動評価",
+      "domain": "creative",
+      "primary_score": 38,
+      "primary_score_rationale": "温度が戻り、しわという痕跡が読者の胸に残る。結語の『そこにいる』が最後に説明へ寄る",
+      "dimension_scores": {
+        "visceral_response": { "score": 42, "weight": 0.35, "evidence": "しわの重さでそこにいる", "judgment": "消失の痕跡が不気味さと哀しみを併せ持つ" },
+        "catharsis": { "score": 36, "weight": 0.3, "evidence": "結語の『そこにいる』", "judgment": "問いではなく断定で、感情が少し固まる" },
+        "empathy_triggers": { "score": 38, "weight": 0.25, "evidence": "局員が空白の手紙を置いて帰る", "judgment": "共感の構造は保たれる" },
+        "subtlety_of_feeling": { "score": 40, "weight": 0.1, "evidence": "『引き出しが戻る音』", "judgment": "感情が音と沈黙に沈む" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 38, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 72,
+      "strengths": ["『しわの重さでそこにいる』——消えたものの存在を、感情ではなく痕跡で残す", "引き出しの音で、温かさと寂しさが一音に収束する"],
+      "weaknesses": ["結語の断定が、感情の余白をわずかに塞ぐ", "『重さ』という語が、感情を量（物質）に換算しすぎる"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情の間接化の完成（痕跡による情動）"],
+      "unique_perspective": "この改訂は『残ること』を選んだ。しわは涙より長く、読者の机の上に残り続ける",
+      "expected_disagreement_points": [
+        { "evaluator_type": "meaning-evaluator", "predicted_stance": "断定の締めを意味の確立と評価するだろう" }
+      ],
+      "improvement_suggestions": ["結語を断定から問い（〜のか）に倒し、感情を開き直す", "『重さ』のあとに一拍の沈黙（改行）を足す"],
+      "narrative": "温度は確かに戻った。しわという痕跡は、読者がその場に立ったかのような哀しみを運ぶ。結語の『そこにいる』は強いが断定に近く、感情が一度閉じる。問いに開けば、この哀しみは読者の胸で続く。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "詩『昨日の郵便局』v3の将来性評価",
+      "domain": "creative",
+      "primary_score": 52,
+      "primary_score_rationale": "しわという痕跡が連作・別ジャンルへの入口になり、世界の余白が広がった",
+      "dimension_scores": {
+        "extensibility": { "score": 56, "weight": 0.35, "evidence": "消えた手紙の痕跡＝しわ", "judgment": "『痕跡』は別の物語の入口になり得る" },
+        "thematic_fertility": { "score": 54, "weight": 0.3, "evidence": "白い受付・引き出しの音", "judgment": "各連が別の詩の入口になる" },
+        "audience_reach": { "score": 46, "weight": 0.25, "evidence": "しわの重さ", "judgment": "具象化で敷居が下がった" },
+        "sustainability": { "score": 52, "weight": 0.1, "evidence": "痕跡の強度と余白", "judgment": "消えたものを残す結末が寿命を伸ばす" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 52, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["『しわ』は読み直すたびに違う物語になる（消えた手紙・残した人・翌朝の受付）", "具象化で広い読者に届きやすくなった"],
+      "weaknesses": ["『そこにいる』の断定が、連作の入口を一つ塞ぐ", "痕跡を描く方向に展開が固定されがち"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["反復可能性のある痕跡", "ジャンル横断（映像・挿絵）の余地"],
+      "unique_perspective": "価値は完成度ではなく未完の余白。しわは余白を残したまま、詩を終わらせる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "余白を未完の粗さとみるかもしれない" }
+      ],
+      "improvement_suggestions": ["結語を断定から問いのままにし、連作の気配を残す", "受付の空気・インクの匂いなど、翌朝を描く入口を足す"],
+      "narrative": "しわは完成度と余白を同時に持つ。この痕跡から、消えた手紙の行き先や、翌朝の受付を訪れる人の物語が生まれる。詩は終わっているが、その世界はまだ終わっていない。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "詩『昨日の郵便局』v3の意味評価",
+      "domain": "creative",
+      "primary_score": 52,
+      "primary_score_rationale": "未達の逆説が『しわの重さ』という具象へ降り、意味が像として詩に沈んだ",
+      "dimension_scores": {
+        "philosophical_depth": { "score": 54, "weight": 0.35, "evidence": "『出さなかった手紙は、しわの重さでそこにいる』", "judgment": "未達が物体として世界に残る" },
+        "universality": { "score": 54, "weight": 0.3, "evidence": "しわ", "judgment": "誰の経験にも残る痕跡に広がった" },
+        "structural_insight": { "score": 50, "weight": 0.25, "evidence": "消失のあとに痕跡を残す時間設計", "judgment": "物語が意味を裏付ける" },
+        "actionability_of_meaning": { "score": 48, "weight": 0.1, "evidence": "結語の『──』", "judgment": "問いは開いたまま、だが断定に近づく" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 52 },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": ["逆説が抽象から『しわ』という具体へ降り、意味が像として耐久性を得た", "未達の存在が、物体の痕跡として世界に残る"],
+      "weaknesses": ["『そこにいる』が意味を断定に近づけ、読者の問いをわずかに閉じる", "具象化で観念的な深さはやや減じた"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["存在論の具象化", "痕跡として残る未達"],
+      "unique_perspective": "この詩は『未達が世界を支える』を、物体の痕跡という形で実存させる。抽象より像の方が、意味は長く生きる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "emotional-impact", "predicted_stance": "断定の締めを感情の余白の消失とみるかもしれない" }
+      ],
+      "improvement_suggestions": ["結語を断定から問いへ倒し、意味を開き直す", "『重さ』を別の具体（インクの匂い）にし、意味の担い手を増やす"],
+      "narrative": "v2の逆説は観念の上に立っていたが、v3の『しわの重さ』は机の上にある。未達は抽象的な真理から、世界に残る物体になった。意味は減ったのではなく、像に降りてより長く生きるようになった。"
+    }
+  ],
+  "recommendations": [
+    "innovation として記録。current_value 48 で、current_success（現在価値が支配的）へ向かう",
+    "結語『そこにいる』の示唆を、より具体的な動作へ、または問いの形に倒す",
+    "受付の空気・インクの匂いなど、消えた後を描く連作の芽を育てる",
+    "過修正を避け、概念（未達が郵便を支える）が失われていないか再確認する"
+  ],
+  "caveats": [
+    "scientific_novelty と business-value は詩に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、48点は『真に良い』水準に到達したことの強い信号",
+    "innovation は現在価値と潜在価値の両高を示すが、その潜在が今後実現されるかは別の観察対象"
+  ]
+}

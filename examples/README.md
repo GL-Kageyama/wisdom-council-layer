@@ -7,10 +7,12 @@
 | フォルダ | ジャンル | 分類の推移（v1 → v2） |
 |----------|---------|----------------------|
 | `creative-poem/` | 詩 | discovery_target → discovery_target（改善） |
-| `creative-film/` | 映画企画 | 単体サンプル |
+| `creative-film/` | 映画企画 | discovery_target → innovation |
 | `business-startup/` | 事業 | trend_object → current_success |
 | `scientific-hypothesis/` | 科学仮説 | discovery_target → innovation |
 | `cultural-philosophy/` | 思想エッセイ | low_signal → discovery_target |
+| `digital-oss/` | OSSソフトウェア | trend_object → current_success |
+| `architecture-house/` | 個人邸設計（建築） | discovery_target → innovation |
 
 各ジャンルのフォルダに:
 - `input.md` — 評価対象のコンテンツ（v1・v2）

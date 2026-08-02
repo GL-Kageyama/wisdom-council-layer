@@ -1,0 +1,231 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "個人邸『光の暦——一本の樹を囲む家』v2改訂——地形応答・回遊動線・垂下梁構造の再構成",
+  "content_type": "structured",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "建築設計に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "個人邸設計に市場性評価は不適合（例外的除外）" },
+    { "evaluator_id": "philosophical-evaluator", "reason": "建築設計に哲学的評価は不適合（例外的除外）" },
+    { "evaluator_id": "meaning-evaluator", "reason": "建築設計に意味評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 54, "variance": 0, "min": 54, "max": 54, "scores": [54] },
+    "quality": { "mean": 32, "variance": 1, "min": 31, "max": 33, "scores": [31, 33] },
+    "aesthetic": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
+    "emotional_impact": { "mean": 36, "variance": 0, "min": 36, "max": 36, "scores": [36] },
+    "future_potential": { "mean": 49, "variance": 0, "min": 49, "max": 49, "scores": [49] }
+  },
+  "current_value_score": 40,
+  "hidden_potential_score": 49,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 行き止まりとべた基礎は解消されたが、『自然の循環』をことさらに語る説明がまだ残る。31点。",
+        "quality-evaluator: 垂下梁と折れ板屋根で構造と雨仕舞は成立しつつあるが、断面と部材の整合が未確定。33点。"
+      ]
+    },
+    {
+      "dimension": "emotional_impact",
+      "variance": 0,
+      "disputing_evaluators": ["emotional-impact", "quality-evaluator"],
+      "arguments": [
+        "emotional-impact: 樹に立ち戻る螺旋動線が、暮らしに『帰る』という感覚を初めて与えた。36点。",
+        "quality-evaluator: 動線の改良は機能改善であり、情動として評価するのは過大。私の視点では計画全体の成立を優先する。"
+      ]
+    }
+  ],
+  "consensus_summary": "改訂指令（荷重経路の明示・屋根の放棄・回遊動線・斜面への応答）が実装され、全次元が上昇（品質24→32・美30→38・感情28→36・独創性50→54）。current=40 / hidden=49 で依然 discovery_target だが、計画は『建てられる』方向へ明確に動いた。残る課題は空間の物語の曖昧さと、光の季節応答。",
+  "executive_summary": "『光の暦』v2は、スプリットレベルで斜面を踏み、一本の螺旋動線で樹に立ち戻り、垂下梁と折れ板屋根で構造と雨仕舞を具体化した。品質32・美38・感情36・独創性54と全次元が上昇し、current=40 / hidden=49 で discovery_target（current_success に接近）。残る課題は『なぜこの順に部屋を巡るのか』という空間の物語と、光の季節への応答。",
+  "synthesis_narrative": "再作成指令（構造の可視化・屋根形の修正・動線の一本化・斜面への応答）が概ね忠実に実装され、v1で指摘された致命傷はほぼ解消した。品質評価者は垂下梁の荷重経路と折れ板の雨仕舞を33点と認め、anti-genericフィルタも行き止まりとべた基礎の消失を31点と改善を認めた。美評価者は半層ずつ降りる断面に起伏を見出したが、空間の物語がまだ曖昧で、光が季節に応答していないと指摘。全体として『建てられる・住まえる』段階へ進んだ discovery_target。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "個人邸『光の暦』v2改訂の独創性評価",
+      "domain": "creative",
+      "primary_score": 54,
+      "primary_score_rationale": "螺旋の回遊動線と第五柱が概念を構造に落とし、光の暦の骨格が一層明確になった",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 60, "weight": 0.35, "evidence": "樹を中心に10組の柱列と垂下梁が螺旋状に巡る構造", "judgment": "環状の概念が構造の型として定着した" },
+        "combinatorial_surprise": { "score": 54, "weight": 0.25, "evidence": "樹×螺旋動線×スプリットレベルの結合", "judgment": "半層ずつ降りる循環が新たな意外性を生む" },
+        "distance_from_template": { "score": 48, "weight": 0.25, "evidence": "一般的な個人邸の箱型プランとの距離", "judgment": "動線と断面でさらに離れた" },
+        "non_obviousness": { "score": 52, "weight": 0.15, "evidence": "垂下梁で梁が柱から落ち、樹が中心を支える", "judgment": "構造の選び方に専門家をうならせる点がある" }
+      },
+      "value_vector_contribution": { "originality": 54, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["螺旋の回遊動線が『樹に戻る』ことを構造的に強制する点が新しい", "半層ずつ降りるスプリットレベルが、斜面という敷地固有の条件から出発している"],
+      "weaknesses": ["『なぜこの順に部屋を巡るのか』という物語がまだ曖昧", "光の計画が『朝昼夕』のまま、季節への応答がない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["敷地固有の条件（斜面）から動線が導かれている", "構造と動線の一体性"],
+      "unique_perspective": "この改訂で新しくなったのは樹そのものではなく、樹を軸に住まいが『巡る』こと。循環の意味がまだ語られていないが、その種は十分に生えた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "螺旋動線の面積効率を疑問視し、概念先行とみるだろう" }
+      ],
+      "improvement_suggestions": ["螺旋を『光が強まる順』という物語に意味づける", "東西南の開口を冬至・夏至・春分の三断面で光に応答させる", "循環の意味を、住まい方（光・風・季節）から語り直す"],
+      "narrative": "v1の骨格は、v2で構造と動線に降り立った。樹を軸に住まいが半層ずつ巡る螺旋は、個人邸の静的な平面を時間化する。しかし循環がなぜこの向きでこの順なのか、その物語がまだ口を閉じている。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "個人邸『光の暦』v2改訂の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 31,
+      "primary_score_rationale": "行き止まりとべた基礎というv1の凡庸は解消されたが、『自然の循環と共生』という触れ込みがまだ残る",
+      "dimension_scores": {
+        "cliche_density": { "score": 30, "weight": 0.3, "evidence": "『自然と共生』『木の循環』という説明", "judgment": "定番装備は消えたが、触れ込みの語彙が残る" },
+        "emotional_manipulation": { "score": 31, "weight": 0.3, "evidence": "『樹に戻る』動線の説明", "judgment": "感情操作は減り、構造が語るようになった" },
+        "structural_predictability": { "score": 32, "weight": 0.25, "evidence": "螺旋動線・スプリットレベル", "judgment": "箱型プランを脱した" },
+        "substance_over_style": { "score": 32, "weight": 0.15, "evidence": "垂下梁・折れ板屋根という具体の機構", "judgment": "唱える代わりに見せる方向に進んだ" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 31, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["行き止まり廊下とべた基礎というv1の凡庸が構造的に解消された", "垂下梁・折れ板屋根という、機構が語る手法への転換"],
+      "weaknesses": ["『自然と共生する暮らし』という触れ込みの語彙がまだ残る", "循環の説明が観念的で、実空間の質にまでは語れていない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["構造が物語る方向への転換"],
+      "unique_perspective": "凡庸の最後の残り香は『共生』という言葉にある。言葉が先に立ち、空間がまだ追いついていない。機構だけが語る段階まで来れば、凡庸は消える",
+      "expected_disagreement_points": [
+        { "evaluator_type": "future-potential", "predicted_stance": "私の31点は構造的進展を甘く見ているとみるだろう" }
+      ],
+      "improvement_suggestions": ["『共生』を言葉で語らず、光・構造・材料がそれを示すようにする", "循環の説明を、実空間の体験（光・風・眺めの変化）で置き換える", "定番的な触れ込みを削り、図面と断面だけで語らせる"],
+      "narrative": "v1が『唱えて』いたことを、v2は機構で行い始めた。行き止まりは螺旋になり、べた基礎はスプリットレベルになり、屋根は折れ板になった。凡庸は解体されたが、『自然と共生する』という触れ込みの言葉がまだ空間の後を歩いている。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "個人邸『光の暦』v2改訂の美的評価",
+      "domain": "creative",
+      "primary_score": 38,
+      "primary_score_rationale": "半層ずつ降りる断面に起伏が生まれ、垂下梁が構造のリズムを空間にもたらしたが、光と材料の経年がまだ描かれない",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 38, "weight": 0.35, "evidence": "半層の段差、折れ板屋根の影", "judgment": "断面の起伏が感覚に届き始めた" },
+        "spatial_composition": { "score": 40, "weight": 0.25, "evidence": "スプリットレベルと螺旋動線", "judgment": "静的な平面が時間的な断面になった" },
+        "material_honesty": { "score": 37, "weight": 0.25, "evidence": "垂下梁・オーク柱列の見せ方", "judgment": "構造を隠さない姿勢は正しいが、材料の経年が未検討" },
+        "cohesion": { "score": 36, "weight": 0.15, "evidence": "樹を中心に巡る全体構成", "judgment": "骨格は統率されたが、光がまだ加わらない" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 38, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": ["半層ずつ降りる断面が、斜面という敷地の条件を空間の起伏に変えた", "垂下梁が、構造の道筋をそのまま美のリズムにしている"],
+      "weaknesses": ["光がまだ言葉のままで、影の造形が空間にない", "材料の経年（雨・霜・樹との出会い）が設計されていない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["断面の起伏", "構造のリズム"],
+      "unique_perspective": "美はこれから『光の切り方』で決まる。断面が良くなった分、次は光が断面にどのように落ちるかが問われる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "emotional-impact", "predicted_stance": "構造の美を認めつつ、住まう温度の感覚がまだ足りないとみるだろう" }
+      ],
+      "improvement_suggestions": ["光を断面に落とし、影の造形（樹冠スロット・東西南の開口）を具体化する", "材料の経年を設計する（雨の動き、木の飴色、土の乾き）", "樹と建物の接点（落水線・足元）を美の対象にする"],
+      "narrative": "v2の断面は、斜面を踏むことで初めて起伏を得た。垂下梁が構造の道筋を隠さず、空間にリズムが生まれた。しかし光はまだ『朝昼夕』という言葉に留まり、影が空間に降りていない。美の次の段階は光の切り方にある。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "個人邸『光の暦』v2改訂の情動評価",
+      "domain": "creative",
+      "primary_score": 36,
+      "primary_score_rationale": "樹に立ち戻る螺旋動線が、住まいに『帰る』という身体の感覚を初めて与えた。感情が言葉から動線と光へ移りつつある",
+      "dimension_scores": {
+        "visceral_response": { "score": 36, "weight": 0.35, "evidence": "半層ずつ巡り、その都度樹に立ち戻る動線", "judgment": "身体の循環が感情の循環に結びつく" },
+        "belonging_atmosphere": { "score": 38, "weight": 0.3, "evidence": "樹を中心に全ての部屋が巡る", "judgment": "『樹に帰る家』が言葉から構造になった" },
+        "empathy_triggers": { "score": 34, "weight": 0.25, "evidence": "斜面に沿って降りる水辺への階梯", "judgment": "暮らしの動きに沿うようになった" },
+        "subtlety_of_feeling": { "score": 34, "weight": 0.1, "evidence": "行き止まりの消えた動線", "judgment": "感情の余白が少し生まれた" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 36, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": ["螺旋動線が、『帰る』という感情を身体の循環として実現した", "半層の段差が、住まう呼吸（昇り降り）を与えた"],
+      "weaknesses": ["光がまだ具体化されず、季節の実感がない", "感情がまだ動線に留まり、部屋の空気の温度にまで届かない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情の構造化（言葉から動線へ）"],
+      "unique_perspective": "この改訂の本質は、『帰る』という感情を螺旋の動線という身体の行為に置き換えたこと。v2は感情を語らずに、感情を構造した",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "『帰る家』という触れ込みはまだ情感に頼っているとみるだろう" }
+      ],
+      "improvement_suggestions": ["光を季節に応答させ、冬の陽・夏の影という実感を与える", "樹冠の下の空気（風の抜け・木漏れ日）を設計対象にする", "感情を動線だけでなく、部屋の温度や音にも広げる"],
+      "narrative": "v1の『樹に抱かれて暮らす』は言葉だったが、v2の螺旋動線はそれを身体の循環に変えた。半層ずつ昇り降りして樹に立ち戻る感覚は、確かに『帰る家』の温度を持つ。しかし光がまだ季節に応答せず、この家の空気がどう動くかは描かれていない。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "個人邸『光の暦』v2改訂の品質評価",
+      "domain": "creative",
+      "primary_score": 33,
+      "primary_score_rationale": "垂下梁と折れ板屋根で構造と雨仕舞は成立しつつあるが、断面と部材の整合が未確定で、施工に耐える詳細にまだ届かない",
+      "dimension_scores": {
+        "structural_feasibility": { "score": 30, "weight": 0.35, "evidence": "10組の柱列と垂下梁、第五柱としての樹", "judgment": "荷重経路は見えたが、樹の荷重分担の計算が未確定" },
+        "functional_program": { "score": 34, "weight": 0.25, "evidence": "螺旋動線とスプリットレベル", "judgment": "行き止まりが消え、プログラムが機能する" },
+        "buildability": { "score": 34, "weight": 0.25, "evidence": "折れ板屋根とスプリットレベルの段差", "judgment": "工法は可能だが、継手の詳細が未検討" },
+        "durability": { "score": 36, "weight": 0.15, "evidence": "折れ板屋根が樹の落水線から逃げる", "judgment": "雨仕舞の方向性は正しい" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 33, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["荷重経路が図面に現れ、樹を第五柱とする構想が構造として語れる段階になった", "折れ板屋根が樹の落水線を避け、雨仕舞の方向性が正しい"],
+      "weaknesses": ["樹の荷重分担と柱列の径・梁の成が未計算", "螺旋動線の面積効率が悪く、バリアフリーとの両立が未検討", "スプリットレベルの段差部分の構造詳細（壁の位置）が未確定"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["荷重経路の可視化", "雨仕舞の方向性"],
+      "unique_perspective": "品質は『成立』から『最適』へ進む段階に来た。成立はしたが、螺旋の面積効率と樹への依存度が、実務の水準に達するかが次に問われる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "私が螺旋の効率を減点するのは、概念の価値を無視したとみるだろう" }
+      ],
+      "improvement_suggestions": ["樹の荷重分担を定量化し、柱列の径・梁の成を確定する", "螺旋動線の効率を高め、必要なら半層の数を再検討する", "スプリットレベルの段差を支える壁の構造詳細を図面化する"],
+      "narrative": "v2は品質を『唱える』から『成立する』段階へ動かした。荷重経路は図面に現れ、屋根は樹を避け、動線は一本になった。しかし樹への荷重分担と螺旋の効率は実務の問いとして残り、計画全体が設計可能かはまだ確定していない。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "個人邸『光の暦』v2改訂の将来性評価",
+      "domain": "creative",
+      "primary_score": 49,
+      "primary_score_rationale": "螺旋の動線が家族構成の変化に耐える構造になり、樹という時間軸が計画に寿命を与え始めた",
+      "dimension_scores": {
+        "extensibility": { "score": 52, "weight": 0.35, "evidence": "螺旋に沿って部屋を増減できる環状の骨格", "judgment": "家族の成長に耐える拡張性が明確になった" },
+        "site_longevity": { "score": 50, "weight": 0.3, "evidence": "樹を第五柱として百年の寿命を計画に織り込む", "judgment": "時間軸が設計に組み込まれた" },
+        "audience_reach": { "score": 45, "weight": 0.25, "evidence": "斜面に応答する個人邸の類型", "judgment": "既存樹と斜面という条件に翻訳可能な一般性を持ち始めた" },
+        "sustainability": { "score": 47, "weight": 0.1, "evidence": "スプリットレベルと自然通風の可能性", "judgment": "気候への応答が構想から具体に近づいた" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 49, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": ["螺旋動線が、家族の成長（子供部屋の増減）に耐える骨格として機能する", "樹を第五柱とすることが、計画に百年の寿命を与えている"],
+      "weaknesses": ["光の暦という時間概念がまだ構想のままで、実空間の装置になっていない", "螺旋の面積効率が、長期的な住まいやすさに懸念を残す"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["拡張性のある骨格", "時間軸の組み込み"],
+      "unique_perspective": "この計画の潜在価値は『樹に住まいが時間をもらっている』点にある。螺旋が樹に立ち戻るたびに、住まいは百年の時間と再接続する。その装置が光になれば、この家は長く住まれる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "私の将来性評価は螺旋の効率問題を楽観視しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["光の暦を、影・季節を刻む実際の装置（樹冠スロット・季節の開口）として実装する", "螺旋の拡張性を、具体的な家族構成の変化（子・老い）と対応させて明示する", "自然通風と蓄熱を、気候に応答する装置として確定する"],
+      "narrative": "v2の計画は、家族の成長と百年の樹という二つの時間軸を骨格に組み込み始めた。螺旋に沿って部屋は増減でき、樹は第五柱として計画に寿命を与える。しかし『光の暦』はまだ構想の言葉であり、実際の影と季節の装置になるには、次の改訂が必要だ。"
+    }
+  ],
+  "recommendations": [
+    "discovery_target として維持。current_value 40 で current_success（45以上）に接近中",
+    "螺旋を『光が強まる順』という空間の物語に意味づける",
+    "東西南の開口を冬至・夏至・春分の三断面で光に応答させる",
+    "『共生』などの触れ込みを言葉で語らず、光・構造・材料に示させる",
+    "樹の荷重分担を定量化し、断面と部材の整合を確定する"
+  ],
+  "caveats": [
+    "scientific-novelty・business-value・philosophical-evaluator・meaning-evaluator は建築設計に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、40点でも『真に良い』に達していない",
+    "光の季節応答と空間の物語は評価者間で評価が分かれる余地があり、次の反復で調整すべき焦点"
+  ]
+}

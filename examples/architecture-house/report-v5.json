@@ -1,0 +1,232 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "個人邸『光の暦——一本の樹を囲む家』v5完成——構造・光・景観が一つに統合された個人邸",
+  "content_type": "structured",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "建築設計に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "個人邸設計に市場性評価は不適合（例外的除外）" },
+    { "evaluator_id": "philosophical-evaluator", "reason": "建築設計に哲学的評価は不適合（例外的除外）" },
+    { "evaluator_id": "meaning-evaluator", "reason": "建築設計に意味評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 60, "variance": 0, "min": 60, "max": 60, "scores": [60] },
+    "quality": { "mean": 56, "variance": 1, "min": 55, "max": 57, "scores": [55, 57] },
+    "aesthetic": { "mean": 54, "variance": 0, "min": 54, "max": 54, "scores": [54] },
+    "emotional_impact": { "mean": 46, "variance": 0, "min": 46, "max": 46, "scores": [46] },
+    "future_potential": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] }
+  },
+  "current_value_score": 54,
+  "hidden_potential_score": 58,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 装置が最小の構法（影を刻む床・折れ板の庇）に還元され、『光の家』という定番化の危険を脱した。55点。",
+        "quality-evaluator: 可動部品の劣化対策と施工詳細が完成し、十年後も成立する品質に達した。57点。"
+      ]
+    },
+    {
+      "dimension": "originality",
+      "variance": 0,
+      "disputing_evaluators": ["originality", "quality-evaluator"],
+      "arguments": [
+        "originality: 影の軌跡を床に刻むことで、時間を読む住まいが操作に依存しない構法になった。独創性60点。",
+        "quality-evaluator: 概念は完成したが、美・感情に比べて熱環境（夏の冷房・冬の暖房負荷）の実測的な検証がなお不足する。品質57点の根拠。"
+      ]
+    }
+  ],
+  "consensus_summary": "改訂指令（全体の統合・材料の経年一致・細部の整合）が実装され、全次元が上昇（品質46→56・美48→54・感情44→46・独創性58→60・未来55→58）。美・品質が『真に良い』（51-70）の帯に入り、計画は完成形に収束した。current=54 / hidden=58 で innovation に到達。細部のすべてが『樹を中心とした光の暦』という同一原理から導かれ、余剰がない。",
+  "executive_summary": "『光の暦——一本の樹を囲む家』v5は、樹の影の軌跡を版築の床に刻み、螺旋の動線と受動的環境、敷地由来の材料を一つの器官として統合した。品質56・美54・独創性60・感情46、current=54 / hidden=58 で innovation。美と品質が『真に良い』（51-70）の帯に入り、細部のすべてが同一原理から導かれて余剰がない。評価者間の不一致（熱環境の実測検証）は残るが、計画は個人邸設計として完成形に収束した。",
+  "synthesis_narrative": "五回の評価→再作成ループを経て、この計画は『良い着想・粗い執行』から『完成された個人邸』へ収束した。品質はv1の24から56へ、美は30から54へ——二つの評価者が支える品質（anti-generic 55・品質評価者57）と美が『真に良い』（51-70）の帯に揃った。独創性（60）と未来（58）は初期から強い水準を保ち、感情（46）は物語の演出から作法と土の温度へ安定して上昇した。原動力は、各反復の作成スキルが previous report の weaknesses / improvement_suggestions を忠実に再作成指令へ変換したことにある。v5では、影の軌跡を床に刻むことで時間を読む住まいが操作に依存しない構法となり、装置の多さは最小の仕草に統合され、材料は経年で揃うよう設計された。品質評価者が指摘する熱環境の実測検証という不一致は残るが、current=54 / hidden=58 の innovation として、このジャンルの完成形サンプルに位置づけられる。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "個人邸『光の暦』v5完成形の独創性評価",
+      "domain": "creative",
+      "primary_score": 60,
+      "primary_score_rationale": "影の軌跡を床に刻むことで、時間を読む住まいが操作に依存しない構法として完成した",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 66, "weight": 0.35, "evidence": "年間の日陰線を版築の床に象嵌し、居室のどこにいても影の進みで時刻と季節が読める", "judgment": "時間を読む住まいが建物自体の痕跡になった" },
+        "combinatorial_surprise": { "score": 60, "weight": 0.25, "evidence": "影の軌跡×螺旋動線×受動的環境×敷地由来の材料", "judgment": "光・熱・材料・動線が一つの器官として結合した" },
+        "distance_from_template": { "score": 54, "weight": 0.25, "evidence": "一般的な個人邸の間取り・設備・意匠への距離", "judgment": "間取りを時間に、設備を構法に置き換えた" },
+        "non_obviousness": { "score": 58, "weight": 0.15, "evidence": "樹の影が一年の暦として床に刻まれる", "judgment": "既存樹の影を住まいの計時装置にする点が専門家をうならせる" }
+      },
+      "value_vector_contribution": { "originality": 60, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": ["影の軌跡を床に刻むことで、時間を読む住まいが操作に依存しない構法になった", "間取りを時間の順序に、設備を構法に置き換えた点で、個人邸の文法を静かに反転させた"],
+      "weaknesses": ["影の目盛りは夏の樹冠で読めない時間帯があり、計時としての完璧さはない", "概念の完成度が高く、展開（別邸・集合）に新たな逸脱を生む余地がやや減る"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["概念の構法化", "時間を読む住まいの完成"],
+      "unique_perspective": "独創性は『装置』から『建物の痕跡』へ完結した。影を刻む床は、だれにも消せない時間の設計——操作も交換もできないからこそ、概念は住まいそのものになった",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "影の計時が季節・樹冠で不完全な点を、機能としての欠落とみるだろう" }
+      ],
+      "improvement_suggestions": ["影の目盛りが読めない時間帯（夏の樹冠下・曇天）を、他の痕跡（風・音）で補完する", "概念の完成後に、この原理を別の類型（別邸・都市の樹）へ翻訳する新たな逸脱を探る"],
+      "narrative": "v5で独創性は『装置を持つ』から『建物が痕跡になる』へ完結した。影の軌跡を刻む床は、光の暦を操作の外に置き、時間そのものを住まいに埋め込んだ。この家は、住まい手が何もしなくても時間を語り続ける。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "個人邸『光の暦』v5完成形の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 55,
+      "primary_score_rationale": "装置が最小の構法に還元され、『光の家』という定番化の危険を脱した。凡庸の兆候は検出されない",
+      "dimension_scores": {
+        "cliche_density": { "score": 56, "weight": 0.3, "evidence": "影を刻む床・折れ板の庇・敷地由来の材料", "judgment": "定番語彙も定番装置も消え、構法が個を語る" },
+        "emotional_manipulation": { "score": 54, "weight": 0.3, "evidence": "影の軌跡と土の温度", "judgment": "感情は操作されず、痕跡と熱から自然に生まれる" },
+        "structural_predictability": { "score": 55, "weight": 0.25, "evidence": "螺旋の断面と受動的環境の一体化", "judgment": "箱型プランとも光の演出家ブームとも距離を取る" },
+        "substance_over_style": { "score": 56, "weight": 0.15, "evidence": "影の目盛り・落水線の樋・継手の詳細", "judgment": "語らずに、建物が自らを証明する" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 55, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": ["装置が最小の構法（影を刻む床・折れ板の庇）に還元され、『光の家』という新たな定番の雛形になる危険を脱した", "定番語彙も演出家ブームも、敷地と樹に固有の個が上回る"],
+      "weaknesses": ["概念が成熟しすぎて、その模倣が『真似やすい原理』として広がる可能性を孕む", "洗練の度合いが高く、次の反復で過剰に磨かれて個が失われる危険がある"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["定番化の脱却", "個の確立"],
+      "unique_perspective": "最も凡庸になりやすい瞬間は『徹底的に良い』ときだ。v5は個を固めてその罠を脱したが、模倣の原理として広がりすぎる危険は、この計画が完成したこと自体に宿る。ループを止めるべき時だ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "future-potential", "predicted_stance": "私の定番化の懸念は、将来性評価を過度に楽観視しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["過剰な洗練を避け、意図的な粗さ（土の凹凸・継手の手仕事）を残して個を守る", "模倣を防ぐより、この原理が次に逸脱する方向（別の類型）を探る"],
+      "narrative": "v5は『徹底的に良い』という最も凡庸になりやすい瞬間を、個を固めることで脱した。装置は構法に還元され、光の家ブームの雛形ではなく、この樹にしかない家になった。私はこのままループを続ければ、磨きすぎで個が失われると警告する。完成形として止めるべき時だ。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "個人邸『光の暦』v5完成形の美的評価",
+      "domain": "creative",
+      "primary_score": 54,
+      "primary_score_rationale": "材料が経年で揃うよう設計され、影の軌跡が床に刻まれ、細部が空間全体の美と一体になった。美は『真に良い』の帯に入った",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 56, "weight": 0.35, "evidence": "影のラインが触れる床、簾を抜けた拡散光、版築の土の熱", "judgment": "光・土・影が時間とともに感覚に沈む" },
+        "spatial_composition": { "score": 54, "weight": 0.25, "evidence": "螺旋の断面が影の目盛りと一体になる", "judgment": "断面が光と時間を同時に語る" },
+        "material_honesty": { "score": 52, "weight": 0.25, "evidence": "版築・杉・オーク・玉石の経年一致", "judgment": "材料が経年で同じ色に揃うよう設計された" },
+        "cohesion": { "score": 53, "weight": 0.15, "evidence": "細部（樋・簾・段差・影のライン）がすべて同一原理から導かれる", "judgment": "全体が一つの器官として余剰なく統合された" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 54, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 80,
+      "strengths": ["影の軌跡が床に刻まれ、光の暦が住まいの時間の目盛りとして美を担う", "版築・杉・オーク・玉石が経年で同じ色に揃うよう設計され、美が時間で裏打ちされた", "樋・簾・段差・影のラインという細部が、すべて同一原理から導かれて余剰がない"],
+      "weaknesses": ["冬の樹冠のない時期と曇天では、影の目盛りが読めず空間の主役が光から消える", "洗練された統一が、想定外の住まい方（大きな家具・多人数の家族）への寛容さを減らす"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間で裏打ちされた美", "余剰のない統合"],
+      "unique_perspective": "美の完成は『材料が経年で揃う』ことにあり、v5はそれを実測的な設計で裏打ちした。新しい美は誰でも描けるが、十年後に同じ色に沈む美は設計でしか生まれない。この家は、時間とともに美しくなる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "emotional-impact", "predicted_stance": "統一の完成度は認めるが、光の消える日々の安らぎを私が過小評価しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["影の読めない日（曇天・冬）を、音・風・土の熱といった別の痕跡が美として引き継ぐ設計を残す", "統一を保ちつつ、住まい方の寛容さ（可動収納・多人数の座）を担保する"],
+      "narrative": "v5の美は、時間で裏打ちされた。影の軌跡が床に刻まれ、材料が経年で同じ色に沈むよう設計され、細部のすべてが同一原理から導かれて余剰がない。この家は建てた瞬間が最も美しいのではなく、十年後に最も美しくなる。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "個人邸『光の暦』v5完成形の情動評価",
+      "domain": "creative",
+      "primary_score": 46,
+      "primary_score_rationale": "感情は光の演出から、影と土の温度という安定した土台へ移り、天候に揺れない安らぎを得た",
+      "dimension_scores": {
+        "visceral_response": { "score": 47, "weight": 0.35, "evidence": "影のラインが床を這う午後、版築の土の熱が足裏に残る", "judgment": "時間の痕跡が身体に届く" },
+        "belonging_atmosphere": { "score": 47, "weight": 0.3, "evidence": "半層ごとに樹に還り、最後に南テラスへ開く螺旋", "judgment": "帰る感覚が住まいの作法として定着した" },
+        "empathy_triggers": { "score": 44, "weight": 0.25, "evidence": "季節の印と受動的な温熱", "judgment": "季節に応える暮らしの祈りが、操作なしに満たされる" },
+        "subtlety_of_feeling": { "score": 46, "weight": 0.1, "evidence": "光が消える曇天にも土の熱が残る", "judgment": "感情が光の強弱から解放された" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 46, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["感情が光の演出から、影と土の温度という操作に依存しない土台へ移り、天候に揺れない安らぎを得た", "樹に還る螺旋が、帰る感覚を住まいの作法として定着させた"],
+      "weaknesses": ["全体が静かで完成された分、大きな喜びや予期せぬ驚きの振幅が小さい", "洗練された統一が、家族の多様な感情（賑わい・騒ぎ）を収める寛容さに欠ける懸念がある"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["天候に揺れない感情の土台"],
+      "unique_perspective": "この家の感情は『静けさ』という完成度にある。大きな感動より、毎日少しずつ沈む時間の安らぎ。光が消える日にも土の熱が残る——それは弱い情動だが、最も長く住まい手に残る情動だ",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "私が静けさを評価するのは、完成した美への甘やかしとみるだろう" }
+      ],
+      "improvement_suggestions": ["静けさを保ちつつ、賑わい（多人数の食卓・祝い）を収める一つの寛容な間を残す", "感情の振幅を増やすため、季節の印に『小さな祝い』（花・実・初雪）を結びつける"],
+      "narrative": "v5の感情は、光の演出から影と土の温度という土台へ移り、天候に揺れない安らぎを得た。この家の情動は静かで、大きな感動より毎日少しずつ沈む時間の安らぎだ。他の次元に比べると振幅は小さいが、それが最も長く住まい手に残る情動でもある。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "個人邸『光の暦』v5完成形の品質評価",
+      "domain": "creative",
+      "primary_score": 57,
+      "primary_score_rationale": "可動部品の劣化対策と施工詳細が完成し、十年後も成立する品質に達した。残るは熱環境の実測検証",
+      "dimension_scores": {
+        "structural_feasibility": { "score": 56, "weight": 0.35, "evidence": "第五柱の荷重分担、10組の柱列・垂下梁、折れ板の庇", "judgment": "構造が検討可能な水準で確定し、余剰がない" },
+        "functional_program": { "score": 57, "weight": 0.25, "evidence": "螺旋動線の効率とバリアフリー、自然換気", "judgment": "プログラムが効率的に機能し、行き止まりが皆無" },
+        "buildability": { "score": 58, "weight": 0.25, "evidence": "落水線の樋・継手・土間と板床の収まり", "judgment": "施工詳細が完成し、建てられる品質に達した" },
+        "durability": { "score": 58, "weight": 0.15, "evidence": "版築のクラック対策・杉の腐朽対策・可動部品の低劣化", "judgment": "十年後の維持が設計に織り込まれた" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 57, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": ["可動部品の劣化対策と施工詳細が完成し、十年後も成立する品質に達した", "版築・杉・オーク・玉石の経年一致が、材料の寿命として設計された", "螺旋動線の効率とバリアフリー、自然換気が実用として確定した"],
+      "weaknesses": ["熱環境（夏の冷房・冬の暖房負荷）の実測的な検証がなお不足し、受動環境の性能が計算で証明されていない", "樹の成長（枝張り・影の変化）に応じた長期の維持管理計画が未確定"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["施工詳細の完成", "十年後の維持の設計化"],
+      "unique_perspective": "品質は『完成』から『証明』の段階へ来た。受動的な環境設計が美しく語られるほど、実測の検証は後回しになりがちだ。この計画が真の完成形になるには、熱と光の性能を数字で裏付ける段階が残る",
+      "expected_disagreement_points": [
+        { "evaluator_type": "originality", "predicted_stance": "私が熱環境の実測不足を挙げるのは、概念の完成度を下げているとみるだろう" }
+      ],
+      "improvement_suggestions": ["受動環境の熱・光性能を数値シミュレーションで検証し、計算で裏付ける", "樹の成長に応じた剪定・枝張りの維持管理計画を立てる"],
+      "narrative": "v5の品質は、施工詳細と十年後の維持まで設計に織り込まれ、『建てられる・長く保つ』水準に達した。残るは、受動的な環境設計が美しく語られるだけに、熱と光の性能を実測で証明する段階だ。概念は完成したが、数字はまだ追いついていない。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "個人邸『光の暦』v5完成形の将来性評価",
+      "domain": "creative",
+      "primary_score": 58,
+      "primary_score_rationale": "時間を読む住まいが操作に依存しない構法として完成し、世代を超えて住まわれる条件を備えた",
+      "dimension_scores": {
+        "extensibility": { "score": 60, "weight": 0.35, "evidence": "螺旋に沿う部屋の増減と、影・土の熱に支えられた時間の読み方", "judgment": "家族の変化と老いを住まい自体が受け止める" },
+        "site_longevity": { "score": 58, "weight": 0.3, "evidence": "第五柱の樹と経年で揃う敷地由来の材料", "judgment": "百年の時間軸が構法と材料で支えられる" },
+        "audience_reach": { "score": 55, "weight": 0.25, "evidence": "既存樹・斜面・土を持つ敷地への翻訳可能な原理", "judgment": "一般化できるが、個の強さが類型化を拒む" },
+        "sustainability": { "score": 59, "weight": 0.1, "evidence": "版築の蓄熱・自然換気・敷地由来の材料", "judgment": "資源と気候への応答が構法として確立された" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 58, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 84,
+      "strengths": ["時間を読む住まいが操作に依存しない構法として完成し、高齢になっても住まい自体が暮らしを支える", "経年で美しくなる材料と、世代を超える時間軸が、最も長く住まわれる条件を満たす"],
+      "weaknesses": ["熱環境の実測検証が未完了で、受動環境の将来性能が数字で保証されていない", "樹の成長に依存するため、樹の寿命が計画の寿命を規定する"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["世代を超える時間軸", "時間とともに増す価値"],
+      "unique_perspective": "この計画の将来性は『時間とともに価値が増す』ことにあり、それは建築が最も手放しにくくなる理由になる。影の目盛りと経年する材料は、住まい手が老いても時間を味方にする——そういう家は、売られず、壊されず、住み継がれる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "私の将来性評価は、熱性能の未検証を楽観視しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["熱・光の性能検証を完了し、将来の快適性を数字で保証する", "樹の寿命と後継（次代の樹・植栽計画）を計画に織り込み、時間軸をさらに延ばす"],
+      "narrative": "v5のこの家は、時間とともに価値が増す住まいとして完成した。影の目盛りと経年する材料は、住まい手が老いても時間を味方にする。時間を読める家は住まい手とともに老い、売られず壊されず住み継がれる。将来性は、この計画の最も強い次元である。"
+    }
+  ],
+  "recommendations": [
+    "innovation として記録し、評価→再作成ループをここで停止する（過修正は完成した個を失わせる）",
+    "受動環境の熱・光性能を数値シミュレーションで検証し、概念を計算で裏付ける",
+    "樹の成長に応じた維持管理計画を立て、時間軸をさらに延ばす",
+    "静けさを保ちつつ、賑わい（多人数の食卓・祝い）を収める一つの寛容な間を検討する",
+    "この原理を別の類型（都市の樹・集合の樹）へ翻訳する新たな逸脱を探索する"
+  ],
+  "caveats": [
+    "scientific-novelty・business-value・philosophical-evaluator・meaning-evaluator は建築設計に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、current=54 は『真に良い』（51-70）の帯に達したが、絶対スコアの水準は意図的に厳しい",
+    "感情評価者は discovery_target（46点）で他評価者と割れており、静けさの完成度と感情の振幅という不一致が残る",
+    "品質評価者が指摘する熱環境の実測検証は未完了で、受動環境の性能がまだ数字で保証されていない"
+  ]
+}

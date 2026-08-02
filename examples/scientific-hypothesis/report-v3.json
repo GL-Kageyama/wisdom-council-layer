@@ -1,0 +1,287 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T12:45:00Z",
+  "content_summary": "科学研究仮説v3「予測可能な睡眠時キューは記憶固定化を妨げる——予測誤差によるリプレイ解放仮説（操作定義・検出力・代替仮説を追加）」に対する合議評価",
+  "content_type": "structured",
+  "domain": "scientific",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [],
+  "value_vector": {
+    "originality": {"mean": 49, "variance": 0, "min": 49, "max": 49, "scores": [49]},
+    "quality": {"mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50, 50]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 53, "variance": 0, "min": 53, "max": 53, "scores": [53]},
+    "business_value": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "scientific_novelty": {"mean": 51, "variance": 0, "min": 51, "max": 51, "scores": [51]},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 51, "variance": 0, "min": 51, "max": 51, "scores": [51]}
+  },
+  "current_value_score": 50,
+  "hidden_potential_score": 52,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "scientific_novelty",
+      "variance": 0,
+      "disputing_evaluators": ["scientific-novelty", "future-potential"],
+      "arguments": [
+        "scientific-novelty: 予測誤差の操作定義（CV閾値・ASSR・MMN）と反証条件の統計的基準（TOST等価性）が追加され、反転予測の検証可能性が一段と精緻化した。2経路の機序仮説により、査読で問われる理論的整合性への回答が準備された（51点）。",
+        "future-potential: 反転予測の検証が進めば「予測可能性」が睡眠介入の制御変数として確立する。提示量仮説の分離設計は、結果がどちらに転んでも知識が残る構造になった（53点）。"
+      ]
+    },
+    {
+      "dimension": "quality",
+      "variance": 0,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 「予測誤差」という語が操作的意味に限定され、濫用リスクが解消された。効果量・有意水準まで落ちた反証条件が、この仮説にしか書けない輪郭を強化した（50点）。",
+        "quality-evaluator: 検出力計算・睡眠段階判定の妥当性検証手順が明記され、実行可能性が研究計画の水準に達した。ただし実データ（パイロット）がない点は実装前の注意項目として残る（50点）。"
+      ]
+    }
+  ],
+  "consensus_summary": "全評価者が、v3が「操作定義の限定＋統計的閾値＋代替仮説＋機序の文献的裏付け」を追加し、v2の残課題（用語の濫用・判定基準・機序の整合性）を解消した点で一致した。scientific_novelty と future_potential が引き続き最高評価で、予測可能性という制御変数の検証可能性が前線に接続している。残る論点はパイロットデータの欠如と境界条件の未検討で、研究計画としての次の段階（実証）に委ねられた。",
+  "executive_summary": "v3は、反直観的予測（予測可能キューは固定化を弱め、予測不能キューは強める）に、操作定義・統計的閾値（効果量・TOST等価性）・代替仮説（提示量仮説）・機序の文献的裏付けを追加した改訂である。現在価値は50、潜在価値は52で、両軸とも45を超えInnovationを維持した。科学的新規性（51）と未来可能性（53）が中核で、仮説は研究計画として実証可能な水準に到達した。",
+  "synthesis_narrative": "議長として、6体の評価者はv2→v3で「精査項目の解消」が起きたと見た。独創性鑑定人（49）は「操作定義の限定で逸脱が芯を保った」と評し、凡庸性探知犬（50）は「予測誤差の濫用リスクが解消され、この仮説にしか書けない輪郭が強化された」と認めた。科学的新規性査読者（51）は「機序の2経路と統計的閾値が、査読で問われる論点を先回りした」と評価し、完成度検査官（50）は「検出力計算と睡眠段階判定の検証手順が研究計画の水準に達した」とした。未来可能性分析者（53）は「提示量仮説の分離設計が、結果の成否に関わらず知識を残す構造になった」と見た。唯一の緊張は、パイロットデータの欠如と境界条件の未検討であり、これは実証段階の次の課題として保存する。Innovationとして維持しつつ、実証への距離が一歩縮まった。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "独創性鑑定人",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の独創性評価",
+      "domain": "scientific",
+      "primary_score": 49,
+      "primary_score_rationale": "反転という逸脱の芯が、操作定義の限定と代替仮説の併記によって、理論的勇気から検証可能な主張へと昇華された。",
+      "dimension_scores": {
+        "meaningful_deviation": {"score": 49, "weight": 0.5, "evidence": "「予測可能=抑制」という反転と提示量仮説の分離", "judgment": "逸脱が検証可能な形で残った"},
+        "counterintuitive_flip": {"score": 50, "weight": 0.3, "evidence": "TMRの強化前提に対する逆転の主張が維持", "judgment": "反直観的主張として成熟した"},
+        "specificity_of_claim": {"score": 48, "weight": 0.2, "evidence": "効果量・TOST等価性まで落ちた反証条件", "judgment": "予測の具体性が高まった"}
+      },
+      "value_vector_contribution": {"originality": 49, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 82,
+      "strengths": [
+        "反転という逸脱が、操作定義・統計閾値の追加によって理論的勇気から実証可能な主張へ昇華した",
+        "代替仮説（提示量仮説）の併記が、逸脱の強さに伴うリスクを適切に管理した",
+        "機序の2経路が、逸脱を記述から機構へと深めた"
+      ],
+      "weaknesses": [
+        "反転の実在はまだデータで示されておらず、パイロットが未実施",
+        "境界条件（どの睡眠段階・どの記憶種で効果が出るか）が未検討で、逸脱の適用範囲が不明"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["意味ある逸脱（反直観的予測）", "代替仮説の併記"],
+      "unique_perspective": "逸脱は強さと安全性の両立を求められる。この仮説は、反転という勇気ある逸脱に、提示量仮説という逃げ道を付けて安全網を張った。これにより、失敗しても学びが残る構造になった。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "機序の精緻化は認めつつ、実データがない点を厳しく問うだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "境界条件の限定より、開かれた問いの潜在性を重視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "パイロット実験で反転の方向と効果量の概算を確認する",
+        "境界条件（睡眠段階・記憶種）を実験で切り分ける"
+      ],
+      "narrative": "逸脱は安全網を得た。反転という芯は残したまま、提示量仮説で検証可能性を確保したのは理論的勇気のある所作だ。あとはデータが、その逸脱が実在するかを教えてくれる。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性探知犬",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の凡庸性スクリーニング",
+      "domain": "scientific",
+      "primary_score": 50,
+      "primary_score_rationale": "「予測誤差」の濫用リスクが操作的定義で解消され、効果量・有意水準まで落ちた反証条件がこの仮説にしか書けない輪郭を強化した。",
+      "dimension_scores": {
+        "generic_risk": {"score": 49, "weight": 0.4, "evidence": "操作定義（CV閾値）とTOST等価性の具体的な判定基準", "judgment": "平均解からさらに離脱"},
+        "information_density": {"score": 51, "weight": 0.3, "evidence": "文献的裏付けと代替仮説が情報密度を高めた", "judgment": "新情報密度が向上"},
+        "particularity": {"score": 50, "weight": 0.3, "evidence": "予測可能性の反転が固有の輪郭を維持", "judgment": "仮説固有の輪郭が強化された"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 83,
+      "strengths": [
+        "「予測誤差」が操作的意味（CV閾値・ASSR・MMN）に限定され、濫用の入り口が封じられた",
+        "効果量・有意水準まで落ちた反証条件が、誰が書いても同じにならない文章になっている",
+        "代替仮説の併記が、断言的な凡庸さではなく健全な仮説文体を作った"
+      ],
+      "weaknesses": [
+        "多数の追記（操作定義・機序・代替仮説）により情報量が増えたぶん、核心の主張が文面の中心からやや散漫になっている",
+        "個体差（聴覚閾値・睡眠構築の違い）への言及がなく、集団平均への過度の一般化リスクが残る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["固有の輪郭（反直観的主張）", "濫用の封じ（操作定義）"],
+      "unique_perspective": "言葉の濫用は凡庸化の隠れた入り口だ。v3は「予測誤差」を操作的に限定し、その入り口を封じた。ただし情報密度が上がった代償に、核心の輪郭がやや散漫になった点は、次の改訂で注意すべきだ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "情報量の増加を、文章の密度と実行可能性の両面から評価するだろう"},
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "操作定義の硬直化が、物語の語り口を損なうリスクを指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "核心の反転主張を先頭に戻し、追記を後段に整理して輪郭を復活させる",
+        "聴覚閾値・睡眠構築の個体差への言及を加え、過度の一般化を防ぐ"
+      ],
+      "narrative": "この文面は、この仮説にしか書けない。濫用の入り口を封じたのは好判断だ。ただ、情報が増えた分、核心の声が少し埋もれた。輪郭をもう一度前面に出せば、凡庸は完全に逃げ切れる。"
+    },
+    {
+      "evaluator_id": "scientific-novelty",
+      "evaluator_name": "科学的新規性査読者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の科学的新規性・検証可能性評価",
+      "domain": "scientific",
+      "primary_score": 51,
+      "primary_score_rationale": "反転予測に操作定義・統計的閾値・代替仮説・機序の文献的裏付けが揃い、既存TMR理論に新しい予測を加えた検証可能な研究計画として評価できる。",
+      "dimension_scores": {
+        "frontier_advancement": {"score": 52, "weight": 0.5, "evidence": "予測可能性による抑制という新しい予測と機序の2経路", "judgment": "知識の前線への接続が明確"},
+        "falsifiability": {"score": 51, "weight": 0.3, "evidence": "効果量・TOST等価性まで落ちた反証条件", "judgment": "検証可能性が一段と設計された"},
+        "importance_if_true": {"score": 49, "weight": 0.2, "evidence": "正しければ予測可能性が睡眠介入の設計原理になる", "judgment": "重要度は高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": 51, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 85,
+      "strengths": [
+        "反転予測の検証可能性が、効果量と等価性検定まで含めて具体的に設計された",
+        "機序の2経路（干渉・予測誤差解放）が文献的裏付けを得て、理論的整合性への回答が準備された",
+        "提示量仮説の分離設計により、予測の帰無と代替が同一実験で判別できる",
+        "睡眠段階判定の妥当性検証手順が、測定指標の信頼性を担保した"
+      ],
+      "weaknesses": [
+        "実データがなく、反転の方向と効果量の想定が文献推定に依存している",
+        "予測誤差説と覚醒説が同一結果を説明しうる点の識別実験が未設計",
+        "境界条件（睡眠段階・記憶種）が未検討で、新規性の適用範囲が不明瞭"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["新しい予測の追加（外挿でない）", "反証可能性の設計", "代替仮説の分離"],
+      "unique_perspective": "科学的新規性は、反証条件と代替仮説のセットで決まる。この仮説は予測の反証条件と提示量仮説の分離を同時に備え、v2の「問い」がv3で「判別可能な予測」へと進化した。査読で次に問われるのは実データと識別実験だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "統計的閾値は認めつつ、実データの欠如を実行段階の懸念として挙げるだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "前線への接続より、結果が残す知識の構造を重視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "パイロット実験で反転の方向と効果量を実測する",
+        "予測誤差説vs覚醒説の識別実験（覚醒の共変量測定）を設計に加える"
+      ],
+      "narrative": "査読者として、この仮説は「検証可能な予測」の段階に到達した。反証条件と代替仮説が揃い、機序にも文献的な裏付けがある。次の審査項目は実データと識別実験で、これは研究計画として当然進むべき段階だ。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度検査官",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の技術的完成度・実現可能性評価",
+      "domain": "scientific",
+      "primary_score": 50,
+      "primary_score_rationale": "検出力計算（N=24、d=0.5、80%）と睡眠段階判定の妥当性検証（κ>0.8）が明記され、実行可能性が研究計画の水準に達した。",
+      "dimension_scores": {
+        "technical_completion": {"score": 50, "weight": 0.35, "evidence": "操作定義・機序・代替仮説・反証条件の一貫構造", "judgment": "研究計画としての整合性が向上"},
+        "feasibility": {"score": 51, "weight": 0.35, "evidence": "検出力計算と妥当性検証手順", "judgment": "実行可能性が担保された"},
+        "precision": {"score": 49, "weight": 0.3, "evidence": "効果量・TOST等価性の判定基準", "judgment": "操作定義が精緻化された"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 83,
+      "strengths": [
+        "検出力計算（N=24、d=0.5、80%）が明記され、被験者数の根拠が示された",
+        "睡眠段階自動判定の妥当性検証手順（κ>0.8）が、測定の信頼性を担保した",
+        "TOST等価性検定により、予測(2)の「等価」の統計的基準が確定した",
+        "刺激総量を3条件で等しくすることで、提示量の交給が制御された"
+      ],
+      "weaknesses": [
+        "パイロットデータがなく、刺激強度の較正と効果量の想定が未実証",
+        "覚醒水準・体動など実装上の交給要因の統制が未明記",
+        "睡眠効率や睡眠構築の個体差への対応が未設計"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["約束と検証手段の対応", "統計的閾値の確定"],
+      "unique_perspective": "品質は、検証手段が約束にどこまで対応するかで決まる。v3は効果量・等価性検定・妥当性検証手順まで落ち、約束と手段の対応が完成した。残るは実データと交給要因の統制という、実行段階の標準的な課題だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "統計的厳密さは認めつつ、核心の輪郭の散漫を指摘するだろう"},
+        {"evaluator_type": "future-potential", "predicted_stance": "実装の精査を軽く見て、開かれた問いの価値を重視するだろう"}
+      ],
+      "improvement_suggestions": [
+        "パイロット実験で刺激較正と効果量の実測を行う",
+        "覚醒水準・体動の連続測定と個体差への対応を計画に明記する"
+      ],
+      "narrative": "アイデアは実行を通してしか現実にならない。v3は統計的閾値と妥当性検証まで落ち、実行計画として成立した。次の段階はパイロットで、これは標準的な研究の進み方だ。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性分析者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の将来価値・環境変化評価",
+      "domain": "scientific",
+      "primary_score": 53,
+      "primary_score_rationale": "提示量仮説の分離設計により、反転予測の成否に関わらず「予測可能性は固定化に影響するか」という問いの知識が残る構造になった。",
+      "dimension_scores": {
+        "environment_shift": {"score": 53, "weight": 0.4, "evidence": "睡眠科学・非侵襲刺激研究の加速", "judgment": "環境は明確な追い風"},
+        "ahead_of_time": {"score": 54, "weight": 0.4, "evidence": "予測可能性という未解決の制御変数", "judgment": "開かれた問いが実証段階に進んだ"},
+        "generalization": {"score": 50, "weight": 0.2, "evidence": "学習支援・PTSD記憶変容への接続", "judgment": "汎化可能性が高い"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 53, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "discovery_target",
+      "confidence": 86,
+      "strengths": [
+        "反転予測の成否に関わらず知見が残る分離設計により、将来価値が結果依存から解放された",
+        "予測可能性を制御変数とする睡眠介入への接続が具体的になった",
+        "睡眠科学研究の加速で、検証のための技術基盤が整い始めている"
+      ],
+      "weaknesses": [
+        "境界条件の未検討により、将来の介入適用範囲が不明瞭",
+        "単施設での実施を想定しており、再現性の担保が未定"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["開かれた問い（未解決の制御変数）", "結果依存からの解放"],
+      "unique_perspective": "私は可能性の地図を描く者だ。この仮説の最大の強みは、結果がどちらに転んでも地図に線が引かれることだ。提示量仮説との分離は、問いを結果の危険から解放した。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "scientific-novelty", "predicted_stance": "結果依存からの解放より、実データの欠如を優先するだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "再現性の担保を、実装計画の課題として指摘するだろう"}
+      ],
+      "improvement_suggestions": [
+        "境界条件を実験で切り分け、介入の適用範囲を確定する",
+        "多施設・事前登録による再現性の担保を計画する"
+      ],
+      "narrative": "歴史的に、重要な問いは結果の正しさとは別に価値を持つ。この仮説は、分離設計によって問いを結果の危険から解放した。境界条件が切り分けられれば、この地図は介入研究に引き渡せる。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味の守護者",
+      "content_summary": "予測誤差によるリプレイ解放仮説v3の意味的・物語的価値評価",
+      "domain": "scientific",
+      "primary_score": 51,
+      "primary_score_rationale": "記憶変容の倫理的・存在論的注記（記憶の真正性）が仮説の含意として明示され、実験記述を超える意味の問いが開かれた。",
+      "dimension_scores": {
+        "existence_question": {"score": 50, "weight": 0.4, "evidence": "記憶の夜間書き換えと真正性の注記", "judgment": "自己同一性の問いに接続した"},
+        "narrative_power": {"score": 52, "weight": 0.3, "evidence": "予測可能性が想起の主体性を変えるという物語", "judgment": "人間の理解に届く物語が維持された"},
+        "interpretive_depth": {"score": 52, "weight": 0.3, "evidence": "介入時の記憶の真正性という問い", "judgment": "解釈の深まりが見られる"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 51},
+      "classification": "discovery_target",
+      "confidence": 80,
+      "strengths": [
+        "記憶変容が記憶の真正性という倫理的問いを伴う旨が、仮説の含意として明示された",
+        "「予測可能性が主体性に与える意味」という問いが、境界条件の検討とつながり始めた",
+        "物語としての定式化が、操作定義の精緻化によっても失われなかった"
+      ],
+      "weaknesses": [
+        "記憶変容介入時の同意手続き・真正性の扱いが、概念の注記に留まり具体的手続きに届いていない",
+        "倫理注記が文面の末尾に置かれ、意味の問いが仮説の中心にはなっていない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["普遍的経験（睡眠・記憶・自己）への接続", "倫理的問いの明示"],
+      "unique_perspective": "操作定義の精緻化は、物語を殺すことが多い。だがこの仮説は、記憶の真正性という倫理的問いを併記することで、物語の深みを保った。意味の問いは、実証の厳しさと共存できる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "倫理注記の追加を、物語性への回帰として警戒するだろう"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "倫理注記を、実装手続きの欠落として捉えるだろう"}
+      ],
+      "improvement_suggestions": [
+        "記憶変容介入時の同意手続きと真正性の扱いを具体的に記す",
+        "倫理注記を仮説の含意として本文に組み込み、意味の問いを中心へ近づける"
+      ],
+      "narrative": "科学的仮説も、人間がなぜそれを知りたいのかという問いの上に立つとき、意味を持つ。この仮説は、記憶の真正性という倫理的問いを併記することで、実証の厳しさと物語を両立させた。あと一歩で、この問いは中心に来る。"
+    }
+  ],
+  "recommendations": [
+    "パイロット実験（N=8程度）で反転の方向と効果量の概算を実測し、刺激較正を確定する",
+    "予測誤差説vs覚醒説の識別実験（覚醒水準の連続測定）を設計に加える",
+    "境界条件（睡眠段階・記憶種）を実験で切り分け、適用範囲を確定する",
+    "覚醒水準・体動・睡眠効率など実装上の交給要因の統制を計画に明記する",
+    "再評価ループ（compare_reports.py）で v2→v3 の改善を確認済み。Innovation を維持しつつ、実証段階へ進む"
+  ],
+  "caveats": [
+    "評価は仮説の記述のみに基づく。背景文献の精査と実験による検証は行っていない。",
+    "パイロットデータがなく、効果量の想定は文献推定に依存する。",
+    "予測の成否は実証に依存し、Innovation の判定は「潜在価値が高い」という意味であって、仮説の正しさを保証しない。"
+  ]
+}

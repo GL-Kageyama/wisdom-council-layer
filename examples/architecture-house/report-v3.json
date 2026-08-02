@@ -1,0 +1,231 @@
+{
+  "report_id": "wisdom-council-report",
+  "report_timestamp": "2026-08-02T00:00:00Z",
+  "content_summary": "個人邸『光の暦——一本の樹を囲む家』v3改訂——螺旋の空間物語・光の三断面・構造の正直さ",
+  "content_type": "structured",
+  "domain": "creative",
+  "mode": "full",
+  "evaluators_consulted": [
+    "originality",
+    "anti-generic-filter",
+    "aesthetic-critic",
+    "emotional-impact",
+    "quality-evaluator",
+    "future-potential"
+  ],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "建築設計に科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "個人邸設計に市場性評価は不適合（例外的除外）" },
+    { "evaluator_id": "philosophical-evaluator", "reason": "建築設計に哲学的評価は不適合（例外的除外）" },
+    { "evaluator_id": "meaning-evaluator", "reason": "建築設計に意味評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 56, "variance": 0, "min": 56, "max": 56, "scores": [56] },
+    "quality": { "mean": 40, "variance": 1, "min": 39, "max": 41, "scores": [39, 41] },
+    "aesthetic": { "mean": 44, "variance": 0, "min": 44, "max": 44, "scores": [44] },
+    "emotional_impact": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
+    "future_potential": { "mean": 52, "variance": 0, "min": 52, "max": 52, "scores": [52] }
+  },
+  "current_value_score": 45,
+  "hidden_potential_score": 52,
+  "classification": "discovery_target",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 1,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 空間の物語と構造の見せ方が凡庸の最後の残り香（共生の触れ込み）を拭った。39点。",
+        "quality-evaluator: 構造は『正直』になったが、樹の荷重分担と継手の詳細がまだ未確定で、40点前半に留める。41点。"
+      ]
+    },
+    {
+      "dimension": "aesthetic",
+      "variance": 0,
+      "disputing_evaluators": ["aesthetic-critic", "quality-evaluator"],
+      "arguments": [
+        "aesthetic-critic: 三断面の光と樹冠スロットが、影という時間の造形を空間に持ち込んだ。44点。",
+        "quality-evaluator: 光の切り方が演出に傾きすぎる懸念がある。実際の暮らし（眩しさ・収納・熱）と整合するかは別の問いだ。"
+      ]
+    }
+  ],
+  "consensus_summary": "改訂指令（空間の物語・光の季節応答・構造の正直さ）が実装され、全次元が上昇（品質32→40・美38→44・感情36→40・独創性54→56）。current=45 / hidden=52 で discovery_target だが、しきい値に達しつつある。光の暦という物語が断面に降り、構造が隠されず語る段階に到達。残る課題は細部の手仕事と、光の演出の実用との整合。",
+  "executive_summary": "『光の暦』v3は、北の圧縮された土間から半層ずつ光が強まる順に巡り、樹冠の下へ還る螺旋の物語を確立した。三断面（冬至・夏至・春分）で光を設計し、垂下梁と第五柱を隠さず見せる構造の正直さを実現。品質40・美44・感情40・独創性56、current=45 / hidden=52 で discovery_target（しきい値目前）。残る課題は細部の手仕事と光の演出の実用性。",
+  "synthesis_narrative": "再作成指令（螺旋の物語化・光の季節応答・構造の見せ方）が忠実に実装され、計画は『物語を持つ』段階に進んだ。美評価者は三断面の光と樹冠スロットが影という時間を空間に持ち込んだと44点、感情評価者は光が強まる順に巡って樹に還る物語が住まう感覚に届いたと40点。品質評価者は構造の正直さを認めつつ樹の荷重分担と継手の未確定を41点、anti-genericフィルタは最後の触れ込みが拭われたと39点。全体としてしきい値に達しつつある discovery_target だが、細部の手仕事と光の演出の実用との整合が次の焦点。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "個人邸『光の暦』v3改訂の独創性評価",
+      "domain": "creative",
+      "primary_score": 56,
+      "primary_score_rationale": "『光が強まる順に巡り樹に還る』という螺旋の物語が確立し、光の暦という概念が空間の骨格に昇華した",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 62, "weight": 0.35, "evidence": "北の土間→朝の台所→昼の中庭→夕の書斎→樹冠のテラス、という光の強まる螺旋", "judgment": "光を時間軸にした物語が空間の骨格になった" },
+        "combinatorial_surprise": { "score": 56, "weight": 0.25, "evidence": "光の強まる順×半層×樹冠スロットの結合", "judgment": "光と動線と構造が一つの原理に収斂した" },
+        "distance_from_template": { "score": 50, "weight": 0.25, "evidence": "一般的な個人邸の間取りへの距離", "judgment": "間取りを時間の順序に置き換えた点で明確に離れた" },
+        "non_obviousness": { "score": 54, "weight": 0.15, "evidence": "樹冠スロットが環状のトップライトで樹を貫く", "judgment": "光と樹の出会いに専門家をうならせる点がある" }
+      },
+      "value_vector_contribution": { "originality": 56, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["『光が強まる順に巡って樹に還る』という、間取りを時間の順序に置き換えた物語", "樹冠スロットという、樹と光を一本の環で結ぶ装置"],
+      "weaknesses": ["光の切り方に演出が先行し、実用（眩しさ・季節差）との整合が未検証", "物語の強度が高く、住まい手の自由な暮らし方を制約する危険"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["光を時間軸にした空間物語", "一つの原理への収斂"],
+      "unique_perspective": "この計画の独創性は、間取りを『機能の配置』から『光の順序』へと組み替えた点にある。v3はその組み替えを物語として完成させた",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "物語の強制力が実用の自由度を奪うとみるだろう" }
+      ],
+      "improvement_suggestions": ["光の演出を実用（眩しさ・季節の日射）と整合させ、物語を操作可能にする", "物語の強制と自由な暮らし方の折り合いを、可動な装置で担保する", "光の暦を、住まい手が読める痕跡（影のライン・季節の目盛り）として残す"],
+      "narrative": "v3は『光が強まる順に巡り、樹に還る』という物語を空間の骨格にした。間取りは機能の配置から光の順序へ組み替えられ、個人邸の文法を静かに反転させた。残るは、この強い物語が実用と折り合うかという問いだ。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "個人邸『光の暦』v3改訂の凡庸性フィルタ評価",
+      "domain": "creative",
+      "primary_score": 39,
+      "primary_score_rationale": "『共生』の触れ込みは拭われ、構造と光が語るようになった。凡庸はほぼ解体された",
+      "dimension_scores": {
+        "cliche_density": { "score": 38, "weight": 0.3, "evidence": "三断面・樹冠スロット・垂下梁の見せ方", "judgment": "定番語彙は消え、機構が語る" },
+        "emotional_manipulation": { "score": 39, "weight": 0.3, "evidence": "『光が強まる順に樹に還る』という物語", "judgment": "情感ではなく体験の順序が感情を作る" },
+        "structural_predictability": { "score": 40, "weight": 0.25, "evidence": "螺旋の断面と光の三つの開口", "judgment": "箱型プランを完全に脱した" },
+        "substance_over_style": { "score": 40, "weight": 0.15, "evidence": "荷重経路を隠さない垂下梁と第五柱", "judgment": "唱えずに見せる段階に到達した" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 39, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 80,
+      "strengths": ["『共生』という触れ込みが消え、機構（三断面・スロット・垂下梁）が空間を語る", "物語が情感ではなく体験の順序で感情を作る"],
+      "weaknesses": ["物語の強度が、住まい手の自由な暮らしを『演出』に誘導する危険", "光の演出が実用より前に立つ、新たな形の『過剰』"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["機構が語る段階への到達", "感情の体験化"],
+      "unique_perspective": "凡庸は『言葉の過剰』から『演出の過剰』へ姿を変える。光を強く打ち出すほど、それが新たな定番（光の家ブーム）の元になり得る。演出を実用で引き締めるのが次の仕事",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "私が演出の過剰を指摘するのは、光の美しさを過小評価しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["光の演出を、眩しさ・収納・熱の実用で引き締める", "物語を操作可能にし、住まい手が自由に光を使える余地を残す", "光の装置に『季節を読む』実用（日射調整・保温）を持たせる"],
+      "narrative": "v3で『共生』という言葉は消え、光と構造が空間を語り始めた。凡庸は解体されたが、新たな過剰が顔を出しつつある——光の演出が実用より先に立つ、という形の。光を強く語るほど、それは次の定番になり得る。"
+    },
+    {
+      "evaluator_id": "aesthetic-critic",
+      "evaluator_name": "Aesthetic Critic",
+      "content_summary": "個人邸『光の暦』v3改訂の美的評価",
+      "domain": "creative",
+      "primary_score": 44,
+      "primary_score_rationale": "三断面の光が影という時間を空間に持ち込み、垂下梁が構造のリズムを空間に刻んだ。美は物語から体感に近づいた",
+      "dimension_scores": {
+        "sensory_vividness": { "score": 45, "weight": 0.35, "evidence": "樹冠スロットが樹の影を床に落とす、三つの開口の季節差", "judgment": "光と影が感覚に届き始めた" },
+        "spatial_composition": { "score": 44, "weight": 0.25, "evidence": "光が強まる順に半層ずつ昇る断面", "judgment": "断面が時間の順序を語る" },
+        "material_honesty": { "score": 42, "weight": 0.25, "evidence": "垂下梁と第五柱の見せ方", "judgment": "構造の道筋が美になるが、材料の経年が未検討" },
+        "cohesion": { "score": 43, "weight": 0.15, "evidence": "樹を中心に光・構造・動線が一つの原理に収斂する", "judgment": "全体が一つの原理で統率され始めた" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": 44, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": ["三断面の光が、影という時間の造形を空間に持ち込んだ", "垂下梁が構造のリズムを、光の順序と重ねて空間に刻む"],
+      "weaknesses": ["光の切り方が演出に傾き、眩しさや季節差の実用と整合していない", "材料の経年（雨の動き・木の飴色・土の乾き）がまだ設計されていない"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間の造形（影）", "一つの原理への収斂"],
+      "unique_perspective": "美はこれから『光の演出』と『実用の光』の折り合いで決まる。強く照らしすぎる光は、住まう人の眼には眩しさに変わる。影が快適さと一体になるとき、美は完成する",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "光の演出の過剰を指摘し、私の美の評価を甘いとみるだろう" }
+      ],
+      "improvement_suggestions": ["光の演出を実用（眩しさ・日射制御）と整合させる", "材料の経年を設計する：雨の動き、木の飴色、土の乾き、樹との出会い", "樹と屋根の接点（落水線の樋・足元）を美の対象として仕上げる"],
+      "narrative": "v3の光は、影という時間の造形を空間にもたらした。垂下梁のリズムと光の順序が重なり、断面が物語を語り始める。しかし光が強く打たれるほど、眩しさと実用の問いが迫る。美は、演出と快適さの狭間で完成する。"
+    },
+    {
+      "evaluator_id": "emotional-impact",
+      "evaluator_name": "Emotional Impact Evaluator",
+      "content_summary": "個人邸『光の暦』v3改訂の情動評価",
+      "domain": "creative",
+      "primary_score": 40,
+      "primary_score_rationale": "光が強まる順に巡って樹に還る物語が、住まう感覚に『一日と一生の呼吸』を与え始めた",
+      "dimension_scores": {
+        "visceral_response": { "score": 40, "weight": 0.35, "evidence": "朝の台所の光から夕の書斎の光へ、身体が光の順序を辿る", "judgment": "光の順序が一日の呼吸になる" },
+        "belonging_atmosphere": { "score": 42, "weight": 0.3, "evidence": "半層ごとに樹に立ち戻る螺旋", "judgment": "『樹に還る』が一日の作法になる" },
+        "empathy_triggers": { "score": 38, "weight": 0.25, "evidence": "樹冠の下のテラスへの帰還", "judgment": "暮らしの祈りが空間の順序になった" },
+        "subtlety_of_feeling": { "score": 39, "weight": 0.1, "evidence": "光の強さの変化に委ねた感情", "judgment": "感情が言葉でなく光の推移に委ねられた" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": 40, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": ["光が強まる順に巡る動線が、一日の呼吸として感情を運ぶ", "樹に還る螺旋が、『帰る』という感情を毎日の作法にした"],
+      "weaknesses": ["光の演出が強い分、曇りの日や冬の短い日に感情が空回りする", "物語の強制が、住まい手それぞれの暮らし方（夜型・老い）を阻む恐れ"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["感情の作法化（一日の呼吸）"],
+      "unique_perspective": "この家の感情は『光の順序』という時間に委ねられている。それが強みであり弱点でもある——天候と季節に感情が左右される。安定した温度が、光の物語を支える土台になる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "quality-evaluator", "predicted_stance": "感情が天候に左右される点を、環境性能の欠如として減点するだろう" }
+      ],
+      "improvement_suggestions": ["曇りや冬の光の弱い日を支える、安定した光の装置（拡散光・蓄熱）を足す", "物語を操作可能にし、夜型や老いの暮らしにも開かせる", "光の順序を、温度や音（風の抜け・木のざわめき）でも支える"],
+      "narrative": "v3の螺旋は、光が強まる順に巡り、樹に還るという一日の呼吸を感情に与えた。『帰る』という言葉は、動線と光の順序という作法になった。しかし光に頼りすぎた感情は、曇りの日と冬の短い日に揺らぐ。光の物語を支える土台の温度が次に問われる。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "個人邸『光の暦』v3改訂の品質評価",
+      "domain": "creative",
+      "primary_score": 41,
+      "primary_score_rationale": "構造は『正直』になり、三断面の光が設計された。しかし樹の荷重分担と継手の詳細が未確定で、施工に耐える水準にはもう一段必要",
+      "dimension_scores": {
+        "structural_feasibility": { "score": 39, "weight": 0.35, "evidence": "第五柱としての樹、垂下梁の荷重経路", "judgment": "荷重経路は明示されたが、樹の分担と部材の径が未計算" },
+        "functional_program": { "score": 42, "weight": 0.25, "evidence": "螺旋動線と半層の断面", "judgment": "プログラムは機能するが、効率とバリアフリーが残る" },
+        "buildability": { "score": 42, "weight": 0.25, "evidence": "スプリットレベルと三つの開口", "judgment": "工法は可能だが、継手と収まりの詳細が未検討" },
+        "durability": { "score": 42, "weight": 0.15, "evidence": "折れ板屋根と落水線の樋", "judgment": "雨仕舞の方向性は正しく、詳細を詰める段階" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 41, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": ["荷重経路が構造図に明示され、第五柱の構想が構造として検討可能になった", "三断面の光が、実測可能な設計事項になった"],
+      "weaknesses": ["樹の荷重分担と柱列の径・梁の成が未計算", "螺旋動線の面積効率とバリアフリーの両立が未検討", "樹冠スロットの防水・落ち葉・鳥などの維持が未検討", "スプリットレベルの段差を支える壁の詳細が未確定"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["荷重経路の明示", "光の設計可能化"],
+      "unique_perspective": "品質は『成立』から『耐久』の段階へ進んだ。光の物語が美しいほど、樹冠スロットの防水・落ち葉・鳥という現実が後回しになりがちだ。実用の詳細が美を支える",
+      "expected_disagreement_points": [
+        { "evaluator_type": "aesthetic-critic", "predicted_stance": "私が維持の問題を挙げるのは、樹冠スロットの美しさを無視しているとみるだろう" }
+      ],
+      "improvement_suggestions": ["樹の荷重分担を定量化し、柱列の径・梁の成を確定する", "樹冠スロットの防水・排水・落ち葉・鳥対策を設計に織り込む", "螺旋動線の効率とバリアフリー（手すり・勾配）を再検討する", "スプリットレベルの段差を支える壁の構造詳細を図面化する"],
+      "narrative": "v3は品質を『成立』から『耐久』の段階へ動かした。構造は正直になり、光は設計可能になった。しかし樹冠スロットの防水や落ち葉、樹の荷重分担といった現実の問いが、美しい物語の影に残っている。実用の詳細こそが美を支える。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Evaluator",
+      "content_summary": "個人邸『光の暦』v3改訂の将来性評価",
+      "domain": "creative",
+      "primary_score": 52,
+      "primary_score_rationale": "光の暦が実空間の装置として実装され始め、時間軸を持つ住まいの類型が具体的な姿を見せた",
+      "dimension_scores": {
+        "extensibility": { "score": 54, "weight": 0.35, "evidence": "螺旋に沿って部屋を増減できる環状の骨格", "judgment": "家族の成長に耐える拡張性が維持される" },
+        "site_longevity": { "score": 53, "weight": 0.3, "evidence": "樹冠スロットと第五柱が百年の時間を構造に組み込む", "judgment": "時間軸が装置として実装され始めた" },
+        "audience_reach": { "score": 48, "weight": 0.25, "evidence": "光の順序に間取りを組み替える個人邸の類型", "judgment": "既存樹と斜面を持つ敷地に広く翻訳可能" },
+        "sustainability": { "score": 51, "weight": 0.1, "evidence": "三断面の光と自然通風の設計", "judgment": "気候への応答が具体の設計になった" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 52, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 74,
+      "strengths": ["光の暦が実空間の装置として実装され、時間軸を持つ住まいの類型が姿を見せた", "螺旋の骨格が、家族の成長と百年の樹という二つの時間軸に耐える"],
+      "weaknesses": ["光の演出が天候・季節に依存し、長期の快適性の土台がまだ未確定", "物語の強度が、多様な住まい手（高齢・夜型）への展開を狭めている"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["時間軸の装置化", "気候応答の設計化"],
+      "unique_perspective": "この計画の将来性は『住まいが時間を読める』ことにあり、それは高齢化した住まい手が季節と光で暮らしを整える力になる。時間を読める家は、長く住まわれる",
+      "expected_disagreement_points": [
+        { "evaluator_type": "anti-generic-filter", "predicted_stance": "光の演出が定番化する危険を指摘し、私の将来性評価を楽観視とみるだろう" }
+      ],
+      "improvement_suggestions": ["光の物語を天候・季節に依存しない土台（蓄熱・拡散光）で支える", "高齢・夜型など多様な暮らしに開くよう、物語を操作可能にする", "時間を読む装置（影の目盛り・季節の印）を、住まい手の実用として確立する"],
+      "narrative": "v3の光の暦は、実空間の装置として実装され始めた。樹冠スロットと三断面は、住まいが時間を読める器になった。この『時間を読める家』は、世代を超えて長く住まわれる潜在力を持つ。次は、その時間を天候に揺らがせない土台を築くことだ。"
+    }
+  ],
+  "recommendations": [
+    "discovery_target として維持。current_value 45 はしきい値（高≧45）に到達しつつある",
+    "光の演出を実用（眩しさ・日射制御・樹冠スロットの防水）と整合させる",
+    "材料の経年（雨・木の飴色・土の乾き）を設計し、美を時間で裏打ちする",
+    "樹の荷重分担と継手の詳細を確定し、品質を施工可能な水準へ引き上げる",
+    "物語を操作可能にし、多様な住まい手（高齢・夜型）に開かせる"
+  ],
+  "caveats": [
+    "scientific-novelty・business-value・philosophical-evaluator・meaning-evaluator は建築設計に不適合のため excluded_evaluators に記録し、集計から除外した",
+    "厳格スコアリング（中央値約30）適用のため、45点はしきい値到達であり『真に良い』（51以上）にはまだ達していない",
+    "光の演出と実用の整合は、美・感情と品質の間で評価が割れる余地があり、次の反復で調整すべき焦点"
+  ]
+}

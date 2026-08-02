@@ -116,7 +116,7 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 1. **全評価者の生データを完全に保存する**（`individual_reports`）。特に `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は作成スキルが再作成の材料として使う。
 2. **フィールド名は固定・一貫**（`schemas/value-output.schema.json` 準拠）。作成スキルはパスを決め打ちで読める。
 3. **合成で生データを捨てない**。executive_summary や synthesis_narrative はあくまで補助であり、評価の素材（スコア・根拠・弱点）は必ず JSON に残す。
-4. **再作成指示（directive）そのものは生成しない。** それは専用スキルの責務。このレイヤーは「評価の素材」を整えて渡す。
+4. **再作成指示（directive）そのものは生成しない。** それは専用スキル・生成AIなど、**適切な他の手段**の責務。このレイヤーは評価専用であり、作成には介入しない。「評価の素材」を整えて渡すことに専念する。
 5. **成果物は常に統合されたValue Reportである。** 個々の評価者出力は内部素材であり、単体で出力しない。
 
 ## Value Report の構造

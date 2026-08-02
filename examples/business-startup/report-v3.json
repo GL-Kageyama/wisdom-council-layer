@@ -1,0 +1,290 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "FOODSIGN（フードサイン）v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+  "domain": "business",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [
+    {"evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）"},
+    {"evaluator_id": "aesthetic-critic", "reason": "企画文書に美的完成度の評価軸は不適合"},
+    {"evaluator_id": "emotional-impact", "reason": "ビジネス企画評価では主軸とならない（消費者感情はbusiness-valueが担う）"},
+    {"evaluator_id": "philosophical-evaluator", "reason": "企画段階では市場価値の検証が優先され、世界観の変容評価は時期尚早"}
+  ],
+  "value_vector": {
+    "originality": {"mean": 48, "variance": 0, "min": 48, "max": 48, "scores": [48]},
+    "quality": {"mean": 56, "variance": 4, "min": 54, "max": 58, "scores": [58, 54]},
+    "aesthetic": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "emotional_impact": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "future_potential": {"mean": 34, "variance": 0, "min": 34, "max": 34, "scores": [34]},
+    "business_value": {"mean": 61, "variance": 0, "min": 61, "max": 61, "scores": [61]},
+    "scientific_novelty": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "philosophical_depth": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "meaning": {"mean": 32, "variance": 0, "min": 32, "max": 32, "scores": [32]}
+  },
+  "current_value_score": 55,
+  "hidden_potential_score": 33,
+  "classification": "current_success",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 4,
+      "disputing_evaluators": ["quality-evaluator", "anti-generic-filter"],
+      "arguments": [
+        "quality-evaluator: 収益の実数化・リースモデル・物語の三層が整合し、文書としての完成度が一気に高まった（58）",
+        "anti-generic-filter: 数字は入ったが、その根拠（LOIの検証内容）はまだ文言中心で、B2B定型への接近も残る（54）"
+      ]
+    },
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": ["business-value", "meaning-evaluator"],
+      "arguments": [
+        "business-value: LOI取得と機器リースで需要と導入摩擦の両方が具体化し、リカーリング収益の確度が高まった（61）",
+        "meaning-evaluator: 人間の層は復活したが、データ商品の冷徹さと体験はまだ外殻に留まり、テーマの重さは担保されていない（32）"
+      ]
+    }
+  ],
+  "consensus_summary": "6名の評価者は、収益の実数化（単価・契約数・限界利益）とLOIによる需要検証が、v2で指摘した弱点（数値根拠の欠如・需要未検証）を直接的に解消した点で一致。ビジネス価値（61）と品質（56）は明確に上昇し、current_successを維持した。一方、future-potentialとmeaning-evaluatorは、LOIが未だ契約書ベースの検証段階であることと、人間の物語がブランドの外殻に留まることを注記し、評価を控えめに保った。",
+  "executive_summary": "FOODSIGN v3は、データライセンスの単価・契約数・限界利益を明示し、食品メーカー2社とのLOI取得と機器リースによる店舗負担ゼロを加えた。収益の成り立ちが数字で語れるようになり、ベーカリーの焼き上がりサイクルを中核とする業界固有ノウハウが差別化の実体を帯びた。現時点の価値（≈55）は、需要の契約化と導入障壁の具体化でさらに押し上がった。",
+  "synthesis_narrative": "合議はv3をcurrent_successと判定した。v2の改善指令（数値根拠・需要の実証・業界固有の細部）が、企画を『構想』から『契約の足場を持つ事業』へ引き上げた。残る論点は、LOIが本契約になるかという検証の先と、スケールしたときに人間の物語が薄まらないかという、ビジネスと意味の緊張関係である。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "オリジナリティ評価者（新しいものの鑑定人）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 48,
+      "primary_score_rationale": "ベーカリーの焼き上がりサイクルという業界固有の運用知識が企画の中核に入り、データ商品を単独で代替不能なものに近づけた。手法（ライセンス）から現場のノウハウへ重心が移った。",
+      "dimension_scores": {
+        "conceptual_novelty": {"score": 48, "weight": 0.35, "evidence": "「焼き上がりサイクル＝次バッチの仕込み量」を予測の核にする視点は、フードロス領域では見慣れない", "judgment": "データ基盤のアイデアが、業界固有の現場知識と一体化した。"},
+        "combinatorial_surprise": {"score": 48, "weight": 0.25, "evidence": "「焼き上げ予測×廃棄予測×ギフト体験」の結合が、B2Bと人間の層を両立させる", "judgment": "組み合わせに方向性が生まれ、予測しにくさが増した。"},
+        "distance_from_template": {"score": 49, "weight": 0.25, "evidence": "消費者割引テンプレートからの距離は既に大きく、さらに業界固有知識で塗り替えられた", "judgment": "B2B定型への接近が、現場細部で部分的に破られた。"},
+        "non_obviousness": {"score": 47, "weight": 0.15, "evidence": "朝4時・昼11時の2バッチ計測という、実際の店舗運用からしか出ない細部", "judgment": "机上の実践者では思いつきにくい死角が埋め込まれた。"}
+      },
+      "value_vector_contribution": {"originality": 48, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 72,
+      "strengths": [
+        "業界固有の運用知識（焼き上がりサイクル）が企画の中核に据えられ、代替不能性が高まった",
+        "データライセンスという手法そのものではなく、現場のノウハウへ重心を移した"
+      ],
+      "weaknesses": [
+        "予測の実証（精度）がまだ無く、ノウハウが構想のまま残っている",
+        "データの蓄積方法自体は既存のサプライチェーンSaaSの延長に見える部分が残る"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["業界固有の運用知識の中核化", "予測しにくい現場細部"],
+      "unique_perspective": "この改訂で私が求めた『手法から現場ノウハウへの重心移動』が正しく実行された。ベーカリーの焼き上がりという、どの企画書にも書かれていない細部が、模倣への最強の壁になる。ただしノウハウは実証されて初めて資産になる。次は数字で証明せよ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "LOIとリースモデルを高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "焼き上げ細部は評価しつつ、データ基盤の部分は既存SaaSの延長と見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "予測精度（%表示）を次の反復で明示し、ノウハウを実証データに裏付ける",
+        "特許・ブランドだけでなく、予測モデルそのものを業界標準のAPIとして公開する構想で代替不能性をさらに高める"
+      ],
+      "narrative": "私はv1で『同じ需要の場で見方を変えよ』と言い、v2で『手法でなく業界独自の知識を中核に』と言った。v3はその両方に答えた。残るは実証。数字が入れば、この企画の独自性は証明される。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "反凡庸フィルタ（凡庸性の探知犬）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 54,
+      "primary_score_rationale": "収益の実数化で情報密度が大幅に上がり、どの企画にも当てはまる万能感がさらに薄れた。ただし数字の根拠がまだ文言中心で、B2B定型への接近が一部残る。",
+      "dimension_scores": {
+        "generic_language_density": {"score": 55, "weight": 0.30, "evidence": "「月額30万円×12社」「限界利益率85%」と、置き換え不能な数値が並ぶ", "judgment": "数字は借用や汎用表現の最強の解毒剤になった。"},
+        "risk_avoidance": {"score": 56, "weight": 0.25, "evidence": "「特許・ブランドで保護する方針」という防御の立場表明がある", "judgment": "守るべき資産を具体的に宣言し、反論を呼び込んだ。"},
+        "information_density": {"score": 53, "weight": 0.25, "evidence": "収益・LOI・リース・人間の層が分節化され、各柱に数字が付いた", "judgment": "情報量は十分だが、根拠の検証ステップが未記載。"},
+        "particularity": {"score": 51, "weight": 0.20, "evidence": "「焼き上がりサイクル」「月額5千円/店のリース」など、他企画に置き換えにくい細部", "judgment": "現場に根ざした固有性が数字と共に出てきた。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 54, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": [
+        "収益が単価・契約数・限界利益で語られ、汎用表現がほぼ消えた",
+        "「特許・ブランドで保護」という守りの具体策を明示した",
+        "人間の層（受け取り体験・物語）を残し、B2B一本化という別の凡庸を避けた"
+      ],
+      "weaknesses": [
+        "LOIの検証内容・確約の根拠が文言中心で、数字の裏付けがまだ薄い",
+        "「データ×物流×コンサル」のB2B定型への接近は、細部で薄まったものの完全には消えていない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["実数化された収益", "守るべき資産の宣言", "現場の細部"],
+      "unique_perspective": "私は数字を『特定性の証拠』として嗅ぐ。月額30万円、焼き上がり2バッチ、月額5千円のリース——これらは他の企画に置き換えられない。ただし数字は出所が命だ。LOIの根拠がまだ『確約』という言葉だけなら、次の反復で実績に置き換えなければ、数字は虚飾に戻る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "三層の整合性を評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "LOIとリースの具体化を重視し、数字の検証不足には寛容だろう。"}
+      ],
+      "improvement_suggestions": [
+        "LOIをパイロット実績（導入店舗数・予測精度・実契約数）に置き換え、数字を裏付けで補強する",
+        "予測精度の測定方法（何をもって94%か）を明記し、B2B定型の細部をさらに塗り替える"
+      ],
+      "narrative": "v2で私は『迷信を破れ』と言った。v3は数字と現場細部で、その迷信をかなり破った。残るは数字の出所。実績が裏付けになれば、この企画の言葉は誰のものでもない、この企画だけの言葉になる。"
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "ビジネス価値評価者（現実の資金と市場の語り手）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 61,
+      "primary_score_rationale": "LOI取得で需要が契約の足場を持ち、機器リースで導入摩擦が解消された。収益が単価・契約数・限界利益で明示され、投資家との対話が可能な段階に達した。",
+      "dimension_scores": {
+        "market_demand": {"score": 62, "weight": 0.30, "evidence": "食品メーカー2社のLOI、うち1社は年度予算での本契約を確約", "judgment": "需要が『想定』から『署名』へ一歩近づいた。ただしLOIは法的拘束力の弱い段階。"},
+        "growth_potential": {"score": 63, "weight": 0.25, "evidence": "規制強化と廃棄処理費高騰に加え、年度予算サイクルへの織り込みで収益化の時期が具体化", "judgment": "市場の追い風が予算獲得という実務に接続された。"},
+        "feasibility_of_delivery": {"score": 58, "weight": 0.20, "evidence": "機器リース（月額5千円/店）で店舗負担ゼロを実装可能な回収モデルにした", "judgment": "導入の障壁が解消された。物流の運営細部はまだ残る。"},
+        "competitive_advantage": {"score": 60, "weight": 0.25, "evidence": "焼き上がりサイクル予測のノウハウと特許・ブランド保護方針", "judgment": "障壁が『構想』から『保護対象の資産』へ具体化した。実績による防御はこれから。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 61, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 79,
+      "strengths": [
+        "LOI2社（うち1社は年度予算で本契約確約）で需要が署名の足場を得た",
+        "収益が単価・契約数・限界利益で語られ、ユニットエコノミクスが成立した",
+        "機器リースで導入初期コストの負担問題を具体的に解決した"
+      ],
+      "weaknesses": [
+        "LOIは本契約へのコンバージョンが未検証で、確度はまだ想定の域",
+        "共同物流の運営（配送網・品質管理）が未検証で、第2の収益柱が脆弱",
+        "参入障壁は保護方針の宣言に留まり、実績による防御力を持たない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["署名済み需要の兆候（LOI）", "リカーリング収益の実数化", "導入コストの回収モデル"],
+      "unique_perspective": "私は『需要が署名に近づいたか』で嗅ぐ。v3は2社のLOIという、まだ弱い署名を手に入れた。投資家に『最初に金を払うのは誰だ？』と聞かれて、ようやく名前を出せる。次の扉は、そのLOIが本契約に変わる100店の実績だ。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "meaning-evaluator", "predicted_stance": "人間の層は復活したが、データ商品の冷徹さは変わらないと批判するだろう。"},
+        {"evaluator_type": "future-potential", "predicted_stance": "LOIの契約化と制度化の確度に注目し、控えめな点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "100店規模のパイロットでLOIを本契約へ転換し、データ購入の実績を作る",
+        "共同物流の運営体制（配送パートナー・品質KPI）を企画に明記する",
+        "予測精度の実証値（%）を最優先のKPIとして宣言する"
+      ],
+      "narrative": "この改訂で、この企画は『アイデア』から『契約の足場を持つ事業』へ進んだ。数字が入り、LOIが署名された。だが投資家の次の質問は『そのLOIは本契約になるのか、100店で証明せよ』だ。実績が積まれれば、ビジネス価値はさらに跳ねる。"
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "完成度評価者（職人気質の検査官）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 58,
+      "primary_score_rationale": "v2で指摘した数値根拠の欠如が解消され、収益・需要検証・導入モデル・人間の層が整合的に構成された。収益3本柱の単価と限界利益まで明示した精密さは評価に値する。",
+      "dimension_scores": {
+        "technical_quality": {"score": 59, "weight": 0.35, "evidence": "事業概要・収益実数・需要検証・人間の層・強みの5層が互いを支える構造", "judgment": "各層が数字と物語で接続され、構成の完成度が高まった。"},
+        "precision": {"score": 57, "weight": 0.20, "evidence": "「月額30万円×12社」「限界利益率85%」「月額5千円/店」と数値が具体的", "judgment": "数値の明示が精密さを一段上げた。根拠の検証は次の課題。"},
+        "structure": {"score": 59, "weight": 0.25, "evidence": "v2の課題（数値根拠・需要検証・店舗負担）をLOIとリースで回収した", "judgment": "自己指摘した約束が企画内で閉じられた。"},
+        "feasibility": {"score": 56, "weight": 0.20, "evidence": "LOI・リース・焼き上げ計測は実行可能な範囲で、実装計画が追いついた", "judgment": "実現可能性は高まったが、物流の運営細部と予測精度の実証が残る。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": 58, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "current_success",
+      "confidence": 74,
+      "strengths": [
+        "収益3本柱に単価・契約数・限界利益の数字が入り、精密さが大幅に向上した",
+        "需要検証（LOI）と導入コスト（リース）というv2の未回収課題を回収した",
+        "人間の層を外殻の物語として明記し、全層の整合を保った"
+      ],
+      "weaknesses": [
+        "数字の出所（LOIの検証内容・確約の根拠）が文言中心で、裏付けが未記載",
+        "共同物流の運営細部（配送網・品質管理）が未検証で、第2の収益柱が未完成"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["数値の裏付け（収益実数）", "約束の回収（LOI・リース）", "構成の一貫性"],
+      "unique_perspective": "完成度検査官として私が見るのは『数字が出所を持てるか』だ。v3は収益を実数で語るようになったが、その数字の出所（LOIの根拠）はまだ言葉でしかない。次の改訂で、数字が実績の裏付けを持つとき、この企画は『完成』に近づく。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "anti-generic-filter", "predicted_stance": "数字は評価しつつ、B2B定型への接近と根拠の薄さを指摘するだろう。"},
+        {"evaluator_type": "business-value", "predicted_stance": "LOIの実現性を重視し、構成の完成度を私と同様に高く見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "予測精度・契約転換率など、数字を裏付ける実績値を次の反復で入れる",
+        "共同物流の運営（配送パートナー・品質KPI・成功報酬型回収）を明文化する"
+      ],
+      "narrative": "v2の粗さは『数字の欠落』だった。v3はそれを単価と限界利益で埋め、LOIという署名まで入れた。構成は整った。残る粗は、数字の出所と物流の運営だ。それらが埋まれば、この企画の品質はさらに完成へ近づく。"
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "未来可能性評価者（未来の時間軸から現在を見る観測者）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 34,
+      "primary_score_rationale": "年度予算サイクルへの織り込みとLOIが、複利の前提（データ購入の実在）を実証へ近づけた。ただしLOIの契約化と制度化の確度はまだ低く、未来価値の前提は不安定なまま。",
+      "dimension_scores": {
+        "environmental_shift_potential": {"score": 38, "weight": 0.30, "evidence": "食品ロス規制の強化と廃棄処理費高騰が、廃棄予測データへの需要を押し上げる", "judgment": "進行中の変化が企画の価値を押し上げる方向に働く。"},
+        "historical_similarity": {"score": 32, "weight": 0.25, "evidence": "サプライチェーンSaaSの『データ資産』評価の系譜と部分的に類似", "judgment": "検証待ちの構造であり、否定された革新ではない。"},
+        "compounding_value": {"score": 36, "weight": 0.25, "evidence": "焼き上がりデータが増えるほど予測精度が上がり、メーカーが離れにくくなる", "judgment": "複利の構造に加え、業界固有データで蓄積の質が高まった。"},
+        "timing_analysis": {"score": 30, "weight": 0.20, "evidence": "年度予算サイクルに織り込んだが、契約化は未実証で制度化の確度が不明", "judgment": "タイミングは改善したが、実行の確度はまだ不確実。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 34, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null},
+      "classification": "trend_object",
+      "confidence": 68,
+      "strengths": [
+        "年度予算サイクルへの織り込みで、収益化のタイミングが具体化した",
+        "業界固有データで複利の構造がさらに強固になった"
+      ],
+      "weaknesses": [
+        "LOIは本契約への転換が未実証で、データ購入の実績がまだ無い",
+        "制度化（データ購買予算）の確度は依然として不明"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["複利の価値構造の強化", "予算サイクルへの織り込み"],
+      "unique_perspective": "私は資産が『誰かが金を払った』という痕跡を持つかを見る。v3のLOIは、その痕跡への一歩だが、署名はまだ弱い。次の反復で、購入実績という痕跡が積まれれば、この企画の未来価値は私の目に大きく映る。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "LOIとリースを現在の成果として高く評価し、私より高い点を付けるだろう。"},
+        {"evaluator_type": "originality", "predicted_stance": "業界固有データの独自性を評価し、未来の可能性を高く見るだろう。"}
+      ],
+      "improvement_suggestions": [
+        "パイロットでデータ購入の実績（年度契約）を作り、複利の前提を実証する",
+        "予測精度の実証値とデータの制度化（購買予算）を企画に織り込む"
+      ],
+      "narrative": "私はv1で『在庫データを捨てるな』、v2で『資産は金を払う者があって初めて価値になる』と言った。v3は年度予算という、払う者がいる時期を企画に織り込んだ。次は、払ったという痕跡——購入実績——を見せてほしい。"
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "意味評価者（意味の守護者）",
+      "content_summary": "FOODSIGN v3 — 収益の実数化と需要検証（LOI）を反映した改訂",
+      "domain": "business",
+      "primary_score": 32,
+      "primary_score_rationale": "受け取りの体験と『捨てられる食を、誰かの食事に変える』物語が復活し、v2で失われた人間の層が一部戻った。ただし物語はブランドの外殻に留まり、データ事業の冷徹さとの統合は未完。",
+      "dimension_scores": {
+        "existential_resonance": {"score": 28, "weight": 0.35, "evidence": "「食べ手と作り手が顔を合わせる」言葉が戻ったが、事業の中心は依然データ", "judgment": "存在の問いへの触れは改善したが、中心軸にはなっていない。"},
+        "narrative_power": {"score": 30, "weight": 0.25, "evidence": "「捨てられる食を、誰かの食事に変える」という物語が外殻として明記された", "judgment": "物語は生まれたが、まだ装飾の位置にある。"},
+        "significance": {"score": 37, "weight": 0.20, "evidence": "廃棄転換という機能の社会的重みは維持される", "judgment": "テーマの重要さは揺るがない。"},
+        "interpretive_depth": {"score": 35, "weight": 0.20, "evidence": "「売れ残り＝シグナル」の見方に加え、受け取りの場の意味が加わった", "judgment": "解釈の層が少し厚くなった。"}
+      },
+      "value_vector_contribution": {"originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 32},
+      "classification": "trend_object",
+      "confidence": 63,
+      "strengths": [
+        "「捨てられる食を、誰かの食事に変える」という物語が企画に戻ってきた",
+        "受け取りの場に食べ手と作り手が交わる体験が設計された"
+      ],
+      "weaknesses": [
+        "物語はブランドの外殻に留まり、データ商品の冷徹さと統合されていない",
+        "人間の層が機能仕様（メッセージ交換）に留まり、体験の深まりがない"
+      ],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["人間の層の復活（物語・受け取り体験）"],
+      "unique_perspective": "私はv2で『事業が成功するほど、その物語を語る者が企画の中に必要になる』と言った。v3は物語を外殻に置いた。これは正しい方向だが、まだ装飾だ。物語が機能仕様ではなく、事業の核に昇格したとき、意味の層は本物になる。",
+      "expected_disagreement_points": [
+        {"evaluator_type": "business-value", "predicted_stance": "人間の層の復活は評価しつつ、データ事業の中心性は変わらないと見るだろう。"},
+        {"evaluator_type": "quality-evaluator", "predicted_stance": "物語を含めた全層の整合を評価し、私より高い点を付けるだろう。"}
+      ],
+      "improvement_suggestions": [
+        "受け取り体験を『食卓に還す』ギフト型へ深め、食べ手と作り手の物語を事業の核に据える",
+        "スケール後も人間の物語を変えない旨を、最優先事項として明記する"
+      ],
+      "narrative": "v3は、私が求めていた人間の姿をようやく企画に戻した。ただし物語はまだ外殻にいる。データが売れ、スケールするほど、その物語が中心にいるべき理由は強くなる。次は、物語を核に据える番だ。"
+    }
+  ],
+  "recommendations": [
+    "LOI2社を本契約へ転換し、100店規模のパイロットでデータ購入の実績を作る",
+    "予測精度の実証値（%）を最優先のKPIとして宣言し、焼き上げノウハウを実証データで裏付ける",
+    "共同物流の運営体制（配送パートナー・品質KPI・成功報酬型回収）を明文化する",
+    "『食卓に還す』ギフト体験を設計し、人間の物語をブランドの外殻から核へ昇格させる"
+  ],
+  "caveats": [
+    "LOIは法的拘束力の弱い段階であり、本契約への転換率は未検証",
+    "予測精度（%）は未実証で、焼き上げノウハウの優位性は構想の域",
+    "共同物流の運営細部と、スケール時の人間の層の維持は未検証"
+  ]
+}
