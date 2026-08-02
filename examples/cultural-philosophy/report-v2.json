@@ -1,0 +1,29 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "思想エッセイ『便利さは選択の手触りを奪う』改訂案——身体感覚の具体化",
+  "domain": "cultural",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "aesthetic-critic", "philosophical-evaluator", "future-potential", "meaning-evaluator", "quality-evaluator"],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "エッセイに科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "思想エッセイに市場性評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 48, "scores": [48] },
+    "quality": { "mean": 28, "scores": [28] },
+    "aesthetic": { "mean": 30, "scores": [30] },
+    "philosophical_depth": { "mean": 54, "scores": [54] },
+    "future_potential": { "mean": 50, "scores": [50] },
+    "meaning": { "mean": 56, "scores": [56] }
+  },
+  "current_value_score": 40,
+  "hidden_potential_score": 53,
+  "classification": "discovery_target",
+  "executive_summary": "『手で水をすくう』という身体記憶の具体化により、哲学・意味が大幅に改善。現在価値40・潜在価値53で discovery_target（執行は粗いが、思想の可能性は高い）。",
+  "synthesis_narrative": "再作成指令（物理的感覚としての『手触り』）が機能した。哲学評価者は『便利さの代償を身体感覚の喪失として描いた点に独自の問いがある』と54点。意味評価者も56点。ただし品質(28)と美(30)は低く、文体はまだ粗い。",
+  "recommendations": [
+    "文体の精緻化（品質・美を上げる改訂）を次回の再作成指令にする",
+    "『微かな抵抗』の具体例を1つに絞って深掘りする"
+  ],
+  "caveats": ["科学・ビジネス評価は不適合のため除外"]
+}

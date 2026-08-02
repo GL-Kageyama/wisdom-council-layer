@@ -83,11 +83,17 @@ wisdom-council-layer/
 │   ├── debate-principles.md
 │   ├── value-vector-model.md
 │   └── scoring-strictness.md          # 厳格スコアリング基準
-├── examples/
-│   ├── sample-input.md
-│   └── sample-value-report.md
+├── examples/                          # ジャンル別サンプル（生成→評価→再作成）
+│   ├── README.md
+│   ├── creative-poem/                 # 詩
+│   ├── creative-film/                 # 映画企画
+│   ├── business-startup/              # 事業
+│   ├── scientific-hypothesis/         # 科学仮説
+│   └── cultural-philosophy/           # 思想エッセイ
 └── utils/
-    └── validate_output.py             # 出力バリデーション
+    ├── validate_output.py             # 出力バリデーション
+    ├── render_report.py               # 視覚化（コンソール / Markdown）
+    └── compare_reports.py             # 改訂前後の比較
 ```
 
 ## 使い方
@@ -228,9 +234,9 @@ python utils/render_report.py --format md report.json               # 標準出�
 python utils/render_report.py --format md -o report.md report.json  # ファイルに保存
 ```
 
-MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/sample-poem-report.md](wisdom-council-layer/examples/sample-poem-report.md)
+MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/creative-poem/report.md](wisdom-council-layer/examples/creative-poem/report.md)
 
-**出力例**（[examples/sample-poem-report.json](wisdom-council-layer/examples/sample-poem-report.json) をレンダリングしたもの）:
+**出力例**（[examples/creative-poem/report-v2.json](wisdom-council-layer/examples/creative-poem/report-v2.json) をレンダリングしたもの）:
 
 ```
 ┌──────────────────────────────────────────────────────┐

@@ -1,0 +1,29 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "思想エッセイ『便利さは選択の手触りを奪う』初案",
+  "domain": "cultural",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "aesthetic-critic", "philosophical-evaluator", "future-potential", "meaning-evaluator", "quality-evaluator"],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "エッセイに科学的新規性は不適合（例外的除外）" },
+    { "evaluator_id": "business-value", "reason": "思想エッセイに市場性評価は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 30, "scores": [30] },
+    "quality": { "mean": 28, "scores": [28] },
+    "aesthetic": { "mean": 25, "scores": [25] },
+    "philosophical_depth": { "mean": 32, "scores": [32] },
+    "future_potential": { "mean": 30, "scores": [30] },
+    "meaning": { "mean": 33, "scores": [33] }
+  },
+  "current_value_score": 29,
+  "hidden_potential_score": 32,
+  "classification": "low_signal",
+  "executive_summary": "テーマは既知の技術批判の繰り返しで、具体性が乏しい。現在価値29・潜在価値32で low_signal（現時点では価値兆候なし）。",
+  "synthesis_narrative": "哲学評価者は『テクノロジー批判の定番テーマで、独自の問いがない』と32点。美評価者は『抽象的な言い回しに終始し、感覚的な深みがない』と25点。",
+  "recommendations": [
+    "『手触り』を抽象でなく物理的感覚として具体化する",
+    "冒頭に身体的な記憶を置き、読者の感覚に届ける"
+  ],
+  "caveats": ["科学・ビジネス評価は不適合のため除外"]
+}

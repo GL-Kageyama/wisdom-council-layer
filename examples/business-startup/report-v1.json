@@ -1,0 +1,28 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "スタートアップ『消えゆく日記』初案——感情記録アプリ",
+  "domain": "business",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "future-potential", "quality-evaluator", "meaning-evaluator"],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 38, "scores": [38] },
+    "quality": { "mean": 40, "scores": [40] },
+    "business_value": { "mean": 42, "scores": [42] },
+    "future_potential": { "mean": 42, "scores": [42] },
+    "meaning": { "mean": 24, "scores": [24] },
+    "philosophical_depth": { "mean": 26, "scores": [26] }
+  },
+  "current_value_score": 40,
+  "hidden_potential_score": 31,
+  "classification": "trend_object",
+  "executive_summary": "既存の日記アプリの亜種であり、差別化が弱い。現在価値40・潜在価値31で trend_object（一時的に需要はあるが持続性が不明）。",
+  "synthesis_narrative": "独創性評価者は『既存アプリとの差別化が弱く、感情マップは見慣れた機能の組み合わせ』と38点。ビジネス評価者も『プライバシーだけでは参入障壁にならない』と42点。",
+  "recommendations": [
+    "差別化軸を明確にする（永続保存ではなく『消える前提』に反転）",
+    "再作成し、compare_reports.py で改善を確認"
+  ],
+  "caveats": ["科学評価は不適合のため除外"]
+}

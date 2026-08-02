@@ -1,0 +1,28 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "スタートアップ『消えゆく日記』改訂案——『消える前提』を差別化軸に",
+  "domain": "business",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "business-value", "future-potential", "quality-evaluator", "meaning-evaluator"],
+  "excluded_evaluators": [
+    { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
+  ],
+  "value_vector": {
+    "originality": { "mean": 50, "scores": [50] },
+    "quality": { "mean": 52, "scores": [52] },
+    "business_value": { "mean": 58, "scores": [58] },
+    "future_potential": { "mean": 40, "scores": [40] },
+    "meaning": { "mean": 28, "scores": [28] },
+    "philosophical_depth": { "mean": 30, "scores": [30] }
+  },
+  "current_value_score": 53,
+  "hidden_potential_score": 33,
+  "classification": "current_success",
+  "executive_summary": "『永続保存』の常識を『消える前提』に反転した差別化により、ビジネス価値が42→58に改善。現在価値53で current_success に到達。",
+  "synthesis_narrative": "再作成指令（差別化軸の反転）が有効だった。ビジネス評価者は『消える前提は既存アプリと真逆で、口コミで広がる可能性がある』と58点。独創性も38→50に上昇。ただし意味・哲学は低いままで、長期的な深みは今後の課題。",
+  "recommendations": [
+    "プライバシー設計の詳細を固め、プロトタイプを作成する",
+    "意味性を高める改訂を検討（『消える感情』の物語性）"
+  ],
+  "caveats": ["科学評価は不適合のため除外"]
+}

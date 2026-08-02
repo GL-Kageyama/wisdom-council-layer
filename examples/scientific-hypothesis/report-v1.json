@@ -1,0 +1,26 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "科学仮説『失敗挿入型反復』初案",
+  "domain": "scientific",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [],
+  "value_vector": {
+    "originality": { "mean": 35, "scores": [35] },
+    "quality": { "mean": 30, "scores": [30] },
+    "scientific_novelty": { "mean": 38, "scores": [38] },
+    "future_potential": { "mean": 55, "scores": [55] },
+    "meaning": { "mean": 42, "scores": [42] },
+    "philosophical_depth": { "mean": 38, "scores": [38] }
+  },
+  "current_value_score": 34,
+  "hidden_potential_score": 45,
+  "classification": "discovery_target",
+  "executive_summary": "仮説の着想はあるが検証デザインが粗く、現在価値は34。潜在価値45で discovery_target（未来の可能性はあるが現状は未成熟）。",
+  "synthesis_narrative": "科学評価者は『想起失敗を利用する点は既存研究の延長で、新規性が明確でない』と38点。品質評価者は『検証デザインが具体的でない』と30点。しかし未来評価者は『学習科学として需要がある』と55点。",
+  "recommendations": [
+    "検証デザイン（対照群・被験者数）を具体化する",
+    "新規性の主張を『想起失敗を記憶タグとして使う』点に絞る"
+  ],
+  "caveats": []
+}

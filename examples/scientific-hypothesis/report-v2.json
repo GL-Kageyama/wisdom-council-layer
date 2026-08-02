@@ -1,0 +1,26 @@
+{
+  "report_id": "wisdom-council-report",
+  "content_summary": "科学仮説『失敗挿入型反復』改訂案——検証デザイン具体化",
+  "domain": "scientific",
+  "mode": "full",
+  "evaluators_consulted": ["originality", "anti-generic-filter", "scientific-novelty", "quality-evaluator", "future-potential", "meaning-evaluator"],
+  "excluded_evaluators": [],
+  "value_vector": {
+    "originality": { "mean": 45, "scores": [45] },
+    "quality": { "mean": 42, "scores": [42] },
+    "scientific_novelty": { "mean": 50, "scores": [50] },
+    "future_potential": { "mean": 58, "scores": [58] },
+    "meaning": { "mean": 40, "scores": [40] },
+    "philosophical_depth": { "mean": 36, "scores": [36] }
+  },
+  "current_value_score": 46,
+  "hidden_potential_score": 45,
+  "classification": "innovation",
+  "executive_summary": "検証デザインの具体化（対照群・n=60）と新規性の主張の明確化により、科学新規性が38→50に改善。現在価値46・潜在価値45で innovation（現在も将来も有望）。",
+  "synthesis_narrative": "再作成指令（デザイン具体化・新規性の絞り込み）が機能した。科学評価者は『想起失敗を記憶タグとして使う』という主張の新規性を認め50点。品質も30→42に改善。未来評価者は58点と引き続き高い。",
+  "recommendations": [
+    "予備実験で効果サイズを推定し、被験者数を正当化する",
+    "学習科学・教育工学への応用可能性を論文として整理する"
+  ],
+  "caveats": ["仮説段階であり、実証は未完了"]
+}
