@@ -102,6 +102,17 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 - **平均化や和解を試みない。**
 - 可能ならば、この不一致自体が価値のシグナルであることを指摘する（激しく割れるコンテンツはしばしば最も興味深い）。
 
+### Phase 5: Rebuild Feedback Synthesis（再作成指令の合成）
+
+**これは「作成 → 評価 → 再作成」ループのための出力である。** 単なる評価で終わらせず、次にどう作り直すかを具体的に指示する。
+
+1. **top_priorities**: 各評価者の `improvement_suggestions` と `weaknesses` から、再作成時に**最初に対処すべき1〜3件**を選ぶ。スコアへの影響が大きい順。
+2. **concrete_changes**: 各優先事項について、評価者のid・現在の弱点・**適用可能な具体的な変更指示**・期待されるスコア変化を記録する。
+   - `directive` は「〜を改善する」ではなく「『X』を『Y』に変更する」「3連目に比喩の転換を加える」のように**直接適用できる指示**にする。
+3. **preserve**: 弱点を直す過程で失ってはいけない強み（高スコア次元の源泉）を明記する。
+   - 独創性の高い作品を「平凡にする」方向の修正を防ぐ。
+4. `rebuild_feedback` の指針: **下げた次元を上げる**ことを優先し、**上げた次元を保つ**ことを常に両立させる。
+
 ## Value Report の構造
 
 以下は合議の最終成果物である。この構造に従って生成する。
@@ -141,6 +152,18 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
   "synthesis_narrative": "detailed synthesis in the chairperson's voice",
   "individual_reports": ["full JSON of each evaluator's output"],
   "recommendations": ["suggested next steps for the human decision-maker"],
+  "rebuild_feedback": {
+    "top_priorities": ["1-3 directives that must be addressed first"],
+    "concrete_changes": [
+      {
+        "source_evaluator": "evaluator id that flagged it",
+        "current_weakness": "specific weakness with evidence",
+        "directive": "actionable change to apply when recreating",
+        "expected_impact": "projected score change, e.g. 'aesthetic 62 → 75'"
+      }
+    ],
+    "preserve": ["strengths that must NOT be lost during revision"]
+  },
   "caveats": ["limitations, what was not assessed, confidence gaps"]
 }
 ```
@@ -235,6 +258,15 @@ a classification using the 2x2 model.
 Output the complete Value Report as specified in the structure
 section. Preserve every evaluator's full report in
 `individual_reports`.
+
+### Step 7: Write rebuild_feedback
+
+Synthesize `rebuild_feedback` from the evaluators' improvement
+suggestions and weaknesses, so the content can be recreated in an
+improved form. Directive must be concrete ("change X to Y"), not
+vague ("improve X"). Always include `preserve` so revision does not
+destroy existing strengths. This output powers the create → evaluate
+→ recreate loop.
 
 ## Output Format
 

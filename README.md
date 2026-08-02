@@ -211,6 +211,102 @@ Value Vector を合成（全9次元が埋まる）
 python utils/validate_output.py < evaluator_output.json
 ```
 
+### 結果の視覚化
+
+JSONのままでは見づらい場合、レンダラーで視覚表示に変換できます。
+
+```bash
+python utils/render_report.py < report.json     # stdinから
+python utils/render_report.py report.json        # ファイルから
+```
+
+**出力例**（[examples/sample-poem-report.json](wisdom-council-layer/examples/sample-poem-report.json) をレンダリングしたもの）:
+
+```
+┌──────────────────────────────────────────────────────┐
+│ 🧠 Wisdom Council Value Report
+└──────────────────────────────────────────────────────┘
+
+  分類: 🔍 Discovery Target（潜在価値）
+  現在価値:  49  █████████████████░░░░░░░░░░░░░░░░░░░
+  潜在価値:  59  █████████████████████░░░░░░░░░░░░░░░
+
+【Value Vector】多次元スコア（0-100、厳格スケール）
+  独創性 (originality)   ████████████████████████████░░  78
+  品質 (quality)         ███████████████████████░░░░░░  65
+  美 (aesthetic)         ██████████████████████░░░░░░░  62
+  感情 (emotional_impact) ████████████████████████░░░░░  68
+  未来 (future_potential) ██████████████████░░░░░░░░░░  50
+  ビジネス (business_value) ██████░░░░░░░░░░░░░░░░░░░░░  18
+  科学 (scientific_novelty) █░░░░░░░░░░░░░░░░░░░░░░░░░   5
+  哲学 (philosophical_depth)█████████████████████░░░░░░  60
+  意味 (meaning)         ███████████████████████░░░░░░  66
+
+【次元間の対立（Contrast）】高スコア軸と低スコア軸の共存
+  ⚡ 独創性(originality) 78  vs  ビジネス(business_value) 18
+  ⚡ 独創性(originality) 78  vs  科学(scientific_novelty) 5
+```
+
+レンダラーは以下を表示する:
+- **分類バッジ**（🔍 Discovery Target / 🟢 Current Success / 🔶 Trend Object / ⚪ Low Signal / ⭐ Innovation）
+- **現在価値・潜在価値**のバー表示
+- **9次元のValue Vector** バーチャート（厳格スケール、高得点はバーが長いほど稀）
+- **不一致**（評価者が割れた次元、分散の深刻度付き）
+- **次元間の対立**（高スコア×低スコアの緊張関係——平均化せず保存）
+- **再作成指令（rebuild_feedback）**（次のループで何を直すか）
+- **総評・一致点・推奨アクション・注意点**
+
+## 作成 → 評価 → 再作成 ループ
+
+評価結果を**再作成のためのフィードバック**として使い、作品を改善していくループ。
+
+```
+① 作成（生成）
+    ↓
+② 評価（wisdom-council / mode:full）
+    ↓
+③ rebuild_feedback を抽出 ← 合議が自動生成
+    ├── top_priorities（最優先の改善点）
+    ├── concrete_changes（具体的な変更指示＋期待スコア）
+    └── preserve（失ってはいけない強み）
+    ↓
+④ 再作成（directive を適用）
+    ↓
+⑤ 再評価
+    ↓
+⑥ 比較（compare_reports.py で改善度を確認）
+    ↓
+⑦ 目標スコアに達するか改善が頭打ちになるまで繰り返す
+```
+
+**改善度の比較:**
+
+```bash
+python utils/compare_reports.py before.json after.json
+```
+
+出力例:
+
+```
+🔍 分類: Discovery Target（変化なし）
+
+  【次元別の改善】
+  美 (aesthetic)     62 → 75  ▲ +13   ← rebuild_feedbackの指示が有効だった
+  品質 (quality)     65 → 72  ▲ +7
+  意味 (meaning)     66 → 70  ▲ +4
+  平均変化（9次元）: +3.8
+
+  【次回の再作成指令】
+  1. 哲学的深さを上げる（philosophical_depth 62）
+  2. 感情的な余白を増やす（emotional 72 → 目標75以上）
+```
+
+**ループの指針:**
+- **上げた次元を保つ**（`preserve`）—— 修正で独創性を壊さない
+- **下げた次元を上げる**（`concrete_changes`）—— directiveは「具体」に適用する
+- 平均だけで判断せず、**分散と不一致**も見る（1次元が突出しても全体は変わらないことがある）
+- 改善が**頭打ちになったらループを止める**（過修正で元の良さを失うリスク）
+
 ## 評価者一覧
 
 | 評価者 | コア質問 | スコア次元 |

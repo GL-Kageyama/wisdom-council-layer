@@ -62,6 +62,28 @@ Args: {"content": "...", "content_type": "text", "domain": "creative", "mode": "
 python utils/validate_output.py < output.json
 ```
 
+## ツール群
+
+| ツール | 役割 |
+|--------|------|
+| `utils/validate_output.py` | 評価者出力のスキーマ検証 |
+| `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・再作成指令） |
+| `utils/compare_reports.py` | 改訂前後の差分比較（作成→評価→再作成ループ用） |
+
+## 作成 → 評価 → 再作成 ループ
+
+合議は `rebuild_feedback`（再作成指令）を出力する。これを使って作品を改善し、ループさせる。
+
+```
+評価 → rebuild_feedback（最優先・具体的変更・保持すべき強み）
+  → 再作成（directive適用） → 再評価 → compare_reports.py で改善度確認 → 繰り返し
+```
+
+指針:
+- **preserve**（失ってはいけない強み）を守り、修正で既存の高次元を壊さない。
+- `concrete_changes` の directive は「改善する」ではなく「XをYに変える」の具体形にする。
+- 改善が頭打ちになったらループを止める（過修正は元の良さを失わせる）。
+
 ## 重要原則
 
 - 評価者は自分の専門領域の次元だけをスコアする。専門外は `null` を返す。
