@@ -115,30 +115,95 @@ wisdom-council-layer/
 /plugin install wisdom-council-layer@wisdom-council-layer
 ```
 
-### 単一評価者を呼ぶ
+### 呼び出しの流れ（3段階）
 
-スキルは **名前** で呼び出す:
+用途に応じて3段階から選べる。
+
+| レベル | 何を呼ぶ | 返るもの | 用途 |
+|--------|---------|----------|------|
+| **1** | 評価者を**1体** | 単一次元の評価JSON | 特定の視点だけ確認したい |
+| **2** | **合議（auto）** | 統合Value Report（3〜5次元） | ドメインに応じて効率的に総合評価 |
+| **3** | **合議（full）** | 全9次元が埋まった完全なValue Report | 最初から全員を一気に評価したい |
+
+---
+
+#### レベル1：評価者を1体呼ぶ
+
+特定の視点だけを評価したい場合。スキルは **名前** で呼ぶ。
 
 ```
 Skill: originality
 Args: {"content": "...", "content_type": "text", "domain": "creative"}
 ```
 
-各評価者は `schemas/value-output.schema.json` に準拠したJSONを出力する。
+例：
+- 企画の独創性だけ確認 → `Skill: originality`
+- AIらしさ（凡庸さ）をチェック → `Skill: anti-generic-filter`
+- 市場性だけ確認 → `Skill: business-value`
 
-### 合議全体を呼ぶ
+→ 返るもの：その評価者1体のJSON（`schemas/value-output.schema.json` 準拠、1次元 + ナラティブ）
+
+---
+
+#### レベル2：合議を呼ぶ（推奨）
+
+複数の視点で総合評価したい場合。合議がドメインを判定し、**3〜5体の評価者を選んで独立評価**し、統合Value Reportを返す。
 
 ```
 Skill: wisdom-council
 Args: {"content": "...", "content_type": "text", "domain": "creative"}
 ```
 
-合議は以下を実行する:
-1. ドメインを判定し、3〜5体の評価者を選択
-2. 各評価者を独立に招集（originality と anti-generic-filter は常に含む）
-3. Value Vector を合成
-4. 不一致マップを生成
-5. Value Report を出力
+合議が実行する流れ：
+
+```
+評価対象
+   ↓
+ドメイン判定 → 評価者3〜5体を選択（originality と anti-generic-filter は常に含む）
+   ↓
+各評価者を独立に呼び出し（互いの結果を知らずに評価）
+   ↓
+Value Vector を合成（平均・分散・範囲）
+   ↓
+不一致マップを生成（割れた次元と双方の主張を保存）
+   ↓
+Value Report を出力（分類・推奨・各評価者の全文）
+```
+
+→ 返るもの：統合Value Report（複数次元のスコア分布 + 不一致 + 4象限分類 + 推奨）
+
+---
+
+#### レベル3：全評価者を一気に呼ぶ
+
+最初から全部の視点で評価したい場合。合議を `mode: "full"` で呼ぶと、**全10体が一気に独立評価**し、全9次元が埋まった完全なValue Reportを返す。
+
+```
+Skill: wisdom-council
+Args: {"content": "...", "content_type": "text", "domain": "creative", "mode": "full"}
+```
+
+合議が実行する流れ（fullモード）：
+
+```
+評価対象
+   ↓
+全10体を招集（mode: full）
+   ↓
+各評価者を独立に呼び出し（互いの結果を知らずに評価）
+   ↓
+Value Vector を合成（全9次元が埋まる）
+   ↓
+不一致マップを生成（割れた次元と双方の主張を保存）
+   ↓
+完全なValue Report を出力（分類・推奨・各評価者の全文）
+```
+
+→ 返るもの：統合Value Report（**全9次元が埋まった**Value Vector + 不一致 + 4象限分類 + 推奨）
+
+> **ヒント**：各評価者を個別に呼ぶ（レベル1の繰り返し）ことも可能だが、`mode: "full"` なら1回の呼び出しで同じ結果が得られる。`mode: "auto"`（レベル2）はドメインに応じて3〜5体を選ぶため、未招集の次元は `null` になる。
+
+---
 
 ### 出力の検証
 

@@ -1,7 +1,7 @@
 ---
 name: wisdom-council
 description: Orchestrates a council of evaluator skills to produce a structured Value Report that preserves disagreement. Use to evaluate any content through multiple independent value perspectives (originality, aesthetics, emotion, future potential, business, science, philosophy, meaning, quality, anti-generic). Selects evaluators by domain, convenes them, and synthesizes without forcing consensus.
-argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|structured", "domain": "creative|scientific|business|social|digital|cultural", "context": "<optional context>"}'
+argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|structured", "domain": "creative|scientific|business|social|digital|cultural", "context": "<optional context>", "mode": "auto|full"}'
 ---
 
 # Wisdom Council Orchestrator
@@ -56,6 +56,17 @@ argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|struct
 | cultural | meaning-evaluator, philosophical-evaluator, originality | aesthetic-critic, emotional-impact, future-potential |
 
 ※ 必須評価者のうち、そのドメインに適用可能なものを選ぶ。常に **originality** と **anti-generic-filter** を含めること（これらは横断的に機能する中核評価者）。理想的には**3〜5体**の評価者を招集する。
+
+#### モード（mode）
+
+`ARGUMENTS` の `mode` フィールドで招集範囲を選ぶ。
+
+| mode | 動作 | 用途 |
+|------|------|------|
+| `auto`（デフォルト） | ドメインに応じて**3〜5体**を選択 | 効率的に総合評価 |
+| `full` | **全10体**を招集し、全9次元が埋まった完全なValue Vectorを得る | 最初から全員を一気に評価したい |
+
+省略時は `auto`。`full` の場合も評価は各評価者に任せ、統合方法は同じ。
 
 ### Phase 2: Council Convening（合議招集）
 
@@ -185,8 +196,10 @@ as an independent skill call, and synthesize without forcing consensus.
 
 ### Step 1: Select evaluators
 
-Based on the domain, select 3-5 evaluators using the selection
-matrix. Always include `originality` and `anti-generic-filter`.
+If `mode` is "full", select ALL 10 evaluators so every dimension of
+the value vector is scored. Otherwise, based on the domain, select
+3-5 evaluators using the selection matrix. Always include
+`originality` and `anti-generic-filter`.
 [Selection matrix reference]
 
 ### Step 2: Convene each evaluator

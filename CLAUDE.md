@@ -47,6 +47,13 @@ Args: {"content": "...", "content_type": "text", "domain": "creative"}
 4. Value Reportに統合
 5. すべての不一致を保存
 
+**modeオプション** — `Args` に `"mode": "full"` を追加すると、ドメイン選択をせず**全10体**を一気に招集し、全9次元が埋まった完全なValue Reportを得る:
+
+```
+Skill: wisdom-council
+Args: {"content": "...", "content_type": "text", "domain": "creative", "mode": "full"}
+```
+
 ## 出力規約
 
 すべての評価者出力は `schemas/value-output.schema.json` に準拠した有効なJSONでなければならない。
