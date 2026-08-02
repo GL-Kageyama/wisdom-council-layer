@@ -315,9 +315,9 @@ MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（�
     ↓
 ② 評価（wisdom-council / mode:full）
     ↓
-③ 作成スキルが評価を入力に指示を合成
+③ revision_direction（次回の修正方向）を確認
     ↓
-④ 再作成
+④ 作成スキルが評価を入力に指示を合成 → 再作成
     ↓
 ⑤ 再評価
     ↓
@@ -325,6 +325,22 @@ MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（�
     ↓
 ⑦ 目標に達するか頭打ちになるまで繰り返す
 ```
+
+**反復モード（`iteration`）— 修正方向の管理:**
+
+```bash
+Skill: wisdom-council
+Args: {"content": "...", "domain": "creative", "iteration": "confirm"}
+```
+
+| iteration | 動作 | 使いどころ |
+|-----------|------|------------|
+| `confirm`（デフォルト） | 各ターンの評価後に `revision_direction` を提示し、**確認してから**次の修正へ | 方向転換を都度チェックしたい |
+| `persistent` | 最初に `revision_direction` を確定し、その方向に沿って**修正し続ける** | 方向を決めて磨き込みたい |
+
+- `confirm` = 逐次確認モード（各ターンで「どの方向に修正するか」を確認できる）
+- `persistent` = 方向固定モード（最初に方向を示し、その方向を継続）
+- 詳細: [references/revision-loop.md](wisdom-council-layer/references/revision-loop.md)
 
 **改善度の比較:**
 

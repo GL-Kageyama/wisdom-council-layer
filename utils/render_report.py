@@ -200,6 +200,20 @@ def render_council(obj, show_ind=False):
         for i, r in enumerate(recs, 1):
             print(f"  {i}. {r}")
 
+    rd = obj.get("revision_direction")
+    if rd:
+        mode = rd.get("iteration") or "confirm"
+        label = "逐次確認（confirm）" if mode == "confirm" else "方向固定（persistent）"
+        print(f"\n🔧 【次回の修正方向（revision_direction）】モード: {label}")
+        if rd.get("statement"):
+            print(f"  方向: {rd['statement']}")
+        axis = rd.get("axis") or []
+        if axis:
+            print(f"  上げる/変える: {', '.join(axis)}")
+        keep = rd.get("preserve") or []
+        if keep:
+            print(f"  維持すべき: {', '.join(keep)}")
+
     caves = obj.get("caveats") or []
     if caves:
         print("\n【注意点】")
@@ -369,6 +383,26 @@ def render_council_md(obj, show_ind=False):
         for i, r in enumerate(recs, 1):
             L.append(f"{i}. {r}")
         L.append("")
+
+    rd = obj.get("revision_direction")
+    if rd:
+        mode = rd.get("iteration") or "confirm"
+        label = "逐次確認（confirm）" if mode == "confirm" else "方向固定（persistent）"
+        L.append(f"## 🔧 次回の修正方向（`{label}`）")
+        L.append("")
+        if rd.get("statement"):
+            L.append(f"> {rd['statement']}")
+            L.append("")
+        if rd.get("axis"):
+            L.append("**上げる／変える**:")
+            for a in rd["axis"]:
+                L.append(f"- {a}")
+            L.append("")
+        if rd.get("preserve"):
+            L.append("**維持すべき**:")
+            for p in rd["preserve"]:
+                L.append(f"- {p}")
+            L.append("")
 
     caves = obj.get("caveats") or []
     if caves:

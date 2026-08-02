@@ -1,7 +1,7 @@
 ---
 name: wisdom-council
 description: Orchestrates a council of evaluator skills to produce a structured Value Report that preserves disagreement. Use to evaluate any content through multiple independent value perspectives (originality, aesthetics, emotion, future potential, business, science, philosophy, meaning, quality, anti-generic). Selects evaluators by domain, convenes them, and synthesizes without forcing consensus.
-argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|structured", "domain": "creative|scientific|business|social|digital|cultural", "context": "<optional context>", "mode": "auto|full"}'
+argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|structured", "domain": "creative|scientific|business|social|digital|cultural", "context": "<optional context>", "mode": "auto|full", "iteration": "confirm|persistent"}'
 ---
 
 # Wisdom Council Orchestrator
@@ -68,6 +68,19 @@ argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|struct
 
 省略時は `auto`。`full` の場合も評価は各評価者に任せ、統合方法は同じ。
 
+#### 反復モード（iteration）— 作成→評価→再作成ループの制御
+
+`ARGUMENTS` の `iteration` フィールドで、**評価→修正のループ**の進め方を選ぶ。ループの本質は「1ターン評価ごとに、どの方向に修正するか」を管理することにある。
+
+| iteration | 動作 | 用途 |
+|-----------|------|------|
+| `confirm`（デフォルト） | **各ターンの評価後に `revision_direction`（修正方向）を提示**し、人間または作成スキルが方向を**確認してから**次の修正へ進む | 方向転換を都度チェックしたい |
+| `persistent` | **最初の評価で `revision_direction` を確定**し、以降の反復は**その方向に沿って修正し続ける**（方向を変えない。各反復では実行の具体化のみ変える） | 方向性を先に決めて、その方向で磨き込みたい |
+
+- 省略時は `confirm`。
+- `revision_direction` は Value Report の `revision_direction` フィールドに出力する（下記）。
+- `persistent` のときは、各反復の評価で方向そのものを再考せず、`revision_direction.axis` への**到達度**（どれだけ近づいたか）を報告する。
+
 ### Phase 2: Council Convening（合議招集）
 
 各選択された評価者を、独立したスキル呼び出しとして個別に起動し、以下を渡す:
@@ -118,6 +131,9 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 3. **合成で生データを捨てない**。executive_summary や synthesis_narrative はあくまで補助であり、評価の素材（スコア・根拠・弱点）は必ず JSON に残す。
 4. **再作成指示（directive）そのものは生成しない。** それは専用スキル・生成AIなど、**適切な他の手段**の責務。このレイヤーは評価専用であり、作成には介入しない。「評価の素材」を整えて渡すことに専念する。
 5. **成果物は常に統合されたValue Reportである。** 個々の評価者出力は内部素材であり、単体で出力しない。
+6. **`revision_direction`（次回の修正方向）を合成する。** 各評価者の `weaknesses`・`improvement_suggestions` とスコア分布から、次回の作成に「どの方向へ修正すべきか」を1-2文でまとめる。
+   - `iteration: "confirm"` なら**方向を提示して確認を促す**（この方向で良いか）。
+   - `iteration: "persistent"` なら**初回で確定した方向を維持**し、各反復ではその方向への**到達度**を報告する。
 
 ## Value Report の構造
 
@@ -161,6 +177,12 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
   "synthesis_narrative": "detailed synthesis in the chairperson's voice",
   "individual_reports": ["full JSON of each evaluator's output"],
   "recommendations": ["suggested next steps for the human decision-maker"],
+  "revision_direction": {
+    "statement": "1-2 sentences: the direction for the next revision",
+    "axis": ["dimensions/elements to raise or change"],
+    "preserve": ["strengths that must not be lost"],
+    "iteration": "confirm|persistent"
+  },
   "caveats": ["limitations, what was not assessed, confidence gaps"]
 }
 ```
@@ -272,6 +294,15 @@ job. Instead, ensure the report keeps every evaluator's raw material
 (weaknesses, improvement_suggestions, expected_disagreement_points,
 full narratives) intact in `individual_reports`, so a creation
 skill can consume them as its input.
+
+### Step 8: Write revision_direction
+
+Synthesize `revision_direction`: the direction for the next revision
+(statement, axis, preserve, iteration). In `confirm` mode this is a
+proposal for the human/creation skill to confirm before revising. In
+`persistent` mode the direction is fixed from the first evaluation and
+re-applied across iterations; report only progress toward the fixed
+axis.
 
 ## Output Format
 

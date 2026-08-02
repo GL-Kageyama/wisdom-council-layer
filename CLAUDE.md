@@ -83,13 +83,18 @@ python utils/validate_output.py < output.json
 
 **評価 → 再作成ループ:**
 ```
-評価 → 作成スキルが評価を入力に指示を合成 → 再作成 → 再評価
+評価 → revision_direction（次回の修正方向）→ 作成スキルが指示を合成 → 再作成 → 再評価
   → compare_reports.py で改善度確認 → 繰り返し
 ```
+
+**反復モード（`iteration`）:**
+- `iteration: "confirm"`（デフォルト）— 各ターンの評価後に `revision_direction` を提示し、**確認してから**次の修正へ。
+- `iteration: "persistent"` — 最初に `revision_direction` を確定し、その方向に沿って**修正し続ける**（各反復では到達度を報告）。
 
 指針:
 - 平均だけで判断せず、分散と不一致も見る。
 - 改善が頭打ちになったらループを止める（過修正は元の良さを失わせる）。
+- 詳細: `references/revision-loop.md`
 
 ## 重要原則
 
