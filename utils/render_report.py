@@ -160,7 +160,7 @@ def render_contrasts(value_vector, excluded=()):
         print("  → この対立は平均化せず、そのまま保存する（debate-principles.md）")
 
 
-def render_council(obj):
+def render_council(obj, show_ind=False):
     header("🧠 Wisdom Council Value Report")
     badge = CLASS_BADGE.get(obj.get("classification"), obj.get("classification", "?"))
     print(f"\n  分類: {badge}")
@@ -208,7 +208,12 @@ def render_council(obj):
 
     ind = obj.get("individual_reports") or []
     if ind:
-        print(f"\n【個別評価】{len(ind)}体の詳細は JSON 側に保存（各評価者の narrative 参照）")
+        if show_ind:
+            print(f"\n【個別評価】{len(ind)}体")
+            for r in ind:
+                render_evaluator(r)
+        else:
+            print(f"\n【個別評価】{len(ind)}体の詳細は JSON 側に保存（--individuals で全レポート表示）")
 
 
 def render_evaluator(obj):
@@ -252,7 +257,7 @@ def md_val(v):
     return "—" if v is None else f"{v}"
 
 
-def render_council_md(obj):
+def render_council_md(obj, show_ind=False):
     """Readable Markdown report (suitable for .md files / GitHub preview)."""
     L = []
     L.append("# 🧠 Wisdom Council Value Report")
@@ -375,10 +380,17 @@ def render_council_md(obj):
 
     ind = obj.get("individual_reports") or []
     if ind:
-        L.append("## 📄 個別評価の素材")
-        L.append("")
-        L.append("下流の再作成スキルは、各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` を入力に使う。生データは JSON（`individual_reports`）に保存。")
-        L.append("")
+        if show_ind:
+            L.append("## 📄 個別評価（全レポート）")
+            L.append("")
+            for r in ind:
+                L.append("")
+                L.append(render_evaluator_md(r))
+        else:
+            L.append("## 📄 個別評価の素材")
+            L.append("")
+            L.append("作成スキルは、各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` を入力に使う。生データは JSON（`individual_reports`）に保存。`--individuals` で全レポートを表示。")
+            L.append("")
 
     return "\n".join(L)
 
@@ -428,6 +440,7 @@ def main():
     args = [a for a in sys.argv[1:]]
     out_format = "console"
     out_file = None
+    show_ind = False
     positional = []
     i = 0
     while i < len(args):
@@ -438,8 +451,11 @@ def main():
         elif a in ("--output", "-o") and i + 1 < len(args):
             out_file = args[i + 1]
             i += 2
+        elif a in ("--individuals", "--ind"):
+            show_ind = True
+            i += 1
         elif a in ("--help", "-h"):
-            print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [report.json]",
+            print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [--individuals] [report.json]",
                   file=sys.stderr)
             return 0
         else:
@@ -468,7 +484,7 @@ def main():
         return 2
 
     if isinstance(obj, dict) and "report_id" in obj:
-        text = render_council_md(obj) if out_format == "md" else _console_council(obj)
+        text = render_council_md(obj, show_ind) if out_format == "md" else _console_council(obj, show_ind)
     elif isinstance(obj, dict) and "evaluator_id" in obj:
         text = render_evaluator_md(obj) if out_format == "md" else _console_evaluator(obj)
     else:
@@ -485,12 +501,12 @@ def main():
     return 0
 
 
-def _console_council(obj):
+def _console_council(obj, show_ind=False):
     import io
     buf = io.StringIO()
     import contextlib
     with contextlib.redirect_stdout(buf):
-        render_council(obj)
+        render_council(obj, show_ind)
     return buf.getvalue()
 
 

@@ -8,21 +8,184 @@
     { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 50, "scores": [50] },
-    "quality": { "mean": 52, "scores": [52] },
-    "business_value": { "mean": 58, "scores": [58] },
-    "future_potential": { "mean": 40, "scores": [40] },
-    "meaning": { "mean": 28, "scores": [28] },
-    "philosophical_depth": { "mean": 30, "scores": [30] }
+    "originality": { "mean": 50, "variance": 0, "min": 50, "max": 50, "scores": [50] },
+    "quality": { "mean": 51, "variance": 4, "min": 50, "max": 52, "scores": [52, 50] },
+    "business_value": { "mean": 58, "variance": 0, "min": 58, "max": 58, "scores": [58] },
+    "future_potential": { "mean": 40, "variance": 0, "min": 40, "max": 40, "scores": [40] },
+    "meaning": { "mean": 28, "variance": 0, "min": 28, "max": 28, "scores": [28] }
   },
   "current_value_score": 53,
-  "hidden_potential_score": 33,
+  "hidden_potential_score": 34,
   "classification": "current_success",
-  "executive_summary": "『永続保存』の常識を『消える前提』に反転した差別化により、ビジネス価値が42→58に改善。現在価値53で current_success に到達。",
-  "synthesis_narrative": "再作成指令（差別化軸の反転）が有効だった。ビジネス評価者は『消える前提は既存アプリと真逆で、口コミで広がる可能性がある』と58点。独創性も38→50に上昇。ただし意味・哲学は低いままで、長期的な深みは今後の課題。",
+  "disagreement_map": [
+    {
+      "dimension": "business_value",
+      "variance": 0,
+      "disputing_evaluators": ["business-value", "meaning-evaluator"],
+      "arguments": [
+        "business-value: 『消える前提』は差別化され、市場性が高い。58点。",
+        "meaning-evaluator: 市場性は高いが、感情の扱いに意味性は依然薄い。28点。"
+      ]
+    }
+  ],
+  "consensus_summary": "『永続保存』を『消える前提』に反転した差別化により、ビジネス価値が42→58に改善。独創性も38→50に。",
+  "executive_summary": "『消える前提』の反転により、ビジネス価値が42→58、独創性が38→50に改善。現在価値53で current_success に到達。ただし意味(28)は低く、深みは今後の課題。",
+  "synthesis_narrative": "作成スキルが個別評価（weaknesses）を入力に合成した再作成指令（差別化軸の反転）が有効だった。ビジネス評価者は『消える前提は既存と真逆で口コミが生まれる』と58点。独創性も『消えゆき方の可視化』という独自体験として50点。一方、意味評価者は28点のままで、感情の扱いの深みが次の課題。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の独自性評価",
+      "domain": "business",
+      "primary_score": 50,
+      "primary_score_rationale": "『消える前提』という逆転の発想が既存と差別化された",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 52, "weight": 0.35, "evidence": "永続保存の反転", "judgment": "新しい角度" },
+        "combinatorial_surprise": { "score": 50, "weight": 0.25, "evidence": "消える×感情記録", "judgment": "意外な結合" },
+        "distance_from_template": { "score": 48, "weight": 0.25, "evidence": "既存日記との差", "judgment": "明確になった" },
+        "non_obviousness": { "score": 48, "weight": 0.15, "evidence": "消える前提の着想", "judgment": "やや意外" }
+      },
+      "value_vector_contribution": { "originality": 50, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 72,
+      "strengths": ["逆転の発想による差別化"],
+      "weaknesses": ["『消える』の意味づけが浅い"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["カテゴリー破壊的な角度"],
+      "unique_perspective": "『消える』を機能でなくコンセプトにした点が新しい",
+      "expected_disagreement_points": [{ "evaluator_type": "meaning-evaluator", "predicted_stance": "意味性は薄いと見るだろう" }],
+      "improvement_suggestions": ["『消えゆき方』の体験をより具体的に"],
+      "narrative": "永続保存の常識を反転させた点が差別化として機能した。..."
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の凡庸性評価",
+      "domain": "business",
+      "primary_score": 52,
+      "primary_score_rationale": "『消える前提』に固有の体験の声が現れた",
+      "dimension_scores": {
+        "generic_language_density": { "score": 50, "weight": 0.30, "evidence": "定番語は減った", "judgment": "改善" },
+        "risk_avoidance": { "score": 55, "weight": 0.25, "evidence": "既存と真逆を選ぶ", "judgment": "リスクを取った" },
+        "information_density": { "score": 50, "weight": 0.25, "evidence": "コンセプトが明確", "judgment": "向上" },
+        "particularity": { "score": 52, "weight": 0.20, "evidence": "消えゆき方のUI", "judgment": "独自性が出た" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 52, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 68,
+      "strengths": ["差別化の声が出た"],
+      "weaknesses": ["消えゆき方のUIの具体性不足"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["生産的なリスク"],
+      "unique_perspective": "『消える』を選んだことで、このアプリでしかない体験の手がかりが生まれた",
+      "expected_disagreement_points": [{ "evaluator_type": "quality-evaluator", "predicted_stance": "実装前提は依然不明と見るだろう" }],
+      "improvement_suggestions": ["消えゆき方のUXを具体的に設計する"],
+      "narrative": "差別化の言葉がコンセプトに現れ、凡庸さが薄れた。..."
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "Business Value Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の市場性評価",
+      "domain": "business",
+      "primary_score": 58,
+      "primary_score_rationale": "『消える前提』は既存と真逆で、差別化と話題性が生まれる",
+      "dimension_scores": {
+        "market_demand": { "score": 55, "weight": 0.30, "evidence": "消す自由への需要", "judgment": "明確化" },
+        "growth_potential": { "score": 60, "weight": 0.25, "evidence": "プライバシー意識の高まり", "judgment": "追い風" },
+        "feasibility_of_delivery": { "score": 52, "weight": 0.20, "evidence": "消える仕組みは実装可能", "judgment": "改善" },
+        "competitive_advantage": { "score": 62, "weight": 0.25, "evidence": "コンセプトの差別化", "judgment": "参入障壁に近い" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 58, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 75,
+      "strengths": ["コンセプト差別化"],
+      "weaknesses": ["収益モデルが未確定"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["参入障壁", "話題性"],
+      "unique_perspective": "『消える』は機能でなく価値提案であり、真似されにくい",
+      "expected_disagreement_points": [{ "evaluator_type": "meaning-evaluator", "predicted_stance": "市場性と意味性は別と見るだろう" }],
+      "improvement_suggestions": ["収益モデル（サブスク等）を固める"],
+      "narrative": "『消える前提』は既存と真逆で、価値提案として機能する。..."
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Analyzer",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の将来性評価",
+      "domain": "business",
+      "primary_score": 40,
+      "primary_score_rationale": "コンセプトは明確になったが、市場の受け方は不確実",
+      "dimension_scores": {
+        "environmental_shift_potential": { "score": 45, "weight": 0.30, "evidence": "データ断捨離の流れ", "judgment": "追い風" },
+        "historical_similarity": { "score": 38, "weight": 0.25, "evidence": "消えるSNSの前例", "judgment": "賛否両論" },
+        "compounding_value": { "score": 38, "weight": 0.25, "evidence": "消えるので蓄積しない", "judgment": "限定" },
+        "timing_analysis": { "score": 40, "weight": 0.20, "evidence": "時期は悪くない", "judgment": "普通" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 40, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 60,
+      "strengths": ["データ断捨離の追い風"],
+      "weaknesses": ["消える価値の持続性は不明"],
+      "red_flags_triggered": [],
+      "green_flags_detected": [],
+      "unique_perspective": "『消える』が一過性のトレンドになるか、根強い価値になるかは未知数",
+      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "現在の市場価値を重視するだろう" }],
+      "improvement_suggestions": ["消える先の『残るもの』を設計する"],
+      "narrative": "コンセプトは明確だが、長期の価値は実証待ち。..."
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の完成度評価",
+      "domain": "business",
+      "primary_score": 50,
+      "primary_score_rationale": "コンセプトは明確化したが、実装詳細はまだ不十分",
+      "dimension_scores": {
+        "technical_quality": { "score": 50, "weight": 0.35, "evidence": "消える仕組みの設計", "judgment": "方向は良い" },
+        "precision": { "score": 48, "weight": 0.20, "evidence": "消えゆき方の定義", "judgment": "やや曖昧" },
+        "structure": { "score": 52, "weight": 0.25, "evidence": "構成は明確", "judgment": "改善" },
+        "feasibility": { "score": 48, "weight": 0.20, "evidence": "端末内処理の実装前提", "judgment": "まだ不明" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 50, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "current_success",
+      "confidence": 70,
+      "strengths": ["コンセプトの明確化"],
+      "weaknesses": ["技術スタック未確定"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["約束の遵守"],
+      "unique_perspective": "『消えゆき方』の技術実装（ローカル削除・定期削除）が次段階の要",
+      "expected_disagreement_points": [{ "evaluator_type": "anti-generic-filter", "predicted_stance": "コンセプトの声は出たと認めるだろう" }],
+      "improvement_suggestions": ["技術スタックと削除仕様を明記する"],
+      "narrative": "コンセプトは明確になったが、実装の土台は次段階。..."
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』改訂案の意味性評価",
+      "domain": "business",
+      "primary_score": 28,
+      "primary_score_rationale": "『消える』の意味づけが、人間の生への繋がりにまだ届かない",
+      "dimension_scores": {
+        "existential_resonance": { "score": 26, "weight": 0.35, "evidence": "消える感情の意味", "judgment": "未深化" },
+        "narrative_power": { "score": 30, "weight": 0.25, "evidence": "消えゆき方の体験", "judgment": "手がかりはある" },
+        "significance": { "score": 28, "weight": 0.20, "evidence": "必要性", "judgment": "中途" },
+        "interpretive_depth": { "score": 30, "weight": 0.20, "evidence": "消える前提の深掘り", "judgment": "浅い" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 28 },
+      "classification": "low_signal",
+      "confidence": 65,
+      "strengths": ["消えゆき方に物語の可能性"],
+      "weaknesses": ["感情の扱いが浅い"],
+      "red_flags_triggered": [],
+      "green_flags_detected": [],
+      "unique_perspective": "『消える』ことは意味の断絶だが、それがなぜ救いなのかが描かれていない",
+      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "意味性は市場性と別と見るだろう" }],
+      "improvement_suggestions": ["『消えて楽になる』体験を物語として描く"],
+      "narrative": "コンセプトは明確になったが、人間の生への意味づけは次の課題。..."
+    }
+  ],
   "recommendations": [
-    "プライバシー設計の詳細を固め、プロトタイプを作成する",
-    "意味性を高める改訂を検討（『消える感情』の物語性）"
+    "収益モデルと技術実装を固め、プロトタイプを作成する",
+    "意味性を高める改訂（『消えて楽になる』の物語）を次回の再作成指令にする"
   ],
   "caveats": ["科学評価は不適合のため除外"]
 }

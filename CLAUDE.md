@@ -72,16 +72,16 @@ python utils/validate_output.py < output.json
 
 ## 評価出力は「入力」として設計されている
 
-**このレイヤーの評価結果は、それ自体が最終成果ではない。** 下流のスキル（再作成・改善指示を合成する専用スキル）への**入力**である。
+**このレイヤーの評価結果は、それ自体が最終成果ではない。** 作成スキル（再作成・改善指示を合成する専用スキル）への**入力**である。
 
 - 合議は**再作成指示そのものを生成しない**。それは専用スキルの責務。
 - 代わりに、`individual_reports` に各評価者の**生の素材**（`weaknesses`・`improvement_suggestions`・`expected_disagreement_points`・`narrative`）を完全に保存する。
-- フィールド名は固定・一貫（`schemas/value-output.schema.json` 準拠）で、下流スキルがパスを決め打ちで読める。
+- フィールド名は固定・一貫（`schemas/value-output.schema.json` 準拠）で、作成スキルがパスを決め打ちで読める。
 - 合成ナラティブ（executive_summary等）は補助であり、生データを捨てない。
 
 **評価 → 再作成ループ:**
 ```
-評価 → 下流スキルが評価を入力に指示を合成 → 再作成 → 再評価
+評価 → 作成スキルが評価を入力に指示を合成 → 再作成 → 再評価
   → compare_reports.py で改善度確認 → 繰り返し
 ```
 

@@ -24,6 +24,11 @@
 python ../utils/render_report.py --format md business-startup/report-v2.json
 ```
 
+**全評価者の個別レポートまで表示:**
+```bash
+python ../utils/render_report.py --individuals business-startup/report-v2.json
+```
+
 **ループの改善を比較:**
 ```bash
 python ../utils/compare_reports.py business-startup/report-v1.json business-startup/report-v2.json
@@ -33,3 +38,10 @@ python ../utils/compare_reports.py business-startup/report-v1.json business-star
 ```bash
 for f in */report-*.json; do python3 ../utils/validate_output.py "$f"; done
 ```
+
+## 個別評価レポート（individual_reports）
+
+各レポートの `individual_reports` には**招集した全評価者の生データ**（`weaknesses`・`improvement_suggestions`・`narrative`）が入る。これは**作成スキルが再作成の材料として読む入力**である。
+
+- **`business-startup/`** は全6評価者の個別レポートを完全実装した**正規の形**（`--individuals` で確認できる）。
+- 他のジャンルのサンプルは**可読性のため要約**してある。実際の合議は全招集評価者を保存する。

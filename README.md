@@ -232,6 +232,7 @@ python utils/render_report.py report.json        # ファイルから
 ```bash
 python utils/render_report.py --format md report.json               # 標準出力
 python utils/render_report.py --format md -o report.md report.json  # ファイルに保存
+python utils/render_report.py --individuals report.json             # 全評価者の個別レポートも表示
 ```
 
 MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/creative-poem/report.md](wisdom-council-layer/examples/creative-poem/report.md)
@@ -273,11 +274,11 @@ MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（�
 
 ## 評価結果は「入力」として設計されている
 
-このレイヤーの評価結果は最終成果ではなく、**下流スキル（再作成・改善指示を合成する専用スキル）への入力**である。
+このレイヤーの評価結果は最終成果ではなく、**作成スキル（再作成・改善指示を合成する専用スキル）への入力**である。
 
-合議は再作成指示そのものを生成しない。代わりに、下流スキルが指示を合成するための**生の素材**を完全な形で残す:
+合議は再作成指示そのものを生成しない。代わりに、作成スキルが指示を合成するための**生の素材**を完全な形で残す:
 
-| 素材 | 下流スキルでの使われ方 |
+| 素材 | 作成スキルでの使われ方 |
 |------|----------------------|
 | `individual_reports[].weaknesses` | 弱点（根拠付き）——修正対象の特定 |
 | `individual_reports[].improvement_suggestions` | 各評価者の改善提案——指示の候補 |
@@ -294,7 +295,7 @@ MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（�
     ↓
 ② 評価（wisdom-council / mode:full）
     ↓
-③ 下流スキルが評価を入力に指示を合成
+③ 作成スキルが評価を入力に指示を合成
     ↓
 ④ 再作成
     ↓

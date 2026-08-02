@@ -8,18 +8,181 @@
     { "evaluator_id": "scientific-novelty", "reason": "アプリ企画に科学的新規性は不適合（例外的除外）" }
   ],
   "value_vector": {
-    "originality": { "mean": 38, "scores": [38] },
-    "quality": { "mean": 40, "scores": [40] },
-    "business_value": { "mean": 42, "scores": [42] },
-    "future_potential": { "mean": 42, "scores": [42] },
-    "meaning": { "mean": 24, "scores": [24] },
-    "philosophical_depth": { "mean": 26, "scores": [26] }
+    "originality": { "mean": 38, "variance": 0, "min": 38, "max": 38, "scores": [38] },
+    "quality": { "mean": 40, "variance": 16, "min": 38, "max": 42, "scores": [42, 38] },
+    "business_value": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
+    "future_potential": { "mean": 42, "variance": 0, "min": 42, "max": 42, "scores": [42] },
+    "meaning": { "mean": 24, "variance": 0, "min": 24, "max": 24, "scores": [24] }
   },
   "current_value_score": 40,
-  "hidden_potential_score": 31,
+  "hidden_potential_score": 33,
   "classification": "trend_object",
-  "executive_summary": "既存の日記アプリの亜種であり、差別化が弱い。現在価値40・潜在価値31で trend_object（一時的に需要はあるが持続性が不明）。",
-  "synthesis_narrative": "独創性評価者は『既存アプリとの差別化が弱く、感情マップは見慣れた機能の組み合わせ』と38点。ビジネス評価者も『プライバシーだけでは参入障壁にならない』と42点。",
+  "disagreement_map": [
+    {
+      "dimension": "quality",
+      "variance": 16,
+      "disputing_evaluators": ["anti-generic-filter", "quality-evaluator"],
+      "arguments": [
+        "anti-generic-filter: 構成は安定しているが凡庸な表現が目立つ。42点。",
+        "quality-evaluator: 機能要件は揃っているが実装前提が不明確。38点。"
+      ]
+    }
+  ],
+  "consensus_summary": "ビジネス価値(42)は平均的、独創性(38)は弱い。既存の日記アプリの亜種という見立てで評価者が一致。",
+  "executive_summary": "既存の日記アプリの亜種であり、差別化が弱い。現在価値40・潜在価値33で trend_object（一時的に需要はあるが持続性が不明）。",
+  "synthesis_narrative": "独創性評価者は『感情マップは見慣れた機能の組み合わせ』と38点。ビジネス評価者も『プライバシーだけでは参入障壁にならない』と42点。意味評価者は24点と低く、アプリの存在意義が不明瞭。",
+  "individual_reports": [
+    {
+      "evaluator_id": "originality",
+      "evaluator_name": "Originality Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』の独自性評価",
+      "domain": "business",
+      "primary_score": 38,
+      "primary_score_rationale": "感情マップは既存機能の組み合わせで、差別化が弱い",
+      "dimension_scores": {
+        "conceptual_novelty": { "score": 40, "weight": 0.35, "evidence": "感情記録＋可視化", "judgment": "見慣れた構成" },
+        "combinatorial_surprise": { "score": 35, "weight": 0.25, "evidence": "日記×感情マップ", "judgment": "予測の範囲内" },
+        "distance_from_template": { "score": 36, "weight": 0.25, "evidence": "既存日記アプリとの差", "judgment": "小さい" },
+        "non_obviousness": { "score": 38, "weight": 0.15, "evidence": "独自機能の不在", "judgment": "自明" }
+      },
+      "value_vector_contribution": { "originality": 38, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 75,
+      "strengths": ["感情の可視化という需要はある"],
+      "weaknesses": ["差別化軸が不明確"],
+      "red_flags_triggered": ["見せかけの新しさ"],
+      "green_flags_detected": [],
+      "unique_perspective": "既存機能の寄せ集めで、真の新規性がない",
+      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "市場はあるが競争が激しいと評価するだろう" }],
+      "improvement_suggestions": ["差別化軸を逆転させる（例: 消える前提）"],
+      "narrative": "感情の可視化は需要があるが、既存の日記・ムードトラッカーと違いがない。..."
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "Anti-Generic Filter",
+      "content_summary": "アプリ企画『消えゆく日記』の凡庸性評価",
+      "domain": "business",
+      "primary_score": 42,
+      "primary_score_rationale": "構成は標準的だが、コンセプトに固有の声がない",
+      "dimension_scores": {
+        "generic_language_density": { "score": 40, "weight": 0.30, "evidence": "『プライバシー』『可視化』の定番語", "judgment": "やや凡庸" },
+        "risk_avoidance": { "score": 45, "weight": 0.25, "evidence": "安全な市場を狙う", "judgment": "挑戦がない" },
+        "information_density": { "score": 40, "weight": 0.25, "evidence": "機能列挙に終始", "judgment": "薄い" },
+        "particularity": { "score": 42, "weight": 0.20, "evidence": "独自の体験がない", "judgment": "置き換え可能" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 42, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 70,
+      "strengths": ["実現可能性は高い"],
+      "weaknesses": ["凡庸な寄せ集め"],
+      "red_flags_triggered": ["安全な中道"],
+      "green_flags_detected": [],
+      "unique_perspective": "機能リストのどこにも『このアプリでしかない体験』がない",
+      "expected_disagreement_points": [{ "evaluator_type": "quality-evaluator", "predicted_stance": "完成度はそれなりと評価するだろう" }],
+      "improvement_suggestions": ["体験の独自性を1点に絞る"],
+      "narrative": "標準的な企画書の文体で、差別化の言葉が入っていない。..."
+    },
+    {
+      "evaluator_id": "business-value",
+      "evaluator_name": "Business Value Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』の市場性評価",
+      "domain": "business",
+      "primary_score": 42,
+      "primary_score_rationale": "需要はあるが、競争優位と収益モデルが弱い",
+      "dimension_scores": {
+        "market_demand": { "score": 50, "weight": 0.30, "evidence": "感情記録への需要は実在", "judgment": "中程度" },
+        "growth_potential": { "score": 45, "weight": 0.25, "evidence": "既存市場は成熟", "judgment": "天井が近い" },
+        "feasibility_of_delivery": { "score": 40, "weight": 0.20, "evidence": "実装前提が不明確", "judgment": "やや不明" },
+        "competitive_advantage": { "score": 30, "weight": 0.25, "evidence": "プライバシーだけでは弱い", "judgment": "参入障壁なし" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": 42, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 65,
+      "strengths": ["需要の実在"],
+      "weaknesses": ["競争優位の欠如"],
+      "red_flags_triggered": ["模倣可能性"],
+      "green_flags_detected": [],
+      "unique_perspective": "プライバシーは大手が後から簡単に実装できる",
+      "expected_disagreement_points": [{ "evaluator_type": "future-potential", "predicted_stance": "市場変化で可能性はあると見るだろう" }],
+      "improvement_suggestions": ["参入障壁になる独自の仕組みを設計する"],
+      "narrative": "感情記録の需要はあるが、類似アプリが多数。差別化がないままなら価格競争に巻き込まれる。..."
+    },
+    {
+      "evaluator_id": "future-potential",
+      "evaluator_name": "Future Potential Analyzer",
+      "content_summary": "アプリ企画『消えゆく日記』の将来性評価",
+      "domain": "business",
+      "primary_score": 42,
+      "primary_score_rationale": "メンタルヘルス市場の成長に乗る可能性はある",
+      "dimension_scores": {
+        "environmental_shift_potential": { "score": 48, "weight": 0.30, "evidence": "感情・健康データへの関心増", "judgment": "追い風" },
+        "historical_similarity": { "score": 38, "weight": 0.25, "evidence": "類似アプリの成功例が少ない", "judgment": "明確な前例なし" },
+        "compounding_value": { "score": 42, "weight": 0.25, "evidence": "感情履歴は蓄積価値あり", "judgment": "中程度" },
+        "timing_analysis": { "score": 40, "weight": 0.20, "evidence": "市場は開き始めたが競合も多い", "judgment": "普通" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": 42, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "discovery_target",
+      "confidence": 60,
+      "strengths": ["メンタルヘルス市場の成長"],
+      "weaknesses": ["差別化がないと埋没する"],
+      "red_flags_triggered": [],
+      "green_flags_detected": ["環境変化の味方"],
+      "unique_perspective": "感情データの蓄積は、長期的に健康サービスと繋がる可能性がある",
+      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "現在の市場では埋没すると見るだろう" }],
+      "improvement_suggestions": ["蓄積データを活かす独自の仕組みを設計する"],
+      "narrative": "感情データへの関心は増えており、追い風はある。ただし現在の企画では他のアプリに埋もれる。..."
+    },
+    {
+      "evaluator_id": "quality-evaluator",
+      "evaluator_name": "Quality Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』の完成度評価",
+      "domain": "business",
+      "primary_score": 38,
+      "primary_score_rationale": "要件は揃っているが、実装・UXの前提が不明確",
+      "dimension_scores": {
+        "technical_quality": { "score": 40, "weight": 0.35, "evidence": "技術要件の記述", "judgment": "普通" },
+        "precision": { "score": 38, "weight": 0.20, "evidence": "感情マップの定義が曖昧", "judgment": "不明瞭" },
+        "structure": { "score": 40, "weight": 0.25, "evidence": "機能は整理されている", "judgment": "標準的" },
+        "feasibility": { "score": 35, "weight": 0.20, "evidence": "端末内処理の実装前提なし", "judgment": "疑問" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": 38, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": null },
+      "classification": "trend_object",
+      "confidence": 68,
+      "strengths": ["機能要件の整理"],
+      "weaknesses": ["実装前提の欠如"],
+      "red_flags_triggered": ["説明不足"],
+      "green_flags_detected": [],
+      "unique_perspective": "『端末内処理』の技術的実現方法が書かれていない",
+      "expected_disagreement_points": [{ "evaluator_type": "anti-generic-filter", "predicted_stance": "凡庸な企画書と見るだろう" }],
+      "improvement_suggestions": ["技術スタックと実装前提を明記する"],
+      "narrative": "機能リストは整理されているが、実装の土台が不明。..."
+    },
+    {
+      "evaluator_id": "meaning-evaluator",
+      "evaluator_name": "Meaning Evaluator",
+      "content_summary": "アプリ企画『消えゆく日記』の意味性評価",
+      "domain": "business",
+      "primary_score": 24,
+      "primary_score_rationale": "アプリの存在意義・人間の生への繋がりが薄い",
+      "dimension_scores": {
+        "existential_resonance": { "score": 22, "weight": 0.35, "evidence": "感情記録の意味づけなし", "judgment": "薄い" },
+        "narrative_power": { "score": 25, "weight": 0.25, "evidence": "ユーザー体験の物語なし", "judgment": "なし" },
+        "significance": { "score": 25, "weight": 0.20, "evidence": "必要性が不明", "judgment": "弱い" },
+        "interpretive_depth": { "score": 25, "weight": 0.20, "evidence": "単機能", "judgment": "浅い" }
+      },
+      "value_vector_contribution": { "originality": null, "quality": null, "aesthetic": null, "emotional_impact": null, "future_potential": null, "business_value": null, "scientific_novelty": null, "philosophical_depth": null, "meaning": 24 },
+      "classification": "low_signal",
+      "confidence": 70,
+      "strengths": [],
+      "weaknesses": ["存在意義が不明瞭"],
+      "red_flags_triggered": [],
+      "green_flags_detected": [],
+      "unique_perspective": "感情を『記録して終わり』にする点に、人間の生への配慮がない",
+      "expected_disagreement_points": [{ "evaluator_type": "business-value", "predicted_stance": "意味性は市場性と別と見るだろう" }],
+      "improvement_suggestions": ["感情の『消え方』に物語を持たせる"],
+      "narrative": "感情を記録するだけでは、なぜ人間にとって重要なのかが伝わらない。..."
+    }
+  ],
   "recommendations": [
     "差別化軸を明確にする（永続保存ではなく『消える前提』に反転）",
     "再作成し、compare_reports.py で改善を確認"

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Compare two Wisdom Council Value Reports (before / after a revision) and
 show the improvement per dimension. This powers the create → evaluate →
-recreate loop: run the council on v1, revise per the downstream
-recreation skill's directives, run the council on v2, then compare.
+recreate loop: run the council on v1, revise per the creation
+skill's directives, run the council on v2, then compare.
 
 Usage:
     python utils/compare_reports.py before.json after.json
@@ -115,7 +115,7 @@ def main():
             print(f"  {arrow} {jp}: {b} → {a} ({d:+d})")
 
     print("\n  ※ 全次元の生値は JSON を参照。平均だけで判断せず、分散と不一致も見ること。")
-    print("  ※ 下流の再作成スキルは individual_reports の weaknesses / improvement_suggestions を入力に使う。")
+    print("  ※ 作成スキルは individual_reports の weaknesses / improvement_suggestions を入力に使う。")
     return 0
 
 

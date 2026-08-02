@@ -109,12 +109,12 @@ Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "
 
 ### Phase 5: Input-Ready Output（入力として使いやすい出力）
 
-**このレイヤーの評価結果は、それ自体が最終成果ではない。** 下流のスキル（例: 再作成・改善指示を合成する専用スキル）への**入力**として設計されている。
+**このレイヤーの評価結果は、それ自体が最終成果ではない。** 作成スキル（例: 再作成・改善指示を合成する専用スキル）への**入力**として設計されている。
 
 入力として使いやすくするため:
 
-1. **全評価者の生データを完全に保存する**（`individual_reports`）。特に `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は下流スキルが再作成の材料として使う。
-2. **フィールド名は固定・一貫**（`schemas/value-output.schema.json` 準拠）。下流スキルはパスを決め打ちで読める。
+1. **全評価者の生データを完全に保存する**（`individual_reports`）。特に `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は作成スキルが再作成の材料として使う。
+2. **フィールド名は固定・一貫**（`schemas/value-output.schema.json` 準拠）。作成スキルはパスを決め打ちで読める。
 3. **合成で生データを捨てない**。executive_summary や synthesis_narrative はあくまで補助であり、評価の素材（スコア・根拠・弱点）は必ず JSON に残す。
 4. **再作成指示（directive）そのものは生成しない。** それは専用スキルの責務。このレイヤーは「評価の素材」を整えて渡す。
 5. **成果物は常に統合されたValue Reportである。** 個々の評価者出力は内部素材であり、単体で出力しない。
@@ -270,8 +270,8 @@ section. Preserve every evaluator's full report in
 Do NOT synthesize recreation directives — that is a separate skill's
 job. Instead, ensure the report keeps every evaluator's raw material
 (weaknesses, improvement_suggestions, expected_disagreement_points,
-full narratives) intact in `individual_reports`, so a downstream
-recreation skill can consume them as its input.
+full narratives) intact in `individual_reports`, so a creation
+skill can consume them as its input.
 
 ## Output Format
 
