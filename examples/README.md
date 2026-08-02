@@ -8,6 +8,7 @@
 |----------|---------|----------------------|
 | `creative-poem/` | 詩 | discovery_target → current_success |
 | `creative-poem-sea/` | 詩（海・『借りた言葉』） | discovery_target → innovation（v1〜v10） |
+| `music-lyrics/` | 歌謡曲の歌詞（『雨上がりの電話』） | trend_object → innovation（v1〜v5） |
 | `creative-film/` | 映画企画 | discovery_target → innovation |
 | `creative-watercolor/` | 画像生成プロンプト（水彩） | discovery_target → innovation |
 | `creative-photography/` | 画像生成プロンプト（写真） | discovery_target → innovation |
