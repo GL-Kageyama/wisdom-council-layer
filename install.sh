@@ -2,21 +2,24 @@
 #
 # Wisdom Council Layer installer
 #
-# Installs the skill set to a Claude Code discovery location so the
-# evaluator skills and council orchestrator are callable by name from
-# anywhere.
+# Installs the 10 evaluator agents and the council orchestrator skill to
+# Claude Code discovery locations so they are available by name.
 #
 # Usage:
-#   ./install.sh            # Global: ~/.claude/skills/ (callable from any project)
-#   ./install.sh --local    # Project: .claude/skills/ (this repo only)
+#   ./install.sh            # Global: ~/.claude/agents/ + ~/.claude/skills/ (callable from any project)
+#   ./install.sh --local    # Project: .claude/agents/ + .claude/skills/ (this repo only)
 #   ./install.sh --uninstall
 #
-# Installation uses symlinks: the canonical source stays in ./skills/,
-# so edits to the repo are reflected immediately.
+# Installation uses symlinks: the canonical source stays in ./agents/ and
+# ./skills/, so edits to the repo are reflected immediately.
+#
+# Note: agents are loaded as subagents (Agent tool / @-mention), while the
+# orchestrator remains a skill (Skill tool / `Skill: wisdom-council`).
 
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+AGENTS_DIR="$REPO_DIR/agents"
 SKILLS_DIR="$REPO_DIR/skills"
 
 MODE="global"
@@ -30,9 +33,9 @@ while [[ $# -gt 0 ]]; do
     -h|--help)
       echo "Usage: ./install.sh [--local|--global] [--uninstall]"
       echo ""
-      echo "  --local      Install to .claude/skills/ (this project only)"
-      echo "  --global     Install to ~/.claude/skills/ (default; callable from anywhere)"
-      echo "  --uninstall  Remove the installed skills (default: global target)"
+      echo "  --local      Install to .claude/ (this project only)"
+      echo "  --global     Install to ~/.claude/ (default; callable from anywhere)"
+      echo "  --uninstall  Remove the installed agents and skills (default: global target)"
       exit 0
       ;;
     *) echo "Unknown option: $1"; exit 1 ;;
@@ -41,42 +44,78 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ "$MODE" == "local" ]]; then
-  TARGET_DIR="$REPO_DIR/.claude/skills"
+  TARGET_AGENTS_DIR="$REPO_DIR/.claude/agents"
+  TARGET_SKILLS_DIR="$REPO_DIR/.claude/skills"
 else
-  TARGET_DIR="$HOME/.claude/skills"
+  TARGET_AGENTS_DIR="$HOME/.claude/agents"
+  TARGET_SKILLS_DIR="$HOME/.claude/skills"
 fi
 
 if [[ "$ACTION" == "uninstall" ]]; then
-  echo "==> Uninstalling Wisdom Council Layer skills from $TARGET_DIR"
+  echo "==> Uninstalling Wisdom Council Layer agents/skills from:"
+  echo "    $TARGET_AGENTS_DIR"
+  echo "    $TARGET_SKILLS_DIR"
   removed=0
-  for skill_dir in "$SKILLS_DIR"/*/; do
-    name="$(basename "$skill_dir")"
-    if [[ -L "$TARGET_DIR/$name" || -e "$TARGET_DIR/$name" ]]; then
-      rm -rf "$TARGET_DIR/$name"
-      echo "    ✓ removed $name"
+  # agents
+  for agent_file in "$AGENTS_DIR"/*.md; do
+    name="$(basename "$agent_file")"
+    if [[ -L "$TARGET_AGENTS_DIR/$name" || -e "$TARGET_AGENTS_DIR/$name" ]]; then
+      rm -rf "$TARGET_AGENTS_DIR/$name"
+      echo "    ✓ removed agent $name"
       removed=$((removed+1))
     fi
   done
-  echo "==> Removed $removed skill(s)."
+  # skills
+  for skill_dir in "$SKILLS_DIR"/*/; do
+    name="$(basename "$skill_dir")"
+    if [[ -L "$TARGET_SKILLS_DIR/$name" || -e "$TARGET_SKILLS_DIR/$name" ]]; then
+      rm -rf "$TARGET_SKILLS_DIR/$name"
+      echo "    ✓ removed skill $name"
+      removed=$((removed+1))
+    fi
+  done
+  echo "==> Removed $removed component(s)."
   exit 0
 fi
 
-echo "==> Installing Wisdom Council Layer skills to: $TARGET_DIR"
-mkdir -p "$TARGET_DIR"
+echo "==> Installing Wisdom Council Layer to:"
+echo "    agents: $TARGET_AGENTS_DIR"
+echo "    skills: $TARGET_SKILLS_DIR"
+mkdir -p "$TARGET_AGENTS_DIR" "$TARGET_SKILLS_DIR"
 
 installed=0
-for skill_dir in "$SKILLS_DIR"/*/; do
-  name="$(basename "$skill_dir")"
-  target="$TARGET_DIR/$name"
-  rm -rf "$target"          # remove any previous install (symlink or dir)
-  ln -s "$skill_dir" "$target"
+
+# Install evaluator agents
+for agent_file in "$AGENTS_DIR"/*.md; do
+  name="$(basename "$agent_file")"
+  target="$TARGET_AGENTS_DIR/$name"
+  rm -rf "$target"          # remove any previous install (symlink or file)
+  ln -s "$agent_file" "$target"
   installed=$((installed+1))
-  echo "    ✓ $name"
+  echo "    ✓ agent  $name"
 done
 
-# Verify every symlink resolves to a readable SKILL.md
+# Install the orchestrator skill
+for skill_dir in "$SKILLS_DIR"/*/; do
+  name="$(basename "$skill_dir")"
+  target="$TARGET_SKILLS_DIR/$name"
+  rm -rf "$target"
+  ln -s "$skill_dir" "$target"
+  installed=$((installed+1))
+  echo "    ✓ skill $name"
+done
+
+# Verify every symlink resolves to a readable file
 failures=0
-for target in "$TARGET_DIR"/*/; do
+for target in "$TARGET_AGENTS_DIR"/*.md; do
+  if [[ -f "$target" ]]; then
+    :
+  else
+    echo "    ✗ broken: $target"
+    failures=$((failures+1))
+  fi
+done
+for target in "$TARGET_SKILLS_DIR"/*/; do
   if [[ -f "$target/SKILL.md" ]]; then
     :
   else
@@ -87,15 +126,14 @@ done
 
 echo ""
 if [[ $failures -gt 0 ]]; then
-  echo "==> $installed installed, $failures broken symlink(s). Check $SKILLS_DIR."
+  echo "==> $installed installed, $failures broken symlink(s). Check $AGENTS_DIR and $SKILLS_DIR."
   exit 1
 fi
 
-echo "==> Done: $installed skills installed to $TARGET_DIR"
+echo "==> Done: $installed components installed."
 echo ""
-echo "    Callable by name from anywhere:"
-echo "      Skill: originality"
-echo "      Skill: anti-generic-filter"
-echo "      Skill: wisdom-council"
+echo "    Callable as follows:"
+echo "      Skill: wisdom-council            # 合議オーケストレーター"
+echo "      Agent: originality, ...          # 評価者はサブエージェントとして起動"
 echo ""
-echo "    Note: restart Claude Code or open /skills once to reload the skill listing."
+echo "    Note: restart Claude Code or run /agents and /skills once to reload the listing."

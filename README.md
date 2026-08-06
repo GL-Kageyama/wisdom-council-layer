@@ -72,19 +72,21 @@ Layer 3: Meta Value Layer（価値基準そのものを考えるAI）← 将来�
 wisdom-council-layer/
 ├── CLAUDE.md                          # プロジェクト規約
 ├── install.sh                         # グローバル/プロジェクトインストーラー
-├── skills/                            # スキルの正本（11体）
-│   ├── originality/SKILL.md
-│   ├── anti-generic-filter/SKILL.md
-│   ├── aesthetic-critic/SKILL.md
-│   ├── emotional-impact/SKILL.md
-│   ├── future-potential/SKILL.md
-│   ├── business-value/SKILL.md
-│   ├── scientific-novelty/SKILL.md
-│   ├── philosophical-evaluator/SKILL.md
-│   ├── quality-evaluator/SKILL.md
-│   ├── meaning-evaluator/SKILL.md
+├── agents/                            # 評価者エージェントの正本（10体）
+│   ├── originality.md
+│   ├── anti-generic-filter.md
+│   ├── aesthetic-critic.md
+│   ├── emotional-impact.md
+│   ├── future-potential.md
+│   ├── business-value.md
+│   ├── scientific-novelty.md
+│   ├── philosophical-evaluator.md
+│   ├── quality-evaluator.md
+│   └── meaning-evaluator.md
+├── skills/                            # スキルの正本（合議オーケストレーター）
 │   └── wisdom-council/SKILL.md        # 合議オーケストレーター
-├── .claude/skills/                    # プロジェクト内検出用symlink
+├── .claude/agents/                    # プロジェクト内検出用symlink（評価者）
+├── .claude/skills/                    # プロジェクト内検出用symlink（合議）
 ├── .claude-plugin/                    # プラグイン配布定義
 │   ├── marketplace.json
 │   └── plugin.json
@@ -123,7 +125,7 @@ wisdom-council-layer/
 ./install.sh
 ```
 
-`~/.claude/skills/` にsymlinkが作成され、どのプロジェクトでもスキルが利用可能になる。
+`~/.claude/agents/`（評価者エージェント）と `~/.claude/skills/`（合議スキル）にsymlinkが作成され、どのプロジェクトでも利用可能になる。
 
 **プロジェクト限定:**
 
@@ -152,19 +154,21 @@ wisdom-council-layer/
 
 #### レベル1：評価者を1体呼ぶ
 
-特定の視点だけを評価したい場合。スキルは **名前** で呼ぶ。
+特定の視点だけを評価したい場合。評価者は**サブエージェント**として起動する。
 
 ```
-Skill: originality
-Args: {"content": "...", "content_type": "text", "domain": "creative"}
+Agent tool, subagent_type: originality
+Prompt: {"content": "...", "content_type": "text", "domain": "creative"}
 ```
 
 例：
-- 企画の独創性だけ確認 → `Skill: originality`
-- AIらしさ（凡庸さ）をチェック → `Skill: anti-generic-filter`
-- 市場性だけ確認 → `Skill: business-value`
+- 企画の独創性だけ確認 → 評価者エージェント `originality`
+- AIらしさ（凡庸さ）をチェック → 評価者エージェント `anti-generic-filter`
+- 市場性だけ確認 → 評価者エージェント `business-value`
 
 → 返るもの：その評価者1体のJSON（`schemas/value-output.schema.json` 準拠、1次元 + ナラティブ）
+
+> **プラグインとして実行している場合**: 評価者はスコープ名で起動する（例: `wisdom-council:originality`）。プロジェクト内で実行している場合は素の名前（`originality`）で良い。
 
 ---
 
@@ -367,18 +371,20 @@ python utils/compare_reports.py before.json after.json
 
 ## 評価者一覧
 
-| 評価者 | コア質問 | スコア次元 |
+評価者10体は**サブエージェント**（`agents/{name}.md`）である。合議はこれらを独立したコンテキストで起動し、評価の独立性を保証する。個別に呼ぶ場合は Agent tool で起動する（レベル1参照）。
+
+| 評価者（エージェント名） | コア質問 | スコア次元 |
 |--------|----------|-----------|
-| Originality Evaluator | 意味ある逸脱か、再結合か？ | originality |
-| Anti-Generic Filter | AIらしい平均解ではないか？ | quality |
-| Aesthetic Critic | 深い美の体験を創出しているか？ | aesthetic |
-| Emotional Impact Evaluator | 人間の心を動かすか？ | emotional_impact |
-| Future Potential Analyzer | 未来の環境で価値が上昇するか？ | future_potential |
-| Business Value Evaluator | 市場で価値を生むか？ | business_value |
-| Scientific Novelty Reviewer | 知識の前線を押し広げるか？ | scientific_novelty |
-| Philosophical Evaluator | 世界観を変える可能性があるか？ | philosophical_depth |
-| Quality Evaluator | 技術的に完成しているか？ | quality |
-| Meaning Evaluator | 生に意味を与えるか？ | meaning |
+| Originality Evaluator（`originality`） | 意味ある逸脱か、再結合か？ | originality |
+| Anti-Generic Filter（`anti-generic-filter`） | AIらしい平均解ではないか？ | quality |
+| Aesthetic Critic（`aesthetic-critic`） | 深い美の体験を創出しているか？ | aesthetic |
+| Emotional Impact Evaluator（`emotional-impact`） | 人間の心を動かすか？ | emotional_impact |
+| Future Potential Analyzer（`future-potential`） | 未来の環境で価値が上昇するか？ | future_potential |
+| Business Value Evaluator（`business-value`） | 市場で価値を生むか？ | business_value |
+| Scientific Novelty Reviewer（`scientific-novelty`） | 知識の前線を押し広げるか？ | scientific_novelty |
+| Philosophical Evaluator（`philosophical-evaluator`） | 世界観を変える可能性があるか？ | philosophical_depth |
+| Quality Evaluator（`quality-evaluator`） | 技術的に完成しているか？ | quality |
+| Meaning Evaluator（`meaning-evaluator`） | 生に意味を与えるか？ | meaning |
 
 ## Value Classification
 
@@ -396,7 +402,7 @@ python utils/compare_reports.py before.json after.json
 
 ## ロードマップ
 
-- **Phase 1（完了）**: Universal Evaluation Core — 10体の評価者スキル + 合議オーケストレーター + Value Vector + Value Report
+- **Phase 1（完了）**: Universal Evaluation Core — 10体の評価者エージェント + 合議オーケストレータースキル + Value Vector + Value Report
 - **Phase 2（将来）**: Hidden Potential Layer — Historical Analyzer, Mutation Detector, Timing Analyzer
 - **Phase 3（将来）**: Debate Engine — 評価者間の多ターン議論
 - **Phase 4（将来）**: Meta Value Layer — Bias Detection, Evaluation Critic, Value Evolution

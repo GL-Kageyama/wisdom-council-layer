@@ -2,7 +2,7 @@
 
 ## プロジェクトのアイデンティティ
 
-これは**知恵の評議会（Wisdom Council Layer）**である。複数のAI評価者が異なる知的視点からコンテンツを評価し、合議によって構造化された価値レポートを生成するClaude Codeスキル群。
+これは**知恵の評議会（Wisdom Council Layer）**である。複数のAI評価者エージェントが異なる知的視点からコンテンツを評価し、合議スキルによって構造化された価値レポートを生成するClaude Codeエージェント群。
 
 > **役割分担**: このレイヤーは**評価専用**である。作品の**作成**は、適切な他の手段（生成AI・専用の作成スキル・他のツール）が利用可能ならそちらに譲る。このリポジトリは「作る」ことではなく「価値を見抜く」ことを担い、その評価結果を次回の作成へ渡す材料として整える。
 
@@ -15,9 +15,11 @@
 
 ## ディレクトリ規約
 
-- `skills/{name}/SKILL.md` — スキルの正本（評価者10体 + 合議オーケストレーター1体）
-- `.claude/skills/` — プロジェクト内検出用symlink
-- `~/.claude/skills/` — グローバルインストール先（`./install.sh` で設定、どこからでも呼べる）
+- `agents/{name}.md` — 評価者エージェントの正本（10体）。ペルソナベースの専門家として独立したサブエージェントで起動される
+- `skills/wisdom-council/SKILL.md` — 合議オーケストレーターの正本（唯一のスキル）
+- `.claude/agents/` — プロジェクト内検出用symlink（評価者エージェント）
+- `.claude/skills/` — プロジェクト内検出用symlink（合議オーケストレーター）
+- `~/.claude/agents/`, `~/.claude/skills/` — グローバルインストール先（`./install.sh` で設定、どこからでも呼べる）
 - `.claude-plugin/` — プラグイン配布定義（`/plugin marketplace add` 用）
 - `schemas/` — 構造化出力のJSONスキーマ
 - `references/` — 設計文書と理論的基盤（評価者分類・分類モデル・不一致原則・ベクトルモデル・厳格スコアリング）
@@ -26,16 +28,9 @@
 
 ## 評価者の呼び出し方
 
-スキルは **名前** で呼び出す（`.claude/skills/` から検出される）。スキル名は評価者のディレクトリ名と一致する。
+**合議はスキル、評価者はサブエージェント**で呼び出す。この役割分担はアーキテクチャの要である——評価者は互いの結果を知らずに独立評価しなければならない。スキルは同じコンテキストを共有するため、独立評価には不向き。評価者をサブエージェントとして起動することで、コンテキストが隔離される。
 
-### 単一評価者
-
-```
-Skill: originality
-Args: {"content": "...", "content_type": "text", "domain": "creative"}
-```
-
-### 合議全体
+### 合議全体（推奨）
 
 ```
 Skill: wisdom-council
@@ -44,10 +39,21 @@ Args: {"content": "...", "content_type": "text", "domain": "creative"}
 
 合議は以下を実行する:
 1. 入力のドメインを判定
-2. 関連する評価者を選択（originality と anti-generic-filter は常に含める）
-3. 各評価者を名前で起動（Skill tool経由）
+2. 関連する評価者エージェントを選択（originality と anti-generic-filter は常に含める）
+3. 各評価者をサブエージェントとして起動（Agent tool経由、互いの結果を知らずに独立評価）
 4. Value Reportに統合
 5. すべての不一致を保存
+
+### 単一評価者
+
+特定の視点だけを評価したい場合。評価者はサブエージェントとして起動する。
+
+```
+Agent tool, subagent_type: originality
+Prompt: {"content": "...", "content_type": "text", "domain": "creative"}
+```
+
+インストール済みプラグインとして実行している場合は、プラグインスコープ名（`wisdom-council:originality`）を使う。
 
 **modeオプション** — `Args` に `"mode": "full"` を追加すると、ドメイン選択をせず**全10体**を一気に招集し、全9次元が埋まった完全なValue Reportを得る:
 
@@ -107,7 +113,7 @@ python utils/validate_output.py < output.json
 ## インストール
 
 ```bash
-./install.sh            # グローバル: ~/.claude/skills/（どこからでも呼べる）
-./install.sh --local    # プロジェクト: .claude/skills/
+./install.sh            # グローバル: ~/.claude/agents/ + ~/.claude/skills/（どこからでも呼べる）
+./install.sh --local    # プロジェクト: .claude/agents/ + .claude/skills/
 ./install.sh --uninstall
 ```

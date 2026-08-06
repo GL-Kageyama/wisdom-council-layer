@@ -1,6 +1,6 @@
 ---
 name: wisdom-council
-description: Orchestrates a council of evaluator skills to produce a structured Value Report that preserves disagreement. Use to evaluate any content through multiple independent value perspectives (originality, aesthetics, emotion, future potential, business, science, philosophy, meaning, quality, anti-generic). Selects evaluators by domain, convenes them, and synthesizes without forcing consensus.
+description: Orchestrates a council of evaluator agents to produce a structured Value Report that preserves disagreement. Use to evaluate any content through multiple independent value perspectives (originality, aesthetics, emotion, future potential, business, science, philosophy, meaning, quality, anti-generic). Selects evaluators by domain, convenes them as subagents, and synthesizes without forcing consensus.
 argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|structured", "domain": "creative|scientific|business|social|digital|cultural", "context": "<optional context>", "mode": "auto|full", "iteration": "confirm|persistent"}'
 ---
 
@@ -10,8 +10,8 @@ argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|struct
 - **id**: `wisdom-council`
 - **version**: `1.0.0`
 - **category**: `orchestrator`
-- **standalone**: `false`（評価者スキルを必要とする）
-- **requires_skills**: `[originality, anti-generic-filter, aesthetic-critic, emotional-impact, future-potential, business-value, scientific-novelty, philosophical-evaluator, quality-evaluator, meaning-evaluator]`
+- **standalone**: `false`（評価者エージェントを必要とする）
+- **requires_agents**: `[originality, anti-generic-filter, aesthetic-critic, emotional-impact, future-potential, business-value, scientific-novelty, philosophical-evaluator, quality-evaluator, meaning-evaluator]`
 
 ## When to Activate
 
@@ -83,19 +83,22 @@ argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|struct
 
 ### Phase 2: Council Convening（合議招集）
 
-各選択された評価者を、独立したスキル呼び出しとして個別に起動し、以下を渡す:
+各選択された評価者を、独立した**サブエージェントとして個別に起動**し、以下を渡す:
 - 評価対象のコンテンツ
 - ドメインとコンテキスト
 - 出力スキーマへの準拠指示
 
-起動パターン:
+起動パターン（**Agent tool** で評価者エージェントを起動する。コンテンツは `prompt` にインラインで渡す）:
 
 ```
-Skill: {evaluator-id}
-Args: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>"}
+Agent tool, subagent_type: {evaluator-id}
+Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>", "schema": "schemas/value-output.schema.json に準拠すること"}
 ```
 
-各評価者は独立に、他の評価者の結果を知らずに評価を行う（独立性の確保）。
+- プロジェクト内で実行している場合は `subagent_type` に評価者名（例: `originality`）をそのまま使う。
+- **インストール済みプラグインとして実行している場合は、プラグインスコープ名を使う**（例: `wisdom-council:originality`）。
+
+各評価者エージェントは独立したコンテキストで動作し、他の評価者の結果を知らずに評価を行う（独立性の確保）。これが本設計の要である——スキル呼び出しは同じコンテキストを共有するが、サブエージェントは隔離される。
 
 ### Phase 3: Synthesis（統合）
 
@@ -229,10 +232,11 @@ $ARGUMENTS
 
 ## Your Task
 
-Convene a council of evaluators and synthesize their findings into
-a Value Report. The evaluators are independent; you do not instruct
-them what to think. You select the relevant evaluators, invoke each
-as an independent skill call, and synthesize without forcing consensus.
+Convene a council of evaluator agents and synthesize their findings
+into a Value Report. The evaluators are independent; you do not
+instruct them what to think. You select the relevant evaluators,
+spawn each as an isolated subagent via the Agent tool, and synthesize
+without forcing consensus.
 
 ## Procedure
 
@@ -246,12 +250,17 @@ the value vector is scored. Otherwise, based on the domain, select
 
 ### Step 2: Convene each evaluator
 
-For each evaluator, invoke its skill with the content:
+For each selected evaluator, spawn its agent with the Agent tool
+(separate isolated context — evaluators never see each other's results):
 
-Skill: {evaluator-id}
-Args: {"content": "...", "content_type": "...", "domain": "...", "context": "..."}
+Agent tool: subagent_type = {evaluator-id}
+Prompt: {"content": "...", "content_type": "...", "domain": "...", "context": "..."}
 
-Each evaluator returns JSON conforming to
+Use the plain evaluator name (e.g. `originality`) when running in the
+project; use the plugin-scoped name (e.g. `wisdom-council:originality`)
+when running as an installed plugin.
+
+Each evaluator agent returns JSON conforming to
 `schemas/value-output.schema.json`. Collect all outputs.
 
 ### Step 3: Build the composite Value Vector
