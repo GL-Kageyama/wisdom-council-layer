@@ -89,8 +89,52 @@ Your mandate is to answer: **「これは技術的に完成しているか？約
 
 ## Output Format
 
-`schemas/value-output.schema.json` に準拠した有効なJSONで応答せよ。`evaluator_id` は `"quality-evaluator"`。`value_vector_contribution` は `quality` のみ非null、他は全て `null`。
+**最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 
-`primary_score`・`dimension_scores`・`classification`・`confidence`・`strengths`・`weaknesses`・`red_flags_triggered`・`green_flags_detected`・`unique_perspective`・`expected_disagreement_points`・`improvement_suggestions`・`narrative`（あなたの声で2-3段落の分析）をすべて含めよ。
+1. 応答の**最初の文字は `{`、最後の文字は `}`** でなければならない
+2. マークダウンのコードブロック（```json ... ```）で囲んではならない
+3. JSONの前後に説明文・注釈・要約を一切書いてはならない
+4. ツール呼び出し・ファイル読み込みは一切禁止（read_file等を呼ばないこと）
+5. スキーマファイル（`schemas/value-output.schema.json`）は読まずに、下記のフィールド定義に直接従え
 
-応答は**JSONオブジェクトのみ**、他のテキストを一切含めてはならない。
+### 全フィールド定義
+
+| # | フィールド | 型 | 必須 | この評価者での内容 |
+|---|-----------|-----|------|-------------------|
+| 1 | `evaluator_id` | string (kebab-case) | ✅ | `"quality-evaluator"` |
+| 2 | `evaluator_name` | string | ✅ | `"Quality Evaluator"` |
+| 3 | `content_summary` | string | ✅ | 評価対象の一行要約 |
+| 4 | `domain` | string (enum) | ✅ | `creative` / `scientific` / `business` / `social` / `digital` / `cultural` のいずれか |
+| 5 | `primary_score` | integer 0-100 | ✅ | あなたの視点での総合スコア |
+| 6 | `primary_score_rationale` | string | 任意 | スコアの簡潔な理由（省略可、`narrative` に含めてもよい） |
+| 7 | `dimension_scores` | object | ✅ | 下記の「この評価者の次元」を snake_case キーにした `{ "key": {"score": 0-100, "weight": 0-1, "evidence": "引用可能な根拠", "judgment": "解釈的評価"}, ... }` |
+| 8 | `value_vector_contribution` | object | ✅ | 下記の JSON をそのままの形で。`quality` のみ整数0-100、他は全て `null` |
+| 9 | `classification` | string (enum) | ✅ | `current_success` / `discovery_target` / `trend_object` / `low_signal` のいずれか |
+| 10 | `confidence` | integer 0-100 | ✅ | あなたの評価の確信度 |
+| 11 | `strengths` | array of strings | ✅ | 具体的な強み（証拠付き） |
+| 12 | `weaknesses` | array of strings | ✅ | 具体的な弱点（証拠付き） |
+| 13 | `unique_perspective` | string | ✅ | この評価者だけが見抜いたこと |
+| 14 | `expected_disagreement_points` | array | 任意 | `[{"evaluator_type": "anti-generic-filter", "predicted_stance": "..."}, ...]`（省略可） |
+| 15 | `narrative` | string | ✅ | あなたの声で2-3段落の分析 |
+
+任意フィールド（検出した場合に含めてよい）: `red_flags_triggered`（array of strings）, `green_flags_detected`（array of strings）, `improvement_suggestions`（array of strings）, `evaluation_timestamp`（ISO-8601 string）
+
+### この評価者の次元（`dimension_scores` のキー）
+
+`technical_quality` / `precision` / `structure` / `feasibility`（上記「Evaluation Framework」で定義した重みと一致させる）
+
+### value_vector_contribution（この評価者での値）
+
+```json
+{
+  "originality": null,
+  "quality": <あなたのprimary_score 0-100>,
+  "aesthetic": null,
+  "emotional_impact": null,
+  "future_potential": null,
+  "business_value": null,
+  "scientific_novelty": null,
+  "philosophical_depth": null,
+  "meaning": null
+}
+```

@@ -68,13 +68,16 @@ Args: {"content": "...", "content_type": "text", "domain": "creative", "mode": "
 
 ```bash
 python utils/validate_output.py < output.json
+python utils/validate_output.py --json output.json   # 機械可読な検証結果
 ```
+
+**自動リトライ**: 合議スキルは各評価者の出力を `validate_output.py --json` で**決定的に検証**し、不合格なら同じ評価者を**最大3回再起動**する（フィードバックにエラー内容を含める）。3回リトライ後も不合格なら `excluded_evaluators` に `reason: "JSON validation failed after 3 retries"` として明示的に記録する。**サイレントドロップ禁止。**
 
 ## ツール群
 
 | ツール | 役割 |
 |--------|------|
-| `utils/validate_output.py` | 評価者出力のスキーマ検証 |
+| `utils/validate_output.py` | 評価者出力のスキーマ検証。`--json` フラグで機械可読な結果を出力（合議スキルの自動リトライが利用） |
 | `utils/render_report.py` | Value Report の視覚表示（バーチャート・分類バッジ・次元間の対立）。`-o report.md` で拡張子自動判定によりMarkdown文書として保存、`--individuals` で全個別レポート表示 |
 | `utils/compare_reports.py` | 改訂前後の差分比較（評価→再作成ループ用） |
 

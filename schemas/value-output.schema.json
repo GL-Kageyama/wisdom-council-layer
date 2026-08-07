@@ -10,7 +10,6 @@
     "content_summary",
     "domain",
     "primary_score",
-    "primary_score_rationale",
     "dimension_scores",
     "value_vector_contribution",
     "classification",
@@ -18,7 +17,6 @@
     "strengths",
     "weaknesses",
     "unique_perspective",
-    "expected_disagreement_points",
     "narrative"
   ],
   "properties": {
@@ -53,7 +51,7 @@
     },
     "primary_score_rationale": {
       "type": "string",
-      "description": "Concise explanation of why this primary score was assigned."
+      "description": "Concise explanation of why this primary score was assigned. Optional; the narrative may cover the same content."
     },
     "dimension_scores": {
       "type": "object",
@@ -190,7 +188,7 @@
           }
         }
       },
-      "description": "Where this evaluator anticipates conflict with other perspectives."
+      "description": "Where this evaluator anticipates conflict with other perspectives. Optional; may be omitted or empty."
     },
     "improvement_suggestions": {
       "type": "array",
@@ -202,5 +200,5 @@
       "description": "2-3 paragraph analysis in the evaluator's own voice. Captures what cannot be reduced to numbers."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

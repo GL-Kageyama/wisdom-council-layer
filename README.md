@@ -110,7 +110,7 @@ wisdom-council-layer/
 │   ├── creative-watercolor/           # 画像生成プロンプト（水彩）
 │   └── creative-photography/          # 画像生成プロンプト（写真）
 └── utils/
-    ├── validate_output.py             # 出力バリデーション
+    ├── validate_output.py             # 出力バリデーション（--json で機械可読化。合議が自動リトライに利用）
     ├── render_report.py               # 視覚化（コンソール / Markdown）
     └── compare_reports.py             # 改訂前後の比較
 ```
@@ -236,7 +236,10 @@ Value Vector を合成（全9次元が埋まる）
 
 ```bash
 python utils/validate_output.py < evaluator_output.json
+python utils/validate_output.py --json output.json   # 機械可読な結果（合議の自動リトライで使用）
 ```
+
+合議スキルは各評価者の出力をこのバリデーターで決定的に検証し、不合格なら**最大3回リトライ**する。リトライ後も失敗した評価者は `excluded_evaluators` に明示的に記録される（サイレントドロップなし）。
 
 ### 結果の視覚化
 

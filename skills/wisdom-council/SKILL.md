@@ -92,13 +92,46 @@ argument-hint: 'JSON: {"content": "<content>", "content_type": "text|code|struct
 
 ```
 Agent tool, subagent_type: {evaluator-id}
-Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>", "schema": "schemas/value-output.schema.json に準拠すること"}
+Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>", "schema": "value-output.schema.json に準拠したJSONを出力せよ。スキーマファイルは読み込まないこと。ツール呼び出し・ファイル読み込みは禁止。応答は評価JSONのみとし、他のテキストを一切含めないこと"}
 ```
+
+> **注意（既知のバグ対策）**: サブエージェントに `schemas/value-output.schema.json` というパスを渡すと、エージェントが `read_file` でスキーマを読みに行き、ツール結果が返らずハングする事象が確認されている。エージェント定義（`agents/*.md`）側で「スキーマファイルは読まずに必須フィールドへ直接従う」よう対策済み（Output Format に全フィールド定義をインライン化）なので、**招集側もスキーマのファイルパスを prompt に含めないこと**。`schema` フィールドには上記のように「準拠しろ・ファイルは読むな」という指示文だけを渡す。不正な JSON が返ってきた場合は Phase 2.5 で `validate_output.py` が検出し、最大3回リトライする。
 
 - プロジェクト内で実行している場合は `subagent_type` に評価者名（例: `originality`）をそのまま使う。
 - **インストール済みプラグインとして実行している場合は、プラグインスコープ名を使う**（例: `wisdom-council:originality`）。
 
 各評価者エージェントは独立したコンテキストで動作し、他の評価者の結果を知らずに評価を行う（独立性の確保）。これが本設計の要である——スキル呼び出しは同じコンテキストを共有するが、サブエージェントは隔離される。
+
+### Phase 2.5: Validation & Retry（自動検証と再試行）
+
+各評価者の応答を**Pythonで決定的に検証**し、不正なら再生成させる。LLMによる「目視検証」に頼らない（LLMはJSONの構文を確実に判定できない）。
+
+各評価者について、以下の手順を実行する:
+
+1. **応答を一時ファイルに保存**:
+   ```
+   Bash: cat <<'EOF' > /tmp/wisdom-council-{evaluator-id}.json
+   <評価者の応答テキストをそのまま貼り付け>
+   EOF
+   ```
+
+2. **バリデーション実行**:
+   ```
+   Bash: python <wisdom-council-layerの絶対パス>/utils/validate_output.py --json /tmp/wisdom-council-{evaluator-id}.json
+   ```
+
+3. **結果判定**:
+   - 出力が `{"valid": true, ...}` → **合格**。この評価者のJSONを保持して次へ。
+   - 出力が `{"valid": false, "errors": [...]}` → **不合格**。`errors` を読み取り、同じ評価者を**再起動**する。再起動時のプロンプトに前回のエラー内容をフィードバックとして含める:
+     ```
+     "前回のJSON出力がバリデーションに失敗した。エラー: <errors>
+      エラーを修正し、JSONオブジェクトのみを出力せよ。"
+     ```
+   - 再起動は**最大3回**まで。
+
+4. **3回リトライしても不合格**なら、その評価者を `excluded_evaluators` に記録する（`reason: "JSON validation failed after 3 retries"`）。**サイレントドロップ禁止**——必ず除外理由を明示する。
+
+> **重要**: `validate_output.py` のパスは `--json` フラグで機械可読な結果を返す（`{"valid": bool, "kind": str, "errors": [string]}`）。Bash ツールでパスが解決できない場合は、wisdom-council-layer リポジトリの絶対パスを確認せよ。
 
 ### Phase 3: Synthesis（統合）
 
@@ -106,14 +139,14 @@ Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>",
 
 **例外的機能 — excluded_evaluators（評価の除外）:** デフォルトでは全評価者を統合する。しかし**例外として**、ドメインやコンテンツ形式に明らかに不適合な評価者（例: 詩への科学評価）は、`excluded_evaluators` に `evaluator_id` と `reason` 付きで記録し、**Value Vector・現在/潜在価値の集計から除外**する。除外した評価者のスコアも `individual_reports` には残す（記録は保つ）。除外は「値が低いから」ではなく「次元が不適合だから」に限る。
 
-1. すべての評価者のJSON出力を収集する。
-2. 各出力を `schemas/value-output.schema.json` に対して検証する。
-3. 例外的に不適合な評価者を判定し、`excluded_evaluators` に記録する。
+1. すべての評価者のJSON出力を収集する（Phase 2.5 で検証済みの出力のみを使用する）。
+2. Phase 2.5 で合格した出力を統合の材料とする。個々の JSON 構文検証は既に Phase 2.5 で `validate_output.py` が実施済みなので、ここで再検証しない。
+3. 例外的に不適合な評価者を判定し、`excluded_evaluators` に記録する（例: 詩への科学評価。値が低いからではなく「次元が不適合」だからに限る）。
 4. **除外されなかった評価者のみ**で合成 Value Vector を構築する（各次元の平均・分散・範囲）。
 5. 不一致クラスタを特定する（分散がしきい値を超える次元）。
 6. 4象限モデルに基づいて分類を導出する。
 7. 統合 Value Report を生成する。
-8. 評価者が不正なJSONを返した場合は、`caveats` に記録して除外し、残りの評価者で続行する。
+8. Phase 2.5 で3回リトライ後も不合格だった評価者は `excluded_evaluators` に記録済み。`caveats` には、検証を通過できなかった評価者のうち除外対象になったものを要約して記録する。
 
 ### Phase 4: Disagreement Preservation（不一致の保存）
 
@@ -262,6 +295,17 @@ when running as an installed plugin.
 
 Each evaluator agent returns JSON conforming to
 `schemas/value-output.schema.json`. Collect all outputs.
+
+### Step 2.5: Validate and retry each output
+
+For every evaluator output, run the deterministic validator:
+save the response to a temp file, then run
+`python utils/validate_output.py --json <file>`. If it reports
+`"valid": false`, re-spawn the same evaluator with the error list as
+feedback, up to 3 retries. After 3 failed retries, record the
+evaluator in `excluded_evaluators` with reason
+`"JSON validation failed after 3 retries"` and continue with the rest.
+Never silently drop an evaluator.
 
 ### Step 3: Build the composite Value Vector
 

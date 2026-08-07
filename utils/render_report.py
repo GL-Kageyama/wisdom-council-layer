@@ -49,7 +49,14 @@ def bar(score):
 
 
 def f(v):
-    return "—" if v is None else f"{v:3d}"
+    if v is None:
+        return "—"
+    if isinstance(v, int):
+        return f"{v:3d}"
+    if isinstance(v, float):
+        # 厳格スコアの平均は小数になりうる。整数値なら従来の整数表記に揃える。
+        return f"{int(v):3d}" if v == int(v) else f"{v:6.2f}"
+    return str(v)
 
 
 def header(title):
@@ -242,10 +249,10 @@ def render_evaluator(obj):
     if ds:
         print("\n【次元別】")
         for name, d in ds.items():
-            w = d.get("weight", 0)
-            print(f"  {name:24s} {bar(d.get('score'))} {f(d.get('score'))}  (w={w})")
-            if d.get("evidence"):
-                print(f"    ↳ {d['evidence']}")
+            score, w, evidence = _ds_norm(d)
+            print(f"  {name:24s} {bar(score)} {f(score)}  (w={w})")
+            if evidence:
+                print(f"    ↳ {evidence}")
 
     if obj.get("unique_perspective"):
         print(f"\n【この評価者にしか見えないもの】\n  {obj['unique_perspective']}")
@@ -253,7 +260,8 @@ def render_evaluator(obj):
     if obj.get("expected_disagreement_points"):
         print("\n【予測される不一致】")
         for p in obj["expected_disagreement_points"]:
-            print(f"  · {p.get('evaluator_type')}: {p.get('predicted_stance')}")
+            etype, stance = _edp_norm(p)
+            print(f"  · {etype}: {stance}")
 
     if obj.get("narrative"):
         print(f"\n【ナラティブ】\n  {obj['narrative']}")
@@ -269,6 +277,26 @@ def md_bar(score, width=20):
 
 def md_val(v):
     return "—" if v is None else f"{v}"
+
+
+def _ds_norm(d):
+    """dimension_scores の値は評価者により int（スコア直接）と
+    dict（score/weight/evidence）が混在する。両形式を正規化する。"""
+    if isinstance(d, dict):
+        return d.get("score"), d.get("weight", 0), d.get("evidence")
+    return d, 0, None
+
+
+def _edp_norm(p):
+    """expected_disagreement_points の要素は評価者により dict
+    （evaluator_type/predicted_stance）と文字列（"Evaluator: stance"）
+    が混在する。両形式を (評価者, 主張) に正規化する。"""
+    if isinstance(p, dict):
+        return p.get("evaluator_type"), p.get("predicted_stance")
+    if isinstance(p, str) and ":" in p:
+        etype, stance = p.split(":", 1)
+        return etype.strip(), stance.strip()
+    return None, p
 
 
 def render_council_md(obj, show_ind=False):
@@ -447,9 +475,10 @@ def render_evaluator_md(obj):
         L.append("| 次元 | スコア | 重み |")
         L.append("|------|:------:|:----:|")
         for name, d in ds.items():
-            L.append(f"| {name} | {md_val(d.get('score'))} | {d.get('weight', '—')} |")
-            if d.get("evidence"):
-                L.append(f"| ↳ {d['evidence']} | | |")
+            score, w, evidence = _ds_norm(d)
+            L.append(f"| {name} | {md_val(score)} | {w if w else '—'} |")
+            if evidence:
+                L.append(f"| ↳ {evidence} | | |")
         L.append("")
     if obj.get("unique_perspective"):
         L.append(f"## 👁️ この評価者にしか見えないもの")
@@ -460,7 +489,8 @@ def render_evaluator_md(obj):
         L.append("## 🔮 予測される不一致")
         L.append("")
         for p in obj["expected_disagreement_points"]:
-            L.append(f"- **{p.get('evaluator_type')}**: {p.get('predicted_stance')}")
+            etype, stance = _edp_norm(p)
+            L.append(f"- **{etype}**: {stance}")
         L.append("")
     if obj.get("narrative"):
         L.append("## 📖 ナラティブ")
