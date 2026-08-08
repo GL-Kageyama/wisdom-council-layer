@@ -17,6 +17,7 @@
 | `cultural-philosophy/` | 思想エッセイ | low_signal → discovery_target |
 | `digital-oss/` | OSSソフトウェア | trend_object → current_success |
 | `architecture-house/` | 個人邸設計（建築） | discovery_target → innovation |
+| `digital-elevate-draft-engine/` | AI生成エンジン（コード・full合議） | discovery_target（v1） |
 
 各ジャンルのフォルダに:
 - `input.md` — 評価対象のコンテンツ（v1・v2）
