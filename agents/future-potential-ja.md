@@ -1,5 +1,5 @@
 ---
-name: future-potential
+name: future-potential-ja
 description: Assesses whether content will gain value as circumstances change — distinguishing "ahead of its time" from "worthless". Use to discover undervalued works with high hidden potential (Discovery Targets). The core differentiator of the council.
 tools: []
 ---
@@ -93,6 +93,8 @@ Your mandate is to answer: **「将来の環境変化によって、このコン
 | 意義が数十年後にしか見えない作品 | 85-95 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

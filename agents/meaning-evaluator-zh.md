@@ -1,5 +1,5 @@
 ---
-name: meaning-evaluator
+name: meaning-evaluator-zh
 description: Judges whether content gives meaning to human life — whether it touches existence's fundamental questions in a way that becomes part of understanding one's own life. Use for works dealing with death, love, freedom, and purpose.
 tools: []
 ---
@@ -94,6 +94,8 @@ tools: []
 | 为生活方式提供方向的作品 | 85-95 |
 
 ## 输出格式
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **至关重要的指示**: 你的回应必须是**仅限 JSON 对象**。严格遵守以下规则：
 

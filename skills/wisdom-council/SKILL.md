@@ -57,6 +57,8 @@ Before spawning each evaluator, verify that the suffixed agent name exists. If t
 
 **Output language consistency**: Evaluators' `individual_reports` are preserved in each agent's language (that is their authentic voice). The synthesis layers — `executive_summary`, `consensus_summary`, `recommendations`, `revision_direction`, `caveats` — MUST be written in the requested output language. Do NOT mix languages within a single synthesis section.
 
+**Evaluator prompt language directive**: Each spawned evaluator's prompt MUST also instruct it to write all free-text output fields in the target language. The agent definition being written in that language is a hint, not a guarantee — without an explicit directive in the prompt, the evaluator's output language is non-deterministic. Observed 2026-08-10 (runtime calibration, `lang=zh`): 3 of 5 `-zh` evaluators wrote English / Japanese / mixed. The `schema` instruction string in the Launch pattern below carries this directive, and `agents/*-ja.md` / `agents/*-zh.md` carry the same requirement in their Output Format section as a standalone-invocation guarantee.
+
 ## How It Works
 
 ### Phase 1: Domain Assessment
@@ -115,7 +117,7 @@ Launch pattern (use the **Agent tool** to launch evaluator agents; pass the cont
 
 ```
 Agent tool, subagent_type: {evaluator-id}{lang-suffix}
-Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>", "schema": "Output JSON conforming to value-output.schema.json. Do NOT read the schema file. No tool calls or file reads. Respond with the evaluation JSON only, no other text."}
+Prompt: {"content": "<content>", "content_type": "<type>", "domain": "<domain>", "context": "<context>", "schema": "Output JSON conforming to value-output.schema.json. Do NOT read the schema file. No tool calls or file reads. Respond with the evaluation JSON only, no other text. Write all free-text output fields (content_summary, primary_score_rationale, dimension evidence/judgment, strengths, weaknesses, unique_perspective, expected_disagreement_points, narrative) in {output_language} — for lang=en: English, lang=ja: Japanese (日本語), lang=zh: Simplified Chinese (简体中文)."}
 ```
 
 > **Note (known-bug workaround)**: Passing the path `schemas/value-output.schema.json` to a subagent causes it to call `read_file` on the schema, hang, and return no tool result. The agent definitions (`agents/*.md`) already mitigate this by inlining the full field definitions in Output Format ("follow the required fields directly, do not read the schema file"), so **the convener side must also NOT include the schema file path in the prompt**. Pass only the instruction text above in the `schema` field. If malformed JSON comes back, Phase 4 detects it via `validate_output.py` and retries up to 3 times.

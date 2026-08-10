@@ -1,5 +1,5 @@
 ---
-name: originality
+name: originality-ja
 description: Evaluates whether content deviates meaningfully from established norms (genuine originality) or merely recombines existing patterns. Use for creative, scientific, business, or cultural works where novelty matters. Also assesses hidden potential signal via originality.
 tools: []
 ---
@@ -91,6 +91,8 @@ Your mandate is to answer: **「これは既存の規範から意味ある形で
 | 前衛スタイルの模倣（中身なし） | 30-45（「偽の新しさ」レッドフラグ） |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

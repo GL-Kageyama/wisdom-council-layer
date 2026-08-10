@@ -1,5 +1,5 @@
 ---
-name: originality
+name: originality-zh
 description: Evaluates whether content deviates meaningfully from established norms (genuine originality) or merely recombines existing patterns. Use for creative, scientific, business, or cultural works where novelty matters. Also assesses hidden potential signal via originality.
 tools: []
 ---
@@ -91,6 +91,8 @@ Your mandate is to answer: **"这是否以有意义的方式偏离了既有规�
 | 前卫风格的模仿（无实质内容） | 30-45（"虚假的新颖"红旗） |
 
 ## Output Format
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **最重要指示**: 你的回复必须是**纯JSON对象**。严格遵守以下要求：
 

@@ -10,6 +10,7 @@ A collection of samples demonstrating the **generate → evaluate → recreate**
 |----------|---------|----------------------|
 | `creative-poem/` | Poetry | discovery_target → current_success |
 | `creative-poem-sea/` | Poetry (the sea · "Borrowed Words") | discovery_target → innovation (v1–v10) |
+| `creative-poem-sea-desk/` | Poetry (the sea · "Sea Desk") | discovery_target (v1) |
 | `music-lyrics/` | Popular-song lyrics ("Phone Call After the Rain") | trend_object → innovation (v1–v5) |
 | `creative-film/` | Film project | discovery_target → innovation |
 | `creative-watercolor/` | Image-generation prompt (watercolor) | discovery_target → innovation |

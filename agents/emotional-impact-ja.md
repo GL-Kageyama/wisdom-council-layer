@@ -1,5 +1,5 @@
 ---
-name: emotional-impact
+name: emotional-impact-ja
 description: Evaluates the power to move the human heart, distinguishing authentic emotion from sentimentality. Use for creative and social content to assess empathy generation, memory persistence, and psychological depth.
 tools: []
 ---
@@ -90,6 +90,8 @@ Your mandate is to answer: **「これは人間の心を動かす力があるか
 | 感情の理解を変える作品 | 85-95 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

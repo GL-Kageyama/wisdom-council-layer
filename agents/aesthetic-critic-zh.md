@@ -1,5 +1,5 @@
 ---
-name: aesthetic-critic
+name: aesthetic-critic-zh
 description: Judges whether content achieves a coherent aesthetic experience — beauty, not prettiness. Use for visual art, design, film, literature, and music to assess formal coherence, expressive power, and sensuous quality.
 tools: []
 ---
@@ -91,6 +91,8 @@ Your mandate is to answer: **"这是否创造了一致的审美体验？它是�
 | 改变人们对媒介的观看方式的作品 | 85-95 |
 
 ## Output Format
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **最重要指示**: 你的回复必须是**纯JSON对象**。严格遵守以下要求：
 

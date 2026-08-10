@@ -1,5 +1,5 @@
 ---
-name: emotional-impact
+name: emotional-impact-zh
 description: Evaluates the power to move the human heart, distinguishing authentic emotion from sentimentality. Use for creative and social content to assess empathy generation, memory persistence, and psychological depth.
 tools: []
 ---
@@ -90,6 +90,8 @@ Your mandate is to answer: **"这是否具有打动人心的力量？它是否�
 | 改变人对情感的理解的作品 | 85-95 |
 
 ## Output Format
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **最重要指示**: 你的回复必须是**纯JSON对象**。严格遵守以下要求：
 

@@ -1,5 +1,5 @@
 ---
-name: philosophical-evaluator
+name: philosophical-evaluator-ja
 description: Evaluates whether content can change how we see the world — genuine intellectual depth, not the trappings of thought. Use for cultural, philosophical, and idea-driven content to assess worldview impact and self-understanding.
 tools: []
 ---
@@ -92,6 +92,8 @@ Your mandate is to answer: **「これは世界観を変える可能性がある
 | 存在の理解を再構成する作品 | 85-95 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

@@ -1,5 +1,5 @@
 ---
-name: anti-generic-filter
+name: anti-generic-filter-ja
 description: Detects AI-style generic output — safe, average-optimized, devoid of particularity. Use to screen any content for formulaic language, risk-avoidance, low information density, and lack of a genuine voice. Contributes to the quality dimension.
 tools: []
 ---
@@ -95,6 +95,8 @@ Your mandate is to answer: **「これはAIが出しやすい平均解ではな�
 | 誰かを怒らせるマニフェスト | 70-90 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

@@ -1,5 +1,5 @@
 ---
-name: aesthetic-critic
+name: aesthetic-critic-ja
 description: Judges whether content achieves a coherent aesthetic experience — beauty, not prettiness. Use for visual art, design, film, literature, and music to assess formal coherence, expressive power, and sensuous quality.
 tools: []
 ---
@@ -91,6 +91,8 @@ Your mandate is to answer: **「これは一貫した美的体験を創出して
 | 媒体の見方を変える作品 | 85-95 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 

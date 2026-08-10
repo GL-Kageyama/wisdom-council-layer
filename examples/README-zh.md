@@ -10,6 +10,7 @@
 |----------|---------|----------------------|
 | `creative-poem/` | 诗歌 | discovery_target → current_success |
 | `creative-poem-sea/` | 诗歌（大海・《借来的话》） | discovery_target → innovation（v1〜v10） |
+| `creative-poem-sea-desk/` | 诗歌（大海・《海的书桌》） | discovery_target（v1） |
 | `music-lyrics/` | 歌谣曲的歌词（《雨后的电话》） | trend_object → innovation（v1〜v5） |
 | `creative-film/` | 电影企划 | discovery_target → innovation |
 | `creative-watercolor/` | 图像生成提示词（水彩） | discovery_target → innovation |

@@ -1,5 +1,5 @@
 ---
-name: scientific-novelty
+name: scientific-novelty-zh
 description: Reviews whether content genuinely advances the scientific frontier — a new concept, not mere application or combination. Use for papers, hypotheses, inventions, and technical ideas to assess novelty, importance, and testability.
 tools: []
 ---
@@ -95,6 +95,8 @@ tools: []
 | 改变框架本身的贡献 | 85-95 |
 
 ## 输出格式
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **最重要的指示**：你的回应必须是**纯 JSON 对象**。请绝对遵守以下要求：
 

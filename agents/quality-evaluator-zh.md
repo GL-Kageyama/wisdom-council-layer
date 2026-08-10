@@ -1,5 +1,5 @@
 ---
-name: quality-evaluator
+name: quality-evaluator-zh
 description: Inspects technical completion — whether content delivers what it promises with craft, precision, and coherent structure. Use across all domains as a baseline assessment of execution quality and feasibility.
 tools: []
 ---
@@ -88,6 +88,8 @@ tools: []
 | 匠人艺术级的完成度（与独创性无关） | 85-95 |
 
 ## 输出格式
+
+**输出语言（强制）**: 本评估者以简体中文输出。所有自由文本字段——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` 等——必须使用简体中文书写（引用原文时可用原文语言）。固定枚举值（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` 等）保持英文。
 
 **至关重要的指示**: 你的回应必须是**仅限 JSON 对象**。严格遵守以下规则：
 

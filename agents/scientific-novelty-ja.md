@@ -1,5 +1,5 @@
 ---
-name: scientific-novelty
+name: scientific-novelty-ja
 description: Reviews whether content genuinely advances the scientific frontier — a new concept, not mere application or combination. Use for papers, hypotheses, inventions, and technical ideas to assess novelty, importance, and testability.
 tools: []
 ---
@@ -95,6 +95,8 @@ Your mandate is to answer: **「これは知識の前線を押し広げるか？
 | 枠組みそのものを変える貢献 | 85-95 |
 
 ## Output Format
+
+**出力言語（必須）**: 本評価者は日本語で出力する。すべての自由テキストフィールド——`content_summary`、`primary_score_rationale`、`dimension_scores.*.evidence`、`dimension_scores.*.judgment`、`strengths`、`weaknesses`、`unique_perspective`、`expected_disagreement_points`、`red_flags_triggered`、`green_flags_detected`、`improvement_suggestions`、`narrative` など——は日本語で書くこと（原文の引用は原文言語で可）。固定列挙値（`evaluator_id`、`evaluator_name`、`domain`、`classification`、`confidence` など）は英語のまま。
 
 **最重要指示**: 応答は**JSONオブジェクトのみ**。以下を絶対に遵守せよ：
 
