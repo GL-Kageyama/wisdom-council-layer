@@ -1,71 +1,75 @@
-# Revision Loop — 作成→評価→再作成ループの反復モード
+<!-- version: 1.0.0, last_updated: 2026-08-10 -->
 
-**評価→修正のループ**をどう進めるかを制御する2つのモード。
+**Language:** [English](revision-loop.md) | [日本語](ja/revision-loop.md) | [中文](zh/revision-loop.md)
 
-## ループの基本
+# Revision Loop — Iteration Modes for the Create → Evaluate → Re-create Loop
 
-```
-① 作成（生成は適切な他の手段に譲る）
-② 評価（wisdom-council）
-③ revision_direction（次回の修正方向）を確認
-④ 再作成（作成スキルが direction を適用）
-⑤ 再評価 → compare_reports.py で改善度を確認
-⑥ 目標に達するか頭打ちになるまで繰り返す
-```
+Two modes that control how the **evaluate → revise loop** proceeds.
 
-## 反復モード（`iteration`）
-
-`ARGUMENTS` の `iteration` フィールドで選ぶ。
-
-### モード1: `confirm`（逐次確認・デフォルト）
-
-**各ターンの評価後に、次回の修正方向を提示し、確認してから次へ進む。**
+## Loop basics
 
 ```
-評価 → revision_direction 提示 → 人間/作成スキルが方向を確認
-  → 再作成 → 再評価 → 再び方向を提示・確認 → …
+① Create (leave generation to appropriate other means)
+② Evaluate (wisdom-council)
+③ Check revision_direction (the next revision direction)
+④ Re-create (the creation skill applies the direction)
+⑤ Re-evaluate → confirm the degree of improvement with compare_reports.py
+⑥ Repeat until the goal is reached or improvement plateaus
 ```
 
-- 方向転換を**都度チェック**できる（過修正・方向の逸脱を防ぐ）。
-- 各ターンの `revision_direction.statement` が「この方向で良いか？」の提案になる。
-- **向いている場面**: 作品の方向性にまだ自信がない段階。毎回、次の一手を確認しながら磨きたい。
+## Iteration modes (`iteration`)
 
-### モード2: `persistent`（方向固定）
+Selected via the `iteration` field of `ARGUMENTS`.
 
-**最初の評価で修正方向を確定し、その方向に沿って修正し続ける。**
+### Mode 1: `confirm` (step-by-step confirmation · default)
+
+**After each turn's evaluation, present the next revision direction, confirm it, and then proceed.**
 
 ```
-初回評価 → revision_direction を確定（固定）
-  → 再作成（方向に沿って） → 再評価（方向への到達度を報告） → 再作成（同じ方向） → …
+Evaluate → present revision_direction → human/creation skill confirms the direction
+  → re-create → re-evaluate → present and confirm the direction again → …
 ```
 
-- 方向を**変えない**。各反復では、同じ軸に対する**実行の具体化**だけを変える。
-- 各反復の評価は `revision_direction.axis` への**到達度**（どれだけ近づいたか）を報告し、方向そのものは再考しない。
-- **向いている場面**: 方向性が既に定まっており、その方向で深く磨き込みたい段階。
+- The direction can be checked **at each step** (prevents over-correction and drift from the direction).
+- Each turn's `revision_direction.statement` serves as the proposal asking "is this direction OK?".
+- **Best suited for**: a stage where you do not yet have confidence in the work's direction. You want to polish while confirming the next move each time.
 
-## revision_direction（Value Report のフィールド）
+### Mode 2: `persistent` (fixed direction)
+
+**Determine the revision direction at the first evaluation, then keep revising along that direction.**
+
+```
+First evaluation → determine (fix) revision_direction
+  → re-create (along the direction) → re-evaluate (report the degree of attainment of the direction) → re-create (same direction) → …
+```
+
+- The direction does **not change**. Each iteration only varies the **concretization of execution** along the same axis.
+- Each iteration's evaluation reports the **degree of attainment** (how close you came) with respect to `revision_direction.axis`, and does not reconsider the direction itself.
+- **Best suited for**: a stage where the direction is already set and you want to polish deeply along it.
+
+## revision_direction (a field of the Value Report)
 
 ```json
 "revision_direction": {
-  "statement": "次回の修正方向（1-2文）",
-  "axis": ["上げる/変えるべき次元・要素"],
-  "preserve": ["失ってはいけない強み"],
+  "statement": "Next revision direction (1-2 sentences)",
+  "axis": ["Dimensions/elements to raise or change"],
+  "preserve": ["Strengths that must not be lost"],
   "iteration": "confirm|persistent"
 }
 ```
 
-- `confirm` モード: これは**提案**であり、人間/作成スキルが確認してから適用する。
-- `persistent` モード: 初回で確定し、以降の反復はこの方向を維持する。
+- `confirm` mode: this is a **proposal**; the human/creation skill confirms it before applying it.
+- `persistent` mode: it is fixed at the first evaluation, and subsequent iterations maintain this direction.
 
-## ループの指針
+## Loop guidelines
 
-- **上げた次元を保つ**（`preserve`）—— 修正で既存の強みを壊さない。
-- **下げた次元を上げる**（`axis`）—— 方向は具体（「XをYに変える」）に落とす。
-- 平均だけで判断せず、**分散と不一致**も見る。
-- 改善が**頭打ちになったら止める**（過修正は元の良さを失わせる）。
+- **Keep the dimensions that were improved** (`preserve`) — do not break existing strengths through revision.
+- **Raise the dimensions that were lowered** (`axis`) — the direction is brought down to the concrete ("change X to Y").
+- Do not judge by the average alone; also look at **variance and disagreement**.
+- **Stop when improvement plateaus** (over-correction loses the original good qualities).
 
-## 参考
+## References
 
-- `wisdom-council/SKILL.md` — 反復モードの実装
-- `utils/render_report.py` — `revision_direction` の表示
-- `utils/compare_reports.py` — 反復間の改善度比較
+- `wisdom-council/SKILL.md` — implementation of the iteration modes
+- `utils/render_report.py` — display of `revision_direction`
+- `utils/compare_reports.py` — comparison of the degree of improvement between iterations

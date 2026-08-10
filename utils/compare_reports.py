@@ -7,6 +7,12 @@ skill's directives, run the council on v2, then compare.
 Usage:
     python utils/compare_reports.py before.json after.json
     python utils/compare_reports.py --before before.json --after after.json
+    python utils/compare_reports.py --lang ja before.json after.json
+
+Language selection:
+    --lang en|ja|zh          Explicit language (highest priority)
+    WISDOM_COUNCIL_LANG env  Fallback environment variable
+    (default: en)
 
 Exit codes:
     0  compared (improvement or not — the report says which)
@@ -14,29 +20,42 @@ Exit codes:
 """
 
 import json
+import os
 import sys
 
-DIMENSIONS = [
-    ("originality", "独創性"),
-    ("quality", "品質"),
-    ("aesthetic", "美"),
-    ("emotional_impact", "感情"),
-    ("future_potential", "未来"),
-    ("business_value", "ビジネス"),
-    ("scientific_novelty", "科学"),
-    ("philosophical_depth", "哲学"),
-    ("meaning", "意味"),
-]
+# Ensure utils/ is on the path so `from _locale import ...` works
+# regardless of the caller's working directory.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from locale_loader import load_locale  # noqa: E402
 
-CLASS_BADGE = {
-    "current_success": "🟢 Current Success",
-    "discovery_target": "🔍 Discovery Target",
-    "trend_object": "🔶 Trend Object",
-    "low_signal": "⚪ Low Signal",
-    "innovation": "⭐ Innovation",
-}
+# --- Locale-driven globals ---
 
+_L = None
+DIMENSIONS = []
+CLASS_BADGE = {}
 ARROWS = {"up": "▲", "down": "▼", "same": "—"}
+
+
+def _set_locale(lang=None):
+    global _L, DIMENSIONS, CLASS_BADGE
+    _L = load_locale(lang)
+    _DIMENSION_KEYS = [
+        "originality", "quality", "aesthetic", "emotional_impact",
+        "future_potential", "business_value", "scientific_novelty",
+        "philosophical_depth", "meaning",
+    ]
+    DIMENSIONS[:] = [(k, _L["dimensions"][k]) for k in _DIMENSION_KEYS]
+    CLASS_BADGE.clear()
+    CLASS_BADGE.update(_L["classifications"])
+
+
+def _cmp(key, **kwargs):
+    s = _L["compare"].get(key, key)
+    return s.format(**kwargs) if kwargs else s
+
+
+# Populate defaults at import time
+_set_locale("en")
 
 
 def load(path):
@@ -53,12 +72,48 @@ def dim_mean(report, key):
 
 
 def main():
-    if len(sys.argv) == 3:
-        before_path, after_path = sys.argv[1], sys.argv[2]
-    elif len(sys.argv) == 5 and sys.argv[1] == "--before" and sys.argv[3] == "--after":
-        before_path, after_path = sys.argv[2], sys.argv[4]
+    global _L, DIMENSIONS, CLASS_BADGE
+
+    # Parse arguments (support --lang)
+    raw_args = sys.argv[1:]
+    lang = None
+    positional = []
+    i = 0
+    while i < len(raw_args):
+        a = raw_args[i]
+        if a == "--lang" and i + 1 < len(raw_args):
+            lang = raw_args[i + 1]
+            i += 2
+        elif a in ("--before", "--after"):
+            positional.append(a)
+            if i + 1 < len(raw_args):
+                positional.append(raw_args[i + 1])
+                i += 2
+            else:
+                i += 1
+        elif a in ("-h", "--help"):
+            print("Usage: python utils/compare_reports.py [--lang en|ja|zh] before.json after.json",
+                  file=sys.stderr)
+            print("       python utils/compare_reports.py [--lang en|ja|zh] --before before.json --after after.json",
+                  file=sys.stderr)
+            print("       WISDOM_COUNCIL_LANG env var is used when --lang is omitted (default: en)",
+                  file=sys.stderr)
+            return 0
+        else:
+            positional.append(a)
+            i += 1
+
+    _set_locale(lang)
+
+    # Parse positional / named arguments
+    if len(positional) == 2 and positional[0] not in ("--before", "--after"):
+        before_path, after_path = positional[0], positional[1]
+    elif (len(positional) == 4 and positional[0] == "--before"
+          and positional[2] == "--after"):
+        before_path, after_path = positional[1], positional[3]
     else:
-        print("Usage: python utils/compare_reports.py before.json after.json", file=sys.stderr)
+        print("Usage: python utils/compare_reports.py [--lang en|ja|zh] before.json after.json",
+              file=sys.stderr)
         return 1
 
     try:
@@ -68,17 +123,20 @@ def main():
         return 1
 
     print("┌──────────────────────────────────────────────────────┐")
-    print("│ 🔄 作成 → 評価 → 再作成 ループの比較")
+    print(f"│ 🔄 {_cmp('comparison_header')}")
     print("└──────────────────────────────────────────────────────┘")
 
-    print("\n  分類の変化:")
+    print(f"\n  {_cmp('classification_change')}:")
     bcls = CLASS_BADGE.get(before.get("classification"), before.get("classification", "?"))
     acls = CLASS_BADGE.get(after.get("classification"), after.get("classification", "?"))
-    print(f"    before: {bcls}")
-    print(f"    after:  {acls}")
+    print(f"    {_cmp('before')}: {bcls}")
+    print(f"    {_cmp('after')}:  {acls}")
 
-    print("\n【次元別の改善】")
-    print(f"  {'次元':22s} {'before':>7s} {'after':>6s} {'Δ':>5s}")
+    print(f"\n{_cmp('dimensional_improvement')}")
+    # Use locale dimension labels for table header
+    dim_label = _L["console"]["dimension"]
+    score_label = _L["console"]["score"]
+    print(f"  {dim_label:22s} {'before':>7s} {'after':>6s} {'Δ':>5s}")
     total = 0
     counted = 0
     changed = []
@@ -99,23 +157,23 @@ def main():
             d_s = f"{delta:+3d}" if b is not None and a is not None else "   "
             print(f"  {jp + ' (' + key + ')':28s} {b_s:>5s} {a_s:>5s} {arrow}{d_s}")
         else:
-            print(f"  {jp + ' (' + key + ')':28s}   {'—' if b is None else b} -> {'—' if a is None else a}  (片側のみ)")
+            print(f"  {jp + ' (' + key + ')':28s}   {'—' if b is None else b} -> {'—' if a is None else a}  {_cmp('one_sided_only')}")
 
     if counted:
         avg = total / counted
-        print(f"\n  平均変化（評価された{counted}次元）: {total:+d} / {counted} = {avg:+.1f}")
+        print(f"\n  {_cmp('average_change', counted=counted)}: {total:+d} / {counted} = {avg:+.1f}")
 
-    print("\n【主な変化】")
+    print(f"\n{_cmp('main_changes')}")
     if not changed:
-        print("  有意な次元変化なし")
+        print(f"  {_cmp('no_significant_changes')}")
     else:
         changed_sorted = sorted(changed, key=lambda c: -abs(c[3]))
         for jp, b, a, d in changed_sorted[:6]:
             arrow = ARROWS["up"] if d > 0 else ARROWS["down"]
             print(f"  {arrow} {jp}: {b} → {a} ({d:+d})")
 
-    print("\n  ※ 全次元の生値は JSON を参照。平均だけで判断せず、分散と不一致も見ること。")
-    print("  ※ 作成スキルは individual_reports の weaknesses / improvement_suggestions を入力に使う。")
+    print(f"\n  ※ {_cmp('raw_values_note')}")
+    print(f"  ※ {_cmp('creation_skill_note')}")
     return 0
 
 

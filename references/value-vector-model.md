@@ -1,8 +1,12 @@
-# Value Vector Model — 多次元スコアリング
+<!-- version: 1.0.0, last_updated: 2026-08-10 -->
 
-単純な点数評価の欠点は、価値を単一の軸に押しつぶすことである。Wisdom Council Layerは価値を**多次元ベクトル**として扱う。
+**Language:** [English](value-vector-model.md) | [日本語](ja/value-vector-model.md) | [中文](zh/value-vector-model.md)
 
-## Value Vector の定義
+# Value Vector Model — Multi-dimensional Scoring
+
+The flaw of simple numeric scoring is that it crushes value onto a single axis. The Wisdom Council Layer treats value as a **multi-dimensional vector**.
+
+## Definition of the Value Vector
 
 ```
 Value Vector = [originality, quality, aesthetic, emotional_impact,
@@ -10,78 +14,78 @@ Value Vector = [originality, quality, aesthetic, emotional_impact,
                 philosophical_depth, meaning]
 ```
 
-各次元は 0-100 の整数スコア、またはその評価者が専門外の場合は `null`。
+Each dimension is an integer score of 0-100, or `null` when that evaluator is not an expert in the dimension.
 
-## 単一点数との違い
+## Differences from a single score
 
-| | 単一点数 | Value Vector |
+| | Single score | Value Vector |
 |--|---------|--------------|
-| 情報量 | 1つの数字 | 9次元の分布 |
-| 表現力 | 「63点」 | 「独創性は低いが未来価値は高い」 |
-| 評価者の専門性 | 平均的な誰か | 各次元の専門家 |
-| 矛盾の扱い | 隠される | 明示される |
+| Information content | one number | a 9-dimensional distribution |
+| Expressive power | "63 points" | "low in originality but high in future value" |
+| Evaluator expertise | an average somebody | an expert in each dimension |
+| Handling of contradictions | hidden | made explicit |
 
-## 例：同じ作品の2つの見方
+## Example: two ways of looking at the same work
 
-**作品**: 商業的に失敗した前衛的な映像作品
+**Work**: an avant-garde video work that failed commercially
 
 ```
-単一点数:  48点（平均的な評価、情報なし）
+Single score:  48 points (an average rating, no information)
 
 Value Vector:
-  originality:         82   ← 高い（評価者: Originality）
-  aesthetic:           71   ← 中高（評価者: Aesthetic）
-  emotional_impact:    35   ← 低い（評価者: Emotional）
-  future_potential:    88   ← 非常に高い（評価者: Future）
-  business_value:      15   ← 非常に低い（評価者: Business）
-  philosophical_depth: 79   ← 高い（評価者: Philosophical）
+  originality:         82   ← high (evaluator: Originality)
+  aesthetic:           71   ← medium-high (evaluator: Aesthetic)
+  emotional_impact:    35   ← low (evaluator: Emotional)
+  future_potential:    88   ← very high (evaluator: Future)
+  business_value:      15   ← very low (evaluator: Business)
+  philosophical_depth: 79   ← high (evaluator: Philosophical)
 ```
 
-ベクトルの形そのものが「現在は理解されないが、未来の可能性が高い」という物語を語る。単一点数はこの情報を破棄する。
+The very shape of the vector tells the story "not understood now, but with high future potential". A single score discards this information.
 
-## ベクトルの合成
+## Vector aggregation
 
-合議（オーケストレーター）は各評価者の `value_vector_contribution` を集約する。
+The council (orchestrator) aggregates each evaluator's `value_vector_contribution`.
 
-| 統計量 | 意味 |
+| Statistic | Meaning |
 |--------|------|
-| 平均 | 各次元の中心傾向 |
-| 分散 | 評価者がどれだけ割れているか（不一致の強さ） |
-| 範囲 (min-max) | 評価の両端 |
-| nullの数 | どの次元が未評価か（評価者選択の妥当性） |
+| Mean | the central tendency of each dimension |
+| Variance | how much the evaluators split (the strength of disagreement) |
+| Range (min-max) | the two extremes of the assessments |
+| Number of nulls | which dimensions went unevaluated (the validity of evaluator selection) |
 
-### 分散の解釈
+### Interpreting the variance
 
-| 分散 | 意味 |
+| Variance | Meaning |
 |------|------|
-| 低分散 (< 100) | 評価者間でほぼ同意見。安定した評価。 |
-| 中分散 (100-400) | ある程度の視点の違い。正常。 |
-| 高分散 (> 400) | 深刻な意見の割れ。コンテンツが何らかの分裂を引き起こしている。**最も重要なシグナル。** |
+| Low variance (< 100) | Evaluators are nearly unanimous. A stable evaluation. |
+| Medium variance (100-400) | A certain degree of viewpoint difference. Normal. |
+| High variance (> 400) | A serious split of opinion. The content is causing some kind of division. **The most important signal.** |
 
-## 分類への写像
+## Mapping to classification
 
-Value Vector は2次元に縮約される:
+The Value Vector is reduced to two dimensions:
 
 ```
 Current Value = w_q·quality + w_o·originality + w_a·aesthetic
               + w_e·emotional + w_b·business + w_s·scientific
-              （専門外の次元は省略、重みは正規化）
+              (non-expert dimensions omitted, weights normalized)
 
 Hidden Potential = w_f·future_potential + w_m·meaning
-                 + w_p·philosophical + w_o'·originality(未来寄与)
+                 + w_p·philosophical + w_o'·originality (future contribution)
 ```
 
-この縮約は**報告のための表示**であり、保存されるのは常に完全なベクトルである。
+This reduction is **a display for reporting purposes**; what is always stored is the complete vector.
 
-## なぜベクトルか
+## Why a vector
 
-1. **対立を保存できる**: 高いオリジナリティと低いビジネス価値の共存を表現できる。
-2. **将来の再評価に耐える**: 6ヶ月後に再評価したとき、ベクトルの各次元の変化を追跡できる。
-3. **評価者の専門性を活かす**: 各評価者は自分の専門の次元だけを責任を持ってスコアする。
-4. **人間の判断を助ける**: 人間は「ベクトルを見て、どの次元を重視するか決める」という新たな役割を持つ。
+1. **Conflicts can be preserved**: the coexistence of high originality and low business value can be expressed.
+2. **Withstands future re-evaluation**: when re-evaluated six months later, changes in each dimension of the vector can be tracked.
+3. **Leverages evaluator expertise**: each evaluator responsibly scores only their own expert dimension.
+4. **Aids human judgment**: humans gain the new role of "looking at the vector and deciding which dimensions to value".
 
-## 将来の拡張
+## Future extensions
 
-- **時系列ベクトル**: 同じコンテンツの複数回の評価を重ねて、価値の軌跡（trajectory）を描く（Memory System）。
-- **重みの個人化**: 人間が自分の価値観に合わせて次元の重みを調整する。
-- **高次元の解釈**: 9次元を超える次元（時代性、政治的影響など）を追加可能にする。
+- **Time-series vectors**: overlay multiple evaluations of the same content to draw the value trajectory (Memory System).
+- **Personalized weights**: humans adjust the weights of dimensions according to their own values.
+- **Higher-dimensional interpretation**: allow adding dimensions beyond 9 (fit with the era, political influence, etc.).

@@ -1,78 +1,80 @@
+**Language:** [English](README.md) | [日本語](README-ja.md) | [中文](README-zh.md)
+
 # Wisdom Council Layer
 
-**知恵の評議会** —— 生成AIの大量アウトプットの中から、真に価値あるものを発見するための多エージェント価値評価レイヤー。
+**知恵の評議会（Council of Wisdom）** — a multi-agent value evaluation layer for discovering what is truly valuable amid the flood of generative-AI output.
 
-## なぜ必要か
+## Why This Is Needed
 
-生成AIの発展により、文章・画像・音楽・コード・企画など、あらゆる創造物を大量に生成できる時代になった。
+With the rise of generative AI, we now live in an era where writing, images, music, code, plans — virtually every kind of creation — can be mass-produced.
 
-しかし、新たな問題が発生している。
+But a new problem has emerged.
 
-> **作る能力ではなく、価値あるものを見抜く能力が不足する。**
+> **The scarce ability is no longer the ability to create, but the ability to recognize what is truly valuable.**
 
-AIは平均的で完成度の高いアウトプットを生成できる。しかし、本当に重要なものは必ずしも平均の中には存在しない。
+AI can produce output that is average and technically polished. Yet what truly matters does not always live inside the average.
 
-- 一見奇妙だが革新的なもの
-- 現時点では理解されないもの
-- 少数派だが未来文化を作るもの
-- 人間の認識を変えるもの
+- Things that seem strange at first glance but are genuinely innovative
+- Things not yet understood at the present moment
+- Minority views that will shape the culture of the future
+- Things that change how humans perceive the world
 
-これらを発見するための基盤が **Wisdom Council Layer** である。
+**Wisdom Council Layer** is the infrastructure built to discover these.
 
-## 核となる哲学
+## Core Philosophy
 
-- **Anti-Generic（反凡庸）**: 平均的な答えを排除し、意味ある逸脱を発見する。
-- **多声的評価**: 単一の審判者ではなく、異なる視点を持つ複数の評価者による合議。
-- **不一致こそシグナル**: 評価者間の対立は平均化せず、そのまま保存する。
-- **生成より評価**: AI時代の競争領域は「どれだけ作れるか」から「どれだけ価値あるものを見抜けるか」へ移る。
+- **Anti-Generic**: reject the average answer and discover meaningful deviation.
+- **Polyphonic Evaluation**: not a single judge, but a council of multiple evaluators holding different perspectives.
+- **Disagreement Is a Signal**: conflict between evaluators is not averaged away — it is preserved as-is.
+- **Evaluation over Generation**: in the AI era, the competitive frontier shifts from "how much can you create" to "how well can you recognize what is valuable."
 
-## 役割分担（このリポジトリの位置づけ）
+## Division of Roles (Where This Repository Stands)
 
-> **このリポジトリは評価（Evaluation）のために存在する。作品の作成（Generation）は、適切な他の手段が利用可能ならそちらに譲る。**
+> **This repository exists for evaluation. Creation (Generation) is left to other, more suitable means whenever they are available.**
 
-| 役割 | 担当 |
-|------|------|
-| **作成（Generation）** | 生成AI・専用の作成スキル・他のツール（このリポジトリは**作らない**） |
-| **評価（Evaluation）** | このリポジトリ。作成されたものを多視点で評価し、次回の作成に渡す材料（`weaknesses`・`improvement_suggestions`）を整える |
+| Role | Responsibility |
+|------|----------------|
+| **Creation (Generation)** | Generative AI, dedicated creation skills, and other tools (this repository does **not** create) |
+| **Evaluation** | This repository. Evaluates what has been created from multiple perspectives and prepares the material for the next round of creation (`weaknesses` and `improvement_suggestions`) |
 
-**原則**: 「作る人」と「評価する人」を分離し、それぞれの専門に任せる。このレイヤーは評価の専門家であり、**作成は他の手段に譲る**。作成手段がなければ、評価結果を人間が受けて次を作る。
+**Principle**: keep "the one who creates" and "the one who evaluates" separate, and leave each to its own specialty. This layer is the evaluation specialist and **leaves creation to other means**. If no creation tool is available, a human receives the evaluation results and produces the next work.
 
-## アーキテクチャ
+## Architecture
 
 ```
-評価対象のコンテンツ
+Content to be evaluated
         ↓
-┌─────────────── 知恵の評議会 ───────────────┐
+┌────────────── 知恵の評議会 (Wisdom Council) ──────────────┐
 │  Originality  Aesthetic  Emotional        │
 │  Anti-Generic Business   Scientific       │
 │  Future       Philosophical  Meaning      │
 │  Quality                                    │
 └────────────────────────────────────────────┘
         ↓
-  Value Vector（多次元スコア）
+  Value Vector (multi-dimensional scores)
         ↓
-  Disagreement Map（不一致の保存）
+  Disagreement Map (disagreement preserved)
         ↓
-  Value Report（人間の意思決定者へ）
+  Value Report (for the human decision-maker)
 ```
 
-### 3層構造
+### Three-Layer Structure
 
 ```
-Layer 1: Generation Layer（生成するAI）※ このプロジェクトの外。適切な他の手段に委ねる
-Layer 2: Evaluation Layer（評価するAI）← このプロジェクト
-Layer 3: Meta Value Layer（価値基準そのものを考えるAI）← 将来フェーズ
+Layer 1: Generation Layer (the AI that generates) ※ outside this project; delegated to other suitable means
+Layer 2: Evaluation Layer (the AI that evaluates) ← this project
+Layer 3: Meta Value Layer (the AI that reflects on value criteria themselves) ← future phase
 ```
 
-**このプロジェクトが担うのは Layer 2（評価）のみ。** Layer 1（生成）は生成AI・作成スキルなど適切な手段に譲る。
+**This project covers only Layer 2 (Evaluation).** Layer 1 (Generation) is left to suitable means such as generative AI and creation skills.
 
-## ディレクトリ構造
+## Directory Structure
 
 ```
 wisdom-council-layer/
-├── CLAUDE.md                          # プロジェクト規約
-├── install.sh                         # グローバル/プロジェクトインストーラー
-├── agents/                            # 評価者エージェントの正本（10体）
+├── CLAUDE.md                          # Project conventions
+├── install.sh                         # Global / project installer
+├── agents/                            # Source of truth for the evaluator agents (10)
 │   ├── originality.md
 │   ├── anti-generic-filter.md
 │   ├── aesthetic-critic.md
@@ -83,315 +85,318 @@ wisdom-council-layer/
 │   ├── philosophical-evaluator.md
 │   ├── quality-evaluator.md
 │   └── meaning-evaluator.md
-├── skills/                            # スキルの正本（合議オーケストレーター）
-│   └── wisdom-council/SKILL.md        # 合議オーケストレーター
-├── .claude/agents/                    # プロジェクト内検出用symlink（評価者）
-├── .claude/skills/                    # プロジェクト内検出用symlink（合議）
-├── .claude-plugin/                    # プラグイン配布定義
+├── skills/                            # Source of truth for the skill (council orchestrator)
+│   └── wisdom-council/SKILL.md        # Council orchestrator
+├── .claude/agents/                    # symlinks for in-project detection (evaluators)
+├── .claude/skills/                    # symlinks for in-project detection (council)
+├── .claude-plugin/                    # Plugin distribution definitions
 │   ├── marketplace.json
 │   └── plugin.json
 ├── schemas/
-│   └── value-output.schema.json       # 全評価者の出力契約
-├── references/                        # 理論的基盤
+│   └── value-output.schema.json       # Output contract for all evaluators
+├── references/                        # Theoretical foundations
 │   ├── evaluator-taxonomy.md
 │   ├── value-classification.md
 │   ├── debate-principles.md
 │   ├── value-vector-model.md
-│   └── scoring-strictness.md          # 厳格スコアリング基準
-├── examples/                          # ジャンル別サンプル（生成→評価→再作成）
+│   ├── scoring-strictness.md          # Strict scoring criteria
+│   ├── calibration-suite.md           # Static drift check + runtime calibration procedure
+│   └── runtime-calibration-runbook.md # Executable runtime-calibration runbook (after restart)
+├── examples/                          # Genre-based samples (create → evaluate → recreate)
 │   ├── README.md
-│   ├── creative-poem/                 # 詩
-│   ├── creative-film/                 # 映画企画
-│   ├── business-startup/              # 事業
-│   ├── scientific-hypothesis/         # 科学仮説
-│   ├── cultural-philosophy/           # 思想エッセイ
-│   ├── digital-oss/                   # OSSソフトウェア
-│   ├── architecture-house/            # 個人邸設計（建築）
-│   ├── creative-watercolor/           # 画像生成プロンプト（水彩）
-│   └── creative-photography/          # 画像生成プロンプト（写真）
+│   ├── creative-poem/                 # Poetry
+│   ├── creative-film/                 # Film pitch
+│   ├── business-startup/              # Business
+│   ├── scientific-hypothesis/         # Scientific hypothesis
+│   ├── cultural-philosophy/           # Thought essay
+│   ├── digital-oss/                   # OSS software
+│   ├── architecture-house/            # Private residence design (architecture)
+│   ├── creative-watercolor/           # Image-generation prompt (watercolor)
+│   └── creative-photography/          # Image-generation prompt (photography)
 └── utils/
-    ├── validate_output.py             # 出力バリデーション（--json で機械可読化。合議が自動リトライに利用）
-    ├── render_report.py               # 視覚化（コンソール / Markdown）
-    └── compare_reports.py             # 改訂前後の比較
+    ├── validate_output.py             # Output validation (machine-readable via --json; used by the council's automatic retry)
+    ├── render_report.py               # Visualization (console / Markdown)
+    ├── compare_reports.py             # Compare before / after a revision
+    └── check_calibration_drift.py     # Static drift check across en/ja/zh agents (weights, bands, calibration)
 ```
 
-## 使い方
+## Usage
 
-### インストール
+### Installation
 
-**グローバル（どこからでも呼べる）:**
+**Global (callable from anywhere):**
 
 ```bash
 ./install.sh
 ```
 
-`~/.claude/agents/`（評価者エージェント）と `~/.claude/skills/`（合議スキル）にsymlinkが作成され、どのプロジェクトでも利用可能になる。
+symlinks are created in `~/.claude/agents/` (evaluator agents) and `~/.claude/skills/` (council skill), making them available in any project.
 
-**プロジェクト限定:**
+**Project-scoped:**
 
 ```bash
 ./install.sh --local
 ```
 
-**プラグインとして配布・インストール**（GitHub公開後）:
+**Distribute and install as a plugin** (after publishing to GitHub):
 
 ```
-/plugin marketplace add https://github.com/<あなたのアカウント>/wisdom-council-layer
+/plugin marketplace add https://github.com/<your-account>/wisdom-council-layer
 /plugin install wisdom-council-layer@wisdom-council-layer
 ```
 
-### 呼び出しの流れ（3段階）
+### Invocation Flow (3 Levels)
 
-用途に応じて3段階から選べる。
+Choose from three levels depending on your use case.
 
-| レベル | 何を呼ぶ | 返るもの | 用途 |
-|--------|---------|----------|------|
-| **1** | 評価者を**1体** | 単一次元の評価JSON | 特定の視点だけ確認したい |
-| **2** | **合議（auto）** | 統合Value Report（3〜5次元） | ドメインに応じて効率的に総合評価 |
-| **3** | **合議（full）** | 全9次元が埋まった完全なValue Report | 最初から全員を一気に評価したい |
+| Level | What to call | What you get | Use case |
+|-------|--------------|--------------|----------|
+| **1** | A **single** evaluator | Single-dimension evaluation JSON | Only want to check one specific perspective |
+| **2** | **Council (auto)** | Integrated Value Report (3–5 dimensions) | Efficient overall evaluation tuned to the domain |
+| **3** | **Council (full)** | Complete Value Report with all 9 dimensions filled | Want to evaluate from every perspective at once from the start |
 
 ---
 
-#### レベル1：評価者を1体呼ぶ
+#### Level 1: Invoke a Single Evaluator
 
-特定の視点だけを評価したい場合。評価者は**サブエージェント**として起動する。
+When you want to evaluate only one specific perspective. The evaluator is launched as a **subagent**.
 
 ```
 Agent tool, subagent_type: originality
 Prompt: {"content": "...", "content_type": "text", "domain": "creative"}
 ```
 
-例：
-- 企画の独創性だけ確認 → 評価者エージェント `originality`
-- AIらしさ（凡庸さ）をチェック → 評価者エージェント `anti-generic-filter`
-- 市場性だけ確認 → 評価者エージェント `business-value`
+Examples:
+- Only check the originality of a plan → evaluator agent `originality`
+- Check for AI-ness (genericness) → evaluator agent `anti-generic-filter`
+- Only check marketability → evaluator agent `business-value`
 
-→ 返るもの：その評価者1体のJSON（`schemas/value-output.schema.json` 準拠、1次元 + ナラティブ）
+→ Returns: the JSON of that single evaluator (conforms to `schemas/value-output.schema.json`; 1 dimension + narrative)
 
-> **プラグインとして実行している場合**: 評価者はスコープ名で起動する（例: `wisdom-council:originality`）。プロジェクト内で実行している場合は素の名前（`originality`）で良い。
+> **When running as a plugin**: evaluators are launched with a scoped name (e.g. `wisdom-council:originality`). When running inside the project, the bare name (`originality`) is fine.
 
 ---
 
-#### レベル2：合議を呼ぶ（推奨）
+#### Level 2: Invoke the Council (Recommended)
 
-複数の視点で総合評価したい場合。合議がドメインを判定し、**3〜5体の評価者を選んで独立評価**し、統合Value Reportを返す。
+When you want a comprehensive evaluation across multiple perspectives. The council detects the domain, **selects 3–5 evaluators for independent evaluation**, and returns an integrated Value Report.
 
 ```
 Skill: wisdom-council
 Args: {"content": "...", "content_type": "text", "domain": "creative"}
 ```
 
-合議が実行する流れ：
+What the council does:
 
 ```
-評価対象
+Content to be evaluated
    ↓
-ドメイン判定 → 評価者3〜5体を選択（originality と anti-generic-filter は常に含む）
+Domain detection → select 3–5 evaluators (originality and anti-generic-filter are always included)
    ↓
-各評価者を独立に呼び出し（互いの結果を知らずに評価）
+Call each evaluator independently (each evaluates without knowing the others' results)
    ↓
-Value Vector を合成（平均・分散・範囲）
+Synthesize the Value Vector (mean, variance, range)
    ↓
-不一致マップを生成（割れた次元と双方の主張を保存）
+Generate the disagreement map (record the split dimensions and both positions)
    ↓
-Value Report を出力（分類・推奨・各評価者の全文）
+Output the Value Report (classification, recommendations, full text of each evaluator)
 ```
 
-→ 返るもの：統合Value Report（複数次元のスコア分布 + 不一致 + 4象限分類 + 推奨）
+→ Returns: an integrated Value Report (multi-dimensional score distribution + disagreement + 4-quadrant classification + recommendations)
 
 ---
 
-#### レベル3：全評価者を一気に呼ぶ
+#### Level 3: Invoke All Evaluators at Once
 
-最初から全部の視点で評価したい場合。合議を `mode: "full"` で呼ぶと、**全10体が一気に独立評価**し、全9次元が埋まった完全なValue Reportを返す。
+When you want to evaluate from every perspective from the start. Call the council with `mode: "full"` to run **all 10 evaluators in a single independent evaluation**, returning a complete Value Report with all 9 dimensions filled.
 
 ```
 Skill: wisdom-council
 Args: {"content": "...", "content_type": "text", "domain": "creative", "mode": "full"}
 ```
 
-合議が実行する流れ（fullモード）：
+What the council does (full mode):
 
 ```
-評価対象
+Content to be evaluated
    ↓
-全10体を招集（mode: full）
+Convene all 10 evaluators (mode: full)
    ↓
-各評価者を独立に呼び出し（互いの結果を知らずに評価）
+Call each evaluator independently (each evaluates without knowing the others' results)
    ↓
-Value Vector を合成（全9次元が埋まる）
+Synthesize the Value Vector (all 9 dimensions filled)
    ↓
-不一致マップを生成（割れた次元と双方の主張を保存）
+Generate the disagreement map (record the split dimensions and both positions)
    ↓
-完全なValue Report を出力（分類・推奨・各評価者の全文）
+Output the complete Value Report (classification, recommendations, full text of each evaluator)
 ```
 
-→ 返るもの：統合Value Report（**全9次元が埋まった**Value Vector + 不一致 + 4象限分類 + 推奨）
+→ Returns: an integrated Value Report (a Value Vector with **all 9 dimensions filled** + disagreement + 4-quadrant classification + recommendations)
 
-> **ヒント**：各評価者を個別に呼ぶ（レベル1の繰り返し）ことも可能だが、`mode: "full"` なら1回の呼び出しで同じ結果が得られる。`mode: "auto"`（レベル2）はドメインに応じて3〜5体を選ぶため、未招集の次元は `null` になる。
+> **Tip**: you can also call each evaluator individually (repeating Level 1), but `mode: "full"` achieves the same result in a single call. `mode: "auto"` (Level 2) selects 3–5 evaluators based on the domain, so unconvened dimensions are `null`.
 
 ---
 
-### 出力の検証
+### Validating Output
 
 ```bash
 python utils/validate_output.py < evaluator_output.json
-python utils/validate_output.py --json output.json   # 機械可読な結果（合議の自動リトライで使用）
+python utils/validate_output.py --json output.json   # machine-readable result (used by the council's automatic retry)
 ```
 
-合議スキルは各評価者の出力をこのバリデーターで決定的に検証し、不合格なら**最大3回リトライ**する。リトライ後も失敗した評価者は `excluded_evaluators` に明示的に記録される（サイレントドロップなし）。
+The council skill deterministically validates each evaluator's output with this validator and retries **up to 3 times** on failure. Evaluators that still fail after retries are explicitly recorded in `excluded_evaluators` (no silent drops).
 
-### 結果の視覚化
+### Visualizing Results
 
-JSONのままでは見づらい場合、レンダラーで視覚表示に変換できます。
+If raw JSON is hard to read, use the renderer to convert it into a visual display.
 
-**コンソール表示:**
+**Console display:**
 ```bash
-python utils/render_report.py < report.json     # stdinから
-python utils/render_report.py report.json        # ファイルから
+python utils/render_report.py < report.json     # from stdin
+python utils/render_report.py report.json        # from a file
 ```
 
-**Markdown出力（読みやすい文書にまとめる）:**
+**Markdown output (for a readable document):**
 
 ```bash
-python utils/render_report.py report.json                          # コンソール表示（バーチャート）
-python utils/render_report.py report.json -o report.md             # MDファイルに保存（拡張子で自動判定）
-python utils/render_report.py --format md report.json              # MDを標準出力
-python utils/render_report.py --individuals report.json            # 全評価者の個別レポートも表示
+python utils/render_report.py report.json                          # console display (bar chart)
+python utils/render_report.py report.json -o report.md             # save to an MD file (auto-detected by extension)
+python utils/render_report.py --format md report.json              # Markdown to stdout
+python utils/render_report.py --individuals report.json            # also show each evaluator's individual report
 ```
 
-**MD出力の仕組み**: `-o report.md` のように**出力先の拡張子が `.md` なら自動でMarkdown形式**になる。`--format md` で明示もできる。生成されるMDは見出し・表・引用で構成され、GitHub / VSCodeプレビューでそのまま読める。
+**How Markdown output works**: if the **output extension is `.md`** (e.g. `-o report.md`), the report is automatically formatted as Markdown. You can also specify it explicitly with `--format md`. The generated MD is composed of headings, tables, and quotes, and is readable as-is in GitHub / VSCode preview.
 
-MD出力は **GitHub / VSCodeプレビューでそのまま読める**形式（見出し・表・引用で構成）。実際の例: [examples/creative-poem/report.md](wisdom-council-layer/examples/creative-poem/report.md)
+MD output is a format **readable as-is in GitHub / VSCode preview** (headings, tables, quotes). Live example: [examples/creative-poem/report.md](wisdom-council-layer/examples/creative-poem/report.md)
 
-**出力例**（[examples/creative-poem/report-v2.json](wisdom-council-layer/examples/creative-poem/report-v2.json) をレンダリングしたもの）:
+**Output example** (rendered from [examples/creative-poem/report-v2.json](wisdom-council-layer/examples/creative-poem/report-v2.json)):
 
 ```
 ┌──────────────────────────────────────────────────────┐
 │ 🧠 Wisdom Council Value Report
 └──────────────────────────────────────────────────────┘
 
-  分類: 🔍 Discovery Target（潜在価値）
-  現在価値:  49  █████████████████░░░░░░░░░░░░░░░░░░░
-  潜在価値:  59  █████████████████████░░░░░░░░░░░░░░░
+  Classification: 🔍 Discovery Target
+  Current Value:  49  █████████████████░░░░░░░░░░░░░░░░░░░
+  Hidden Potential:  59  █████████████████████░░░░░░░░░░░░░░░
 
-【Value Vector】多次元スコア（0-100、厳格スケール）
-  独創性 (originality)   ████████████████████████████░░  78
-  品質 (quality)         ███████████████████████░░░░░░  65
-  美 (aesthetic)         ██████████████████████░░░░░░░  62
-  感情 (emotional_impact) ████████████████████████░░░░░  68
-  未来 (future_potential) ██████████████████░░░░░░░░░░  50
-  ビジネス (business_value) ██████░░░░░░░░░░░░░░░░░░░░░  18
-  科学 (scientific_novelty) █░░░░░░░░░░░░░░░░░░░░░░░░░   5
-  哲学 (philosophical_depth)█████████████████████░░░░░░  60
-  意味 (meaning)         ███████████████████████░░░░░░  66
+【Value Vector】Multi-Dimensional Scores (0–100, strict scale)
+  Originality (originality)          ████████████████████████████░░  78
+  Quality (quality)                  ███████████████████████░░░░░░  65
+  Aesthetics (aesthetic)             ██████████████████████░░░░░░░  62
+  Emotional Impact (emotional_impact) ████████████████████████░░░░░  68
+  Future Potential (future_potential) ██████████████████░░░░░░░░░░  50
+  Business Value (business_value)    ██████░░░░░░░░░░░░░░░░░░░░░░░  18
+  Scientific Novelty (scientific_novelty) █░░░░░░░░░░░░░░░░░░░░░░░░░   5
+  Philosophical Depth (philosophical_depth) █████████████████████░░░░░░  60
+  Meaning (meaning)                  ███████████████████████░░░░░░  66
 
-【次元間の対立（Contrast）】高スコア軸と低スコア軸の共存
-  ⚡ 独創性(originality) 78  vs  ビジネス(business_value) 18
-  ⚡ 独創性(originality) 78  vs  科学(scientific_novelty) 5
+【Cross-Dimensional Contrast】High vs Low Score Coexistence = Value Tension
+  ⚡ Originality (originality) 78  vs  Business Value (business_value) 18
+  ⚡ Originality (originality) 78  vs  Scientific Novelty (scientific_novelty) 5
 ```
 
-レンダラーは以下を表示する:
-- **分類バッジ**（🔍 Discovery Target / 🟢 Current Success / 🔶 Trend Object / ⚪ Low Signal / ⭐ Innovation）
-- **現在価値・潜在価値**のバー表示
-- **9次元のValue Vector** バーチャート（厳格スケール、高得点はバーが長いほど稀）
-- **不一致**（評価者が割れた次元、分散の深刻度付き）
-- **次元間の対立**（高スコア×低スコアの緊張関係——平均化せず保存）
-- **総評・一致点・推奨アクション・注意点**
+The renderer displays:
+- **Classification badge** (🔍 Discovery Target / 🟢 Current Success / 🔶 Trend Object / ⚪ Low Signal / ⭐ Innovation)
+- **Current Value / Hidden Potential** bars
+- **9-dimensional Value Vector** bar chart (strict scale; the higher the score, the rarer a long bar)
+- **Disagreement** (dimensions where evaluators split, with variance severity)
+- **Cross-dimensional contrast** (the tension between high and low scores — preserved without averaging)
+- **Executive summary, consensus points, recommended actions, caveats**
 
-## 評価結果は「入力」として設計されている
+## Evaluation Results Are Designed to Be Input
 
-このレイヤーの評価結果は最終成果ではなく、**作成スキル（再作成・改善指示を合成する専用スキル）への入力**である。
+The evaluation results of this layer are not the final product; they are **input to a creation skill (a dedicated skill that synthesizes re-creation and improvement instructions)**.
 
-合議は再作成指示そのものを生成しない。代わりに、作成スキルが指示を合成するための**生の素材**を完全な形で残す:
+The council does not generate the re-creation instructions itself. Instead, it leaves behind the **raw material** — in complete form — for the creation skill to synthesize instructions from:
 
-| 素材 | 作成スキルでの使われ方 |
-|------|----------------------|
-| `individual_reports[].weaknesses` | 弱点（根拠付き）——修正対象の特定 |
-| `individual_reports[].improvement_suggestions` | 各評価者の改善提案——指示の候補 |
-| `individual_reports[].expected_disagreement_points` | 他視点からの反論予測——バランス |
-| `disagreement_map` | 評価者が割れた次元——改善の手がかり |
-| `value_vector` | 全次元のスコア分布——優先度の決定 |
+| Material | How the creation skill uses it |
+|----------|-------------------------------|
+| `individual_reports[].weaknesses` | Weaknesses (with rationale) — identifying what to fix |
+| `individual_reports[].improvement_suggestions` | Each evaluator's improvement suggestions — candidates for instructions |
+| `individual_reports[].expected_disagreement_points` | Predicted objections from other perspectives — for balance |
+| `disagreement_map` | Dimensions where evaluators split — clues for improvement |
+| `value_vector` | Score distribution across all dimensions — deciding priorities |
 
-（再作成指示を合成する専用スキルの実装は将来フェーズ。）
+(Implementing the dedicated skill that synthesizes re-creation instructions is a future phase.)
 
-### 評価 → 再作成のループ
+### The Evaluate → Recreate Loop
 
 ```
-① 作成
+① Create
     ↓
-② 評価（wisdom-council / mode:full）
+② Evaluate (wisdom-council / mode:full)
     ↓
-③ revision_direction（次回の修正方向）を確認
+③ Check revision_direction (the direction for the next revision)
     ↓
-④ 作成スキルが評価を入力に指示を合成 → 再作成
+④ The creation skill synthesizes instructions from the evaluation as input → recreate
     ↓
-⑤ 再評価
+⑤ Re-evaluate
     ↓
-⑥ 比較（compare_reports.py で改善度を確認）
+⑥ Compare (check the improvement with compare_reports.py)
     ↓
-⑦ 目標に達するか頭打ちになるまで繰り返す
+⑦ Repeat until the goal is reached or improvement plateaus
 ```
 
-**反復モード（`iteration`）— 修正方向の管理:**
+**Iteration modes (`iteration`) — managing the revision direction:**
 
 ```bash
 Skill: wisdom-council
 Args: {"content": "...", "domain": "creative", "iteration": "confirm"}
 ```
 
-| iteration | 動作 | 使いどころ |
-|-----------|------|------------|
-| `confirm`（デフォルト） | 各ターンの評価後に `revision_direction` を提示し、**確認してから**次の修正へ | 方向転換を都度チェックしたい |
-| `persistent` | 最初に `revision_direction` を確定し、その方向に沿って**修正し続ける** | 方向を決めて磨き込みたい |
+| iteration | Behavior | When to use |
+|-----------|----------|-------------|
+| `confirm` (default) | Presents `revision_direction` after each round of evaluation, and proceeds to the next revision **only after confirmation** | Want to check the direction change at each step |
+| `persistent` | Fixes `revision_direction` up front and **keeps revising along that direction** | Want to fix a direction and keep polishing |
 
-- `confirm` = 逐次確認モード（各ターンで「どの方向に修正するか」を確認できる）
-- `persistent` = 方向固定モード（最初に方向を示し、その方向を継続）
-- 詳細: [references/revision-loop.md](wisdom-council-layer/references/revision-loop.md)
+- `confirm` = step-by-step confirmation mode (you can confirm "which direction to revise" at every turn)
+- `persistent` = fixed-direction mode (shows the direction once and stays on it)
+- Details: [references/revision-loop.md](wisdom-council-layer/references/revision-loop.md)
 
-**改善度の比較:**
+**Comparing improvement:**
 
 ```bash
 python utils/compare_reports.py before.json after.json
 ```
 
-出力例:
+Example output:
 
 ```
-🔍 分類: Discovery Target（変化なし）
+🔍 Classification: Discovery Target (no change)
 
-  【次元別の改善】
-  美 (aesthetic)     62 → 75  ▲ +13
-  品質 (quality)     65 → 72  ▲ +7
-  意味 (meaning)     66 → 70  ▲ +4
-  平均変化（9次元）: +3.8
+  【Dimensional Improvement】
+  Aesthetics (aesthetic)     62 → 75  ▲ +13
+  Quality (quality)          65 → 72  ▲ +7
+  Meaning (meaning)          66 → 70  ▲ +4
+  Average change (9 dimensions): +3.8
 ```
 
-**ループの指針:**
-- **評価は生データを捨てない**（合成ナラティブは補助。素材はJSONに残る）
-- 平均だけで判断せず、**分散と不一致**も見る（1次元が突出しても全体は変わらないことがある）
-- 改善が**頭打ちになったらループを止める**（過修正で元の良さを失うリスク）
+**Loop guidelines:**
+- **Evaluation never discards raw data** (the synthesized narrative is auxiliary; the material stays in the JSON)
+- Don't judge by the average alone — also look at **variance and disagreement** (a single dimension may stand out while the whole stays unchanged)
+- **Stop the loop when improvement plateaus** (over-revision risks losing what was originally good)
 
-## 評価者一覧
+## Evaluator Roster
 
-評価者10体は**サブエージェント**（`agents/{name}.md`）である。合議はこれらを独立したコンテキストで起動し、評価の独立性を保証する。個別に呼ぶ場合は Agent tool で起動する（レベル1参照）。
+The 10 evaluators are **subagents** (`agents/{name}.md`). The council launches them in independent contexts to guarantee the independence of each evaluation. To call one individually, launch it with the Agent tool (see Level 1).
 
-| 評価者（エージェント名） | コア質問 | スコア次元 |
-|--------|----------|-----------|
-| Originality Evaluator（`originality`） | 意味ある逸脱か、再結合か？ | originality |
-| Anti-Generic Filter（`anti-generic-filter`） | AIらしい平均解ではないか？ | quality |
-| Aesthetic Critic（`aesthetic-critic`） | 深い美の体験を創出しているか？ | aesthetic |
-| Emotional Impact Evaluator（`emotional-impact`） | 人間の心を動かすか？ | emotional_impact |
-| Future Potential Analyzer（`future-potential`） | 未来の環境で価値が上昇するか？ | future_potential |
-| Business Value Evaluator（`business-value`） | 市場で価値を生むか？ | business_value |
-| Scientific Novelty Reviewer（`scientific-novelty`） | 知識の前線を押し広げるか？ | scientific_novelty |
-| Philosophical Evaluator（`philosophical-evaluator`） | 世界観を変える可能性があるか？ | philosophical_depth |
-| Quality Evaluator（`quality-evaluator`） | 技術的に完成しているか？ | quality |
-| Meaning Evaluator（`meaning-evaluator`） | 生に意味を与えるか？ | meaning |
+| Evaluator (agent name) | Core question | Score dimension |
+|------------------------|---------------|-----------------|
+| Originality Evaluator (`originality`) | Is it a meaningful deviation, or a recombination? | originality |
+| Anti-Generic Filter (`anti-generic-filter`) | Is it not an AI-typical average solution? | quality |
+| Aesthetic Critic (`aesthetic-critic`) | Does it create a deep aesthetic experience? | aesthetic |
+| Emotional Impact Evaluator (`emotional-impact`) | Does it move the human heart? | emotional_impact |
+| Future Potential Analyzer (`future-potential`) | Will its value rise in future environments? | future_potential |
+| Business Value Evaluator (`business-value`) | Does it create value in the market? | business_value |
+| Scientific Novelty Reviewer (`scientific-novelty`) | Does it push back the frontier of knowledge? | scientific_novelty |
+| Philosophical Evaluator (`philosophical-evaluator`) | Can it change our worldview? | philosophical_depth |
+| Quality Evaluator (`quality-evaluator`) | Is it technically complete? | quality |
+| Meaning Evaluator (`meaning-evaluator`) | Does it give meaning to life? | meaning |
 
 ## Value Classification
 
-現在価値 × 潜在価値の2次元マトリクスで分類する。
+Classifies along a two-dimensional matrix of Current Value × Hidden Potential.
 
 ```
              Hidden Potential
@@ -401,23 +406,23 @@ python utils/compare_reports.py before.json after.json
    Low Signal        Current Success
 ```
 
-合議の主要ミッションは **Discovery Target**（現在評価は低いが未来可能性あり）を発見することである。
+The council's primary mission is to discover **Discovery Target** (currently rated low but with future potential).
 
-## ロードマップ
+## Roadmap
 
-- **Phase 1（完了）**: Universal Evaluation Core — 10体の評価者エージェント + 合議オーケストレータースキル + Value Vector + Value Report
-- **Phase 2（将来）**: Hidden Potential Layer — Historical Analyzer, Mutation Detector, Timing Analyzer
-- **Phase 3（将来）**: Debate Engine — 評価者間の多ターン議論
-- **Phase 4（将来）**: Meta Value Layer — Bias Detection, Evaluation Critic, Value Evolution
+- **Phase 1 (complete)**: Universal Evaluation Core — 10 evaluator agents + council orchestrator skill + Value Vector + Value Report
+- **Phase 2 (future)**: Hidden Potential Layer — Historical Analyzer, Mutation Detector, Timing Analyzer
+- **Phase 3 (future)**: Debate Engine — multi-turn debate between evaluators
+- **Phase 4 (future)**: Meta Value Layer — Bias Detection, Evaluation Critic, Value Evolution
 
-## ライセンス
+## License
 
 MIT License — Copyright (c) 2026 GL-Kageyama
 
 ## Core Statement
 
-> AI時代の競争領域は、
-> 「どれだけ作れるか」から、
-> 「どれだけ価値あるものを見抜けるか」へ移る。
+> In the AI era, the competitive frontier shifts
+> from "how much you can create"
+> to "how well you can recognize what is valuable."
 
-Wisdom Council Layerは、そのための価値発見インフラである。
+Wisdom Council Layer is the value-discovery infrastructure for that purpose.

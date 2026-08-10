@@ -4,18 +4,23 @@
     "name": "GL-Kageyama"
   },
   "metadata": {
-    "description": "Multi-agent AI value evaluation layer — 10 evaluator agents + council orchestrator skill that produce structured Value Reports preserving disagreement."
+    "description": "Multi-agent AI value evaluation layer — 30 evaluator agent variants (10 evaluators × 3 languages: en, ja, zh) + council orchestrator skill that produce structured Value Reports preserving disagreement."
   },
   "plugins": [
     {
       "name": "wisdom-council-layer",
       "source": "./",
-      "description": "Wisdom Council Layer (知恵の評議会) — a multi-agent AI value evaluation system that discovers meaningful value beyond generic outputs through diverse perspectives: originality, anti-generic filter, aesthetics, emotion, future potential, business, science, philosophy, meaning, and quality.",
+      "description": "Wisdom Council Layer (知恵の評議会) — a multi-agent AI value evaluation system that discovers meaningful value beyond generic outputs through diverse perspectives: originality, anti-generic filter, aesthetics, emotion, future potential, business, science, philosophy, meaning, and quality. Available in English (default), Japanese, and Chinese (Simplified).",
       "version": "2.0.0",
       "author": {
         "name": "GL-Kageyama"
       },
       "license": "MIT",
+      "languages": [
+        "en",
+        "ja",
+        "zh"
+      ],
       "keywords": [
         "ai",
         "evaluation",

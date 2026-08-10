@@ -1,69 +1,73 @@
+<!-- version: 1.0.0, last_updated: 2026-08-10 -->
+
+**Language:** [English](value-classification.md) | [日本語](ja/value-classification.md) | [中文](zh/value-classification.md)
+
 # Value Classification Model
 
-Wisdom Council Layerは単純な点数ではなく、**現在価値 × 潜在価値**の2次元マトリクスでコンテンツを分類する。
+The Wisdom Council Layer classifies content not with a simple score, but with a two-dimensional matrix of **current value × hidden potential**.
 
-## 2x2 マトリクス
+## The 2x2 matrix
 
 ```
-             Hidden Potential (潜在価値)
+             Hidden Potential
                   ↑
                   │
    Discovery Target   Innovation
-────────────────┼──────────────────→  Current Value (現在価値)
+────────────────┼──────────────────→  Current Value
    Low Signal        Current Success
                   │
                   ↓
 ```
 
-## 4つの分類
+## The four classifications
 
-### Current Success（現在価値が高い）
-- **定義**: 現在の評価が高く、実際に価値を生んでいる。
-- **リスク**: 持続性が不明。トレンドに乗っただけの可能性。
-- **合議の役割**: 現状の成功を正当に評価しつつ、持続可能性への疑いを保持する。
-- **例**: ヒット商品、話題の作品
+### Current Success (high current value)
+- **Definition**: Rated highly at present, and actually producing value.
+- **Risk**: Sustainability is unclear. It may simply have ridden a trend.
+- **Role of the council**: Fairly assess the current success while maintaining doubt about its sustainability.
+- **Examples**: hit products, talked-about works
 
-### Discovery Target（現在評価は低いが未来可能性あり）
-- **定義**: 現在の評価は限定的だが、未来の環境変化によって価値が上昇する可能性が高い。
-- **これは合議の主要ミッションである。** 大量生成時代に最も見つける価値があるのはここ。
-- **合議の役割**: 現在は理解されなくても、その兆候を記録し「長期観察対象」としてマークする。
-- **例**: 初期には否定された芸術運動、最初は嘲笑された技術革新
+### Discovery Target (currently low-rated but with future potential)
+- **Definition**: Limited in current assessment, but likely to rise in value with future environmental changes.
+- **This is the council's primary mission.** In the era of mass generation, what is most worth finding is here.
+- **Role of the council**: Even if not understood now, record its signs and mark it as a "long-term observation target".
+- **Examples**: art movements denied in their early days, technological innovations first ridiculed
 
-### Trend Object（現在評価は高いが長期価値は不明）
-- **定義**: 流行に乗って現在は評価が高いが、深い持続的価値があるかは不明。
-- **合議の役割**: 現在価値を否定せずに、長期的視点からの懐疑を提示する。
-- **例**: バズったが実体のないプロダクト、一過性のトレンド作品
+### Trend Object (currently high-rated but long-term value unclear)
+- **Definition**: Rated highly now by riding a trend, but whether it has deep lasting value is unclear.
+- **Role of the council**: Without denying its current value, present skepticism from a long-term perspective.
+- **Examples**: products that went viral but lack substance, one-off trend works
 
-### Low Signal（現時点では価値兆候なし）
-- **定義**: 現在価値も潜在価値も検出されない。
-- **合議の役割**: 判断を保留しつつ、なぜ兆候がないのかを説明する。単に評価者が見落としている可能性も保持する。
-- **例**: 平均的なAI生成コンテンツ
+### Low Signal (no sign of value at present)
+- **Definition**: Neither current value nor hidden potential is detected.
+- **Role of the council**: Withhold judgment while explaining why no signs exist. Also keep open the possibility that the evaluators have simply overlooked something.
+- **Examples**: average AI-generated content
 
-## 分類の導出
+## Deriving the classification
 
-分類は Value Vector の各次元スコアから導出される。
+The classification is derived from the dimension scores of the Value Vector.
 
-| 軸 | 構成要素 |
+| Axis | Components |
 |----|---------|
-| Current Value | quality, originality(現在), aesthetic, emotional, business, scientific(現在) の加重平均 |
-| Hidden Potential | future_potential, meaning, philosophical, originality(未来) の加重平均 |
+| Current Value | weighted average of quality, originality (current), aesthetic, emotional, business, scientific (current) |
+| Hidden Potential | weighted average of future_potential, meaning, philosophical, originality (future) |
 
-### しきい値の目安
+### Threshold guidelines
 
-厳格スコアリング（`scoring-strictness.md`）では中央値が約30になるため、分類しきい値もそれに合わせて再調整する。
+Because strict scoring (`scoring-strictness.md`) sets the median around 30, the classification thresholds are also re-adjusted to match.
 
-| 分類 | Current Value | Hidden Potential |
+| Classification | Current Value | Hidden Potential |
 |------|---------------|------------------|
-| Current Success | 高 (≥ 45) | 低 (< 35) |
-| Discovery Target | 低 (< 35) | 高 (≥ 45) |
-| Trend Object | 高 (≥ 45) | 中 (35-44) |
-| Innovation | 高 (≥ 45) | 高 (≥ 45) |
-| Low Signal | 低 (< 35) | 低 (< 35) |
+| Current Success | high (≥ 45) | low (< 35) |
+| Discovery Target | low (< 35) | high (≥ 45) |
+| Trend Object | high (≥ 45) | medium (35-44) |
+| Innovation | high (≥ 45) | high (≥ 45) |
+| Low Signal | low (< 35) | low (< 35) |
 
-※ しきい値は開始時の目安であり、Meta Value Layerの実装時に実データで調整される。
+※ The thresholds are starting guidelines and will be adjusted with real data when the Meta Value Layer is implemented.
 
-## 重要な注意
+## Important notes
 
-- 分類は**判断の終わりではなく、観察の始まり**である。
-- Discovery Target と判定されたコンテンツは、時間経過による再評価が必要（将来の Memory System で追跡）。
-- 各評価者が独立に分類し、合議はそれらを総合する。分類が評価者間で割れること自体が重要なシグナル。
+- Classification is **the beginning of observation, not the end of judgment**.
+- Content classified as a Discovery Target requires re-evaluation over time (to be tracked by the future Memory System).
+- Each evaluator classifies independently, and the council synthesizes these. The fact that classifications split among evaluators is itself an important signal.

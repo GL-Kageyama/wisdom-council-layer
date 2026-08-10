@@ -1,1 +1,1 @@
-../../agents/originality.md
+/Users/user/AI評価者たちによる「知恵の評議会」/wisdom-council-layer/agents/originality.md

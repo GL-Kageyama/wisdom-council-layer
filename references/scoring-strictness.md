@@ -1,36 +1,40 @@
-# Scoring Strictness Doctrine — 厳格スコアリング基準
+<!-- version: 1.0.0, last_updated: 2026-08-10 -->
 
-このレイヤーは**意図的に厳しいスコアリング**を行う。理由は、合議の目的が「良いものを褒める」ことではなく「真に価値あるものを見抜く」ことにあるため。緩いスコアは凡庸な作品を高評価に押し上げ、合議の判別力を損なう。
+**Language:** [English](scoring-strictness.md) | [日本語](ja/scoring-strictness.md) | [中文](zh/scoring-strictness.md)
 
-## 基本原理
+# Scoring Strictness Doctrine — Strict Scoring Standards
 
-1. **高得点は稀にしか与えられない。** 60点以上は「真の卓越性」を証明した作品だけ。75点以上は例外的。85点以上はほぼ与えない。
-2. **凡庸さは低得点に落ちる。** 「無難だが目立たない」作品は 20-40 点圏に落ちる。完成度が高いだけでは高得点にならない。
-3. **標準は厳しさに引っ張る。** AI生成を含む日常的な出力の大半は 50点未満に分布する。分布の中央値を **30 前後**に置く。つまり「普通に良い」ものは 30-45 点に落ちる。
-4. **レッドフラグは強く減点する。** 一つの重大なレッドフラグ（凡庸表現、感情操作、偽の新しさ等）は、他の次元が良くてもスコアを 25-40 点引き下げる。
+This layer deliberately performs **strict scoring**. The reason is that the purpose of the council is not to "praise good things" but to "see through what is truly valuable". Loose scoring pushes mediocre works up into high ratings and undermines the council's discriminative power.
 
-## 共通スコア帯（評価者共通の目安）
+## Fundamental principles
 
-| 帯 | 意味 | 頻度の期待値 |
+1. **High scores are given rarely.** Only works that prove "true excellence" score 60 or above. 75 or above is exceptional. 85 or above is almost never given.
+2. **Mediocrity falls into low scores.** Works that are "safe but unremarkable" fall into the 20-40 range. High completion alone does not produce a high score.
+3. **The standard is pulled toward strictness.** Most everyday output, including AI-generated content, is distributed below 50. Place the median of the distribution at **around 30**. In other words, "decently good" work falls into 30-45.
+4. **Red flags are strongly penalized.** A single serious red flag (generic expression, emotional manipulation, false novelty, etc.) pulls the score down by 25-40 points even when the other dimensions are good.
+
+## Common score bands (a yardstick common to all evaluators)
+
+| Band | Meaning | Expected frequency |
 |----|------|-------------|
-| 0-10 | 深刻な欠陥・価値の兆候なし | 稀に出す |
-| 11-30 | 弱い。部分的に劣る | 多め |
-| 31-50 | 無難・凡庸。普通にできる | **最大の人口分布** |
-| 51-70 | 真に良い。卓越性の兆候 | やや稀 |
-| 71-90 | 例外的。傑出した価値 | 稀 |
-| 91-100 | 歴史的な意義 | ほぼ与えない |
+| 0-10 | Serious defect, no sign of value | Give rarely |
+| 11-30 | Weak. Partially inferior | Often |
+| 31-50 | Safe, mediocre. Passably done | **The largest population** |
+| 51-70 | Truly good. A sign of excellence | Somewhat rare |
+| 71-90 | Exceptional. Outstanding value | Rare |
+| 91-100 | Historical significance | Almost never given |
 
-**判断の鉄則**: スコアを出す前に「これは本当に 50 を超える価値があるか？」と自問する。疑わしければ低く出す。「普通に良い」では 50 に届かない。
+**The iron rule of judgment**: Before giving a score, ask yourself "does this really have value exceeding 50?" When in doubt, score low. "Decently good" does not reach 50.
 
-## 適用方法
+## How to apply
 
-各評価者はこのドクトリンに従い、自身の「主要次元」を厳格にスコアリングする。
+Each evaluator follows this doctrine and strictly scores their own "primary dimension".
 
-- スコアを出す前に「これは本当に 60 を超える価値があるか？」と自問する。
-- 疑わしい場合は低めに出す。合議の役割は**発見**であって**承認**ではない。
-- 分類（classification）も厳格に出す。`current_success` と `innovation` は高い証拠があるときだけ。
+- Before giving a score, ask "does this really have value exceeding 60?"
+- When in doubt, score on the lower side. The role of the council is **discovery**, not **approval**.
+- Give classifications strictly as well. Use `current_success` and `innovation` only when the evidence is strong.
 
-## 補足
+## Supplementary notes
 
-- この厳格さはスコアの**相対的な判別力**を高めるためのもので、絶対的な正しさを主張するものではない。
-- 将来の Meta Value Layer で評価者ごとの厳しさのキャリブレーション（bias detection）を導入する際の基準とする。
+- This strictness is meant to increase the **relative discriminative power** of scores; it does not claim absolute correctness.
+- It serves as the baseline for introducing per-evaluator strictness calibration (bias detection) in the future Meta Value Layer.

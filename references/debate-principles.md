@@ -1,79 +1,83 @@
-# Debate Principles — 不一致の保存
+<!-- version: 1.0.0, last_updated: 2026-08-10 -->
 
-Wisdom Council Layerの中核的信念:
+**Language:** [English](debate-principles.md) | [日本語](ja/debate-principles.md) | [中文](zh/debate-principles.md)
 
-> **真実は異なる視点の衝突から生まれるのであって、その平均化からではない。**
+# Debate Principles — Preserving Disagreement
 
-この文書は、合議が評価者間の不一致をどう扱うかを定義する。
+The core belief of the Wisdom Council Layer:
 
-## 原則1：不一致は欠陥ではなく、出力の一部
+> **Truth emerges from the collision of different viewpoints, not from their averaging.**
 
-単一の評価者システムでは、意見の相違は「ノイズ」として除去される。Wisdom Council Layerでは、不一致は**一次出力（first-class output）**である。
+This document defines how the council handles disagreement among evaluators.
 
-- 評価者が同じ次元で大きく異なるスコアを付けた場合、それは平均化されるべきではない。
-- その不一致の**理由**こそが、コンテンツの理解に不可欠な情報である。
+## Principle 1: Disagreement is not a defect, but part of the output
 
-## 原則2：全員一致はむしろ疑わしい
+In a single-evaluator system, differences of opinion are removed as "noise". In the Wisdom Council Layer, disagreement is a **first-class output**.
 
-10人の評価者が全て同じスコアを付けた場合、以下の可能性がある:
+- When evaluators assign widely different scores on the same dimension, those scores should not be averaged.
+- The **reason** for the disagreement is precisely the information essential to understanding the content.
 
-1. 評価者が独立に考えていない（コンフォーミティ）
-2. コンテンツが極めて凡庸で、どの視点でも同じ評価になる（本当の危険信号）
-3. 評価基準が偏っている
+## Principle 2: Unanimity is itself suspicious
 
-「全員一致」を疑うことは、評価者全員に課せられた義務である。
+If 10 evaluators all assign the same score, the following possibilities arise:
 
-## 原則3：反論は評価者の義務
+1. The evaluators are not thinking independently (conformity)
+2. The content is extremely mediocre, and every viewpoint arrives at the same assessment (a true red flag)
+3. The evaluation criteria are biased
 
-各評価者は、他の評価者の視点から自分の評価がどう攻撃されるかを予測し、明示的に報告しなければならない。
+Suspecting "unanimity" is a duty incumbent on every evaluator.
+
+## Principle 3: Rebuttal is the evaluator's duty
+
+Each evaluator must predict how their own assessment would be attacked from the perspectives of the other evaluators, and report this explicitly.
 
 ```
-例：
-- Originality Evaluator: 独自性が高い（85点）
-- Business Value Evaluator: 市場性が低い（25点）
-- この対立自体が「この作品はニッチだが画期的」という重要な情報
+Example:
+- Originality Evaluator: highly original (85 points)
+- Business Value Evaluator: low marketability (25 points)
+- This conflict itself is the key information: "this work is niche but groundbreaking"
 ```
 
-## 原則4：衝突の種類を区別する
+## Principle 4: Distinguish the types of conflict
 
-すべての不一致が同じ重みを持つわけではない。
+Not all disagreements carry the same weight.
 
-| 衝突の種類 | 意味 | 合議の扱い |
+| Type of conflict | Meaning | How the council treats it |
 |-----------|------|-----------|
-| **視点の違い**（同じ事実を異なる価値観で評価） | 健全。多元的価値の反映 | 保存し、両論併記 |
-| **事実認識の違い**（同じことを異なる解釈） | どちらかが誤認している可能性 | 証拠を再確認し、誤認を修正 |
-| **スコアのブレ**（ほぼ同意見だが数値がずれる） | 正常な変動 | 幅として記録 |
+| **Difference of viewpoint** (evaluating the same facts with different value systems) | Healthy. A reflection of pluralistic values | Preserve it and record both sides |
+| **Difference of factual recognition** (interpreting the same thing differently) | One side may be misrecognizing the facts | Re-examine the evidence and correct the misrecognition |
+| **Score scatter** (nearly the same opinion, but the numbers drift) | Normal variation | Record as a range |
 
-## 原則5：不一致を数値で可視化する
+## Principle 5: Visualize disagreement numerically
 
-Value Reportには **Disagreement Map** を含める。これは各次元での評価者のスコア分散（variance）をヒートマップで示す。
+The Value Report includes a **Disagreement Map**. It shows, as a heatmap, the variance of evaluator scores on each dimension.
 
-- 分散が大きい次元 = 評価者が割れた次元 = 最も情報量の多い次元
-- この次元の両論を、それぞれの根拠とともに保存する
+- A dimension with high variance = a dimension on which evaluators split = the dimension with the most information
+- Preserve both sides of this dimension together with each side's rationale
 
-## 原則6：不一致そのものが価値の兆候
+## Principle 6: Disagreement itself is a sign of value
 
-歴史的に、革新的な作品は「賛否両論」だった。
+Historically, innovative works have been "polarizing".
 
 ```
-かつて嘲笑された絵画作品 → 最初は嘲笑された → 現在は傑作
-最初は拒絶された前衛的な作品 → 拒絶された → 現在は転換点
+A painting once ridiculed → ridiculed at first → now regarded as a masterpiece
+An avant-garde work initially rejected → rejected → now a turning point
 ```
 
-したがって、**評価者が激しく割れるコンテンツは、それ自体が注目に値する**。単純な「良い/悪い」を超えて、議論の質と深さを評価する。
+Therefore, **content on which evaluators sharply split is itself worthy of attention**. Go beyond a simple "good/bad" and evaluate the quality and depth of the debate.
 
-## 原則7：合議は判決を下さない
+## Principle 7: The council does not render a verdict
 
-合議（オーケストレーター）の役割は「正解を決める」ことではない。
+The role of the council (orchestrator) is not to "determine the correct answer".
 
-- 異なる価値観から可能性を探す
-- 人間が判断するための知的補助基盤を提供する
-- **最終的な価値判断は人間の責任である**（UVIN哲学）
+- Explore possibilities from different value systems
+- Provide an intellectual support foundation for human judgment
+- **The final value judgment is the responsibility of humans** (the UVIN philosophy)
 
-## Phase 3（将来）の拡張
+## Phase 3 (future) expansion
 
-現在は各評価者が「他者の視点からの予測」を1ターンで報告する方式。将来の Debate Engine では:
+Currently, each evaluator reports "predictions from others' viewpoints" in a single turn. In the future Debate Engine:
 
-- 評価者同士が互いの評価を読んで**再反論**する
-- 複数ターンの議論を経て見解がどう変化するかを記録する
-- 議論そのものが新しい知見を生むことを許容する
+- Evaluators read one another's assessments and **counter-rebut**
+- Record how viewpoints change through multi-turn debate
+- Allow the debate itself to generate new insights

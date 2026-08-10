@@ -1,1 +1,1 @@
-../../agents/anti-generic-filter.md
+/Users/user/AI評価者たちによる「知恵の評議会」/wisdom-council-layer/agents/anti-generic-filter.md

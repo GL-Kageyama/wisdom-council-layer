@@ -2,8 +2,9 @@
 #
 # Wisdom Council Layer installer
 #
-# Installs the 10 evaluator agents and the council orchestrator skill to
-# Claude Code discovery locations so they are available by name.
+# Installs the 30 evaluator agent variants (10 evaluators × 3 languages:
+# English, Japanese `-ja`, Chinese `-zh`) and the council orchestrator skill
+# to Claude Code discovery locations so they are available by name.
 #
 # Usage:
 #   ./install.sh            # Global: ~/.claude/agents/ + ~/.claude/skills/ (callable from any project)
@@ -12,6 +13,10 @@
 #
 # Installation uses symlinks: the canonical source stays in ./agents/ and
 # ./skills/, so edits to the repo are reflected immediately.
+#
+# Language variants: all agents/*.md files are installed, so the agent list
+# grows 3× (e.g. originality, originality-ja, originality-zh). The language is
+# selected via the `lang` argument or the WISDOM_COUNCIL_LANG env var.
 #
 # Note: agents are loaded as subagents (Agent tool / @-mention), while the
 # orchestrator remains a skill (Skill tool / `Skill: wisdom-council`).
@@ -36,6 +41,9 @@ while [[ $# -gt 0 ]]; do
       echo "  --local      Install to .claude/ (this project only)"
       echo "  --global     Install to ~/.claude/ (default; callable from anywhere)"
       echo "  --uninstall  Remove the installed agents and skills (default: global target)"
+      echo ""
+      echo "Languages: en (default, unsuffixed), ja (-ja), zh (-zh)."
+      echo "  Select with the lang argument or the WISDOM_COUNCIL_LANG env var."
       exit 0
       ;;
     *) echo "Unknown option: $1"; exit 1 ;;
@@ -133,7 +141,8 @@ fi
 echo "==> Done: $installed components installed."
 echo ""
 echo "    Callable as follows:"
-echo "      Skill: wisdom-council            # 合議オーケストレーター"
-echo "      Agent: originality, ...          # 評価者はサブエージェントとして起動"
+echo "      Skill: wisdom-council            # council orchestrator"
+echo "      Agent: originality, ...          # evaluators launched as subagents"
+echo "      Language variants: -ja / -zh suffixes (e.g. originality-ja)"
 echo ""
 echo "    Note: restart Claude Code or run /agents and /skills once to reload the listing."
