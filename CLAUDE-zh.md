@@ -117,6 +117,7 @@ python utils/validate_output.py --json output.json   # 机器可读的校验结�
 - 评估不应当圆滑。率直才是价值。
 - 评分**刻意严格**（`references/scoring-strictness.md`）。高分很罕见。绝对分数低并不代表「评价低」，而是代表「平庸・稳妥」。
 - 编排者不会向评估者指示判断。只负责召集与整合。
+- **i18n 基准**: 多语言支持（en/ja/zh）是任何修改・变更的默认基准。新增或修改的评估者 prompt / schema / 报告模板必须通过语言机制（评估者智能体的 `-ja`/`-zh` 变体 / locale JSON / 镜像树）解析，面向用户的文本用运行语言生成。
 
 ## 安装
 

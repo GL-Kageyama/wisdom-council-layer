@@ -117,6 +117,7 @@ Guidelines:
 - Evaluation must not be diplomatic. Candor is the value.
 - Scoring is **deliberately strict** (`references/scoring-strictness.md`). High scores are rare. A low absolute score does not mean "poorly evaluated" — it means "generic and safe".
 - The orchestrator does not dictate judgments to evaluators. It only convenes and synthesizes.
+- **i18n baseline**: multilingual support (en/ja/zh) is the default baseline for any fix or change. New or modified agent prompts, schemas, and report templates must resolve through the language mechanism (evaluator agents' `-ja`/`-zh` variants, locale JSON, mirror tree), and user-facing text must be produced in the run's language.
 
 ## Installation
 
