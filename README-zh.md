@@ -2,6 +2,10 @@
 
 # Wisdom Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Wisdom Council Layer">
+</p>
+
 **知恵の評議会（Wisdom Council Layer）** —— 从生成式 AI 的大量输出中，发现真正有价值之物的多智能体价值评估层。
 
 ## 为什么需要

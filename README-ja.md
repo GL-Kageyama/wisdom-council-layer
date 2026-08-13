@@ -2,6 +2,10 @@
 
 # Wisdom Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Wisdom Council Layer">
+</p>
+
 **知恵の評議会** —— 生成AIの大量アウトプットの中から、真に価値あるものを発見するための多エージェント価値評価レイヤー。
 
 ## なぜ必要か

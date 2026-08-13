@@ -2,6 +2,10 @@
 
 # Wisdom Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Wisdom Council Layer">
+</p>
+
 **知恵の評議会（Council of Wisdom）** — a multi-agent value evaluation layer for discovering what is truly valuable amid the flood of generative-AI output.
 
 ## Why This Is Needed
