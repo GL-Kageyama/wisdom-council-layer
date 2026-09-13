@@ -1,1 +1,1 @@
-/Users/user/AI評価者たちによる「知恵の評議会」/wisdom-council-layer/agents/philosophical-evaluator-ja.md
+/Users/user/AI創作工房/wisdom-council-layer/agents/philosophical-evaluator-ja.md
