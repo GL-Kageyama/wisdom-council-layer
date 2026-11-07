@@ -4,6 +4,18 @@
 
 A collection of samples demonstrating the **generate → evaluate → recreate** loop for each genre.
 
+## Placement guide
+
+When adding a sample, decide the location in this order:
+
+1. **Does it belong to a specific genre or domain?** → `<genre-domain>/`
+2. **Is it a one-off output, old version, or backup?** → `_archive/`
+
+- One sample per folder. Keep `input.md` + `report-v1.json` + `report-v2.json` + `report.md`.
+- Name the folder after the genre (`creative-film`, `business-startup`).
+- If the number of genres grows, group them into `creative/` `business/` `science/` `culture/` and move the folders under them.
+- After adding, add one row to the table above.
+
 ## Folder Structure
 
 | Folder | Genre | Classification transition (v1 → v2) |

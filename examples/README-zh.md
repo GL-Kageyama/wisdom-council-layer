@@ -4,6 +4,18 @@
 
 按体裁演示 **生成 → 评估 → 再创作** 循环的示例集。
 
+## 放置指南
+
+新增样本时，按以下顺序决定位置：
+
+1. **属于特定体裁或领域？** → `<体裁>/`
+2. **是一次性输出、旧版或备份？** → `_archive/`
+
+- 一个样本一个文件夹。`input.md` + `report-v1.json` + `report-v2.json` + `report.md` 放在同一文件夹。
+- 文件夹名用体裁（`creative-film`、`business-startup`）。
+- 体裁增多时，整理到 `creative/` `business/` `science/` `culture/` 下。
+- 添加后在上表补一行。
+
 ## 文件夹结构
 
 | 文件夹 | 体裁 | 分类的变迁（v1 → v2） |
